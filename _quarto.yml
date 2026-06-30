@@ -7,15 +7,15 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: Hxome
       - href: syllabus.qmd
-        text: Syllabus
+        text: Syxllabus
       - href: schedule.qmd
-        text: Schedule
+        text: Schxedule
       - href: projects.qmd
-        text: Projects
+        text: Projxects
       - href: lectures.qmd
-        text: Selected Lectures
+        text: Selecxted Lectures
 
 format:
   html:

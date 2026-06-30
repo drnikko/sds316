@@ -1,0 +1,46 @@
+
+
+The class is broken into five "sprints," each having 5 class sessions.  Each sprint will follow roughly the same schedule, so that you always know what to expect. 
+
+Sprint:
+1 lecture - new information! lots of it
+2 lab - new information + hands on
+3 studnet tech prez + lab - pop quiz! hands on + new information
+4 student content prez + lecture - review key concepts / discuss integration
+(end-of-sprint deliverables DUE)
+
+
+
+25 class sessions in the semester
+[draft syllabus](https://docs.google.com/document/d/1gcTregTaJKTzPuUeHbQEtI3e_38JzYVwixEPD9OOP5c/edit?tab=t.0#heading=h.z4q1b6mv44zf)
+
+## Key deliverables
+
+1. a list of questions (in class)
+
+2. A 3 item list of sources to start answering ONE question  (committed to class github via pull resquest)
+
+3. A list of research clusters (submitted by someone from each cluster in a PR - skill: PRs in fast-moving code base / integrating upstream changes)
+
+4. a lit review from each research cluster, including source datasets
+
+5.  final research questions from everyone (submitted via PR)
+
+6. initial dataset proof of concept / data description
+
+7. initial analysis and findings
+
+8. final findings
+
+9. narrative
+
+
+
+
+
+
+(way down the line)
+
+0. 
+
+1. ethics statement & positionality (how do we relate to ourselves and the data and ourselves via the data)
