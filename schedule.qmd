@@ -1,5 +1,5 @@
 
-
+<!--
 The class is broken into five "sprints," each having 5 class sessions.  Each sprint will follow roughly the same schedule, so that you always know what to expect. 
 
 Sprint:
@@ -44,3 +44,5 @@ Sprint:
 0. 
 
 1. ethics statement & positionality (how do we relate to ourselves and the data and ourselves via the data)
+
+p-->
