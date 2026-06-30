@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "SDS316: Data of the US Criminal Legal System",
-    "section": "",
-    "text": "The class is broken into five “sprints,” each having 5 class sessions. Each sprint will follow roughly the same schedule, so that you always know what to expect.\nSprint: 1 lecture - new information! lots of it 2 lab - new information + hands on 3 studnet tech prez + lab - pop quiz! hands on + new information 4 student content prez + lecture - review key concepts / discuss integration (end-of-sprint deliverables DUE)\n25 class sessions in the semester draft syllabus"
-  },
-  {
-    "objectID": "schedule.html#key-deliverables",
-    "href": "schedule.html#key-deliverables",
-    "title": "SDS316: Data of the US Criminal Legal System",
-    "section": "Key deliverables",
-    "text": "Key deliverables\n\na list of questions (in class)\nA 3 item list of sources to start answering ONE question (committed to class github via pull resquest)\nA list of research clusters (submitted by someone from each cluster in a PR - skill: PRs in fast-moving code base / integrating upstream changes)\na lit review from each research cluster, including source datasets\nfinal research questions from everyone (submitted via PR)\ninitial dataset proof of concept / data description\ninitial analysis and findings\nfinal findings\nnarrative\n\n(way down the line)\n\n\nethics statement & positionality (how do we relate to ourselves and the data and ourselves via the data)"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Homepage",
