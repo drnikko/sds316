@@ -1,5 +1,5 @@
 
-<!--
+
 The class is broken into five "sprints," each having 5 class sessions.  Each sprint will follow roughly the same schedule, so that you always know what to expect. 
 
 Sprint:
@@ -45,4 +45,9 @@ Sprint:
 
 1. ethics statement & positionality (how do we relate to ourselves and the data and ourselves via the data)
 
-p-->
+2. Possible datasets. 
+
+
+Examples that we might discuss:
+- https://www.marlo.works/posts/last-meals/ 
+- Subreddit r/dataisbeautful search for 'crime' - https://www.reddit.com/r/dataisbeautiful/search/?q=crime&cId=8425b48d-f890-4701-8214-13691b12bf04&iId=d38f4365-5c7f-4bae-9d96-176bcab85e50 

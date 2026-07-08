@@ -1,0 +1,32 @@
+---
+title: "Data Sources"
+---
+
+## Datasets
+- [Fatal Encounters](https://fatalencounters.org/spreadsheets/)
+- [Mapping Police Violence](https://mappingpoliceviolence.us/)
+- [California Open Justice (open datasets)](https://openjustice.doj.ca.gov/data)
+- [Washington Post Police Shootings Dataset](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/)
+- [U of Chicago's Crime lab](https://crimelab.uchicago.edu/)
+- [U Miss Library Guide for Crime Statistics](https://libraryguides.missouri.edu/c.php?g=165704&p=1088070)
+- [FBI Crime Data Explorer](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/home)
+- [Vera Institute's Incarceration Trends](https://github.com/vera-institute/incarceration-trends)
+- [Prison Map - Geography of Incarceration](https://prisonmap.com/)
+- [Correctional Procurement Contracts](https://www.prisonpolicy.org/contracts/documents.html)
+
+## Data Collections
+These have more tha one dataset, but are not massive clearinghouses
+- [Across Walls](https://www.acrosswalls.org/) *This site can be a little difficult to navigate, but they have a lot of specific data not generally available elsewhere, like this [final statements, last meals](https://docs.google.com/spreadsheets/u/1/d/1RF-0BkAVaWwWTlQdkswsfQFmq1x1N4xWL6cHAytuydE/pubhtml) dataset.
+- [and other repos by the Vera Institute](https://github.com/vera-institute)
+
+
+
+## Data Clearinghouses 
+- [ICPSR](https://www.icpsr.umich.edu/sites/icpsr/find-data)
+- [Data.gov](https://catalog.data.gov)
+
+
+
+## What about _______?
+The Prison Policy Initative has a list of [datasets they wish existed](https://www.prisonpolicy.org/blog/2024/12/19/data-wishlist/), but which do not.
+

@@ -1,0 +1,95 @@
+---
+title: "Project"
+---
+
+At the end of this class, you will be submitting a full, and complete data analysis project.
+
+## Final Submission
+
+Your work will all be performed in a fork of [this repository](https://github.com/drnikko/sds316). \<💡[How to fork](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)\>
+
+In order for your project to be complete and accepted,
+
+-   you will open a pull request (PR) with *just* the changes you're trying to merge in \<💡[how to open a PR](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)\>
+
+-   that PR will build successfully
+
+-   that PR will be reviewed by 2 other students, who will either approve or request changes
+
+-   you will make any necessary changes requested by your peers and to ensure the build succeeds
+
+-   you update the PR with those changes
+
+-   then the PR is merged into `main`
+
+## Stages
+
+### Stage 1 - Exploration + Workflow
+
+During the first stage of the project, we're practicing:
+
+-   getting comfortable in the IDE, including customizing it as needed for our tasks (let the tools work for us!)
+
+-   getting comfortable with git and the Github pull request workflow (let the tools work for us!)
+
+-   developing our research questions and building lists of resources
+
+#### Key Deliverables
+
+-   Research Question and expected findings
+
+-   Five candidate datasets (added to the [datasets](datasets.html) page)
+
+-   Three examples
+
+-   Work Plan
+
+-   Initial research groups clustering
+
+### Stage 2 - Analyzing Data & Scaffolding the Report
+
+During the second stage, we're actively working on data analysis and making sure that all work is building successfully. This includes:
+
+-   writing python code to analyze the data
+
+-   drafting preliminary writing about the technical/quantitative steps you're taking
+
+-   discussing your results with your research group
+
+#### Key Deliverables
+
+-   Report scaffold
+
+-   Updated (if necessary) research question
+
+-   
+
+### Stage 3 - Building and Deploying
+
+During the third stage of the project, we're practicing:
+
+-   xx
+
+#### Key Deliverables
+
+-   final-first-draft report
+
+-   draft abstract
+
+### Stage 4 - Reflection + Refinement
+
+During the first stage of the project, we're practicing:
+
+-   xx
+
+#### Key Deliverables
+
+-   final report
+
+-   self-reflection (private)
+
+-   
+
+## Resources
+
+-   how to write about data and complex topics, from PPI - <https://www.prisonpolicy.org/trainings/writing_guide.html>

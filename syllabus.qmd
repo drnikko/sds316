@@ -1,0 +1,139 @@
+---
+title: "Syllabus"
+---
+
+
+## Course Information
+
+Pre-requisites: SDS 270 or SDS 271 or CSC 210 or CSC/SDS 235 or by permission of the instructor
+
+Monday & Wednesday: 7:00 - 8:15pm
+
+### Course Description
+
+The United States criminal legal system is increasingly data-driven. Technologies like recidivism algorithms and predictive policing give the appearance of numerical objectivity.  But, without sufficient context, we cannot understand how these technologies work or the data that they are using.   This course introduces students to the theory and practice of handling data about the United States criminal legal system.  Students will engage with this material through in-depth reading about the history of crime, policing, and incarceration; seminar discussions; research design; and large data-driven projects.
+
+### Course Outcomes and Learning Objectives
+
+After completing this course, students will be able to:
+
+- Identify ethical concerns in the development and implementation of data-driven systems, specifically in the context of the criminal legal system  
+- Identify the five phases of the US criminal legal system, and several data-centric challenges within each  
+- Design and execute a data-centered research project about the criminal legal system  
+- Implement a data-driven dashboard to showcase their findings  
+- Convey quantitative information in written, oral and graphical forms of communication to both technical and nontechnical audiences (an SDS learning objective)
+
+## Course Materials
+
+You will be required to purchase two books.  Other readings will be provided on this website.  
+Brayne, S. (2021). *Predict and Surveil: Data, Discretion, and the Future of Policing*. Oxford University Press.  
+Jefferson, B. (2020). *Digitize and punish: Racial criminalization in the digital age*. U of Minnesota Press.
+
+## Participation and Classroom Expectations
+
+When we have classroom discussions, we’ll be covering material that may have impacted our lives or our communities.  It is impossible to separate our lived experience from our academic work, and indeed our expertise and knowledge lies within our experiences. That’s an academic way of saying – bring your whole self to class with you because it’s who you are and because it makes you a better student and researcher.  When everyone is bringing their whole selves to class, there is likely to be disagreement, conflict, or at least some discomfort.  During the first week of class, we’ll set some norms together that work for our group.
+
+I expect that you will come to class prepared to participate, and willing to participate in ways that are both familiar and unfamiliar to you.
+
+### Names and Personal Pronouns
+
+I affirm all forms of gender expression and identities. If you prefer to be called a different name than what is on the class roster, please let me know. Feel free to correct me on your gender pronoun, if you don’t use any pronouns, or if your pronouns change during the semester.  If you have any questions or concerns about being addressed respectfully, please do not hesitate to contact me. For more information, see [Smith's page](https://www.smith.edu/your-campus/offices-services/equity-inclusion/gender-identity-expression) about gender identity and expression.
+
+### Time Commitment and Labor Expectations
+
+This course requires a weekly time commitment. On an average week, you’ll spend about 10-12 hours total on this course (this is also a federal requirement for universities!). In a typical week, you’ll spend 2.5 in class, about 3 hours doing reading, and an average of 4-6 hours working on class projects.  The distribution of this time will shift over the course of the semester with some weeks having mostly reading work and others having mostly hands-on development work. 
+
+### Office Hours
+
+My office hours are listed on the syllabus, and I strongly encourage each of you to use them.  Studies have shown (e.g. Henry, 2014) that some students do not take advantage of office hours or are otherwise afraid to “bother” faculty.  When I was an undergraduate student, the first in my family to go to college, I never went to office hours and I really missed out. This paragraph is my formal invitation to you to come to as many office hours as are helpful to you.  Holding these hours is a literal part of my job – and I like my job – so please use all of the resources available to you, including my office hours.
+
+## Course Policies
+
+### Code of Conduct and Interpersonal Safety
+
+It is important to me to create a classroom environment where everyone can be successful. We will work together to develop a classroom code of conduct that works for the group that we will become this semester, and we will check in about it regularly. At a minimum, this code of conduct will include: 
+
+- respecting and affirming the identities and lived experiences of everyone in the classroom   
+- moving slowly when difficult content is presented  
+- during disagreements, disagreeing with the *idea* and not the *person*   
+- assuming positive intent when someone makes a mistake  
+- honoring those who speak up about something that doesn't feel good
+
+This class has an unconditional timeout policy, which means that *any* person can call a time out for *any* reason. When someone calls a time out, we will thank them for being brave enough to assert their needs. My commitment to you is that I will:  
+\-   work to acknowledge structural and interpersonal power imbalances  
+\-   believe your accounts of your life and experiences  
+\-   interrupt any [harassing behavior](https://www.smith.edu/your-campus/offices-services/equity-inclusion/policies-resources/discriminatory-harassment)
+
+If you have any concerns or suggestions for how to make this class more inclusive, please reach out to me. If you'd rather do it anonymously, please leave a note in my faculty mailbox in Burton Hall.
+
+### Attendance
+
+You are an adult and you can choose whether or not to attend class. Except in exceptional circumstances, I don't provide summaries of missed material for students who miss class; students who miss class will need to get course materials from a classmate.
+
+If you are sick, please don't come to class\! In general, the SDS department has a no-remote-attendance policy. However, we live in community here, and staying home from class when you're sick is a way of caring for your Smith community. In these cases, you are welcome to contact a classmate to zoom you into class. I will not set up zoom for you when you are sick. Students should reach out to their class dean in the event of an extended illness or emergency; they can help you to navigate these situations with your instructors. Consistent with the college’s policy on student academic standing, if you miss more than four weeks of class meetings, you are in danger of failing to earn credit for this course (receiving a grade of E).
+
+### Electronic Devices
+
+This course combines seminar-style discussion and hands-on technical work.  During seminar conversations, I ask that you **close your laptops, put away your phones** and participate in class discussion. Of course, there may be times when you need to take a call or send a message.  In these cases, please step out of class to do so. 
+
+*I will modify this policy for students with ARC accommodations.*
+
+### Leading Discussions & Classroom Participation
+
+During class, you will have the opportunity to lead discussion sections. The ability to do this is a skill, developed through practice. Here are two initial guides for this part of class.
+
+- [How to ask good discussion questions](https://avidly.lareviewofbooks.org/wp-content/uploads/2016/09/Some-Notes-On-How-To-Ask-A-Good-Question-About-Theory-That-Will-Provoke-Conversation-And-Further-Discussion-From-Your-Colleagues-2-2.pdf)  
+- [How to lead a discussion](https://drnikko.github.io/DSGTTM/discussion-leader.html) (from SDS 239\)
+
+### AI Policy
+
+In general, this course is a **strictly** no-AI course.  There are no exceptions to this policy \- you may not use AI to generate ideas, to organize your thoughts, to draft writing, to write code, or for any other use.  It’s very possible that you might feel like you cannot succeed in this course without the use of AI.  If this is the case, please come to office hours so that we can talk about it.  
+
+There may be occasions in class where I invite you to use AI as part of an exercise.  In those cases, the instructions will be explicitly spelled out. 
+
+## Smith College Policies
+
+### Accommodations
+
+Smith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the Accessibility Research Center ([ARC](https://www.smith.edu/your-campus/offices-services/accessibility-resource-center)) at the beginning of the semester. To contact ARC, please email arc@smith.edu
+
+### Academic Integrity
+
+It should go without saying that this course is one in which we do not cheat, plagiarize or otherwise act without academic integrity.  This includes adhering to this course’s AI Policy. 
+
+### Recording
+
+Unless specific accommodations are requested, there will be no recording of class lecture or class discussion. This class relies on collectively creating spaces where we are free to discuss difficult subjects, and to stumble through hard topics as part of learning. Having our best, sometimes fumbling, efforts recorded for posterity is the opposite of the class environment that we need. For more information, please refer to the college policy on [recording](https://www.smith.edu/your-campus/offices-services/office-student-affairs/student-handbook/smith-college-policy-videoaudio-recordings-classroom).
+
+## Additional Resources
+
+### Writing
+
+If you need support with writing, please use the [Jacobson Center for Writing](https://www.smith.edu/academics/integrative-learning/jacobson-center-writing-teaching-learning).
+
+### Mental Health
+
+In addition to challenging themes that we will discuss in this class, being a student can be both a time of exciting learning and also intense stress. If you need mental health support, please take advantage of the [Wellness resources](https://www.smith.edu/your-campus/health-wellness) provided by Smith.
+
+## Grades and Coursework
+
+Your final grade will be determined by a combination of:
+
+- Class Summary Cards \- 15%  
+- Leading class and/or leading small group discussions \- 15%  
+- Research project (and its component parts) \- 50%  
+- Midterm evaluation \- 10%  
+- Final presentation \- 10%
+
+High-level details about each component: 
+
+- Class summary cards are index cards that you drop into the box at the end of every class answering a question related to that day’s lecture or an aspect of the reading.  These are graded credit/no credit and cannot be made up if you are absent from class.  
+- Leading class discussion will involve preparing a one-page handout about the day’s topic and then leading class through \~20 minutes of discussion about that work.  These are graded credit/no credit.  
+- The research project will have many component parts and will be a project that we scaffold over the course of the semester so that you will have the chance to continue to refine and revise your thinking. This project includes submitting: research questions, bibliography, literature review, first draft, final draft,  and a code \+ documentation bundle. Each component will be graded separately.  
+- Presentations will be \~10-15 minutes long 
+
+### Final Project
+
+This course satisfies the application domain requirement for the SDS major.  As such, students will complete a large, independent data analysis project.  In the first third of the class, students will dive into the history and theory of the criminal legal system, develop data-centric research questions, and construct their research approach.  In the middle-third, students will wrangle (clean, normalize, model, etc) data.  In the final third, students will build, refine, and present a dashboard of their results. You may build this project with R using Studio/Positron, with Python using a framework like Marimo or Jupyter, or a with Javscript Library (like React, or D3).  The choice is yours \- I encourage you to choose tech that you want to be good at (vs tech that you’re already familiar with). Across the classes I teach, I generally hear students wish that they had built more projects in Python.  
+
+# Schedule

@@ -1,0 +1,68 @@
+File Manifest for ICPSR 8451
+
+Espy, M. Watt, and John Ortiz Smykla. Executions in the United States,
+1608-2002:  The ESPY File . ICPSR08451-v5. Ann Arbor, MI: Inter-university
+Consortium for Political and Social Research [distributor], 2016-07-20.
+http://doi.org/10.3886/ICPSR08451.v5
+
+Details on the version history can be found below the file listings.
+
+
+Study-level Documentation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    08451-descriptioncitation.pdf       -       -         -       2016-08-25  -
+
+    08451-related_literature.txt        -       -         -       daily       -
+
+    08451-manifest.txt                  -       -         -       daily       -
+
+
+DS0001 Executions in the United States, 1608-2002:  The ESPY File
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    08451-0001-Codebook.pdf             -       -         -       2016-07-20  a480fa9cf257ce330ed62b3e86143841
+
+    08451-0001-Data.dta                 -       15,268    21      2016-07-20  832381a27d3ac768887bd2bea4cab74a
+
+    08451-0001-Data.rda                 -       15,268    21      2016-07-20  7f734cc8ea6bf799afac615ecffe56e4
+
+    08451-0001-Data.sav                 -       15,268    21      2016-07-20  71475e9127660444dd23ef6ec4189adc
+
+    08451-0001-Data.stc                 -       15,268    21      2016-07-20  4f991f1f8c5fd93bb495cfa2e883d7bb
+
+    08451-0001-Data.tsv                 -       15,268    21      2016-07-20  f724b0f00b3cdae0d25f174bb59d71c5
+
+    08451-0001-Data.txt                 73      15,268    21      2016-07-20  889688404171f9ab6da97a7a55d9f049
+
+    08451-0001-Setup.dct                -       -         -       2016-07-20  f364d1519bcedb6f1ce90d28b6c1aad6
+
+    08451-0001-Setup.do                 -       -         -       2016-07-20  660f92393c60519267d9aec434639881
+
+    08451-0001-Setup.sas                -       -         -       2016-07-20  2c962e26ec6821680de0c5896520fafa
+
+    08451-0001-Setup.sps                -       -         -       2016-07-20  ca09c0895c381086f22249b65e4195b2
+
+    08451-0001-Supplemental_syntax.do   -       -         -       2016-07-20  071a8efb7ad0c01bafe12504c201ff44
+
+    08451-0001-Supplemental_syntax.sas  -       -         -       2016-07-20  0ed32d621fddc7b8480745eb86924ae7
+
+
+Version History
+
+2016-07-20 Corrections were made to two records. Case number 40001 was
+dropped, as government records show that she was pardoned. For case number
+50367, the method of execution was changed from hanging to electrocution.
+2005-11-04  On 2005-03-14 new files were added to one or  more datasets.
+These files included additional setup files as well as one or more of the
+following: SAS  program, SAS transport, SPSS portable, and Stata system
+files. The  metadata record was revised  2005-11-04 to reflect these
+additions.  2004-02-27 Data from the years 1992 through 2002 have been
+added to the data file. The SPSS and SAS data definition statements have
+been updated accordingly and Part 2 of this study, old SAS data definition
+statements will be removed, leaving all files in only one part. The ASCII
+codebook has also been updated and converted to a PDF file.

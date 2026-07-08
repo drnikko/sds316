@@ -1,0 +1,12 @@
+---
+title: "Tech Stack"
+---
+
+-   Development IDE: Positron
+-   Python Version: 3.14.5
+    -   check your python version with `python –-version`
+-   We don't install Python libraries globally - we *always* work within a virtual envrionment
+-   A Unix/Linux-based terminal (this comes by default in Positron)
+-   Git, used in the terminal 
+    -   `git --version` for Nikko is 2.39.5 (Apple Git-154)
+     
