@@ -4,11 +4,11 @@ title: "Syllabus"
 
 ## Course Information
 
-Pre-requisites: SDS 270 or SDS 271 or CSC 210 or CSC/SDS 235 or by permission of the instructor
+**Prerequisites:** SDS 270 or SDS 271 or CSC 210 or CSC/SDS 235 or by permission of the instructor
 
-Monday & Wednesday: 7:00 - 8:15pm
+**Meetings:** Monday & Wednesday || 7:00 - 8:15pm || Bass 002
 
-[💡 Office hours, booking time, etc](https://docs.google.com/document/d/1PpndXanj3ffEbUn9nla2POWdhno5BHOCkrkRx4DyzTc/edit?tab=t.0#heading=h.ou1f63t7f0j2)
+[💡 Office hours, booking non-office hour time, etc](https://docs.google.com/document/d/1PpndXanj3ffEbUn9nla2POWdhno5BHOCkrkRx4DyzTc/edit?tab=t.0#heading=h.ou1f63t7f0j2) You can also catch me for about 20 minutes after class on Wednesdays.
 
 ### Course Description
 
@@ -26,11 +26,21 @@ After completing this course, students will be able to:
 
 ## Course Materials
 
-You will be required to purchase two books. Other readings will be provided on this website.
+### Required Reading
+You will be required to purchase two books. Other assigned readings will be provided on this website.
 
 -   Brayne, S. (2021). *Predict and Surveil: Data, Discretion, and the Future of Policing*. Oxford University Press.
 
 -   Jefferson, B. (2020). *Digitize and punish: Racial criminalization in the digital age*. U of Minnesota Press.
+
+### Useful Reference
+These are not required, but you might find these useful:
+
+- [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+
+- [Python for Data Analysis](https://wesmckinney.com/book/)
+
+- [Python Reference Guide](https://docs.python.org/3/reference/index.html)
 
 ## Participation and Classroom Expectations
 
@@ -49,6 +59,26 @@ This course requires a weekly time commitment. On an average week, you’ll spen
 ### Office Hours
 
 My office hours are listed in the document linked from the syllabus, and I strongly encourage each of you to use them. Studies have shown (e.g. Henry, 2014) that some students do not take advantage of office hours or are otherwise afraid to “bother” faculty. When I was an undergraduate student, the first in my family to go to college, I never went to office hours and I really missed out. This paragraph is my formal invitation to you to come to as many office hours as are helpful to you. Holding these hours is a literal part of my job – and I like my job – so please use all of the resources available to you, including my office hours.
+
+## Grading & Schedule
+
+Your final grade will be determined by a combination of:
+
+-   Class Summary Sheets - 15%\
+-   Leading class and/or leading small group discussions - 15%\
+-   Research project (and its component parts) - 50%\
+-   Midterm evaluation - 10%\
+-   Final presentation - 10%
+
+For more details about each component, please see [Assignments Overview](assignments.qmd)
+
+
+### Final Project
+This course satisfies the application domain requirement for the SDS major. As such, students will complete a large, independent data analysis project. In the first third of the class, students will dive into the history and theory of the criminal legal system, develop data-centric research questions, and construct their research approach. In the middle-third, students will wrangle (clean, normalize, model, etc) data. In the final third, students will build, refine, and present a dashboard of their results.
+
+See the full breakdown (in progress) on the [Schedule](schedule.qmd) page
+
+
 
 ## Course Policies
 
@@ -86,18 +116,15 @@ During seminar conversations, I ask that you **close your laptops, put away your
 
 During lab work, I expect you to come to class with a [working development environment](tech-stack.qmd) – there will not be time to troubleshoot your machine in class. If you need help, *please* come to office hours.
 
-### Leading Discussions & Classroom Participation
-
-During class, you will have the opportunity to lead discussion sections. The ability to do this is a skill, developed through practice. Here are two initial guides for this part of class.
-
--   [How to ask good discussion questions](https://avidly.lareviewofbooks.org/wp-content/uploads/2016/09/Some-Notes-On-How-To-Ask-A-Good-Question-About-Theory-That-Will-Provoke-Conversation-And-Further-Discussion-From-Your-Colleagues-2-2.pdf)\
--   [How to lead a discussion](https://drnikko.github.io/DSGTTM/discussion-leader.html) (from SDS 239)
 
 ### AI Policy
 
-In general, this course is a **strictly** no-AI course. There are no exceptions to this policy - you may not use AI to generate ideas, to organize your thoughts, to draft writing, to write code, or for any other use. It’s very possible that you might feel like you cannot succeed in this course without the use of AI. If this is the case, please come to office hours so that we can talk about it.
+This Fall 2026 edition of the class will have a pedagogical partner who will join us to think about IF and HOW we use AI in this class. The policy is one we will develop together.  However, there are some guideliness that will hold:
 
-There may be occasions in class where I invite you to use AI as part of an exercise. In those cases, the instructions will be explicitly spelled out.
+- you may not use AI to generate ideas.  AI is not an idea generation machine, it is a probablistic language predictor.  As a result, any idea that AI generates is one that _many_ people have had before
+- you may not use AI to generate writing.  I would rather read your worst writing on your worst day than a single sentence generated by AI. 
+
+
 
 ## Smith College Policies
 
@@ -123,25 +150,3 @@ If you need support with writing, please use the [Jacobson Center for Writing](h
 
 In addition to challenging themes that we will discuss in this class, being a student can be both a time of exciting learning and also intense stress. If you need mental health support, please take advantage of the [Wellness resources](https://www.smith.edu/your-campus/health-wellness) provided by Smith.
 
-## Grades and Coursework
-
-Your final grade will be determined by a combination of:
-
--   Class Summary Cards - 15%\
--   Leading class and/or leading small group discussions - 15%\
--   Research project (and its component parts) - 50%\
--   Midterm evaluation - 10%\
--   Final presentation - 10%
-
-High-level details about each component:
-
--   Class summary cards are index cards that you drop into the box at the end of every class answering a question related to that day’s lecture or an aspect of the reading. These are graded credit/no credit and cannot be made up if you are absent from class.\
--   Leading class discussion will involve preparing a one-page handout about the day’s topic and then leading class through \~20 minutes of discussion about that work. These are graded credit/no credit.
-    -   TODO: Find an article from Prison Policy Initiative to bring to the topic. TODO - add a list of them HERE / link to them HERE
-    -   TODO - find an article of inside-written journalism
--   The research project will have many component parts and will be a project that we scaffold over the course of the semester so that you will have the chance to continue to refine and revise your thinking. This project includes submitting: research questions, bibliography, literature review, first draft, final draft, and a code + documentation bundle. Each component will be graded separately.\
--   Presentations will be \~10-15 minutes long
-
-### Final Project
-
-This course satisfies the application domain requirement for the SDS major. As such, students will complete a large, independent data analysis project. In the first third of the class, students will dive into the history and theory of the criminal legal system, develop data-centric research questions, and construct their research approach. In the middle-third, students will wrangle (clean, normalize, model, etc) data. In the final third, students will build, refine, and present a dashboard of their results.

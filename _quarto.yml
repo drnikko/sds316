@@ -8,8 +8,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: index.qmd
-        text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+    right:
+      - icon: envelope
+        href: "https://docs.google.com/document/d/1PpndXanj3ffEbUn9nla2POWdhno5BHOCkrkRx4DyzTc/edit?tab=t.0#heading=h.5xdobrmir9r2"
+        aria-label: "Contact and Office Hours"
 
 format:
   html:

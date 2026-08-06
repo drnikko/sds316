@@ -5,7 +5,9 @@ listing:
   type: table               # Options: table, grid, or default
   sort: "date asc"          # Sorts chronologically (or "title asc")
   fields: [title, description, topics] # Customizes display columns
-  categories: false
+  categories: true
 ---
 
-Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered.  You can view the slideshow (including any speaker notes), or head over to the repo and browse the source itself. 
+Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered.  You can view the slideshow (including any speaker notes), or head over to the repo and browse the source itself.  
+
+(If the class hasn't happened yet, no need to review it - there's probably nothing there!)

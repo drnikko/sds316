@@ -2,11 +2,10 @@
 title: "DEMO"
 author: 
   - "Nikko Stevens"
-  - "other name here"
 date: 2026-09-01
 description: "Demo project"
-categories: [Punishment, Physics]  # Used for sidebar filtering
-image: "images/thumbnail.jpeg"             # Required thumbnail for grid view
+categories: [Punishment]  
+image: "images/thumbnail.webp"       
 ---
 
 ## Project Overview

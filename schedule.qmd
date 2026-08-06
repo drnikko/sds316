@@ -67,6 +67,6 @@ Examples that we might discuss:
 
 
 ## Week 1 Homework
-- Install everything you need for the [tech stack](tech-stack.qmd).  You will need these working by W2.C2/Wednesday.  Come to office hours if you're struggling. 
+- By W2.C1: Read Intro & Chapter 1 of _Digitze and Punish_. Bring your book to class.
 
-- Read Ch 1&2 of _Digitze and Punish_. Bring your book to class
+- By W2.C2: Install everything you need for the [tech stack](tech-stack.qmd).  Come to office hours if you're struggling. 

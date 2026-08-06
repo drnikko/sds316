@@ -1,23 +1,70 @@
 ---
-title: "Course Projects"
+title: "Assignments"
 ---
 
+Extra detail about each assignment (and the final project) below.
 
-As part of this class, you will be submitting a complete data analysis project.
+## Class summary sheets
+
+[*Why we do it:*]{.underline} Reflecting on the material is an important part of working in an application domain. These give you practice responding to ethical/domain-specific questions in the same way you will be asked to do so in your data science career.
+
+[What it is:]{.underline} Class summary sheets are handouts that you drop into the box at the end of some classes answering a question related to that day’s lecture or an aspect of the reading. These are graded credit/no credit and *cannot be made up* if you are absent from class.
+
+The only way to get *no credit* for a sheet that you filled out is if you obviously did not do the reading and obviously are writing answers that are completely irrelevant.
+
+We will have \~25 class meetings this semester, and will only do these on the 12 or 13 seminar days. Full credit for this section is **10** sheets.
+
+## Leading class discussion
+
+*Why we do it:* This assignment gives you the opportunity to practice a few important skills: communicating summary information, asking questions about new/complex material, and speaking in public (😬).
+
+::: callout-important
+## You are responsible for signing yourself up to be a class leader. If you cannot attend class that day, you are responsible for switching with another student. [Class Leader Schedule](https://docs.google.com/spreadsheets/d/1oqzW3GjvwdGwQpR57L7JWsS9Wvx-1Sehy_xs4PBAoBo/edit?gid=0#gid=0)
+:::
+
+Leading class discussion will involve preparing materials about the day’s topic, summarizing the reading, and then leading class through \~15 minutes of discussion.
+
+When it's your day to lead, you'll need to make edits to the day's lecture slides before class. The lecture files are markdown in the `lectures` folder. You'll find the appropriate file (week number, class number -eg. `week2-c1.qmd`). You'll know where to add your slides by reading the code and finding the comment:
+
+``` html
+<!-- Discussion Leader: Add your slides here -->
+```
+
+Make these edits:
+
+1.  Create **1** slide with
+
+    1.  A link to a piece of inside-written (or other authors who are system-impacted) journalism or reporting about something related to the reading, the coursework, or your particular research project. We do this because it's important to listen to people who have directly experienced the criminal legal system.
+
+    2.  A link to a current news article related to the topic.
+
+2.  Create **2**slides with an overview of the main points of the reading. You will create these slides in the appropriate
+
+3.  Create **1** slide with discussion questions. Here's a popular guide for [how to ask good discussion questions](https://avidly.lareviewofbooks.org/wp-content/uploads/2016/09/Some-Notes-On-How-To-Ask-A-Good-Question-About-Theory-That-Will-Provoke-Conversation-And-Further-Discussion-From-Your-Colleagues-2-2.pdf).
+
+4.  Open a [pull request]{.underline} containing JUST these **4** slides (and any associated images that you require) and assign it to me by **six pm** the night of the class. Note that the PR must pass all tests, so try not to put it off until the last minute in case tests fail!
+
+During class:
+
+-   At a certain point (likely different in each class), you'll come to the front of the room and spend **7-10 minutes** discussing the links you found and giving us an overview of the reading.
+
+-   Then, you'll have about **15** minutes to lead discussion with your peers. I won't participate unless called on. :)
+
+## Research Project
+
+The research project will have many component parts and will be a project that we scaffold over the course of the semester so that you will have the chance to continue to refine and revise your thinking. This project includes submitting: research questions, bibliography, literature review, first draft, final draft, and a code + documentation bundle. Each component will be graded separately.\
 
 ## Submissions
 
-With the exception of the self-reflection, 100% of your class work will be performed in a fork of [this repository](https://github.com/drnikko/sds316). \<💡[How to fork](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)\>
+With a few exceptions, 100% of your class work will be performed in a fork of [this repository](https://github.com/drnikko/sds316). \<💡[How to fork](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)\>
 
-In order for your project to be complete and accepted,
+In order for your work to be complete and accepted,
 
 -   you will open a pull request (PR) with *just* the changes you're trying to merge in \<💡[how to open a PR](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)\>
 
 -   that PR will build successfully
 
--   that PR will be reviewed by 2 other students, who will either approve or request changes
-
--   you will make any necessary changes requested by your peers and to ensure the build succeeds
+-   you will make any necessary changes requested by your peers (when a review is required) and to ensure the build succeeds
 
 -   you update the PR with those changes
 
