@@ -36,8 +36,21 @@ Sprint:
 
 
 
+## Extra Credit -- Technical Demonstrations
+- Show us two data visualizations using matplotlib after we've set it up
+- Walk us through opening a github pull request 
+- Explain and DOCUMENT the github fork/branch process
+- Demonstrate making github commits in the terminal
+- Show us how to set up python notebooks in Positrpon
+- Demonstrate 3 important terminal improvements or Positron customizations you've made
+- 
 
 
+
+
+
+
+Data Science text for reading and reference: https://wesmckinney.com/book/plotting-and-visualization 
 
 (way down the line)
 
@@ -51,3 +64,9 @@ Sprint:
 Examples that we might discuss:
 - https://www.marlo.works/posts/last-meals/ 
 - Subreddit r/dataisbeautful search for 'crime' - https://www.reddit.com/r/dataisbeautiful/search/?q=crime&cId=8425b48d-f890-4701-8214-13691b12bf04&iId=d38f4365-5c7f-4bae-9d96-176bcab85e50 
+
+
+## Week 1 Homework
+- Install everything you need for the [tech stack](tech-stack.qmd).  You will need these working by W2.C2/Wednesday.  Come to office hours if you're struggling. 
+
+- Read Ch 1&2 of _Digitze and Punish_. Bring your book to class

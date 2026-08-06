@@ -20,11 +20,9 @@ These have more tha one dataset, but are not massive clearinghouses
 - [and other repos by the Vera Institute](https://github.com/vera-institute)
 
 
-
 ## Data Clearinghouses 
 - [ICPSR](https://www.icpsr.umich.edu/sites/icpsr/find-data)
 - [Data.gov](https://catalog.data.gov)
-
 
 
 ## What about _______?

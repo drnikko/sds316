@@ -1,3 +1,11 @@
+---
+title: README.md
+author: Nikko Stevens
+execute:
+  code-fold: true
+---
+
+This document is the README.md for the Demo project.  My readme is designed to make sure that you are ready to run your own projects and can navigate your way through the demo.
 
 
 ## Running python code in a .qmd document. 

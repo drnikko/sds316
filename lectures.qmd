@@ -1,3 +1,11 @@
 ---
-title: "Selected Lectures Slides"
+title: "Course Lectures"
+listing:
+  contents: lectures        # Points to the /lectures folder
+  type: table               # Options: table, grid, or default
+  sort: "date asc"          # Sorts chronologically (or "title asc")
+  fields: [title, description, topics] # Customizes display columns
+  categories: false
 ---
+
+Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered.  You can view the slideshow (including any speaker notes), or head over to the repo and browse the source itself. 

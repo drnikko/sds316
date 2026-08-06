@@ -1,0 +1,205 @@
+---
+title: Initial Questions
+author: Nikko Stevens
+execute:
+  code-fold: true
+---
+
+# Stage 2.1: Initial Explorations of the Dataset.
+::: callout-note
+This example captures my own real, work-in-progress thinking about this dataset.  I haven't gone back and made any revisions. I am writing this page at the same time as I'm asking these questions. What is in this dataset? What kinds of questions might I want to ask as I drill down?
+:::
+
+## About
+
+### Dataset
+The dataset is [Executions in the United States, 1608 - 2002: The Espy File](https://www.icpsr.umich.edu/web/NACJD/studies/8451).  It is stored in the `_data` folder, and the entire set of downloaded files from ICPSR is in the folder `ICPSR-08451`.  Below, you'll see that I'm using inscrutable column names.  They are labled in the file `projects/demo/_data/ICPSR_08451/DS0001/08451-0001-Codebook.pdf`
+
+### Research Question
+My initial research question is pretty vague -- _"Are there trends in the crimes for which people have been executed in the United States?"_ And if I'm being honest, this isn't the right question for someone with both my disciplinary background and my technical skillset/interests.  I'm more interested in how this dataset is shaped, and what I might learn from the kinds of values I'm seeing in it.  (This is a more [inductive approach](https://socialsci.libretexts.org/Bookshelves/Social_Work_and_Human_Services/Scientific_Inquiry_in_Social_Work_(DeCarlo)/06:_Linking_Methods_with_Theory/6.03:_Inductive_and_deductive_reasoning).)
+
+## First question: gender
+I notice that there is a field that defines the sex of the person.  What's the gender breakdown within this dataset?
+
+```{python}
+import pandas as pd
+from pyprojroot import here # this helps us navigate tricky path stuff between local runs and quarto builds
+
+# Load the data using here() with the path from the project root
+file_path = here("projects/demo/_data/ICPSR_08451/DS0001/08451-0001-Data.tsv")
+df = pd.read_csv(file_path, sep='\t')  # Remember!! use '\t' for tab-separated (which this data is)
+
+# how many people executed were women? (where V19 = 2)
+count_v19 = len(df[df['V19'] == '2']) # NOTE - this column is a varchar, so you need to put quotes around your integer. 
+
+# total rows in dataset
+total_rows = len(df)
+
+# lil percent count
+gender_breakdown = count_v19 / total_rows * 100
+
+print("Number of women: ", count_v19)
+print("Total Rows ", total_rows)
+print(f"Percentage of women: ",  gender_breakdown)
+```
+
+At this point, I know that 364 women (2.38%) of all people executed in this dataset were women. Within those 364, what else can I learn?
+
+## Occupation
+
+```{python}
+
+# Let's assign that subset to it's own data frame so that we can work just with it
+women = df[df['V19'] == '2']
+
+# What kinds of jobs (col V21) did these women have? 
+most_common_jobs = women['V21'].value_counts().head(10)
+
+print(most_common_jobs)
+```
+
+Okay, whatever job is 610 is by far the most common, with "no occupation recorded" (NULL) the second most common. 328, a distant second, and 197 less than 3% (11 women).  Let's go to the Codebook and see what these jobs are. 
+
+```         
+code - occupation
+610 - Slave
+328 - Housewife
+197 - Domestic Servant
+593 - Servant
+509 - Prostitute
+440 - Nurse
+719 - Waitress
+327 - Housekeeper
+731 - Widow
+```
+::: callout-note
+YIKES.  I wasn't expecting to see "Slave" as an occupation in this dataset. This makes sense with the broad history of the US - does it make "sense" within this dataset? 
+::: 
+
+## Trigger warning! 
+Based on what we're seeing here (and some browsing I'm doing in the explorer), it looks like the majority of women executed were executed during slavery in the United States. Let's see what the median year in this dataset is - does this make sense?
+
+```{python}
+median_year = women['V14'].median()
+print(median_year)
+```
+
+Okay, the median year is 1826. (Remember, the [13th Amendment](https://www.archives.gov/milestone-documents/13th-amendment) which constitutionally abolished slavery was in 1856) This validates the occupation data we're seeing. Let's also check if there was race (column V5) recorded. In the codebook, these are the values for race:
+`0 M Do Not Know; NA 1 White 2 Black 3 Native American 4 Asian-Pacific Il 5 Hispanic 6 Other`
+
+```{python}
+# What was recorded for race? 
+most_common_race = women['V5'].value_counts().head(3)
+
+print(most_common_race)
+```
+
+
+## Crimes?
+Okay, this is still making sense. A few more general questions about women. Across all, what were their crimes?
+
+```{python}
+
+most_common_crimes = women['V10'].value_counts().head(10)
+
+print(most_common_crimes)
+
+```
+
+```         
+code - crime
+1 - Murder
+9 - Witchcraft
+16 - Arson
+10 - Robbery-Murder
+33 - Poisoning
+40 - Attempted Murder
+6 - Conspiracy to Murder
+8 - Slave revolt
+36 - Unspecified Felony
+```
+### Witchcraft?
+Woof.  Okay.  This also makes sense.  All of this is part of finding one's way around the dataset.  I am _expecting_ that the women executed for witchcraft were white (based on Hollywood movies about witch trials)
+
+```{python}
+
+# reminder, crime V10, race V5
+# we are asking slightly more complicated questions now
+# of the women where V10 = 9 (witchcraft), what were their races?
+
+race_of_witches = women[women['V10']=="9"]["V5"].value_counts().head(3)
+print(race_of_witches) # or rather, women convicted of witchcraft
+```
+
+### Slave Revolt?
+We're seeing data that matches historical expectations (though we must always be careful when making these!).  Women executed for witchcraft were exclusively white in the dataset.  I would similarly expect women convicted of "Slave Revolt" to be Black.  Does this track? 
+
+```{python}
+
+# reminder, crime V10, race V5
+# we are asking slightly more complicated questions now
+# of the women where V10 = 8 (slave revolt), what were their races?
+
+race_of_revolters = women[women['V10']=="8"]["V5"].value_counts().head(3)
+print(race_of_revolters) # or rather, women convicted of 'slave revolt'
+```
+
+Surprise!  That is also majority white women (4 to 1).  Who were these women? 
+
+#### let's put names to the numbers
+```{python}
+# (NOTE, you could do this in the explorer, but then it wouldn't be permanent. This helps us revisit this data any time as we keep thinking through our questions)
+
+# the 5 women convicted and executed for 'slave revolt'
+revolters = women[women['V10']=='8']
+
+# let's make printing easier/prettier and grab just the columns we need
+# V7 = name, V6 = age, V5 = race, V11 = method of ex, V14 year, V16 state
+
+pretty_table = revolters[['V7', 'V6', 'V5', 'V11', 'V14', 'V16']].copy()
+pretty_table.columns = ['Name', 'Age', 'Race', 'Method', 'Ex Year', 'State']
+
+pretty_table
+
+```
+
+## 1741
+Okay, something happened in 1741 with Margaret Kerry and SArah Hughson (I'm guessing).  A quick web search of these two names reveals (1) A website called "executedtoday.com" (grim), with [details](https://www.executedtoday.com/2016/06/12/1741-john-hughson-sarah-hughson-and-peggy-kerry-so-abandoned-to-confederate-with-slaves/) of this situation.  It was apparently part of the "New York Slave Rebellion of 1741" ([Brittanica Entry](https://www.britannica.com/event/New-York-slave-rebellion-of-1741))
+
+If this dataset is complete, I would expect to see a lot of people executed in New York (`state == 36`) in 1741. The Brittanica entry reads "As a result of the rumors, false confessions, and finger-pointing, approximately 30 Black people and 4 white people (the Hughsons, Kerry, and Ury) were executed, and some 80 more people, mostly Black but some white, were exiled."   Does the dataset have this data?
+
+### Checking the Uprising
+
+```{python}
+# we're going back to the entire dataset now and checking on the year 1741
+revolters = df[df['V14'] == 1741]
+
+print("Total Executions in 1741", len(revolters))
+
+```
+
+This is close. What about in New York State?
+
+```{python}
+# we're going back to the entire dataset now and checking on the year 1741
+revolters = df[df['V14'] == 1741]['V16']
+
+print("Top 3 states with executions in 1741", revolters.value_counts().head(3))
+```
+
+Okaaaay!  I'm not sure if this is the focus I want to pursue for the next phase, but this data seems to line up really tidily with this historical account.  I wasn't expecting to find _any_ of this when I grabbed this dataset, but this feels like a fine stopping point for this line of inquiry.  Let's put names to these folks, too, and then take a step back for another set of questions.
+
+### the humans of New York, 1741
+
+```{python}
+# filter for year of execution (V14) and state of execution (V16)
+ny_revolters = df[(df['V14'] == 1741) & (df['V16'] == 36)]
+
+pretty_table = ny_revolters[['V7', 'V6', 'V5', 'V11', 'V14', 'V16']].copy()
+pretty_table.columns = ['Name', 'Age', 'Race', 'Method', 'Ex Year', 'State']
+
+pretty_table
+
+```
+
+Oh for f's sake.  I see that there were different methods of execution that, not perfectly, but pretty tidily map to race.  People who were white (`race == 1`) were hanged (`1`), while Black people were sometimes hanged, but also executed by methods `10` and `11` (burning, and hanging in chains).  This dataset just keeps giving.  
