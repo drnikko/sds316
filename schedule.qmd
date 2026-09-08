@@ -39,10 +39,10 @@ Sprint:
 ## Extra Credit -- Technical Demonstrations
 - Show us two data visualizations using matplotlib after we've set it up
 - Walk us through opening a github pull request 
-- Explain and DOCUMENT the github fork/branch process
+- Explain the github fork/branch process
 - Demonstrate making github commits in the terminal
-- Show us how to set up python notebooks in Positrpon
-- Demonstrate 3 important terminal improvements or Positron customizations you've made
+- Show us how to set up python notebooks in Positron
+- Demonstrate 3 Quality of Life (QoL) terminal improvements or Positron customizations you've made
 - 
 
 
@@ -67,6 +67,8 @@ Examples that we might discuss:
 
 
 ## Week 1 Homework
-- By W2.C1: Read Intro & Chapter 1 of _Digitze and Punish_. Bring your book to class.
+- By W2.C1: 
+  - Read Intro & Chapter 1 of _Digitze and Punish_. Bring your book to class.
+  - Sign up for a discussion leader slot on the [assignments](assignments.qmd#leading-class-discussion) page which has a link to the [Class Leader Schedule](https://docs.google.com/spreadsheets/d/1oqzW3GjvwdGwQpR57L7JWsS9Wvx-1Sehy_xs4PBAoBo/edit?gid=0#gid=0)
 
 - By W2.C2: Install everything you need for the [tech stack](tech-stack.qmd).  Come to office hours if you're struggling. 

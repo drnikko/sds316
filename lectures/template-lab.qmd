@@ -1,0 +1,64 @@
+---
+title: "LAB TEMPLATE"
+subtitle: "Title slide text under big title"
+description: "Template for lab/tech days" # appears in the lecture notes round up
+author: "Nikko Stevens"
+topics:
+- "topic 1"
+- "topic 2"
+categories: ["lab", "template"]
+format:
+  revealjs:
+    theme: [dracula, lab.scss]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+    highlight-style: dracula  # Matches syntax highlighting to the slide theme
+    code-line-numbers: true   # Adds line numbers to code blocks
+    code-copy: true           # Adds a 1-click "Copy" button for students
+    code-overflow: wrap       # Prevents long code lines from clipping off-screen
+    preview-links: auto       # OPENS LINKS IN AN IN-SLIDE POPUP OVERLAY!
+    scrollable: true          # Allows vertical scrolling if code output is tall
+
+---
+
+## Today's Plan
+
+-   Review XY
+
+-   
+
+-   
+
+## By the end of today, you will (probably) know how to:
+
+
+
+
+
+## Reference
+
+> Blockquote
+
+## Executable Code is easy
+
+```{python}
+print("something")
+```
+
+## Visual code is easy
+```python
+# This is a comment on some python code.
+print("something")
+
+
+```
+
+## Key Takeaways
+
+1.
+2. 
+3.
+
+## Next Steps
+

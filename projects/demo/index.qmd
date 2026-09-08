@@ -4,7 +4,7 @@ author:
   - "Nikko Stevens"
 date: 2026-09-01
 description: "Demo project"
-categories: [Punishment]  
+categories: [Punishment, NAME-OF-RESEARCH-GROUP]  
 image: "images/thumbnail.webp"       
 ---
 

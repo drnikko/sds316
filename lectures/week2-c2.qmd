@@ -1,6 +1,6 @@
 ---
 title: "Week 2, Class 2"
-subtitle: "Tech Overview / Getting Started"
+subtitle: "Tech Overview / Getting Started / gitgitgit"
 description: "Walkthrough of the tech stack"
 author: "Nikko Stevens"
 topics:

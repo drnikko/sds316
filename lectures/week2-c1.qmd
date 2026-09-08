@@ -4,12 +4,12 @@ subtitle: "SDS316: Criminal Legal System Overview"
 description: "History of data in the CLS"
 author: "Nikko Stevens"
 topics:
-- "Jefferson, Intro"
-- "Jefferson, Chapter 1"
-categories: ["history"]
+- "Jefferson: Intro"
+- "Jefferson: Chapter 1"
+categories: ["seminar"]
 format:
   revealjs:
-    theme: dark          # Uses Quarto's elegant dark theme
+    theme: serif          # Uses Quarto's elegant dark theme
     slide-number: true   # Displays slide numbers in the corner
     transition: slide    # Clean slide transitions
     controls: true       # Displays navigation controls on screen
@@ -19,8 +19,7 @@ format:
 
 In this session, we will cover:
 
--   Syllabus, Class Policies, etc
--   From crime to punishment: how the criminal legal system functions
+-   From crime to punishment: how the criminal legal system functions (again)
 -   Discussion Leader Time (Nikko)
 
 ------------------------------------------------------------------------

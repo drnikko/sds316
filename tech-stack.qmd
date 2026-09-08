@@ -16,4 +16,4 @@ If you are using a Windows machine, it's also your responsibility to make sure t
 
 **Version control:** We use git for version control. You will not be able to complete class assignments, participate in in-class activities, or complete your final if you don't have git installed on your machine and if you are not comfortable using it. I teach git skills in the terminal. Check that you have git installed by running `git --version` in the terminal.
 
-**Bonus:** When you look at Nikko's terminal, you'll notice some bells and whistles that you likely don't have available. If you'd like them, you can use [Oh My Zsh](https://ohmyz.sh/) as your shell.
+**Bonus:** When you look at my terminal, you'll notice some bells and whistles that you likely don't have available. If you'd like them, you can use [Oh My Zsh](https://ohmyz.sh/) as your shell.

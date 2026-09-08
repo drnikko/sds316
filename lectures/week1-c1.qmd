@@ -4,10 +4,12 @@ subtitle: "SDS316: Criminal Legal System Overview"
 description: "Phases of the criminal legal system"
 author: "Nikko Stevens"
 topics: 
- -  "each discrete step of the CLS"
+ -  "syllabus"
+ - "how to read"
+ - "steps of the CLS"
 format:
   revealjs:
-    theme: dark          # Uses Quarto's elegant dark theme
+    theme: serif          # Uses Quarto's elegant dark theme
     slide-number: true   # Displays slide numbers in the corner
     transition: slide    # Clean slide transitions
     controls: true       # Displays navigation controls on screen
@@ -18,7 +20,13 @@ format:
 In this session, we will cover:
 
 -   Syllabus, Class Policies, etc
+-   How to do academic reading
 -   From crime to punishment: how the criminal legal system functions
+
+## How to Read
+
+
+
 
 ------------------------------------------------------------------------
 
@@ -80,6 +88,6 @@ Many people are arrested and then detained for an undetermined amount of time, *
 
 ## Checkout:
 
-On a sheet of paper, write your name and then:
+_On a sheet of paper, write your name and then:_
 
-Write FIVE questions you have about the system
+Write FIVE questions you have about how the US criminal legal system works or why it works in a particular way.
