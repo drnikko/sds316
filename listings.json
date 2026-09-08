@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/lectures.html",
+    "items": [
+      "/lectures/template-lab.html",
+      "/lectures/week2-c1.html",
+      "/lectures/week2-c2.html",
+      "/lectures/template-seminar.html",
+      "/lectures/week1-c1.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/demo/index.html",
+      "/projects/template/index.html"
+    ]
+  }
+]
