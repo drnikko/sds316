@@ -1,0 +1,93 @@
+---
+title: "Week 1, Class 1"
+subtitle: "SDS316: Criminal Legal System Overview"
+description: "Phases of the criminal legal system"
+author: "Nikko Stevens"
+topics: 
+ -  "syllabus"
+ - "how to read"
+ - "steps of the CLS"
+format:
+  revealjs:
+    theme: serif          # Uses Quarto's elegant dark theme
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: true       # Displays navigation controls on screen
+---
+
+## Today's Agenda
+
+In this session, we will cover:
+
+-   Syllabus, Class Policies, etc
+-   How to do academic reading
+-   From crime to punishment: how the criminal legal system functions
+
+## How to Read
+
+
+
+
+------------------------------------------------------------------------
+
+![https://bjs.ojp.gov/media/image/45506](images/cls-flowchart.jpg){fig-align="center"}
+
+## Step 1: Crime
+
+## What is a crime?
+
+::: incremental
+-   Anything that is against the law.
+-   Crime is a social construct
+-   A social construct: anything that we collectively agree on
+-   What used to be a crime but isn't now? / What is now a crime that wasn't before?
+:::
+
+::: notes
+1954 - Brown v Board
+
+1967 - Loving v Virginia
+
+1973 - Roe v Wade
+:::
+
+---
+## 
+---
+
+## Step 2: Investigation
+
+![](images/nancy-drew.png)
+
+## Step 3: Arrest & Booking
+
+-   Suspect arrested
+
+-   and booked (aka data-entered into system)
+
+    -   What data? How much? It depends
+
+    -   [Some jurisdictions collect DNA upon arrest](https://nij.ojp.gov/topics/articles/collecting-dna-arrestees-implementation-lessons)
+
+    -   Data is entered into criminal justice information systems ([federal record](https://www.ecfr.gov/current/title-28/chapter-I/part-20))
+
+-   You can see operations manuals for some systems - [Illinois](https://isp.illinois.gov/LawEnforcement/GetFile/316d84e4-3e12-480b-adf8-5cb162632f94) \| [New York](https://www.criminaljustice.ny.gov/crimnet/ojsa/crimereporting/ibr_refman/NYSIBR-Data-Capture-Elements-and-Specifications.pdf) \|
+
+    -   [UCR Book](https://ucrbook.com/)
+
+## Step 4: Bail or Detention
+
+Many people are arrested and then detained for an undetermined amount of time, *before* they have been convicted of a crime.
+
+[PPI - Pretrial Detention](https://www.prisonpolicy.org/research/pretrial_detention/)
+
+[How cash bail works](https://www.brennancenter.org/our-work/research-reports/how-cash-bail-works)
+
+
+
+
+## Checkout:
+
+_On a sheet of paper, write your name and then:_
+
+Write FIVE questions you have about how the US criminal legal system works or why it works in a particular way.

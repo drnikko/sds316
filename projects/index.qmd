@@ -1,0 +1,12 @@
+---
+title: "Course Projects"
+listing:
+  contents: "/*/index.qmd"  # Recursively finds all project index files
+  type: grid                         # 'grid', 'table', or 'default'
+  sort: "date desc"
+  categories: true                   # Displays interactive category filters on the right
+  sort-ui: true
+  filter-ui: true
+  fields: [image, title, author, description, categories, date]
+---
+

@@ -1,5 +1,5 @@
 
-<!--
+
 The class is broken into five "sprints," each having 5 class sessions.  Each sprint will follow roughly the same schedule, so that you always know what to expect. 
 
 Sprint:
@@ -36,8 +36,21 @@ Sprint:
 
 
 
+## Extra Credit -- Technical Demonstrations
+- Show us two data visualizations using matplotlib after we've set it up
+- Walk us through opening a github pull request 
+- Explain the github fork/branch process
+- Demonstrate making github commits in the terminal
+- Show us how to set up python notebooks in Positron
+- Demonstrate 3 Quality of Life (QoL) terminal improvements or Positron customizations you've made
+- 
 
 
+
+
+
+
+Data Science text for reading and reference: https://wesmckinney.com/book/plotting-and-visualization 
 
 (way down the line)
 
@@ -45,4 +58,17 @@ Sprint:
 
 1. ethics statement & positionality (how do we relate to ourselves and the data and ourselves via the data)
 
-p-->
+2. Possible datasets. 
+
+
+Examples that we might discuss:
+- https://www.marlo.works/posts/last-meals/ 
+- Subreddit r/dataisbeautful search for 'crime' - https://www.reddit.com/r/dataisbeautiful/search/?q=crime&cId=8425b48d-f890-4701-8214-13691b12bf04&iId=d38f4365-5c7f-4bae-9d96-176bcab85e50 
+
+
+## Week 1 Homework
+- By W2.C1: 
+  - Read Intro & Chapter 1 of _Digitze and Punish_. Bring your book to class.
+  - Sign up for a discussion leader slot on the [assignments](assignments.qmd#leading-class-discussion) page which has a link to the [Class Leader Schedule](https://docs.google.com/spreadsheets/d/1oqzW3GjvwdGwQpR57L7JWsS9Wvx-1Sehy_xs4PBAoBo/edit?gid=0#gid=0)
+
+- By W2.C2: Install everything you need for the [tech stack](tech-stack.qmd).  Come to office hours if you're struggling. 

@@ -1,0 +1,148 @@
+---
+title: Initial Questions
+author: Nikko Stevens
+execute:
+  code-fold: true
+---
+
+# Stage 2: Initial Explorations of the Dataset.
+::: callout-note
+I'm back with this same dataset. When we left off, the last query revealed racial disparities in methods of execution, along with the crime of `slave revolt.` 
+:::
+
+## About 
+(This is the same text as Stage 2.1)
+
+### Dataset
+The dataset is [Executions in the United States, 1608 - 2002: The Espy File](https://www.icpsr.umich.edu/web/NACJD/studies/8451).  It is stored in the `_data` folder, and the entire set of downloaded files from ICPSR is in the folder `ICPSR-08451`.  Below, you'll see that I'm using inscrutable column names.  They are labled in the file `projects/demo/_data/ICPSR_08451/DS0001/08451-0001-Codebook.pdf`
+
+### Research Question
+My initial research question is pretty vague -- _"Are there trends in the crimes for which people have been executed in the United States?"_ And if I'm being honest, this isn't the right question for someone with both my disciplinary background and my technical skillset/interests.  I'm more interested in how this dataset is shaped, and what I might learn from the kinds of values I'm seeing in it.  (This is a more [inductive approach](https://socialsci.libretexts.org/Bookshelves/Social_Work_and_Human_Services/Scientific_Inquiry_in_Social_Work_(DeCarlo)/06:_Linking_Methods_with_Theory/6.03:_Inductive_and_deductive_reasoning).)
+
+### Getting set up
+We've already done some exploration, so let's start with just loading the dataset up and getting ready. 
+
+```{python}
+import pandas as pd
+from pyprojroot import here # this helps us navigate tricky path stuff between local runs and quarto builds
+
+# Load the data using here() with the path from the project root
+file_path = here("projects/demo/_data/ICPSR_08451/DS0001/08451-0001-Data.tsv")
+df = pd.read_csv(file_path, sep='\t')  # Remember!! use '\t' for tab-separated (which this data is)
+```
+
+## Methods
+So when I left off in Stage 2.1, I'd discovered racial disparities in methods of execution.  Let's see if those exist across the dataset.  NOTE: I'm not making any _claims_ about anything.  I'm just asking - in the dataset, do we see disparaities?  It's really hard to make any claims about _the world_ with a dataset that spans ~400 years. 
+
+```{python}
+# Method of execution: column V11
+methods = df['V11'].value_counts().head(10)
+
+methods
+```
+
+Here are the methods, from the codebook:
+```
+0 M Do Not Know; NA
+1 Hanging
+2 Electrocution
+3 Asphyxiation-Gas
+4 Shot
+5 Injection
+6 Pressing
+8 Break on Wheel
+10 Burned
+11 Hung in Chains
+13 Bludgeoned
+14 Gibbetted
+15 Other
+```
+The popularity of 1 and 2 make sense given that hanging has been technologically available this whole time, and electrocution was introduced around 1900.  
+
+Let's expand our skillset, and our questions. How has the popularity of various methods changed over time?
+
+Documentation for techniques below
+- [crosstab](https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html)
+- [crosstab walkthrough](https://medium.com/@whyamit404/understanding-pandas-crosstab-with-simple-examples-90cf6ea5a9a1) _note: this example does use binary gender_
+
+### changes in popularity
+
+```{python}
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# 1. Ensure V14 (year) is numeric
+df['V14'] = pd.to_numeric(df['V14'], errors='coerce')
+
+# 2. Create a table where rows=years, columns=methods
+method_trends = pd.crosstab(df['V14'], df['V11'])
+
+# 3. Plot the data
+method_trends.plot(kind='line', figsize=(10, 6))
+
+# 4. Add labels to make it look nice
+plt.title('Popularity of Execution Methods Over Time')
+plt.xlabel('Year')
+plt.ylabel('Number of Executions')
+plt.legend(title='Method', bbox_to_anchor=(1.05, 1), loc='upper left') # Moves legend outside the plot
+plt.tight_layout() # Ensures everything fits in the output image
+plt.show()
+```
+
+Okay, we're cooking - we can see that execution by hanging was most popular in the late 1800s/early 1900s, and was replaced by electrocution, which itself spiked in popularity in the 1950s. 
+
+## Methods and _____
+How can we understand if there's any relationship between the method of execution and other categorical variables, like race (which emerged as a surprise at the end of Stage 2.1)?
+
+### Stacked Bar Chart
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Create the crosstab 
+# The first variable (V5) becomes the x-axis (rows), the second (V11) becomes the stacked colors (columns)
+race_method_ct = pd.crosstab(df['V5'], df['V11'])
+
+# 2. Plot it with stacked=True
+# We use a colormap like 'viridis' or 'Set2' to make the different methods distinct
+race_method_ct.plot(kind='bar', stacked=True, figsize=(10, 6), colormap='viridis')
+
+# 3. Format the chart
+plt.title('Execution Methods by Race (Raw Counts)')
+plt.xlabel('Race Code (V5)')
+plt.ylabel('Number of Executions')
+plt.legend(title='Method (V11)', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+```
+
+
+### Proportional Bar Chart
+
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Create a normalized crosstab (normalize='index' means each row adds up to 1.0)
+race_method_prop = pd.crosstab(df['V5'], df['V11'], normalize='index')
+
+# 2. Plot the stacked bar chart
+race_method_prop.plot(kind='bar', stacked=True, figsize=(10, 6), colormap='viridis')
+
+# 3. Format the chart
+plt.title('Execution Methods by Race (Proportions)')
+plt.xlabel('Race Code (V5)')
+plt.ylabel('Percentage (0.0 to 1.0)')
+plt.legend(title='Method (V11)', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+```
+
+This doesn't really tell us anything - this also makes sense.  Given the LONG coverage of this dataset. 
+
+What's NEXT ...
+
+## FIX FIX FIX
+- these plotting instances - including figuring out some customization and thinking about the VIBES around these renderings.

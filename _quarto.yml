@@ -2,16 +2,41 @@ project:
   type: website
 
 website:
-  title: "SDS316: Data of the US Criminal Legal System"
+  title: "SDS316 - Fall 2026"
   description: "Applicaiton Domain (context depth) class that focuses on understanding and working with data related to crime, policing, incarceration, detention, and other aspects of the Prison Industrial Complex (PIC) in the US"
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
+    left: # https://icons.getbootstrap.com/
+      - icon: file-earmark
+        href: syllabus.qmd
+        text: Syllabus
+      - text: Assignments
+        href: assignments.qmd
+        icon: file-earmark
+      - text: Lectures
+        href: lectures.qmd
+        icon: file-earmark
+      # Dropdown Menu for Resources
+      - text: "Resources"
+        icon: tools
+        menu:
+          - text: "Datasets"
+            href: datasets.qmd
+            icon: table
+         # - text: "---"                    # Adds a horizontal visual divider
+          - text: "Working Environment"
+            href: tech-stack.qmd
+            icon: laptop
+    right:
+      - icon: envelope
+        href: "https://docs.google.com/document/d/1PpndXanj3ffEbUn9nla2POWdhno5BHOCkrkRx4DyzTc/edit?tab=t.0#heading=h.5xdobrmir9r2"
+        aria-label: "Contact and Office Hours"
+      - icon: github
+        href: "https://github.com/drnikko/sds316"
+        aria-label: "Github"
 
 format:
   html:
-    theme: cosmo # Quarto comes with many built-in themes (bootswatch)
+    theme: pulse 
     toc: true
 
 execute:

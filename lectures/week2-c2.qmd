@@ -1,0 +1,36 @@
+---
+title: "Week 2, Class 2"
+subtitle: "Tech Overview / Getting Started / gitgitgit"
+description: "Walkthrough of the tech stack"
+author: "Nikko Stevens"
+topics:
+- "Positron"
+- "git"
+- "python"
+- "demo projects"
+categories: ["tech"]
+format:
+  revealjs:
+    theme: dark          # Uses Quarto's elegant dark theme
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: true       # Displays navigation controls on screen
+---
+
+## Today's Agenda
+
+In this session, we will cover:
+
+-   Positron
+-   Git & Github
+-   Forking
+
+------------------------------------------------------------------------
+
+
+
+
+## Checkout
+
+On a sheet of paper, write your name and then:
+

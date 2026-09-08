@@ -1,0 +1,19 @@
+---
+title: "Development Environment"
+---
+
+In order to follow along with this class (and as a customary practice in industry), it's your responsibility to make sure that your working environment matches what's below.
+
+::: callout-important
+If you are using a Windows machine, it's also your responsibility to make sure that you have a Linux/Unix terminal available to you on your machine. Windows users, it might be useful to review [the difference between a terminal, a console, and a shell](https://www.hanselman.com/blog/whats-the-difference-between-a-console-a-terminal-and-a-shell)
+:::
+
+**Development:** You'll see me write code, and do all of the work for this course in Positron. [💡 Installation Instructions](https://positron.posit.co/download.html)
+
+**Coding Language:** You can write code in any language you choose. *However*, I will only be teaching, troubleshooting, and doing demos in Python. You'll need to be running Python version 3.14.5. Check your python version with `python –-version` in the terminal. If you'd like to do your coursework in R, you may be able to get support through the [Spinelli Center](https://www.smith.edu/academics/integrative-learning/spinelli-center-quantitative-learning/tutoring-hours/about-tutoring)
+
+**Installing packages/libraries/modules:** We *never* install python libraries globally. Instead, we work within python [virtual environments](https://www.w3schools.com/python/python_virtualenv.asp). There are many modern virtual environments you can use, but I'll default to the one that comes with Python: `venv`. [💡 How venv works](https://docs.python.org/3/library/venv.html)
+
+**Version control:** We use git for version control. You will not be able to complete class assignments, participate in in-class activities, or complete your final if you don't have git installed on your machine and if you are not comfortable using it. I teach git skills in the terminal. Check that you have git installed by running `git --version` in the terminal.
+
+**Bonus:** When you look at my terminal, you'll notice some bells and whistles that you likely don't have available. If you'd like them, you can use [Oh My Zsh](https://ohmyz.sh/) as your shell.

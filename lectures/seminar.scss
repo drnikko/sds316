@@ -1,0 +1,72 @@
+/*-- scss:defaults --*/
+
+// Algorithmically generated (Gemini) SCSS modifications for more accessible & readable slides.
+
+
+// 1. Root Typography & Spacing
+$presentation-font-size-root: 36px;       // Default is 40px
+$presentation-line-height: 1.45;          
+$font-family-serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+// 2. Modern Heading Contrast
+$presentation-heading-font: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+$presentation-heading-font-weight: 600;
+$presentation-h2-font-size: 1.5em;
+
+// 3. Color Tweaks
+$body-bg: #f0f1eb;                       // Native serif warm background
+$body-color: #2b2b2b;                    // Soft dark gray
+
+/*-- scss:rules --*/
+
+// --- TITLE SLIDE FIXES ---
+.reveal #title-slide h1.title,
+.reveal .title-slide h1 {
+  font-size: 2.1em;              // Reduced from Quarto default (~2.8em)
+  line-height: 1.18;             // Tighter line spacing for wrapped titles
+  font-weight: 600;              
+  margin-bottom: 0.4em;
+  text-wrap: balance;            // Evenly distributes text across wrapped lines
+}
+
+.reveal #title-slide .subtitle,
+.reveal .title-slide .subtitle {
+  font-size: 1.25em;
+  line-height: 1.3;
+  color: lighten($body-color, 25%);
+  margin-bottom: 1em;
+}
+
+.reveal #title-slide .quarto-title-author-name,
+.reveal #title-slide .date {
+  font-size: 0.85em;
+  color: lighten($body-color, 30%);
+}
+
+// --- GENERAL SLIDE LAYOUT ---
+.reveal .slides section {
+  text-align: left;
+}
+
+// List Item Spacing
+.reveal .slide ul li, 
+.reveal .slide ol li {
+  margin-bottom: 0.5em;
+}
+
+// Subtle Heading Divider
+.reveal .slide h2 {
+  border-bottom: 1px solid lighten($body-color, 65%);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+// Blockquotes
+.reveal .slide blockquote {
+  border-left: 3px solid lighten($body-color, 40%);
+  padding-left: 1em;
+  font-style: italic;
+  color: lighten($body-color, 15%);
+  background: transparent;
+  box-shadow: none;
+}

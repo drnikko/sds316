@@ -1,0 +1,31 @@
+/*-- scss:defaults --*/
+
+$body-bg: #282a36;            // Dracula background
+$body-color: #f8f8f2;         // Crisp off-white text
+$link-color: #8be9fd;         // High-contrast cyan links
+$link-color-hover: #ff79c6;   // Pink hover state
+
+/*-- scss:rules --*/
+
+// Inline code snippets `like this`
+.reveal .slide code:not(.sourceCode) {
+  background-color: #44475a;
+  color: #ff79c6;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+// Styling class for UI screenshots
+.reveal .slide img.screenshot {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  margin-top: 0.5em;
+}
+
+// Border around full code blocks
+.reveal .slide div.sourceCode {
+  border: 1px solid #44475a;
+  border-radius: 6px;
+}
