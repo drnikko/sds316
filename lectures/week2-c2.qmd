@@ -8,7 +8,7 @@ topics:
 - "git"
 - "python"
 - "demo projects"
-categories: ["tech"]
+categories: ["lab"]
 format:
   revealjs:
     theme: dark          # Uses Quarto's elegant dark theme
