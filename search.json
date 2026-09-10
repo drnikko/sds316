@@ -91,6 +91,41 @@
     "text": "Today’s Agenda\nIn this session, we will cover:\n\nFrom crime to punishment: how the criminal legal system functions (again)\nDiscussion Leader Time (Nikko)"
   },
   {
+    "objectID": "lectures/week2-c1.html#step-1-crime",
+    "href": "lectures/week2-c1.html#step-1-crime",
+    "title": "Week 2, Class 1",
+    "section": "Step 1: Crime",
+    "text": "Step 1: Crime"
+  },
+  {
+    "objectID": "lectures/week2-c1.html#what-is-a-crime",
+    "href": "lectures/week2-c1.html#what-is-a-crime",
+    "title": "Week 2, Class 1",
+    "section": "What is a crime?",
+    "text": "What is a crime?\n\nAnything that is against the law.\nCrime is a social construct\nA social construct: anything that we collectively agree on\nWhat used to be a crime but isn’t now? / What is now a crime that wasn’t before?\n\n1954 - Brown v Board\n1967 - Loving v Virginia\n1973 - Roe v Wade"
+  },
+  {
+    "objectID": "lectures/week2-c1.html#step-2-investigation",
+    "href": "lectures/week2-c1.html#step-2-investigation",
+    "title": "Week 2, Class 1",
+    "section": "Step 2: Investigation",
+    "text": "Step 2: Investigation"
+  },
+  {
+    "objectID": "lectures/week2-c1.html#step-3-arrest-booking",
+    "href": "lectures/week2-c1.html#step-3-arrest-booking",
+    "title": "Week 2, Class 1",
+    "section": "Step 3: Arrest & Booking",
+    "text": "Step 3: Arrest & Booking\n\nSuspect arrested\nand booked (aka data-entered into system)\n\nWhat data? How much? It depends\nSome jurisdictions collect DNA upon arrest\nData is entered into criminal justice information systems (federal record)\n\nYou can see operations manuals for some systems\nIllinois\nNew York\n\nUCR Book"
+  },
+  {
+    "objectID": "lectures/week2-c1.html#step-4-bail-or-detention",
+    "href": "lectures/week2-c1.html#step-4-bail-or-detention",
+    "title": "Week 2, Class 1",
+    "section": "Step 4: Bail or Detention",
+    "text": "Step 4: Bail or Detention\nMany people are arrested and then detained for an undetermined amount of time, before they have been convicted of a crime.\nPPI - Pretrial Detention\nHow cash bail works"
+  },
+  {
     "objectID": "lectures/week2-c1.html#checkout",
     "href": "lectures/week2-c1.html#checkout",
     "title": "Week 2, Class 1",
@@ -158,7 +193,7 @@
     "href": "lectures.html",
     "title": "Course Lectures",
     "section": "",
-    "text": "Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered. You can view the slideshow (including any speaker notes), or head over to the repo and browse the source itself. If we paused the lecture to take notes on something in the middle, you’ll find those notes randomly in the slideshow wherever that happened.\nIf the class hasn’t happened yet, no need to review it - there’s probably nothing there!\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nDescription\n\n\n\ntopics\n\n\n\n\n\n\n\n\nLAB TEMPLATE\n\n\nTemplate for lab/tech days\n\n\ntopic 1, topic 2\n\n\n\n\n\n\nWeek 2, Class 1\n\n\nHistory of data in the CLS\n\n\nJefferson: Intro, Jefferson: Chapter 1\n\n\n\n\n\n\nWeek 2, Class 2\n\n\nWalkthrough of the tech stack\n\n\nPositron, git, python, demo projects\n\n\n\n\n\n\nSEMINAR TEMPLATE\n\n\nLecture template for seminar days\n\n\nTopic 1, Topic 2\n\n\n\n\n\n\nWeek 1, Class 1\n\n\nPhases of the criminal legal system\n\n\nsyllabus, how to read, steps of the CLS\n\n\n\n\n\n\nNo matching items"
+    "text": "Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered. You can view the slideshow (including any speaker notes), or head over to the repo and browse the source itself. If we paused the lecture to take notes on something in the middle, you’ll find those notes randomly in the slideshow wherever that happened.\nIf the class hasn’t happened yet, no need to review it - it’s available in the repo so that students can put their slides in early.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nDescription\n\n\n\ntopics\n\n\n\n\n\n\n\n\nWeek 2, Class 1\n\n\nHistory of data in the CLS\n\n\nJohnson - 2 regimes, UCR reports\n\n\n\n\n\n\nWeek 2, Class 2\n\n\nWalkthrough of the tech stack\n\n\nPositron, git, python, demo projects\n\n\n\n\n\n\nWeek 1, Class 1\n\n\nPhases of the criminal legal system\n\n\nsyllabus, how to read, steps of the CLS\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/index.html",
@@ -224,6 +259,34 @@
     "text": "Lorem Ipsum"
   },
   {
+    "objectID": "examples.html",
+    "href": "examples.html",
+    "title": "Examples",
+    "section": "",
+    "text": "Pudding.cool is a good starting point to see examples of storytelling with data.\nr/dataisbeautful has a ton of examples of data visualization and data storytelling"
+  },
+  {
+    "objectID": "examples.html#general-examples",
+    "href": "examples.html#general-examples",
+    "title": "Examples",
+    "section": "General examples",
+    "text": "General examples\nMany of these are “scrolly telling” sites, where components move as you scroll. We won’t be building anything quite so complicated, but pay attention to what you like about these!\n\nA text analysis of last meals\nCharts and data stories from Vital NYC\nMurky Waters: Navigating the risks of China’s Dual-use Shipyards The tiers are handled especially well!\nPudding: The size of pockets\nPudding: Who is in crosswords\nPudding: birthday death effect (we will likely discuss this one in class)\nSelfie City\nThe Washington Post on Solar Eclipses"
+  },
+  {
+    "objectID": "examples.html#maps",
+    "href": "examples.html#maps",
+    "title": "Examples",
+    "section": "Maps",
+    "text": "Maps\n\nHow the US generates electricity\nDisease related deaths\nEvery prison in the US"
+  },
+  {
+    "objectID": "tech-stack.html",
+    "href": "tech-stack.html",
+    "title": "Development Environment",
+    "section": "",
+    "text": "In order to follow along with this class (and as a customary practice in industry), it’s your responsibility to make sure that your working environment matches what’s below.\n\n\n\n\n\n\nImportant\n\n\n\nIf you are using a Windows machine, it’s also your responsibility to make sure that you have a Linux/Unix terminal available to you on your machine. Windows users, it might be useful to review the difference between a terminal, a console, and a shell\n\n\nDevelopment: You’ll see me write code, and do all of the work for this course in Positron. 💡 Installation Instructions\nCoding Language: You can write code in any language you choose. However, I will only be teaching, troubleshooting, and doing demos in Python. You’ll need to be running Python version 3.14.5. Check your python version with python –-version in the terminal. If you’d like to do your coursework in R, you may be able to get support through the Spinelli Center\nInstalling packages/libraries/modules: We never install python libraries globally. Instead, we work within python virtual environments. There are many modern virtual environments you can use, but I’ll default to the one that comes with Python: venv. 💡 How venv works\nVersion control: We use git for version control. You will not be able to complete class assignments, participate in in-class activities, or complete your final if you don’t have git installed on your machine and if you are not comfortable using it. I teach git skills in the terminal. Check that you have git installed by running git --version in the terminal.\nBonus: When you look at my terminal, you’ll notice some bells and whistles that you likely don’t have available. If you’d like them, you can use Oh My Zsh as your shell."
+  },
+  {
     "objectID": "assignments.html",
     "href": "assignments.html",
     "title": "Assignments",
@@ -235,7 +298,7 @@
     "href": "assignments.html#in-class-work",
     "title": "Assignments",
     "section": "In class work",
-    "text": "In class work\n\nClass summary sheets\n\nWhy we do it\nReflecting on the material is an important part of working in an application domain. These give you practice responding to ethical/domain-specific questions in the same way you will be asked to do so in your data science career.\n\n\nWhat it is\nClass summary sheets are handouts that you drop into the box at the end of some classes answering a question related to that day’s lecture or an aspect of the reading. Some students do not do well speaking in class, others prefer speaking to writing. These sheets give some students a chance to communicate in their strongest medium, and others the opportunity to strenghten their impromptu written communication skills.\n\n\nHow it’s graded\nThese are graded credit/no credit and cannot be made up if you are absent from class. The only way to get no credit for a sheet that you filled out is if you obviously did not do the reading and obviously are writing answers that are completely irrelevant.\nWe will have ~25 class meetings this semester, and will only do these on the 12 or 13 seminar days. Full credit for this section is 10 sheets.\n\n\n\nSkills review\n\nWhy we do it\nA data science or computer science career is one in which you’ll be constantly learning new things and explaining them to other members of your team. This gives you a safe way to practice this skill.\n\n\nWhat it is\nYou’ll come to the front of the class and lead us through about a 7-10 minute review of a predetermined skill that we’ve covered previously.\n\n\nHow it’s graded\nThese are graded credit/no credit and cannot be made up if you are absent from class. The only way to get no credit is if you obviously did not prepare.\nWe will have ~25 class meetings this semester, and will only do these on the 12 or 13 lab days. Full credit for this is 1 presentation. Depending on the class size, these may be done in pairs, or we may do more than one each lab class.\nSign up and remember - you are responsible for switching with another student if you cannot make the date you signed up for."
+    "text": "In class work\n\nClass summary sheets / Exit tickets\n\nWhy we do it\nReflecting on the material is an important part of working in an application domain. These give you practice responding to ethical/domain-specific questions in the same way you will be asked to do so in your data science career.\n\n\nWhat it is\nClass summary sheets are handouts that you turn in at the end of some classes answering a question related to that day’s lecture or an aspect of the reading. Some students do not do well speaking in class, others prefer speaking to writing. These sheets give some students a chance to communicate in their strongest medium, and others the opportunity to strenghten their impromptu written communication skills.\n\n\nHow it’s graded\nThese are graded credit/no credit and cannot be made up if you are absent from class. The only way to get no credit for a sheet that you filled out is if you obviously did not do the reading and obviously are writing answers that are completely irrelevant.\nWe will have ~25 class meetings this semester, and will only do these on the 12 or 13 seminar days. Full credit for this section is 10 sheets.\n\n\n\nSkills review\n\nWhy we do it\nA data science or computer science career is one in which you’ll be constantly learning new things and explaining them to other members of your team. This gives you a safe way to practice this skill.\n\n\nWhat it is\nYou’ll come to the front of the class and lead us through about a 7-10 minute review of a predetermined skill that we’ve covered previously.\n\n\nHow it’s graded\nThese are graded credit/no credit and cannot be made up if you are absent from class. The only way to get no credit is if you obviously did not prepare.\nWe will have ~25 class meetings this semester, and will only do these on the 12 or 13 lab days. Full credit for this is 1 presentation. Depending on the class size, these may be done in pairs, or we may do more than one each lab class.\nSign up and remember - you are responsible for switching with another student if you cannot make the date you signed up for."
   },
   {
     "objectID": "assignments.html#leading-class-discussion",
@@ -263,14 +326,7 @@
     "href": "assignments.html#submitting-work",
     "title": "Assignments",
     "section": "⚠️ Submitting Work",
-    "text": "⚠️ Submitting Work\nWith a few exceptions, 100% of your class work will be performed in a fork of this repository. &lt;💡How to fork&gt;\nIn order for your work to be complete and accepted,\n\nyou will do all of your work in a descriptively and appropriately named branch that includes your name. For example, if I were going to make a branch to add to the week’s discussion slides, I might name it stevens-w2-slides. A branch for my first project deliverable might be called nikko-project-deliverable. I’m not setting hard-and-fast rules about what you should call the branch, only that you keep in mind that there are many people making many branches and there has to be a way to identify what a branch is for based ONLY on the name of it.\nyou will open a pull request (PR) with just the changes you’re trying to merge in &lt;💡how to open a PR&gt;\nthat PR will build successfully\nyou will make any necessary changes requested by your peers (when a review is required) and to ensure the build succeeds\nyou update the PR with those changes\nI will then merge the PR into the main branch and delete your branch and the cycle will begin again!"
-  },
-  {
-    "objectID": "tech-stack.html",
-    "href": "tech-stack.html",
-    "title": "Development Environment",
-    "section": "",
-    "text": "In order to follow along with this class (and as a customary practice in industry), it’s your responsibility to make sure that your working environment matches what’s below.\n\n\n\n\n\n\nImportant\n\n\n\nIf you are using a Windows machine, it’s also your responsibility to make sure that you have a Linux/Unix terminal available to you on your machine. Windows users, it might be useful to review the difference between a terminal, a console, and a shell\n\n\nDevelopment: You’ll see me write code, and do all of the work for this course in Positron. 💡 Installation Instructions\nCoding Language: You can write code in any language you choose. However, I will only be teaching, troubleshooting, and doing demos in Python. You’ll need to be running Python version 3.14.5. Check your python version with python –-version in the terminal. If you’d like to do your coursework in R, you may be able to get support through the Spinelli Center\nInstalling packages/libraries/modules: We never install python libraries globally. Instead, we work within python virtual environments. There are many modern virtual environments you can use, but I’ll default to the one that comes with Python: venv. 💡 How venv works\nVersion control: We use git for version control. You will not be able to complete class assignments, participate in in-class activities, or complete your final if you don’t have git installed on your machine and if you are not comfortable using it. I teach git skills in the terminal. Check that you have git installed by running git --version in the terminal.\nBonus: When you look at my terminal, you’ll notice some bells and whistles that you likely don’t have available. If you’d like them, you can use Oh My Zsh as your shell."
+    "text": "⚠️ Submitting Work\nWith a few exceptions, 100% of your class work will be performed in a fork of this repository and then submitted via a pull request. &lt;💡How to fork&gt;\nIn order for your work to be complete and accepted,\n\nyou will do all of your work in a descriptively and appropriately named branch that includes your name. For example, if I were going to make a branch to add to the week’s discussion slides, I might name it stevens-w2-slides. A branch for my first project deliverable might be called nikko-project-deliverable. I’m not setting hard-and-fast rules about what you should call the branch, only that you keep in mind that there are many people making many branches and there has to be a way to identify what a branch is for based ONLY on the name of it.\nyou will open a pull request (PR) with just the changes you’re trying to merge in &lt;💡how to open a PR&gt;\nthat PR will build successfully\nyou will make any necessary changes requested by your peers (when a review is required) and to ensure the build succeeds\nyou update the PR with those changes\nI will then merge the PR into the main branch and delete your branch and the cycle will begin again!"
   },
   {
     "objectID": "projects/demo/stage2.2.html",
@@ -487,55 +543,34 @@
     "href": "lectures/week1-c1.html#todays-agenda",
     "title": "Week 1, Class 1",
     "section": "Today’s Agenda",
-    "text": "Today’s Agenda\nIn this session, we will cover:\n\nSyllabus, Class Policies, etc\nHow to do academic reading\nFrom crime to punishment: how the criminal legal system functions"
+    "text": "Today’s Agenda\n\nIntros\nSyllabus, Class Policies, etc\nSequence of events\nPIC"
   },
   {
-    "objectID": "lectures/week1-c1.html#how-to-read",
-    "href": "lectures/week1-c1.html#how-to-read",
+    "objectID": "lectures/week1-c1.html#your-turn",
+    "href": "lectures/week1-c1.html#your-turn",
     "title": "Week 1, Class 1",
-    "section": "How to Read",
-    "text": "How to Read\nExamples that we might discuss: - https://www.marlo.works/posts/last-meals/ - Subreddit r/dataisbeautful search for ‘crime’ - https://www.reddit.com/r/dataisbeautiful/search/?q=crime&cId=8425b48d-f890-4701-8214-13691b12bf04&iId=d38f4365-5c7f-4bae-9d96-176bcab85e50"
+    "section": "Your Turn",
+    "text": "Your Turn\n\nName, pronouns (if you want), class year\nWhere do you consider yourself from?\nIf time travel or teleportation were possible, where/when would you go?"
   },
   {
-    "objectID": "lectures/week1-c1.html#step-1-crime",
-    "href": "lectures/week1-c1.html#step-1-crime",
+    "objectID": "lectures/week1-c1.html#bjs-flow",
+    "href": "lectures/week1-c1.html#bjs-flow",
     "title": "Week 1, Class 1",
-    "section": "Step 1: Crime",
-    "text": "Step 1: Crime"
+    "section": "BJS flow",
+    "text": "BJS flow\n\nhttps://bjs.ojp.gov/media/image/45506"
   },
   {
-    "objectID": "lectures/week1-c1.html#what-is-a-crime",
-    "href": "lectures/week1-c1.html#what-is-a-crime",
+    "objectID": "lectures/week1-c1.html#on-sticky-notes",
+    "href": "lectures/week1-c1.html#on-sticky-notes",
     "title": "Week 1, Class 1",
-    "section": "What is a crime?",
-    "text": "What is a crime?\n\nAnything that is against the law.\nCrime is a social construct\nA social construct: anything that we collectively agree on\nWhat used to be a crime but isn’t now? / What is now a crime that wasn’t before?\n\n\n1954 - Brown v Board\n1967 - Loving v Virginia\n1973 - Roe v Wade"
-  },
-  {
-    "objectID": "lectures/week1-c1.html#step-2-investigation",
-    "href": "lectures/week1-c1.html#step-2-investigation",
-    "title": "Week 1, Class 1",
-    "section": "Step 2: Investigation",
-    "text": "Step 2: Investigation"
-  },
-  {
-    "objectID": "lectures/week1-c1.html#step-3-arrest-booking",
-    "href": "lectures/week1-c1.html#step-3-arrest-booking",
-    "title": "Week 1, Class 1",
-    "section": "Step 3: Arrest & Booking",
-    "text": "Step 3: Arrest & Booking\n\nSuspect arrested\nand booked (aka data-entered into system)\n\nWhat data? How much? It depends\nSome jurisdictions collect DNA upon arrest\nData is entered into criminal justice information systems (federal record)\n\nYou can see operations manuals for some systems - Illinois | New York |\n\nUCR Book"
-  },
-  {
-    "objectID": "lectures/week1-c1.html#step-4-bail-or-detention",
-    "href": "lectures/week1-c1.html#step-4-bail-or-detention",
-    "title": "Week 1, Class 1",
-    "section": "Step 4: Bail or Detention",
-    "text": "Step 4: Bail or Detention\nMany people are arrested and then detained for an undetermined amount of time, before they have been convicted of a crime.\nPPI - Pretrial Detention\nHow cash bail works"
+    "section": "On sticky notes",
+    "text": "On sticky notes\nWrite ONE question or idea per sticky note and put it roughly in the section where you think it fits."
   },
   {
     "objectID": "lectures/week1-c1.html#checkout",
     "href": "lectures/week1-c1.html#checkout",
     "title": "Week 1, Class 1",
     "section": "Checkout:",
-    "text": "Checkout:\nOn a sheet of paper, write your name and then:\nWrite FIVE questions you have about how the US criminal legal system works or why it works in a particular way."
+    "text": "Checkout:\nOn a sheet of paper, write your name and then:\nWrite FIVE questions you have about how the US criminal legal system works, why it works in a particular way, or what you’re interested in studying."
   }
 ]
