@@ -1,0 +1,27 @@
+---
+title: Examples
+---
+
+
+
+[Pudding.cool](http://pudding.cool) is a good starting point to see examples of storytelling with data.  
+[r/dataisbeautful](https://www.reddit.com/r/dataisbeautiful) has a ton of examples of data visualization and data storytelling
+
+## General examples
+Many of these are "scrolly telling" sites, where components move as you scroll.  We won't be building anything quite so complicated, but pay attention to what you like about these!
+
+- [A text analysis of last meals](https://www.marlo.works/posts/last-meals/)
+- [Charts and data stories from Vital NYC](https://www.vitalcitynyc.org/data/)
+- [Murky Waters: Navigating the risks of China's Dual-use Shipyards](https://features.csis.org/hiddenreach/china-shipyard-tiers/) *The tiers are handled especially well!*
+- [Pudding: The size of pockets](https://pudding.cool/2018/08/pockets/)
+- [Pudding: Who is in crosswords](https://pudding.cool/2020/11/crossword/)
+- [Pudding: birthday death effect](https://pudding.cool/2025/04/birthday-effect/) (we will likely discuss this one in class)
+- [Selfie City](https://selfiecity.net/)
+- [The Washington Post on Solar Eclipses](https://www.washingtonpost.com/graphics/national/eclipse/)
+
+
+
+## Maps
+- [ How the US generates electricity](https://www.carbonbrief.org/mapped-how-the-us-generates-electricity)
+- [Disease related deaths](https://public.tableau.com/app/profile/josh.tapley/viz/DiseaseRelatedDeaths/CountyMap)
+- [Every prison in the US](https://unfoundedlabs.com/maps/prison/)

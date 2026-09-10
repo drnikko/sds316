@@ -7,9 +7,9 @@ listing:
   fields: [title, description, topics] # Customizes display columns
   categories: true
   exclude:
-    category: "template"
+    categories: "template"
 ---
 
-Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered.  You can view the slideshow (including any speaker notes), or head over to the repo and browse the source itself.  If we paused the lecture to take notes on something in the middle, you'll find those notes randomly in the slideshow wherever that happened. 
+Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered.  You can view the slideshow (including any speaker notes), or head over to [the repo](https://github.com/drnikko/sds316) and browse the source itself.  If we paused the lecture to take notes on something in the middle, you'll find those notes randomly in the slideshow wherever that happened. 
 
-(If the class hasn't happened yet, no need to review it - there's probably nothing there!)
+If the class hasn't happened yet, no need to review it - it's available in the repo so that students can put their slides in early.

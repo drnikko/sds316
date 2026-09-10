@@ -1,4 +1,5 @@
 ---
 title: "Homepage"
 ---
-Adding placeholder text here.
+
+![([source](https://www.explainxkcd.com/wiki/index.php/2582:_Data_Trap))](images/paste-1.png)

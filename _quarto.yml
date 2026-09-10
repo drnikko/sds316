@@ -26,6 +26,9 @@ website:
           - text: "Working Environment"
             href: tech-stack.qmd
             icon: laptop
+          - text: "Examples"
+            href: examples.qmd
+            icon: bar-chart-steps
     right:
       - icon: envelope
         href: "https://docs.google.com/document/d/1PpndXanj3ffEbUn9nla2POWdhno5BHOCkrkRx4DyzTc/edit?tab=t.0#heading=h.5xdobrmir9r2"

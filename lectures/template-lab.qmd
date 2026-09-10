@@ -60,5 +60,9 @@ print("something")
 2. 
 3.
 
+## Next week's skill review 
+- TOPIC
+- PRESENTER
+
 ## Next Steps
 

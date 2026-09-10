@@ -28,7 +28,7 @@ format:
 
 <!-- Discussion Leader: Add your slides here -->
 
-<!-- Don't forget to PREVIEW the slide show to make sure your changes look how you want them to! -->
+<!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
 
 ## Each new slide starts with an H2 tag like this
 
