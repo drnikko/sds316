@@ -35,32 +35,25 @@
     "text": "Today’s Agenda"
   },
   {
-    "objectID": "lectures/template-seminar.html#discussion",
-    "href": "lectures/template-seminar.html#discussion",
+    "objectID": "lectures/template-seminar.html#new-slides-start-with-h2-tags",
+    "href": "lectures/template-seminar.html#new-slides-start-with-h2-tags",
     "title": "SEMINAR TEMPLATE",
-    "section": "Discussion",
-    "text": "Discussion"
+    "section": "New slides start with H2 tags",
+    "text": "New slides start with H2 tags\nCreate 1 slide with\nA link to a piece of inside-written (or other authors who are system-impacted) journalism or reporting about something related to the reading, the coursework, or your particular research project. We do this because it’s important to listen to people who have directly experienced the criminal legal system.\nA link to a current news article related to the topic.\n1 - 2 sentences about how these are related to the day’s topics"
   },
   {
-    "objectID": "lectures/template-seminar.html#each-new-slide-starts-with-an-h2-tag-like-this",
-    "href": "lectures/template-seminar.html#each-new-slide-starts-with-an-h2-tag-like-this",
+    "objectID": "lectures/template-seminar.html#reading",
+    "href": "lectures/template-seminar.html#reading",
     "title": "SEMINAR TEMPLATE",
-    "section": "Each new slide starts with an H2 tag like this",
-    "text": "Each new slide starts with an H2 tag like this"
+    "section": "Reading",
+    "text": "Reading\nCreate 2 slides with an overview of the main points of the reading. ## Main Points"
   },
   {
-    "objectID": "lectures/template-seminar.html#heres-another-new-slide-for-you",
-    "href": "lectures/template-seminar.html#heres-another-new-slide-for-you",
+    "objectID": "lectures/template-seminar.html#questions",
+    "href": "lectures/template-seminar.html#questions",
     "title": "SEMINAR TEMPLATE",
-    "section": "Here’s another new slide for you",
-    "text": "Here’s another new slide for you"
-  },
-  {
-    "objectID": "lectures/template-seminar.html#and-a-third",
-    "href": "lectures/template-seminar.html#and-a-third",
-    "title": "SEMINAR TEMPLATE",
-    "section": "And a third",
-    "text": "And a third\nUnderneath, you can use regular markdown formatting. Browse the other lecture slides if you need to see examples, or consult the documentation"
+    "section": "Questions?",
+    "text": "Questions?\nCreate 1 slide with discussion questions.\nGood questions are: - open ended and not answerable with facts - contain any necessary context (e.g. a quote, or a page number)"
   },
   {
     "objectID": "lectures/template-seminar.html#key-takeaways",
@@ -88,14 +81,14 @@
     "href": "lectures/week2-c1.html#todays-agenda",
     "title": "Week 2, Class 1",
     "section": "Today’s Agenda",
-    "text": "Today’s Agenda\nIn this session, we will cover:\n\nFrom crime to punishment: how the criminal legal system functions (again)\nDiscussion Leader Time (Nikko)"
+    "text": "Today’s Agenda\nIn this session, we will cover:\n\nCrime data!\nJohnson - 2 regimes\nDiscussion Leader Time (Nikko)"
   },
   {
-    "objectID": "lectures/week2-c1.html#step-1-crime",
-    "href": "lectures/week2-c1.html#step-1-crime",
+    "objectID": "lectures/week2-c1.html#crime",
+    "href": "lectures/week2-c1.html#crime",
     "title": "Week 2, Class 1",
-    "section": "Step 1: Crime",
-    "text": "Step 1: Crime"
+    "section": "Crime",
+    "text": "Crime"
   },
   {
     "objectID": "lectures/week2-c1.html#what-is-a-crime",
@@ -105,32 +98,60 @@
     "text": "What is a crime?\n\nAnything that is against the law.\nCrime is a social construct\nA social construct: anything that we collectively agree on\nWhat used to be a crime but isn’t now? / What is now a crime that wasn’t before?\n\n1954 - Brown v Board\n1967 - Loving v Virginia\n1973 - Roe v Wade"
   },
   {
-    "objectID": "lectures/week2-c1.html#step-2-investigation",
-    "href": "lectures/week2-c1.html#step-2-investigation",
+    "objectID": "lectures/week2-c1.html#when-someone-is-arrested-for-a-crime",
+    "href": "lectures/week2-c1.html#when-someone-is-arrested-for-a-crime",
     "title": "Week 2, Class 1",
-    "section": "Step 2: Investigation",
-    "text": "Step 2: Investigation"
+    "section": "When someone is arrested for a crime",
+    "text": "When someone is arrested for a crime\n\nSome jurisdictions collect DNA upon arrest\nData is entered into criminal justice information systems (federal record)\nYou can see operations manuals for some systems\nIllinois\nNew York\nUCR Book"
   },
   {
-    "objectID": "lectures/week2-c1.html#step-3-arrest-booking",
-    "href": "lectures/week2-c1.html#step-3-arrest-booking",
+    "objectID": "lectures/week2-c1.html#links",
+    "href": "lectures/week2-c1.html#links",
     "title": "Week 2, Class 1",
-    "section": "Step 3: Arrest & Booking",
-    "text": "Step 3: Arrest & Booking\n\nSuspect arrested\nand booked (aka data-entered into system)\n\nWhat data? How much? It depends\nSome jurisdictions collect DNA upon arrest\nData is entered into criminal justice information systems (federal record)\n\nYou can see operations manuals for some systems\nIllinois\nNew York\n\nUCR Book"
+    "section": "Links",
+    "text": "Links\nThe Angolite’s study of longest-serving inmates\nSome prisons are using biometrics to track & monitor incarcerated people\nData collected by incarcerated people (eg The Angolite) consistently tells a different story than data collected by those on the outside. (more about The Angolite)"
   },
   {
-    "objectID": "lectures/week2-c1.html#step-4-bail-or-detention",
-    "href": "lectures/week2-c1.html#step-4-bail-or-detention",
+    "objectID": "lectures/week2-c1.html#section",
+    "href": "lectures/week2-c1.html#section",
     "title": "Week 2, Class 1",
-    "section": "Step 4: Bail or Detention",
-    "text": "Step 4: Bail or Detention\nMany people are arrested and then detained for an undetermined amount of time, before they have been convicted of a crime.\nPPI - Pretrial Detention\nHow cash bail works"
+    "section": "",
+    "text": "(screenshot from Johnson article)"
+  },
+  {
+    "objectID": "lectures/week2-c1.html#section-1",
+    "href": "lectures/week2-c1.html#section-1",
+    "title": "Week 2, Class 1",
+    "section": "",
+    "text": "“State prison data is primarily concerned with counting and painting a picture of who occupies a system; what they did, what they look like, and what are some select individual behaviors. It rests on an assumption that everything is best known from afar —especially by those who receive training from Western universities, whose job it is to produce ‘valid’ knowledge (Mignolo, 2011), whereas community data collection grapples with the experience of living within the prison, the conditions that are faced, institutional failures, and the ripple effect of prisons on the wider community” (Johnson, 2021, p. 2) (pdf)"
+  },
+  {
+    "objectID": "lectures/week2-c1.html#section-2",
+    "href": "lectures/week2-c1.html#section-2",
+    "title": "Week 2, Class 1",
+    "section": "",
+    "text": "“What might our research, policies, and understanding of the world look like if we move from a belief that the trajectory of a person’s life after prison is not determined by the years of formal education they have received, but whether they lived for years in a system that did not give them access to direct sunlight?” (Johnson, 2021, p. 11) (pdf)"
+  },
+  {
+    "objectID": "lectures/week2-c1.html#questions",
+    "href": "lectures/week2-c1.html#questions",
+    "title": "Week 2, Class 1",
+    "section": "Questions?",
+    "text": "Questions?\n\nWhy do you think some questions are consisent across censuses? what impact do you think the proposed changes might have?\nHow does Johnson frame the differences between the Angolite/National Campaign to Stop Control Unit Prisons surveys and the state-run surveys?\nHow do you understand the National Acadamies meetings & reports now that you’ve read the Johnson piece? aka - how do we think about crime statistics?"
+  },
+  {
+    "objectID": "lectures/week2-c1.html#exercise",
+    "href": "lectures/week2-c1.html#exercise",
+    "title": "Week 2, Class 1",
+    "section": "Exercise",
+    "text": "Exercise\nSkim this 19th article about a new HHS study."
   },
   {
     "objectID": "lectures/week2-c1.html#checkout",
     "href": "lectures/week2-c1.html#checkout",
     "title": "Week 2, Class 1",
     "section": "Checkout",
-    "text": "Checkout\nOn a sheet of paper, write your name and then:"
+    "text": "Checkout\nOn a sheet of paper, write your name and then…"
   },
   {
     "objectID": "syllabus.html",
@@ -326,7 +347,7 @@
     "href": "assignments.html#leading-class-discussion",
     "title": "Assignments",
     "section": "Leading class discussion",
-    "text": "Leading class discussion\n\nWhy we do it\nThis assignment gives you the opportunity to practice a few important skills: communicating summary information, asking questions about new/complex material, speaking in public (😬), and moderating and facilitating conversations about complex subjects.\n\n\n\n\n\n\nImportant\n\n\n\nYou are responsible for signing yourself up to be a class leader. If you cannot attend class that day, you are responsible for switching with another student. Class Leader Schedule\n\n\n\n\nWhat it is\nLeading class discussion involves preparing materials about the day’s topic, summarizing the reading, and then leading class through ~15 minutes of discussion.\nWhen it’s your day to lead, you’ll need to create a branch and make edits to the day’s lecture slides before class. The lecture files are markdown in the lectures folder. You’ll find the appropriate file (week number, class number (for example the Class 1 of Week 2 week2-c1.qmd) . You’ll know where to add your slides by reading the code and finding the comment:\n&lt;!-- Discussion Leader: Add your slides here --&gt;\nWhen it’s your turn to lead discussion, you will make these edits:\n\nCreate 1 slide with\n\nA link to a piece of inside-written (or other authors who are system-impacted) journalism or reporting about something related to the reading, the coursework, or your particular research project. We do this because it’s important to listen to people who have directly experienced the criminal legal system.\nA link to a current news article related to the topic.\n1 - 2 sentences about how these are related to the day’s topics\n\nCreate 2 slides with an overview of the main points of the reading.\nCreate 1 slide with discussion questions. Here’s a popular guide for how to ask good discussion questions.\nOpen a pull request containing JUST these 4 slides (and any associated images that you require which should be stored in lectures/images) and assign it to me by twelve pm the day of the class. Note that the PR must pass all tests, so try not to put it off until the last minute in case tests fail!\n\nif you open a PR with failing tests and don’t fix it yourself, I will fix it and merge before class but/and that will impact your grade on that portion of the assignment\n\n\nDuring class:\n\nAt a certain point (likely different in each class), you’ll come to the front of the room and spend 7-10 minutes discussing the links you found and giving us an overview of the reading.\nThen, you’ll have 13-15 minutes to lead discussion with your peers. I won’t participate unless called on. :)\n\n\n\nHow its Graded\nThese are graded credit/no credit for each of 7 components:\n\nfour complete slides (each credit/no credit)\nPR open and building (no credit for an open PR that fails to build - so remember to start early!)\npresented slides for 7-10 minutes\nfacilitated discussion for 13-15 minutes\n\nSign up and remember - you are responsible for switching with another student if you cannot make the date you signed up for."
+    "text": "Leading class discussion\n\nWhy we do it\nThis assignment gives you the opportunity to practice a few important skills: communicating summary information, asking questions about new/complex material, speaking in public (😬), and moderating and facilitating conversations about complex subjects.\n\n\n\n\n\n\nImportant\n\n\n\nYou are responsible for signing yourself up to be a class leader. If you cannot attend class that day, you are responsible for switching with another student. Class Leader Schedule\n\n\n\n\nWhat it is\nLeading class discussion involves preparing materials about the day’s topic, summarizing the reading, and then leading class through ~15 minutes of discussion.\nWhen it’s your day to lead, you’ll need to create a branch and make edits to the day’s lecture slides before class. The lecture files are markdown in the lectures folder. You’ll find the appropriate file (week number, class number (for example the Class 1 of Week 2 week2-c1.qmd) . You’ll know where to add your slides by reading the code and finding the comment:\n&lt;!-- Discussion Leader: Add your slides here --&gt;\nWhen it’s your turn to lead discussion, you will make these edits:\n\nCreate 1 slide with\n\nA link to a piece of inside-written (or other authors who are system-impacted) journalism or reporting about something related to the reading, the coursework, or your particular research project. We do this because it’s important to listen to people who have directly experienced the criminal legal system.\n\nIf you’re not sure where to start, try Prison Journalism Project, Prison Writers, The Freedom Archive, American Prison Writing Archive, or works by authors like those associated with the Incarcerated Writers Bureau,\n\nA link to a current news article related to the topic.\n1 - 2 sentences about how these are related to the day’s topics\n\nCreate 2 slides with an overview of the main points of the reading.\nCreate 1 slide with discussion questions. Here’s a popular guide for how to ask good discussion questions.\nOpen a pull request containing JUST these 4 slides (and any associated images that you require which should be stored in lectures/images) and assign it to me by twelve pm the day of the class. Note that the PR must pass all tests, so try not to put it off until the last minute in case tests fail!\n\nif you open a PR with failing tests and don’t fix it yourself, I will fix it and merge before class but/and that will impact your grade on that portion of the assignment\n\n\nDuring class:\n\nAt a certain point (likely different in each class), you’ll come to the front of the room and spend 7-10 minutes discussing the links you found and giving us an overview of the reading.\nThen, you’ll have 13-15 minutes to lead discussion with your peers. I won’t participate unless called on. :)\n\n\n\nHow its Graded\nThese are graded credit/no credit for each of 7 components:\n\nfour complete slides (each credit/no credit)\nPR open and building (no credit for an open PR that fails to build - so remember to start early!)\npresented slides for 7-10 minutes\nfacilitated discussion for 13-15 minutes\n\nSign up and remember - you are responsible for switching with another student if you cannot make the date you signed up for."
   },
   {
     "objectID": "assignments.html#midterm-and-final-evaluations",
