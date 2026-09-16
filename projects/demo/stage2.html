@@ -142,11 +142,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </i> 
 <span class="menu-text">Lectures</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../schedule.html"> <i class="bi bi-calendar-minus" role="img">
-</i> 
-<span class="menu-text">Schedule</span></a>
-  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-tools" role="img">
@@ -168,11 +163,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../examples.html"><i class="bi bi-bar-chart-steps" role="img">
 </i> 
  <span class="dropdown-text">Examples</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../class-log.html"><i class="bi bi-box-arrow-in-right" role="img">
-</i> 
- <span class="dropdown-text">Class Log</span></a>
   </li>  
     </ul>
   </li>
@@ -285,7 +275,7 @@ Note
 <section id="first-question-gender" class="level2">
 <h2 class="anchored" data-anchor-id="first-question-gender">First question: gender</h2>
 <p>I notice that there is a field that defines the sex of the person. What’s the gender breakdown within this dataset?</p>
-<div id="8176ffa9" class="cell" data-execution_count="1">
+<div id="69999f1f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here <span class="co"># this helps us navigate tricky path stuff between local runs and quarto builds</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -315,7 +305,7 @@ Percentage of women:  2.384071260151952</code></pre>
 </section>
 <section id="occupation" class="level2">
 <h2 class="anchored" data-anchor-id="occupation">Occupation</h2>
-<div id="024de892" class="cell" data-execution_count="2">
+<div id="c06227e4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's assign that subset to it's own data frame so that we can work just with it</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>women <span class="op">=</span> df[df[<span class="st">'V19'</span>] <span class="op">==</span> <span class="st">'2'</span>]</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -366,7 +356,7 @@ Note
 <section id="trigger-warning" class="level2">
 <h2 class="anchored" data-anchor-id="trigger-warning">Trigger warning!</h2>
 <p>Based on what we’re seeing here (and some browsing I’m doing in the explorer), it looks like the majority of women executed were executed during slavery in the United States. Let’s see what the median year in this dataset is - does this make sense?</p>
-<div id="223d76f2" class="cell" data-execution_count="3">
+<div id="240035b4" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>median_year <span class="op">=</span> women[<span class="st">'V14'</span>].median()</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(median_year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -374,7 +364,7 @@ Note
 </div>
 </div>
 <p>Okay, the median year is 1826. (Remember, the <a href="https://www.archives.gov/milestone-documents/13th-amendment">13th Amendment</a> which constitutionally abolished slavery was in 1856) This validates the occupation data we’re seeing. Let’s also check if there was race (column V5) recorded. In the codebook, these are the values for race: <code>0 M Do Not Know; NA 1 White 2 Black 3 Native American 4 Asian-Pacific Il 5 Hispanic 6 Other</code></p>
-<div id="c280a4cd" class="cell" data-execution_count="4">
+<div id="548b4fd7" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># What was recorded for race? </span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>most_common_race <span class="op">=</span> women[<span class="st">'V5'</span>].value_counts().head(<span class="dv">3</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -391,7 +381,7 @@ Name: count, dtype: int64</code></pre>
 <section id="crimes" class="level2">
 <h2 class="anchored" data-anchor-id="crimes">Crimes?</h2>
 <p>Okay, this is still making sense. A few more general questions about women. Across all, what were their crimes?</p>
-<div id="ce5e4c8d" class="cell" data-execution_count="5">
+<div id="6fd109c5" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>most_common_crimes <span class="op">=</span> women[<span class="st">'V10'</span>].value_counts().head(<span class="dv">10</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(most_common_crimes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -423,7 +413,7 @@ Name: count, dtype: int64</code></pre>
 <section id="witchcraft" class="level3">
 <h3 class="anchored" data-anchor-id="witchcraft">Witchcraft?</h3>
 <p>Woof. Okay. This also makes sense. All of this is part of finding one’s way around the dataset. I am <em>expecting</em> that the women executed for witchcraft were white (based on Hollywood movies about witch trials)</p>
-<div id="e09f31fb" class="cell" data-execution_count="6">
+<div id="b51a9d48" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reminder, crime V10, race V5</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># we are asking slightly more complicated questions now</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># of the women where V10 = 9 (witchcraft), what were their races?</span></span>
@@ -440,7 +430,7 @@ Name: count, dtype: int64</code></pre>
 <section id="slave-revolt" class="level3">
 <h3 class="anchored" data-anchor-id="slave-revolt">Slave Revolt?</h3>
 <p>We’re seeing data that matches historical expectations (though we must always be careful when making these!). Women executed for witchcraft were exclusively white in the dataset. I would similarly expect women convicted of “Slave Revolt” to be Black. Does this track?</p>
-<div id="a317bc64" class="cell" data-execution_count="7">
+<div id="9b21582c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reminder, crime V10, race V5</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># we are asking slightly more complicated questions now</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># of the women where V10 = 8 (slave revolt), what were their races?</span></span>
@@ -457,7 +447,7 @@ Name: count, dtype: int64</code></pre>
 <p>Surprise! That is also majority white women (4 to 1). Who were these women?</p>
 <section id="lets-put-names-to-the-numbers" class="level4">
 <h4 class="anchored" data-anchor-id="lets-put-names-to-the-numbers">let’s put names to the numbers</h4>
-<div id="c50d460a" class="cell" data-execution_count="8">
+<div id="63f7615c" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># (</span><span class="al">NOTE</span><span class="co">, you could do this in the explorer, but then it wouldn't be permanent. This helps us revisit this data any time as we keep thinking through our questions)</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># the 5 women convicted and executed for 'slave revolt'</span></span>
@@ -547,7 +537,7 @@ Name: count, dtype: int64</code></pre>
 <p>If this dataset is complete, I would expect to see a lot of people executed in New York (<code>state == 36</code>) in 1741. The Brittanica entry reads “As a result of the rumors, false confessions, and finger-pointing, approximately 30 Black people and 4 white people (the Hughsons, Kerry, and Ury) were executed, and some 80 more people, mostly Black but some white, were exiled.” Does the dataset have this data?</p>
 <section id="checking-the-uprising" class="level3">
 <h3 class="anchored" data-anchor-id="checking-the-uprising">Checking the Uprising</h3>
-<div id="b4eb859c" class="cell" data-execution_count="9">
+<div id="a1948f1e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we're going back to the entire dataset now and checking on the year 1741</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>revolters <span class="op">=</span> df[df[<span class="st">'V14'</span>] <span class="op">==</span> <span class="dv">1741</span>]</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -557,7 +547,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>This is close. What about in New York State?</p>
-<div id="3a948ec0" class="cell" data-execution_count="10">
+<div id="4df636b2" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we're going back to the entire dataset now and checking on the year 1741</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>revolters <span class="op">=</span> df[df[<span class="st">'V14'</span>] <span class="op">==</span> <span class="dv">1741</span>][<span class="st">'V16'</span>]</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -574,7 +564,7 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="the-humans-of-new-york-1741" class="level3">
 <h3 class="anchored" data-anchor-id="the-humans-of-new-york-1741">the humans of New York, 1741</h3>
-<div id="c926fb55" class="cell" data-execution_count="11">
+<div id="a6d2bc3b" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter for year of execution (V14) and state of execution (V16)</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>ny_revolters <span class="op">=</span> df[(df[<span class="st">'V14'</span>] <span class="op">==</span> <span class="dv">1741</span>) <span class="op">&amp;</span> (df[<span class="st">'V16'</span>] <span class="op">==</span> <span class="dv">36</span>)]</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
