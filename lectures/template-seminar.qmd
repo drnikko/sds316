@@ -24,18 +24,34 @@ format:
 
 <!--https://quarto.org/docs/presentations/revealjs/ -->
 
-## Discussion
+# Discussion
 
 <!-- Discussion Leader: Add your slides here -->
 
 <!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
 
-## Each new slide starts with an H2 tag like this
+## New slides start with H2 tags
+  Create 1 slide with
 
-## Here's another new slide for you
+  A link to a piece of inside-written (or other authors who are system-impacted) journalism or reporting about something related to the reading, the coursework, or your particular research project. We do this because it’s important to listen to people who have directly experienced the criminal legal system.
 
-## And a third
-Underneath, you can use regular markdown formatting.  Browse the other lecture slides if you need to see examples, or consult [the documentation](https://quarto.org/docs/presentations/revealjs/)
+  A link to a current news article related to the topic.
+
+  1 - 2 sentences about how these are related to the day’s topics
+
+## Reading
+Create 2 slides with an overview of the main points of the reading.
+## Main Points
+
+## Questions?
+Create 1 slide with discussion questions. 
+
+Good questions are:
+- open ended and not answerable with facts
+- contain any necessary context (e.g. a quote, or a page number)
+
+
+
 
 <!-- Discussion Leader: End your slides -->
 

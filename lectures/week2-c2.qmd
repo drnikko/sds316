@@ -19,18 +19,87 @@ format:
 
 ## Today's Agenda
 
-In this session, we will cover:
+End goal:
 
--   Positron
--   Git & Github
--   Forking
+A fork of the class repo on your laptop *and* open in Positron *and* previewing.
 
 ------------------------------------------------------------------------
 
+## Go here
 
+### https://github.com/drnikko/sds316
 
+## Click Fork
+
+![](images/paste-3.png)
+
+## Create a new fork
+
+![](images/paste-4.png)
+
+## Get the repo locally!
+
+On your fork's repo page:
+
+![](images/paste-5.png)
+
+## Clone it
+
+open terminal
+
+``` bash
+cd /wherever/you/store/work
+git clone git@github.com:drnikko/sds316.git
+```
+
+```         
+```
+
+##### ssh problems?!
+
+## Look at it!
+
+Remember that the terminal and the Finder/Explorer are just different ways of accessing the same folders.
+
+|                                      |                                      |
+|------------------------------------|------------------------------------|
+| ![](images/paste-7.png){width="217"} | ![](images/paste-8.png){width="260"} |
+
+## Let's confirm
+
+\<DEMO: make changes via one method and confirm via another\>
+
+## Open Positron
+
+1.  File \> Open Folder
+2.  \<wherever you put the repository\>
+3.  Open! (Manage, if necessary \> Trust)
+
+![](images/paste-9.png)
+
+## Configure Python virtual environment
+
+open terminal in Positron (this is the same terminal - just easier to get at & it starts in your directory)
+
+``` bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## Install packages
+
+in the SAME terminal
+
+``` bash
+python3 -m pip install jupyter pandas pyprojroot matplotlib
+```
+
+#### success?
+
+![](images/paste-10.png)
 
 ## Checkout
 
-On a sheet of paper, write your name and then:
+On a sheet of paper, write your name and then...
 
+as best as you can remember, write the steps to get a repository from github onto your local machine and open in Positron?
