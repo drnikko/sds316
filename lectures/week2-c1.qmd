@@ -6,7 +6,7 @@ author: "Nikko Stevens"
 topics:
 - "Johnson - 2 regimes"
 - "UCR reports"
-categories: ["seminar", "seminar.scss"]
+categories: ["seminar",]
 format:
   revealjs:
     theme: serif          # Uses Quarto's elegant dark theme

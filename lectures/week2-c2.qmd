@@ -11,10 +11,16 @@ topics:
 categories: ["lab"]
 format:
   revealjs:
-    theme: dark          # Uses Quarto's elegant dark theme
+    theme: [dracula, lab.scss]       
     slide-number: true   # Displays slide numbers in the corner
     transition: slide    # Clean slide transitions
-    controls: true       # Displays navigation controls on screen
+    controls: false       # Displays navigation controls on screen
+    highlight-style: dracula  # Matches syntax highlighting to the slide theme
+    code-line-numbers: true   # Adds line numbers to code blocks
+    code-copy: true           # Adds a 1-click "Copy" button for students
+    code-overflow: wrap       # Prevents long code lines from clipping off-screen
+    preview-links: auto       # OPENS LINKS IN AN IN-SLIDE POPUP OVERLAY!
+    scrollable: true          # Allows vertical scrolling if code output is tall
 ---
 
 ## Today's Agenda
@@ -97,6 +103,13 @@ python3 -m pip install jupyter pandas pyprojroot matplotlib
 #### success?
 
 ![](images/paste-10.png)
+
+## With the time that's left
+- create a branch
+- make a change
+- commit change
+- push to origin
+- open a pull request
 
 ## Checkout
 
