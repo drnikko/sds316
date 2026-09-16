@@ -1,0 +1,12 @@
+{
+  "hash": "ae929fa85c5f18055304e2bc63ebedb9",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"LAB TEMPLATE\"\nsubtitle: \"Title slide text under big title\"\ndescription: \"Template for lab/tech days\" # appears in the lecture notes round up\nauthor: \"Nikko Stevens\"\ntopics:\n- \"topic 1\"\n- \"topic 2\"\ncategories: [\"lab\", \"template\"]\nformat:\n  revealjs:\n    theme: [dracula, lab.scss]       \n    slide-number: true   # Displays slide numbers in the corner\n    transition: slide    # Clean slide transitions\n    controls: false       # Displays navigation controls on screen\n    highlight-style: dracula  # Matches syntax highlighting to the slide theme\n    code-line-numbers: true   # Adds line numbers to code blocks\n    code-copy: true           # Adds a 1-click \"Copy\" button for students\n    code-overflow: wrap       # Prevents long code lines from clipping off-screen\n    preview-links: auto       # OPENS LINKS IN AN IN-SLIDE POPUP OVERLAY!\n    scrollable: true          # Allows vertical scrolling if code output is tall\n\n---\n\n## Today's Plan\n\n-   Review XY\n\n-   \n\n-   \n\n## By the end of today, you will (probably) know how to:\n\n\n\n\n\n## Reference\n\n> Blockquote\n\n## Executable Code is easy\n\n::: {#1d55c2cb .cell execution_count=1}\n\n::: {.cell-output .cell-output-stdout}\n```\nsomething\n```\n:::\n:::\n\n\n## Visual code is easy\n```python\n# This is a comment on some python code.\nprint(\"something\")\n\n\n```\n\n## Key Takeaways\n\n1.\n2. \n3.\n\n## Next week's skill review \n- TOPIC\n- PRESENTER\n\n## Next Steps\n\n",
+    "supporting": [
+      "template-lab_files/figure-revealjs"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
