@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Examples – SDS316 - Fall 2026</title>
+<title>Course Projects – SDS316: Data of the US Criminal Legal System</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">SDS316 - Fall 2026</span>
+    <span class="navbar-title">SDS316: Data of the US Criminal Legal System</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -89,65 +89,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> <i class="bi bi-file-earmark" role="img">
-</i> 
-<span class="menu-text">Syllabus</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./assignments.html"> <i class="bi bi-file-earmark" role="img">
-</i> 
-<span class="menu-text">Assignments</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./lectures.html"> <i class="bi bi-file-earmark" role="img">
-</i> 
-<span class="menu-text">Lectures</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./schedule.html"> <i class="bi bi-calendar-minus" role="img">
-</i> 
-<span class="menu-text">Schedule</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-tools" role="img">
-</i> 
- <span class="menu-text">Resources</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
-        <li>
-    <a class="dropdown-item" href="./datasets.html"><i class="bi bi-table" role="img">
-</i> 
- <span class="dropdown-text">Datasets</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./tech-stack.html"><i class="bi bi-laptop" role="img">
-</i> 
- <span class="dropdown-text">Working Environment</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./examples.html"><i class="bi bi-bar-chart-steps" role="img">
-</i> 
- <span class="dropdown-text">Examples</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./class-log.html"><i class="bi bi-box-arrow-in-right" role="img">
-</i> 
- <span class="dropdown-text">Class Log</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://docs.google.com/document/d/1PpndXanj3ffEbUn9nla2POWdhno5BHOCkrkRx4DyzTc/edit?tab=t.0#heading=h.5xdobrmir9r2"> <i class="bi bi-envelope" role="img" aria-label="Contact and Office Hours">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/drnikko/sds316"> <i class="bi bi-github" role="img" aria-label="Github">
-</i> 
-<span class="menu-text"></span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -165,8 +112,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general-examples" id="toc-general-examples" class="nav-link active" data-scroll-target="#general-examples">General examples</a></li>
-  <li><a href="#maps" id="toc-maps" class="nav-link" data-scroll-target="#maps">Maps</a></li>
+  <li><a href="#submissions" id="toc-submissions" class="nav-link active" data-scroll-target="#submissions">Submissions</a></li>
+  <li><a href="#stages" id="toc-stages" class="nav-link" data-scroll-target="#stages">Stages</a>
+  <ul class="collapse">
+  <li><a href="#stage-1---exploration-workflow" id="toc-stage-1---exploration-workflow" class="nav-link" data-scroll-target="#stage-1---exploration-workflow">Stage 1 - Exploration + Workflow</a></li>
+  <li><a href="#stage-2---analyzing-data-scaffolding-the-report" id="toc-stage-2---analyzing-data-scaffolding-the-report" class="nav-link" data-scroll-target="#stage-2---analyzing-data-scaffolding-the-report">Stage 2 - Analyzing Data &amp; Scaffolding the Report</a></li>
+  <li><a href="#stage-3---building-and-deploying" id="toc-stage-3---building-and-deploying" class="nav-link" data-scroll-target="#stage-3---building-and-deploying">Stage 3 - Building and Deploying</a></li>
+  <li><a href="#stage-4---reflection-refinement" id="toc-stage-4---reflection-refinement" class="nav-link" data-scroll-target="#stage-4---reflection-refinement">Stage 4 - Reflection + Refinement</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Examples</h1>
+<h1 class="title">Course Projects</h1>
 </div>
 
 
@@ -192,28 +146,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="http://pudding.cool">Pudding.cool</a> is a good starting point to see examples of storytelling with data.<br>
-<a href="https://www.reddit.com/r/dataisbeautiful">r/dataisbeautful</a> has a ton of examples of data visualization and data storytelling</p>
-<section id="general-examples" class="level2">
-<h2 class="anchored" data-anchor-id="general-examples">General examples</h2>
-<p>Many of these are “scrolly telling” sites, where components move as you scroll. We won’t be building anything quite so complicated, but pay attention to what you like about these!</p>
+<p>As part of this class, you will be submitting a complete data analysis project.</p>
+<section id="submissions" class="level2">
+<h2 class="anchored" data-anchor-id="submissions">Submissions</h2>
+<p>With the exception of the self-reflection, 100% of your class work will be performed in a fork of <a href="https://github.com/drnikko/sds316">this repository</a>. &lt;💡<a href="https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo">How to fork</a>&gt;</p>
+<p>In order for your project to be complete and accepted,</p>
 <ul>
-<li><a href="https://www.marlo.works/posts/last-meals/">A text analysis of last meals</a></li>
-<li><a href="https://www.vitalcitynyc.org/data/">Charts and data stories from Vital NYC</a></li>
-<li><a href="https://features.csis.org/hiddenreach/china-shipyard-tiers/">Murky Waters: Navigating the risks of China’s Dual-use Shipyards</a> <em>The tiers are handled especially well!</em></li>
-<li><a href="https://pudding.cool/2018/08/pockets/">Pudding: The size of pockets</a></li>
-<li><a href="https://pudding.cool/2020/11/crossword/">Pudding: Who is in crosswords</a></li>
-<li><a href="https://pudding.cool/2025/04/birthday-effect/">Pudding: birthday death effect</a> (we will likely discuss this one in class)</li>
-<li><a href="https://selfiecity.net/">Selfie City</a></li>
-<li><a href="https://www.washingtonpost.com/graphics/national/eclipse/">The Washington Post on Solar Eclipses</a></li>
+<li><p>you will open a pull request (PR) with <em>just</em> the changes you’re trying to merge in &lt;💡<a href="https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork">how to open a PR</a>&gt;</p></li>
+<li><p>that PR will build successfully</p></li>
+<li><p>that PR will be reviewed by 2 other students, who will either approve or request changes</p></li>
+<li><p>you will make any necessary changes requested by your peers and to ensure the build succeeds</p></li>
+<li><p>you update the PR with those changes</p></li>
+<li><p>then the PR is merged into <code>main</code></p></li>
 </ul>
 </section>
-<section id="maps" class="level2">
-<h2 class="anchored" data-anchor-id="maps">Maps</h2>
+<section id="stages" class="level2">
+<h2 class="anchored" data-anchor-id="stages">Stages</h2>
+<section id="stage-1---exploration-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="stage-1---exploration-workflow">Stage 1 - Exploration + Workflow</h3>
+<p>During the first stage of the project, we’re practicing:</p>
 <ul>
-<li><a href="https://www.carbonbrief.org/mapped-how-the-us-generates-electricity">How the US generates electricity</a></li>
-<li><a href="https://public.tableau.com/app/profile/josh.tapley/viz/DiseaseRelatedDeaths/CountyMap">Disease related deaths</a></li>
-<li><a href="https://unfoundedlabs.com/maps/prison/">Every prison in the US</a></li>
+<li><p>getting comfortable in the IDE, including customizing it as needed for our tasks (let the tools work for us!)</p></li>
+<li><p>getting comfortable with git and the Github pull request workflow (let the tools work for us!)</p></li>
+<li><p>developing our research questions and building lists of resources and literature to review</p></li>
+</ul>
+<section id="key-deliverables" class="level4">
+<h4 class="anchored" data-anchor-id="key-deliverables">Key Deliverables</h4>
+<ul>
+<li><p>Research Question and expected findings</p></li>
+<li><p>Five candidate datasets (added to the <a href="datasets.html">datasets</a> page)</p></li>
+<li><p>Three examples of data analysis work that is relevant to your questions</p></li>
+<li><p>Initial research groups clustering (we will do these in class)</p></li>
+</ul>
+</section>
+</section>
+<section id="stage-2---analyzing-data-scaffolding-the-report" class="level3">
+<h3 class="anchored" data-anchor-id="stage-2---analyzing-data-scaffolding-the-report">Stage 2 - Analyzing Data &amp; Scaffolding the Report</h3>
+<p>During the second stage, we’re actively working on data analysis and making sure that all work is building successfully. This includes:</p>
+<ul>
+<li><p>writing python code to analyze the data</p></li>
+<li><p>drafting preliminary writing about the technical/quantitative steps you’re taking</p></li>
+<li><p>discussing your results with your research group</p></li>
+<li><p>exploring data visualizations</p></li>
+</ul>
+<section id="key-deliverables-1" class="level4">
+<h4 class="anchored" data-anchor-id="key-deliverables-1">Key Deliverables</h4>
+<ul>
+<li><p>Project and Report scaffold</p></li>
+<li><p>Updated (if necessary) research questions / investigation description</p></li>
+<li></li>
+</ul>
+</section>
+</section>
+<section id="stage-3---building-and-deploying" class="level3">
+<h3 class="anchored" data-anchor-id="stage-3---building-and-deploying">Stage 3 - Building and Deploying</h3>
+<p>During the third stage of the project, we’re practicing:</p>
+<ul>
+<li>xx</li>
+</ul>
+<section id="key-deliverables-2" class="level4">
+<h4 class="anchored" data-anchor-id="key-deliverables-2">Key Deliverables</h4>
+<ul>
+<li><p>final-first-draft report</p></li>
+<li><p>draft abstract</p></li>
+</ul>
+</section>
+</section>
+<section id="stage-4---reflection-refinement" class="level3">
+<h3 class="anchored" data-anchor-id="stage-4---reflection-refinement">Stage 4 - Reflection + Refinement</h3>
+<p>During the first stage of the project, we’re practicing:</p>
+<ul>
+<li>xx</li>
+</ul>
+<section id="key-deliverables-3" class="level4">
+<h4 class="anchored" data-anchor-id="key-deliverables-3">Key Deliverables</h4>
+<ul>
+<li><p>final report</p></li>
+<li><p>self-reflection (private)</p></li>
+<li></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li>how to write about data and complex topics, from PPI - <a href="https://www.prisonpolicy.org/trainings/writing_guide.html" class="uri">https://www.prisonpolicy.org/trainings/writing_guide.html</a></li>
 </ul>
 
 
@@ -292,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/drnikko\.github\.io\/sds316\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
