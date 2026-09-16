@@ -18,7 +18,7 @@
     "href": "schedule.html#week-3",
     "title": "Schedule",
     "section": "Week 3",
-    "text": "Week 3\nWeek of Sept 21\n\nBy W2.C1:\n\nRead Chapters 1 and 2 of Predict and Surveil. Bring your book to class.\n\nBy W2.C2:\n\nHave a first draft of research questions ready to discuss\nBranch with the start of your project created\nHave at least one meeting with your research cluster"
+    "text": "Week 3\nWeek of Sept 21\n\nBy W2.C1:\n\nRead Chapters 1 and 2 of Predict and Surveil. Bring your book to class.\n\nBy W2.C2:\n\nHave a first draft of research questions ready to discuss\nBranch with the start of your project created\nHave (or have set a date for) meeting with your research cluster"
   },
   {
     "objectID": "schedule.html#week-4",
@@ -635,6 +635,13 @@
     "title": "Week 2, Class 2",
     "section": "Install packages",
     "text": "Install packages\nin the SAME terminal\npython3 -m pip install jupyter pandas pyprojroot matplotlib\nsuccess?"
+  },
+  {
+    "objectID": "lectures/week2-c2.html#with-the-time-thats-left",
+    "href": "lectures/week2-c2.html#with-the-time-thats-left",
+    "title": "Week 2, Class 2",
+    "section": "With the time that’s left",
+    "text": "With the time that’s left\n\ncreate a branch\nmake a change\ncommit change\npush to origin\nopen a pull request"
   },
   {
     "objectID": "lectures/week2-c2.html#checkout",
