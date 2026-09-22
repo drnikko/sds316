@@ -1,0 +1,64 @@
+---
+title: "Dragnet Surveillance"
+subtitle: "Brayne, Chapter 3"
+description: "Brayne, Ch 3" # appears in the lecture notes round up
+author: "Nikko Stevens"
+topics:
+- "Dragnet Surveillance"
+categories: ["seminar"]
+format:
+  revealjs:
+    theme: [serif, seminar.scss]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+---
+
+## Today's Agenda
+
+- Tanisha is our discussion leader!
+-  
+-   
+
+
+<!--https://quarto.org/docs/presentations/revealjs/ -->
+
+# Discussion
+
+<!-- Discussion Leader: Add your slides here -->
+
+<!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
+
+## New slides start with H2 tags
+  Create 1 slide with
+
+  A link to a piece of inside-written (or other authors who are system-impacted) journalism or reporting about something related to the reading, the coursework, or your particular research project. We do this because it’s important to listen to people who have directly experienced the criminal legal system.
+
+  A link to a current news article related to the topic.
+
+  1 - 2 sentences about how these are related to the day’s topics
+
+## Reading
+Create 2 slides with an overview of the main points of the reading.
+
+## Main Points
+
+## Questions?
+Create 1 slide with discussion questions. 
+
+Good questions are:
+- open ended and not answerable with facts
+- contain any necessary context (e.g. a quote, or a page number)
+
+
+
+
+<!-- Discussion Leader: End your slides -->
+
+## Reminder
+- next class (9/30) your pull requests need to be OPEN and BUILDING.
+
+## Checkout
+
+On a sheet of paper, write your name and then:
+

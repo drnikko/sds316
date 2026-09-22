@@ -1,0 +1,81 @@
+---
+title: "Brayne, Chs 1 & 2"
+description: "Discussion about Chs 1 & 2 of Brayne" # appears in the lecture notes round up
+author: "Nikko Stevens"
+topics:
+- "Brayne, Chs 1 & 2"
+- "Research Question review"
+categories: ["seminar"]
+format:
+  revealjs:
+    theme: [serif, seminar.scss]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+---
+
+## Today's Agenda
+
+- discussion!
+- research topic > research groups 
+- Aaminah - last 15m
+
+<!--https://quarto.org/docs/presentations/revealjs/ -->
+
+# Discussion
+
+<!-- Discussion Leader: Add your slides here -->
+
+<!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
+
+
+
+## Related
+- [Prison surveillance videos should be public information](https://prisonjournalismproject.org/2022/03/18/prison-surveillance-videos-should-be-public-information/) by Jeffrey McKee from Prison Journalism Project
+
+- [How rogue officers turned a nationwide camera network into a tool for stalking] - Aug 2, 2026 _Washington Post_
+
+- how surveillance material is collected and who has control over it is hugely important to conversations about whether or not surveillance infrastructure "works" or is "worth it"
+
+
+## Reading
+
+- we are in a transitional moment from "traditional" police work to Big Data driven police work (recall the 3 vs - velocity, variety, volume)
+
+- big data only makes meaning in aggregate, thus we need mass collection for the technology to "work"
+
+- police departments used to collect data manually (in the "traditional" ways).  That data collection is now being done by big tech / data brokers / surveillance-focused vendors
+
+## Main Points
+
+- "private" data is not subject to same legal oversight as "public" data
+
+- "objective" technlogy is used to justify police behavior and legitimize outcomes
+
+
+
+## Questions?
+- How do ideas of quantification show up in Brayne's analysis of LAPD's tech use?
+
+- Do you think "old" ways of doing things is/were better? Is the trade off worth it?
+
+- In what meaningful ways are "Big Data" uses of data distinct? What differences are most distinct to you?
+
+- How (if at all) does this influence how you're thinking about your own data sources?
+
+
+
+
+<!-- Discussion Leader: End your slides -->
+
+
+
+
+## Research Groups!
+
+1. Say your close-enough-for-now research question
+2. Groups!
+3. Megan is coming on Wednesday to talk about the groups!
+
+
+
