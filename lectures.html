@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Course Lectures – SDS316 - Fall 2026</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -38,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-283806461d87d7bdc96c8e860487c4d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -100,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -113,7 +119,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -222,7 +228,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VtaW5hcg==">seminar <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c2VtaW5hcg==">seminar <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -288,7 +294,20 @@ topics
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="c2VtaW5hcg==" data-listing-file-modified-sort="1789533066608" data-listing-reading-time-sort="3" data-listing-word-count-sort="535" data-listing-title-sort="Week 2, Class 1" data-listing-filename-sort="week2-c1.qmd">
+<tr data-index="0" data-categories="c2VtaW5hcg==" data-listing-file-modified-sort="1790632571861" data-listing-reading-time-sort="2" data-listing-word-count-sort="400" data-listing-title-sort="Dragnet Surveillance" data-listing-filename-sort="week4-c1.qmd">
+<td>
+<a href="./lectures/week4-c1.html" class="title listing-title">Dragnet Surveillance</a>
+</td>
+<td>
+<span class="listing-description">Brayne, Ch 3</span>
+</td>
+<td>
+<span class="listing-topics">Dragnet Surveillance</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="c2VtaW5hcg==" data-listing-file-modified-sort="1790632571859" data-listing-reading-time-sort="3" data-listing-word-count-sort="535" data-listing-title-sort="Week 2, Class 1" data-listing-filename-sort="week2-c1.qmd">
 <td>
 <a href="./lectures/week2-c1.html" class="title listing-title">Week 2, Class 1</a>
 </td>
@@ -301,7 +320,7 @@ topics
 
 </tr>
 
-<tr data-index="1" data-categories="bGFi" data-listing-file-modified-sort="1789533313653" data-listing-reading-time-sort="2" data-listing-word-count-sort="275" data-listing-title-sort="Week 2, Class 2" data-listing-filename-sort="week2-c2.qmd">
+<tr data-index="2" data-categories="bGFi" data-listing-file-modified-sort="1790632571860" data-listing-reading-time-sort="2" data-listing-word-count-sort="275" data-listing-title-sort="Week 2, Class 2" data-listing-filename-sort="week2-c2.qmd">
 <td>
 <a href="./lectures/week2-c2.html" class="title listing-title">Week 2, Class 2</a>
 </td>
@@ -314,7 +333,33 @@ topics
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1789533002656" data-listing-reading-time-sort="1" data-listing-word-count-sort="117" data-listing-title-sort="Week 1, Class 1" data-listing-filename-sort="week1-c1.qmd">
+<tr data-index="3" data-categories="bGFi" data-listing-file-modified-sort="1790632571861" data-listing-reading-time-sort="1" data-listing-word-count-sort="74" data-listing-title-sort="How to use research groups" data-listing-filename-sort="week3-c2.qmd">
+<td>
+<a href="./lectures/week3-c2.html" class="title listing-title">How to use research groups</a>
+</td>
+<td>
+<span class="listing-description">Research group round up</span>
+</td>
+<td>
+<span class="listing-topics">research, group work</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="c2VtaW5hcg==" data-listing-file-modified-sort="1790632571860" data-listing-reading-time-sort="2" data-listing-word-count-sort="286" data-listing-title-sort="Brayne, Chs 1 &amp; 2" data-listing-filename-sort="week3-c1.qmd">
+<td>
+<a href="./lectures/week3-c1.html" class="title listing-title">Brayne, Chs 1 &amp; 2</a>
+</td>
+<td>
+<span class="listing-description">Discussion about Chs 1 &amp; 2 of Brayne</span>
+</td>
+<td>
+<span class="listing-topics">Brayne, Chs 1 &amp; 2, Research Question review</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-file-modified-sort="1790632571859" data-listing-reading-time-sort="1" data-listing-word-count-sort="117" data-listing-title-sort="Week 1, Class 1" data-listing-filename-sort="week1-c1.qmd">
 <td>
 <a href="./lectures/week1-c1.html" class="title listing-title">Week 1, Class 1</a>
 </td>
@@ -382,13 +427,14 @@ topics
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
