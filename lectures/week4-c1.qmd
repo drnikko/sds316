@@ -1,0 +1,85 @@
+---
+title: "Dragnet Surveillance"
+subtitle: "Brayne, Chapter 3"
+description: "Brayne, Ch 3" # appears in the lecture notes round up
+author: "Nikko Stevens"
+topics:
+- "Dragnet Surveillance"
+categories: ["seminar"]
+format:
+  revealjs:
+    theme: [serif, seminar.scss]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+---
+
+## Today's Agenda
+
+- Tanisha is our discussion leader!
+-  
+-   
+
+
+<!--https://quarto.org/docs/presentations/revealjs/ -->
+
+# Discussion
+
+<!-- Discussion Leader: Add your slides here -->
+
+<!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
+
+## Related
+ [Crime shows and jurrors](https://prisonwitness.org/apwa-essay/crime-shows-and-jurrors/) by Randy A. Waterson from American Prison Writing Archive
+  [Palantir’s Chief Defends His Company’s Work With ICE](https://www.nytimes.com/2025/12/03/business/dealbook/palantir-alex-karp-ice-trump.html) by  Michael J. de la Merced from New York Times - Dec 3 2025
+
+
+- news and media's emphasis on violent crime feeds into the "danger imperative" mentioned in the reading, referring to the cultural frame officers are socialized into in which they may face lethal violence at a moment’s notice
+- Palantir CEO saying he doesn't want to surveil innocent Americans but “completely” supports efforts to surveil America’s adversaries, and the concept of "function creep"
+
+
+## Reading
+- Dragnet surveillance or “the collection and analysis of information on everyone, rather than only people under suspicion” on an unprecedented scale
+- Through tagging and generating links among previously separate data points, entirely new searches can be performed almost instantly
+ - one of the most transformative features of the big data landscape: the creep of criminal justice surveillance into other, non–criminal justice institutions
+- Alert-base systems shift the relational structure of surveillance
+ - Decrease in human mediation
+- In auditable big data systems, queries are serving as quantified proxies for suspiciousness.
+
+
+
+
+
+
+## Main Points
+"Using a series of data points to reconstruct an individual’s intentions and behaviors (whether incriminating or exculpatory) rests on the assumption of an infallible state, or the assumption that law enforcement will draw a correct conclusion. And, as the analyst above implied, you are not able to consent—or refuse consent—to the collection of your data at each point." (86)
+
+
+## Questions?
+“High-frequency data collection makes alert-based systems possible, and that carries enormous implications for the relational structure of surveillance.” (73)
+
+
+- How do alert systems change the relational structure of surveillance?
+- How could changing structures of surveillance impact police accountability and the burden of responsibility?
+
+
+Brayne says that "even dragnet surveillance serves to reinscribe
+inequality" (87)
+
+
+- How does the ability to exercise agency or refuse consent to surveillance map onto societal inequalities?
+
+
+- How, if at all, has this chapter influenced your perception of your own digital trail?
+
+
+
+<!-- Discussion Leader: End your slides -->
+
+## Reminder
+- next class (9/30) your pull requests need to be OPEN and BUILDING.
+
+## Checkout
+
+On a sheet of paper, write your name and then:
+
