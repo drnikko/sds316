@@ -1,0 +1,13 @@
+---
+title: "Ensemble analysis of prison gerrymandering refroms"
+author: 
+  - "Rae Traver-Fallick"
+date: 2026-09-30
+description: "Using ensembles to quantify prison gerrymandering"
+categories: [Geography, Elections, Representation, Voting, Prison Gerrymandering, Vote Dilution]  #  These are some of the categories you might use
+image: "sds316/projects/template_rae/images/Prisonweb.jpg"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+---
+
+## Project Overview
+
+Current methods in detecting partisan gerrymandering revolve around the use of ensemble models, which sample from the universe of possible legal maps in order to better understand the distribution of these maps and whether proposed maps are  within the range of possibility if no partisan intent is assumed. However, ensembles are rarely used in any studies of prison gerrymandering and its effect, and I wonder whether ensembles, specifically Dr. Moon Duchin's Recombination (ReCom) or Reversible Recombination models (RevReCom), have untapped utility in this context. First, I intend to examine whether the distribution of Democratic seats won across possible legal maps in Texas changes measurably after the reallocation of incarcerated Texans to their last known home address. Second, I'm interested in not only quantifying the impact of reallocation on the possible realm of maps, but investigating a way to use pre-allocation ensembles to detect the presence of prison gerrymandering. I choose to focus on Texas due to its relevance in the literature. 
