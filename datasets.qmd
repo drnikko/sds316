@@ -14,7 +14,9 @@ title: "Data Sources"
 - [Prison Map - Geography of Incarceration](https://prisonmap.com/)
 - [Correctional Procurement Contracts](https://www.prisonpolicy.org/contracts/documents.html)
 - [Flock Camera's Per State](https://flockscanner.com/flock-camera-map/)
-
+- [Flock camera locations by state](https://flockcameralocations.com/locations)
+- [Election Results 2024](https://www.cnn.com/election/2024/results/president?election-data-id=2024-PG&election-painting-mode=projection-with-lead&filter-key-races=false&filter-flipped=false&filter-remaining=false)
+- [Flock camera laws by state](https://banflockcameras.com/laws/)
 
 ## Data Collections
 These have more tha one dataset, but are not massive clearinghouses
