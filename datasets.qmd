@@ -28,3 +28,14 @@ These have more tha one dataset, but are not massive clearinghouses
 ## What about _______?
 The Prison Policy Initative has a list of [datasets they wish existed](https://www.prisonpolicy.org/blog/2024/12/19/data-wishlist/), but which do not.
 
+## Kayla's Potential Data Sets
+- https://github.com/jkbren/incarcerated-populations-data/tree/main/data This data set is about incarcerated populations and has variables of race and state. 
+- https://openpolicing.stanford.edu/data/
+This data has separate datasets by state and county is about traffic stops and has variables related to race. 
+- https://www.ussc.gov/research/datafiles/commission-datafiles
+This is data over Federal sentencing.  
+https://cdr.lib.unc.edu/concern/data_sets/6q182v788?locale=en
+Training set data over if a law is a jim crow law or not, helpful to trace the count of Jim Crow Laws and where. 
+- https://exonerationregistry.org/
+This dataset is about exonerations which could be a useful lens to look through.  
+
