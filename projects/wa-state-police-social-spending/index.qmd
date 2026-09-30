@@ -1,0 +1,12 @@
+---
+title: "Template Project"
+author: 
+  - "Julia Laney"
+date: 2026-09-30
+categories: [Police spending, Social spending, Crime reduction, Municipal budget, Washington state]  #  These are some of the categories you might use
+image: "images/wsp.jpg"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+---
+
+## Project Overview
+
+This project explores the breakdown of police spending and social spending in each of Washington state's 39 counties. Using Washington state fiscal information, I am looking at each county’s budget to see which counties spend the most on social services relative to their police spending. Further, I am looking at crime statistics by county to explore the relationship between police spending, social spending, and crime. Because some studies have shown that police spending reduces crime short-term while social spending reduces crime long-term, I am going to identify any significant changes in a county’s police or social spending, then evaluate the impact of these changes on crime after a given period.
