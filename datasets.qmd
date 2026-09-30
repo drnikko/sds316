@@ -13,11 +13,14 @@ title: "Data Sources"
 - [Vera Institute's Incarceration Trends](https://github.com/vera-institute/incarceration-trends)
 - [Prison Map - Geography of Incarceration](https://prisonmap.com/)
 - [Correctional Procurement Contracts](https://www.prisonpolicy.org/contracts/documents.html)
+- [Flock Camera's Per State](https://flockscanner.com/flock-camera-map/)
+
 
 ## Data Collections
 These have more tha one dataset, but are not massive clearinghouses
 - [Across Walls](https://www.acrosswalls.org/) *This site can be a little difficult to navigate, but they have a lot of specific data not generally available elsewhere, like this [final statements, last meals](https://docs.google.com/spreadsheets/u/1/d/1RF-0BkAVaWwWTlQdkswsfQFmq1x1N4xWL6cHAytuydE/pubhtml) dataset.
 - [and other repos by the Vera Institute](https://github.com/vera-institute)
+- [Flock Statistics](https://www.findingflock.com/stats)
 
 
 ## Data Clearinghouses 
