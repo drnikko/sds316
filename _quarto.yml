@@ -15,6 +15,9 @@ website:
       - text: Lectures
         href: lectures.qmd
         icon: file-earmark
+      - text: Schedule
+        href: schedule.qmd
+        icon: calendar-minus
       # Dropdown Menu for Resources
       - text: "Resources"
         icon: tools
@@ -29,6 +32,9 @@ website:
           - text: "Examples"
             href: examples.qmd
             icon: bar-chart-steps
+          - text: "Class Log"
+            href: class-log.qmd
+            icon: box-arrow-in-right
     right:
       - icon: envelope
         href: "https://docs.google.com/document/d/1PpndXanj3ffEbUn9nla2POWdhno5BHOCkrkRx4DyzTc/edit?tab=t.0#heading=h.5xdobrmir9r2"

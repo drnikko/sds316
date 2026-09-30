@@ -1,0 +1,12 @@
+{
+  "hash": "706059fcf2d5debb77050ae69306d411",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Running python code in a .qmd document.\n---\n\n\nOpen this in Positron and try to hit the Run Cell button.  What happens?\n\n\n::: {#467847e8 .cell execution_count=1}\n``` {.python .cell-code}\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Sample data\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\n# Create a plot\nplt.figure(figsize=(8, 6))\nplt.plot(x, y, label='sin(x)')\nplt.title('Sine Wave')\nplt.xlabel('x')\nplt.ylabel('sin(x)')\nplt.legend()\nplt.grid(True)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![](getting-started_files/figure-html/cell-2-output-1.png){width=684 height=524}\n:::\n:::\n\n\n## Getting Your Environment Ready\n1. Set up a virtual environment. Make sure that your Positron terminal is set to the same directory that your project is in (this should be true by default). Then, in your terminal, run `python3 -m venv venv` \n\n2. Then, source the virtual environment with `source venv/bin/activate`\n\n3. Install any libraries you're trying to use.  In our case, above `pip install matplotlib numpy jupyter`\n\n4. Run the cell above again - what happens now?\n\n5. Then, preview this! In your terminal run `quarto preview` and then visit http://localhost:7521/projects/demo/getting-started.html *Note, you might need to change the port number (the :7521) based on your local machine*\n\n",
+    "supporting": [
+      "getting-started_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

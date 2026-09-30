@@ -1,0 +1,38 @@
+---
+title: "How to use research groups"
+subtitle: "(not all group work is the same)"
+description: "Research group round up" # appears in the lecture notes round up
+author: "Nikko Stevens"
+topics:
+- "research"
+- "group work"
+categories: ["lab"]
+format:
+  revealjs:
+    theme: [dracula, lab.scss]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+    highlight-style: dracula  # Matches syntax highlighting to the slide theme
+    code-line-numbers: true   # Adds line numbers to code blocks
+    code-copy: true           # Adds a 1-click "Copy" button for students
+    code-overflow: wrap       # Prevents long code lines from clipping off-screen
+    preview-links: auto       # OPENS LINKS IN AN IN-SLIDE POPUP OVERLAY!
+    scrollable: true          # Allows vertical scrolling if code output is tall
+---
+
+## Today's Plan
+
+-   Megan Lyster visit! 📣
+
+## Next week's skill review
+
+-   **Reagan**: top 10 things you think students should remember about git
+
+## Next Steps
+
+-   Talk with your group about how to divide the candidate sources (in ways that make sense)
+
+-   FINAL submission due **NEXT WEDNESDAY 9/30**
+
+-   START EARLY! Your PR must be open and building (we will troubleshoot this in class since it's the first time)
