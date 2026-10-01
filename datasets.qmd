@@ -14,6 +14,14 @@ title: "Data Sources"
 - [Prison Map - Geography of Incarceration](https://prisonmap.com/)
 - [Correctional Procurement Contracts](https://www.prisonpolicy.org/contracts/documents.html)
 
+## Texas specific datasets
+- [Texas Department of Criminal Justice Releases 2024](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2024?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+- [Texas Department of Criminal Justice Releases 2022](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2022?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+- [Texas Department of Criminal Justice Releases 2021](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2021?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+- [Texas Department of Criminal Justice Releases 2020](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2020?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+- [Texas Department of Criminal Justice Releases 2023](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2023?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+
+
 ## Data Collections
 These have more tha one dataset, but are not massive clearinghouses
 - [Across Walls](https://www.acrosswalls.org/) *This site can be a little difficult to navigate, but they have a lot of specific data not generally available elsewhere, like this [final statements, last meals](https://docs.google.com/spreadsheets/u/1/d/1RF-0BkAVaWwWTlQdkswsfQFmq1x1N4xWL6cHAytuydE/pubhtml) dataset.
