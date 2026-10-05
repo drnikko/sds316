@@ -13,11 +13,17 @@ title: "Data Sources"
 - [Vera Institute's Incarceration Trends](https://github.com/vera-institute/incarceration-trends)
 - [Prison Map - Geography of Incarceration](https://prisonmap.com/)
 - [Correctional Procurement Contracts](https://www.prisonpolicy.org/contracts/documents.html)
+- [Redistricting Data Hub - TX PL 94-171 Data](https://redistrictingdatahub.org/dataset/texas-block-pl-94171-2020/)
+- [Redistricting Data Hub - TX 2026-2035 Population Estimates by Census Block](https://redistrictingdatahub.org/dataset/texas-population-projections-20262035-at-the-block-level/)
+- [Redistricting Data Hub - TX Correctional Facility Population Counts by Census Block (2020)](https://redistrictingdatahub.org/dataset/2020-texas-ppi-correctional-facility-population-counts-at-the-block-level/)
+- [Redistricting Data Hub - TX Counterfactual Prisoner Adjusted Data (2020)](https://redistrictingdatahub.org/dataset/texas-blocklevel-2020-counterfactual-prisoner-adjusted-redistricting-data-with-aggregations-to-state-legislative-districts/)
 
 ## Data Collections
 These have more tha one dataset, but are not massive clearinghouses
 - [Across Walls](https://www.acrosswalls.org/) *This site can be a little difficult to navigate, but they have a lot of specific data not generally available elsewhere, like this [final statements, last meals](https://docs.google.com/spreadsheets/u/1/d/1RF-0BkAVaWwWTlQdkswsfQFmq1x1N4xWL6cHAytuydE/pubhtml) dataset.
 - [and other repos by the Vera Institute](https://github.com/vera-institute)
+- [2025 Census Population Estimates at County/Metropolitan Level](https://www.census.gov/programs-surveys/popest/data/tables.html)
+
 
 
 ## Data Clearinghouses 
@@ -34,3 +40,10 @@ The Prison Policy Initative has a list of [datasets they wish existed](https://w
 -[Commission Datafiles](https://www.ussc.gov/research/datafiles/commission-datafiles)
 -[Immigration and Customs Enforcement - Arrests](https://deportationdata.org/data/processed/ice.html)
 -[Immigration and Customs Enforcement - Arrests joined with detention stays](https://deportationdata.org/data/processed/ice.html)
+
+## Children & Criminal Justice System Datasets
+- [Survey of Youths in Custody, 1987](https://www.icpsr.umich.edu/web/NACJD/studies/8992/versions/V3) The survey provides detailed information on the characteristics of youths held primarily in secure settings within the juvenile justice system. The data contain information on criminal histories, family situations, drug and alcohol use, and peer group activities. For youths committed for violent acts, data are available on the victims of their crimes and on weapon use
+- [Survey of Youth in Residential Placement (SYRP) 2003 [United States]](https://catalog.data.gov/dataset/survey-of-youth-in-residential-placement-syrp-2003-united-states) According to the description, the Survey of Youth in Residential Placement (SYRP) is the only national survey that collects information directly from young people in the juvenile justice system. Developed by the Office of Juvenile Justice and Delinquency Prevention (OJJDP), it uses anonymous interviews to ask youth aged 10 to 20 about their backgrounds, facility conditions, and personal experiences
+- [National Survey of Youth in Custody, 2012](https://catalog.data.gov/dataset/national-survey-of-youth-in-custody-2012?from_hint=eyJrZXl3b3JkIjoiY29ycmVjdGlvbmFsIGZhY2lsaXRpZXMgKGp1dmVuaWxlcykifQ%3D%3D) The National Survey of Youth in Custody collects confidential data on sexual assault in juvenile facilities to fulfill requirements of the Prison Rape Elimination Act of 2003. Using private audio computer assisted self interviews, the survey gathers detailed background, perception, and victimization information from thousands of youth across various facilities. These findings help the Bureau of Justice Statistics measure and report on the prevalence of sexual victimization in the juvenile justice system
+- [Compendium of National Juvenile Justice Datasets](https://ojjdp.ojp.gov/compendium-national-juvenile-justice-datasets#survey-of-youth-in-custody) The links aren't working but I can guess that these data sets will be of use for my project once I find out how to get to them
+- [JDAI Dashboard](https://www.mass.gov/info-details/jdai-dashboard)State level data showing demographic information about Juveniles in Massachusetts prison. Also includes some data on youth held without bail.
