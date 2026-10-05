@@ -48,6 +48,17 @@ The Prison Policy Initative has a list of [datasets they wish existed](https://w
 - [map with infor for each state](https://www.prisonpolicy.org/blog/2023/09/27/updated_race_data/)
 - [some more prison coordinates](http://github.com/joshbegley/Carceral-Space/blob/master/all_us_prisons.csv)
 - [data from DIG, correctional facilities by state](https://nicic.gov/resources/nic-library/corrections-trends/locate-correctional-facilities-state)
+## Kayla's Potential Data Sets
+- https://github.com/jkbren/incarcerated-populations-data/tree/main/data This data set is about incarcerated populations and has variables of race and state. 
+- https://openpolicing.stanford.edu/data/
+This data has separate datasets by state and county is about traffic stops and has variables related to race. 
+- https://www.ussc.gov/research/datafiles/commission-datafiles
+This is data over Federal sentencing.  
+https://cdr.lib.unc.edu/concern/data_sets/6q182v788?locale=en
+Training set data over if a law is a jim crow law or not, helpful to trace the count of Jim Crow Laws and where. 
+- https://exonerationregistry.org/
+This dataset is about exonerations which could be a useful lens to look through.  
+
 ## Ruolin's Datasets for Stage 1
 - [United States Sentencing Commission - Interactive Data Analyzer](https://ida.ussc.gov/analytics/saw.dll?Dashboard&PortalPath=%2Fshared%2FIDA%2F_portal%2FIDA%20Dashboards)
 - [Federally Sentenced Non-U.S. Citizens](https://www.ussc.gov/research/quick-facts/federally-sentenced-non-us-citizens)
