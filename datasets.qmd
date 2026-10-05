@@ -42,12 +42,6 @@ These have more tha one dataset, but are not massive clearinghouses
 ## What about _______?
 The Prison Policy Initative has a list of [datasets they wish existed](https://www.prisonpolicy.org/blog/2024/12/19/data-wishlist/), but which do not.
 
-## jessie (trying to avoid merge conflict)
-- [some prison coordinates ](https://github.com/miolow/US_prisons/blob/master/allprisons.csv)
-- [interactive prison map](https://www.cccarto.com/atlas/prisons/)
-- [map with infor for each state](https://www.prisonpolicy.org/blog/2023/09/27/updated_race_data/)
-- [some more prison coordinates](http://github.com/joshbegley/Carceral-Space/blob/master/all_us_prisons.csv)
-- [data from DIG, correctional facilities by state](https://nicic.gov/resources/nic-library/corrections-trends/locate-correctional-facilities-state)
 ## Kayla's Potential Data Sets
 - https://github.com/jkbren/incarcerated-populations-data/tree/main/data This data set is about incarcerated populations and has variables of race and state. 
 - https://openpolicing.stanford.edu/data/
