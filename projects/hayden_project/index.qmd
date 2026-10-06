@@ -1,10 +1,9 @@
 ---
-title: Hayden's Research Project
-author:
- - Hayden Steinmann
-date: 2026-09-30
-description: Initial Project Overview
-categories: [Geography, Segregation, Discipline, School]
+title: "Hayden's Research Project"
+author: "Hayden Steinmann"
+date: "2026-09-30"
+description: "Initial Project Overview"
+categories: "[Geography, Segregation, Discipline, School]"
 image: "images/schoolsegregation.jpg"
 ---
 

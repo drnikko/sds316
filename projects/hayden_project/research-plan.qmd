@@ -1,6 +1,6 @@
 ---
-title: Research Plan
-author: Hayden Steinmann
+title: "Research Plan"
+author: "Hayden Steinmann"
 execute:
   code-fold: true
 ---
