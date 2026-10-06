@@ -4,8 +4,8 @@ author:
   - "Leah Levensailor"
 date: 2026-09-14
 description: "Semester Project"
-categories: [Investigation, Capture, Trial, Detention, Supervision, Release, Re-entry ]  #  These are some of the categories you might use
-image: "images/thumbnail.jpeg"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+categories: [Investigation, Supervision ]  
+image: "images/flock_stock.png"  
 ---
 
 ## Project Overview
