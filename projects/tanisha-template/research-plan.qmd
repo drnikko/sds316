@@ -1,6 +1,6 @@
 ---
 title: Research Plan
-author: Nikko Stevens
+author: Tanisha Chetty
 execute:
   code-fold: true
 ---
