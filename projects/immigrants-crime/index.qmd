@@ -1,0 +1,13 @@
+---
+title: "Immigration Detention and/or Criminal Justice Outcomes Across Different Immigration Status Before and After COVID-19"
+author: 
+- "Ruolin Kang"
+date: 2026-09-30
+description: "An research on how immigrants-related criminal justice patterns changed before and after the COVID-19 pandemic."
+categories: [Demographics]  
+image: "images/thumbnail.jpeg"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+---
+
+## Project Overview
+
+This project will focus on how the non-citizen incarceration in the United States over the past 26 years (2000–2026). The research aims to find out how incarceration trends have changed and whether these patterns vary based on immigration status. The research will categorize populations into undocumented migrants, legal permanent residents, and asylum seekers. Additionally, this project will evaluate whether the onset of the Covid-19 Pandemic in 2020 served as a factor for significant changes in incarceration rates.

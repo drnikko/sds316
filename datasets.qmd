@@ -18,11 +18,25 @@ title: "Data Sources"
 - [Charlotte Mecklenburg Quality of Life Explorer](https://maps.mecklenburgcountync.gov/qol/#89/)
 - [U.S. Census Bureau - American Community Survey (ACS)](https://www.census.gov/programs-surveys/acs)
 - [Student Boundary Maps](https://www.cmsk12.org/academics/planning-services/student-boundary-maps)
+- [Redistricting Data Hub - TX PL 94-171 Data](https://redistrictingdatahub.org/dataset/texas-block-pl-94171-2020/)
+- [Redistricting Data Hub - TX 2026-2035 Population Estimates by Census Block](https://redistrictingdatahub.org/dataset/texas-population-projections-20262035-at-the-block-level/)
+- [Redistricting Data Hub - TX Correctional Facility Population Counts by Census Block (2020)](https://redistrictingdatahub.org/dataset/2020-texas-ppi-correctional-facility-population-counts-at-the-block-level/)
+- [Redistricting Data Hub - TX Counterfactual Prisoner Adjusted Data (2020)](https://redistrictingdatahub.org/dataset/texas-blocklevel-2020-counterfactual-prisoner-adjusted-redistricting-data-with-aggregations-to-state-legislative-districts/)
+
+## Texas specific datasets
+- [Texas Department of Criminal Justice Releases 2024](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2024?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+- [Texas Department of Criminal Justice Releases 2022](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2022?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+- [Texas Department of Criminal Justice Releases 2021](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2021?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+- [Texas Department of Criminal Justice Releases 2020](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2020?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+- [Texas Department of Criminal Justice Releases 2023](https://catalog.data.gov/dataset/texas-department-of-criminal-justice-releases-fy-2023?from_hint=eyJrZXl3b3JkIjoidGRjaiJ9)
+
 
 ## Data Collections
 These have more tha one dataset, but are not massive clearinghouses
 - [Across Walls](https://www.acrosswalls.org/) *This site can be a little difficult to navigate, but they have a lot of specific data not generally available elsewhere, like this [final statements, last meals](https://docs.google.com/spreadsheets/u/1/d/1RF-0BkAVaWwWTlQdkswsfQFmq1x1N4xWL6cHAytuydE/pubhtml) dataset.
 - [and other repos by the Vera Institute](https://github.com/vera-institute)
+- [2025 Census Population Estimates at County/Metropolitan Level](https://www.census.gov/programs-surveys/popest/data/tables.html)
+
 
 
 ## Data Clearinghouses 
@@ -33,3 +47,33 @@ These have more tha one dataset, but are not massive clearinghouses
 ## What about _______?
 The Prison Policy Initative has a list of [datasets they wish existed](https://www.prisonpolicy.org/blog/2024/12/19/data-wishlist/), but which do not.
 
+## Kayla's Potential Data Sets
+- https://github.com/jkbren/incarcerated-populations-data/tree/main/data This data set is about incarcerated populations and has variables of race and state. 
+- https://openpolicing.stanford.edu/data/
+This data has separate datasets by state and county is about traffic stops and has variables related to race. 
+- https://www.ussc.gov/research/datafiles/commission-datafiles
+This is data over Federal sentencing.  
+https://cdr.lib.unc.edu/concern/data_sets/6q182v788?locale=en
+Training set data over if a law is a jim crow law or not, helpful to trace the count of Jim Crow Laws and where. 
+- https://exonerationregistry.org/
+This dataset is about exonerations which could be a useful lens to look through.  
+
+## Ruolin's Datasets for Stage 1
+- [United States Sentencing Commission - Interactive Data Analyzer](https://ida.ussc.gov/analytics/saw.dll?Dashboard&PortalPath=%2Fshared%2FIDA%2F_portal%2FIDA%20Dashboards)
+- [Federally Sentenced Non-U.S. Citizens](https://www.ussc.gov/research/quick-facts/federally-sentenced-non-us-citizens)
+-[Commission Datafiles](https://www.ussc.gov/research/datafiles/commission-datafiles)
+-[Immigration and Customs Enforcement - Arrests](https://deportationdata.org/data/processed/ice.html)
+-[Immigration and Customs Enforcement - Arrests joined with detention stays](https://deportationdata.org/data/processed/ice.html)
+
+## Children & Criminal Justice System Datasets
+- [Survey of Youths in Custody, 1987](https://www.icpsr.umich.edu/web/NACJD/studies/8992/versions/V3) The survey provides detailed information on the characteristics of youths held primarily in secure settings within the juvenile justice system. The data contain information on criminal histories, family situations, drug and alcohol use, and peer group activities. For youths committed for violent acts, data are available on the victims of their crimes and on weapon use
+- [Survey of Youth in Residential Placement (SYRP) 2003 [United States]](https://catalog.data.gov/dataset/survey-of-youth-in-residential-placement-syrp-2003-united-states) According to the description, the Survey of Youth in Residential Placement (SYRP) is the only national survey that collects information directly from young people in the juvenile justice system. Developed by the Office of Juvenile Justice and Delinquency Prevention (OJJDP), it uses anonymous interviews to ask youth aged 10 to 20 about their backgrounds, facility conditions, and personal experiences
+- [National Survey of Youth in Custody, 2012](https://catalog.data.gov/dataset/national-survey-of-youth-in-custody-2012?from_hint=eyJrZXl3b3JkIjoiY29ycmVjdGlvbmFsIGZhY2lsaXRpZXMgKGp1dmVuaWxlcykifQ%3D%3D) The National Survey of Youth in Custody collects confidential data on sexual assault in juvenile facilities to fulfill requirements of the Prison Rape Elimination Act of 2003. Using private audio computer assisted self interviews, the survey gathers detailed background, perception, and victimization information from thousands of youth across various facilities. These findings help the Bureau of Justice Statistics measure and report on the prevalence of sexual victimization in the juvenile justice system
+- [Compendium of National Juvenile Justice Datasets](https://ojjdp.ojp.gov/compendium-national-juvenile-justice-datasets#survey-of-youth-in-custody) The links aren't working but I can guess that these data sets will be of use for my project once I find out how to get to them
+- [JDAI Dashboard](https://www.mass.gov/info-details/jdai-dashboard)State level data showing demographic information about Juveniles in Massachusetts prison. Also includes some data on youth held without bail.
+## jessie (trying to avoid merge conflict)
+- [some prison coordinates ](https://github.com/miolow/US_prisons/blob/master/allprisons.csv)
+- [interactive prison map](https://www.cccarto.com/atlas/prisons/)
+- [map with infor for each state](https://www.prisonpolicy.org/blog/2023/09/27/updated_race_data/)
+- [some more prison coordinates](http://github.com/joshbegley/Carceral-Space/blob/master/all_us_prisons.csv)
+- [data from DIG, correctional facilities by state](https://nicic.gov/resources/nic-library/corrections-trends/locate-correctional-facilities-state)

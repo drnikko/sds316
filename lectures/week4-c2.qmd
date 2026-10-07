@@ -1,0 +1,98 @@
+---
+title: "My Top 10 Git Tips"
+subtitle: "What I wish I'd known sooner, then a live demo in Positron"
+description: "Ten practical git habits, plus a demo in Positron" # appears in the lecture notes round up
+author: "Reagan Gonzales"
+topics:
+- "git"
+- "github"
+categories: ["lab", "git"]
+format:
+  revealjs:
+    theme: [dracula, lab.scss]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+    highlight-style: dracula  # Matches syntax highlighting to the slide theme
+    code-line-numbers: true   # Adds line numbers to code blocks
+    code-copy: true           # Adds a 1-click "Copy" button for students
+    code-overflow: wrap       # Prevents long code lines from clipping off-screen
+    preview-links: auto       # OPENS LINKS IN AN IN-SLIDE POPUP OVERLAY!
+    scrollable: true          # Allows vertical scrolling if code output is tall
+
+---
+
+## Today's Plan
+
+-   Review Git
+
+-   10 tips I find helpful to know
+
+-   Live demo: doing all of this with buttons in Positron
+
+## By the end of today, you will (probably) know how to:
+
+- Do the everyday git workflow from Positron's Git pane
+- How to undo things in Git
+- How to read git history
+
+## Tip 1: `git status` is your best friend
+
+- Run it constantly! It tells you what's changed, what's staged, and what's untracked
+- When in doubt, run `git status` first.
+
+## Tip 2: Git Workflow
+
+1. Pull
+2. Create/switch branch
+3. Make your changes
+4. Commit
+5. Push
+
+## Tip 3: Don't forget to use multiple branches
+
+- Once you've used a branch and made a commit, *delete* it
+
+## Tip 4: How to read git history
+
+- git log in the terminal
+- Gives entire history of commits in the repository
+- git log --oneline
+
+## Tip 5: Have good commit descriptions
+
+- Better able to read git log + collaborate
+
+## Tip 6: Always review before commiting
+
+- See exactly what you changed with git status or git diff
+
+## Tip 7: Be intentional with commits
+
+- You don't need to commit every file
+- Option to commit gitignore, you don't need to
+
+## Tip 8: Changing themes
+
+- You can change your theme 
+
+## Tip 9: You can always re-add a repository to your computer
+
+- I've found that if my local git is tweaking, just recopy it from github
+
+## Tip 10: Git can undo things
+
+- Undo an unstaged file
+- Undo a staged file
+- Undo/ammend a commit
+- https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
+
+## Key Takeaways
+
+1. Check `git status` and `git diff` before every commit
+2. Write clear commit messages and use branches
+3. Git can undo most mistakes, so don't panic
+
+## Next Steps
+
+- Live demo

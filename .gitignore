@@ -172,6 +172,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv/bin
+sds316/venv/bin
+sds316/venv
 
 # Spyder project settings
 .spyderproject
@@ -232,3 +235,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+**/*.quarto_ipynb

@@ -1,0 +1,51 @@
+---
+title: Research Plan
+author: Reagan Gonzales
+execute:
+  code-fold: true
+---
+
+## Phase 1 Research Questions
+
+1. Where does the criminal justice system draw the line between a child and an adult?
+2. What factors influence whether a young person is treated as a child or an adult in the criminal justice system, particulary race, age, gender, and the severity of the offense?
+3. How do children who were put in the criminal justice system view themselves?
+
+Maybe this question as well
+4. How do media and public narratives about young offenders differ by race and type of crime, and do they match sentencing outcomes?
+
+## Personal Motivation
+ I'm interested in this topic because it's questions that have come up to me as I've seen the way children are treated in the media when it comes to 'crime' commiting. In particular, I've noticed that young school shooters are often treated on social media as derserving of harsh, adult-like sentences. Just recently, I saw the Apalachee High School school shooter who was only 16, sentenced to life without parole. My dad's best friend was charged as an adult at 17 to almost 7 years for a crime he commited, and it makes me wonder why he was treated as so. Was it because of the crime he committed? Or because he was a black teenager? Why was his sentence so long if it was his first offense? This made me want to investigate this discrepancy we often see today in how children are treated in the criminal justice system. 
+
+## Broader Relevance
+Demographic disparaties are well studied in the the juvinile system, so that isn't understudied. But I believe the understudied side is understanding the experience of children who are charged as adults. There isn't many statistics or studies on this. Also, the gap between online outrage about young offenders and the legal reality is rarely examined, and it matters because public sentiment can shape the laws that decide whether a 14, 16, or 17 year old is sentenced as a child
+
+## Example Projects
+
+**[Youth in Adult Courts, Jails, and Prisons](https://www.sentencingproject.org/app/uploads/2022/09/Youth-in-Adult-Courts-Jails-and-Prisons.pdf):** I really like the layout of this project. It gives a brief summary on top and starts with the history of youth in adult courts/jails/prisons. Then leads into the main points with good use of data visualizations.
+
+**[Why The Super Rich Are Inevitable](https://pudding.cool/2022/12/yard-sale/):** I really like the scroll feature and the fact they started their report with a personal story. I'm really inspired by how visual it is. While it's discussing a serious topic, it's still creative and attention-catching
+
+**[These numbers show that black and white people live in two different Americas](https://www.washingtonpost.com/opinions/2020/06/22/what-numbers-say-whites-blacks-live-two-different-americas/):** I really like the balance of a little text, followed by a graphic/visualization, little text, graphic/visualization, and so on. I think I'll try making my report a good balance of text and visualizations.
+
+## Relevant Literature
+
+**[TBD Interview Answers]():** I don't have this data yet, but I plan to ask my father's friend about his experience being charged as an adult and how that has impacted his life, his sense of identity, etc, and use that in my research. This can help in my third research questions focusing on how children put into the criminal justice system view themselves
+
+**[I Was A Child In An Adult Prison System. Now I Fight For Those, Like Me, Who Deserve A Brighter Future When They’re Released](https://theappeal.org/i-was-a-child-in-an-adult-prison-system-now-i-fight-for-those-like-me-who-deserve-a-brighter-future-when-theyre-released/):** Catherine Jones was charged with second degree murder at 13 and spent over 16 years in Florida's adult prison system. She describes how she was instantly relabeled a "super predator" and "killer" rather than a child, which speaks to Research Question 1 (where the line between child and adult is drawn) and how the public frames young offenders. She also says that her abuse went unheeded by adults she told, that prison programming was withheld from people serving long sentences, and that employers turned her away after release, all of which show the impacts of being charged to long sentences as a child (question 3).
+
+**[Children Charged as Adults in Justice System Have Overwhelming Histories of Trauma, Researchers Find](https://imprintnews.org/top-stories/children-charged-as-adults-have-histories-of-trauma/270203):** The Imprint interview (Sara Tiano's Q&A with researcher Aiden Lesley) summarizes a Human Rights for Kids survey of more than 2,200 people incarcerated for crimes committed as minors, finding that 94 percent experienced multiple childhood traumas and that this history was considered in court in only about 10 percent of cases. That speaks to Question 1, because it shows the "adult" label is applied without weighing the developmental and trauma factors that distinguish children. This interview also gives some insight into some of the harsh experiences children face once in prison (abuse risk, solitary confinement, etc)
+
+**[Youth Confinement: The Whole Pie 2025](https://www.prisonpolicy.org/reports/youth2025.html):** Using 2022 juvenile court data, the report finds that Black youth were 37% of delinquency cases but 59% of judicial transfers to adult court, while white youth were 43% of cases and 26% of transfers, and that the disproportion has worsened since 2005. It also cites Florida data showing prosecutors direct-file Black boys at seven times the rate of white or Latino boys, and its footnotes speak to Question 1: four states (Georgia, Louisiana, Texas, and Wisconsin) automatically prosecute 17 year olds as adults, and 22 states plus DC had at least one transfer provision with no minimum age as of 2019. The report also discusses adultification and the "super predator" myth, which ties back to my potential question 4
+
+**[Most children charged as adults in Washington are youth of color](https://www.investigatewest.org/most-children-charged-as-adults-in-washington-are-youth-of-color/):** Henshaw reports that in 2023, 83% of Washington children charged as adults were not white, and that disparities appear both where state law mandates adult charging and where prosecutors have discretion. A 2024 University of Washington report found that of 28 cases where a white child was charged with first or second degree assault with a deadly weapon, none went to adult court, compared with 28% of similar cases involving Black and Latino youth. The article also ties this to adultification, with lawmakers pointing to language in court documents. This all touches on my research questions 1,2, and 4
+
+**[A New Juvenile Justice System: Total Reform for a Broken System](https://www.jstor.org/stable/j.ctt15r4065.15?searchText=juvenile+transfer+racial+disparities&searchUri=%2Faction%2FdoBasicSearch%3FQuery%3Djuvenile%2Btransfer%2Bracial%2Bdisparities%26so%3Drel&ab_segments=0%2Fbasic_search_gsv2%2Fcontrol&refreqid=fastly-default%3A6a254ba37784fc173336b4a3457e290e&seq=8):** Henning argues that prosecutors, who hold the most discretion over whether a youth is charged, are influenced by racial stereotypes about maturity and dangerousness. She cites studies showing that race shifts how culpable, mature, and deserving of harsh punishment a young offender is judged to be, even though self report data show adolescents of all races engage in similar risk taking. This connects to my questions 1 and 2 of who draws this line and the factors that influence whether a child is treated as an adult
+
+**[Off Balance: Youth, Race & Crime in the News](https://www.ojp.gov/ncjrs/virtual-library/abstracts/balance-youth-race-crime-news):** This is a study focused on answering the questions: (1) does news coverage reflect actual crime trends, (2) how does news coverage depict minorities and crime, and (3) does news coverage disproportionately depict youth of color as perpetrators of crime? This connects to my research question 2 about factors that influence how children are treated in the criminal justice system, as well as my potential question 4 about how media/public narratives about young offenders differ by race and type of crime
+
+**[Girlhood  Interrupted: The Erasure of Black Girls’ Childhood](https://genderjusticeandopportunity.georgetown.edu/wp-content/uploads/2020/06/girlhood-interrupted.pdf):** the report finds that adults in a survey saw Black girls as more adult-like and less in need of protection and nurturing than white girls, starting as early as age 5, and it links that "adultification" to harsher discipline in schools and the juvenile system. That speaks to where the line between child and adult gets drawn, and it covers both race and gender, two of the factors in my research question 2. This also touches on my potential 4th question 
+
+**[The Essence of Innocence: Consequences of Dehumanizing Black Children](https://www.apa.org/pubs/journals/releases/psp-a0035663.pdf):** Goff and colleagues ran a series of studies showing that Black boys are seen as older and less innocent than white boys, and that this perception carried over to how much culpability people assigned them. The authors also found that police officers who held dehumanizing associations toward Black people were more likely to have used force against Black children in custody. This strongly connects to my second research question as well as my potential 4th question
+
+**[Race and the Fragility of the Legal Distinction between Juveniles and Adults](https://pmc.ncbi.nlm.nih.gov/articles/PMC3359323/):** Rattan et al. surveyed 735 White Americans (658 in the final sample), and changing a single word in a case description, from "white" to "black" male, made participants see juveniles in general as more similar to adults in blameworthiness and more supportive of life without parole. This connects to my research questions 1 and 2 and my potential question 4 about how perceptions relate to sentencing expectations
