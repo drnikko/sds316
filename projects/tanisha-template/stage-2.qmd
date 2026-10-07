@@ -1,0 +1,32 @@
+---
+title: Stage 2
+author: Tanisha Chetty
+execute:
+  code-fold: true
+---
+
+How many rows are in the dataset? 2436
+
+What is the total number of adults arrested in 2023? 810388
+- in 2024? 827594
+- in 2025? 831210
+
+What was the change in number of arrests between 2023 and 2024? 17206 more arrests in 2024 compared to 2023
+
+What was the change in number of arrests between 2024 and 2025? 3616 more arrests in 2025 compared to 2024
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
