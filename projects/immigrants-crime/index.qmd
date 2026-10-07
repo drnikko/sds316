@@ -1,7 +1,7 @@
 ---
-title: "title: "Immigration Detention and/or Criminal Justice Outcomes Across Different Immigration Status Before and After COVID-19""
+title: "Immigration Detention and/or Criminal Justice Outcomes Across Different Immigration Status Before and After COVID-19"
 author: 
-  - Ruolin Kang
+- "Ruolin Kang"
 date: 2026-09-30
 description: "An research on how immigrants-related criminal justice patterns changed before and after the COVID-19 pandemic."
 categories: [Demographics]  
