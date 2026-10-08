@@ -6,11 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-53dc85963c67a221f6f2030af840abbe.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <meta name="author" content="Nikko Stevens">
-  <title>SDS316 - Fall 2026 – Dragnet Surveillance</title>
+  <meta name="author" content="Reagan Gonzales">
+  <title>SDS316 - Fall 2026 – My Top 10 Git Tips</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -35,7 +35,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-85eb8c06bcb51f44e3e2fbc190663744.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d91377c3403b954f9955b390abdd0271.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -51,6 +51,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -128,87 +129,126 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Dragnet Surveillance</h1>
-  <p class="subtitle">Brayne, Chapter 3</p>
+  <h1 class="title">My Top 10 Git Tips</h1>
+  <p class="subtitle">What I wish I’d known sooner, then a live demo in Positron</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Nikko Stevens
+Reagan Gonzales
 </div>
 </div>
 </div>
 
 </section>
-<section id="todays-agenda" class="slide level2">
-<h2>Today’s Agenda</h2>
+<section id="todays-plan" class="slide level2">
+<h2>Today’s Plan</h2>
 <ul>
-<li>Tanisha is our discussion leader!</li>
-<li></li>
-<li></li>
-</ul>
-<!--https://quarto.org/docs/presentations/revealjs/ -->
-</section>
-<section>
-<section id="discussion" class="title-slide slide level1 center">
-<h1>Discussion</h1>
-<!-- Discussion Leader: Add your slides here -->
-<!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
-</section>
-<section id="related" class="slide level2">
-<h2>Related</h2>
-<p><a href="https://prisonwitness.org/apwa-essay/crime-shows-and-jurrors/">Crime shows and jurrors</a> by Randy A. Waterson from American Prison Writing Archive <a href="https://www.nytimes.com/2025/12/03/business/dealbook/palantir-alex-karp-ice-trump.html">Palantir’s Chief Defends His Company’s Work With ICE</a> by Michael J. de la Merced from New York Times - Dec 3 2025</p>
-<ul>
-<li>news and media’s emphasis on violent crime feeds into the “danger imperative” mentioned in the reading, referring to the cultural frame officers are socialized into in which they may face lethal violence at a moment’s notice</li>
-<li>Palantir CEO saying he doesn’t want to surveil innocent Americans but “completely” supports efforts to surveil America’s adversaries, and the concept of “function creep”</li>
+<li><p>Review Git</p></li>
+<li><p>10 tips I find helpful to know</p></li>
+<li><p>Live demo: doing all of this with buttons in Positron</p></li>
 </ul>
 </section>
-<section id="reading" class="slide level2">
-<h2>Reading</h2>
+<section id="by-the-end-of-today-you-will-probably-know-how-to" class="slide level2">
+<h2>By the end of today, you will (probably) know how to:</h2>
 <ul>
-<li>Dragnet surveillance or “the collection and analysis of information on everyone, rather than only people under suspicion” on an unprecedented scale</li>
-<li>Through tagging and generating links among previously separate data points, entirely new searches can be performed almost instantly</li>
-<li>one of the most transformative features of the big data landscape: the creep of criminal justice surveillance into other, non–criminal justice institutions</li>
-<li>Alert-base systems shift the relational structure of surveillance</li>
-<li>Decrease in human mediation</li>
-<li>In auditable big data systems, queries are serving as quantified proxies for suspiciousness.</li>
+<li>Do the everyday git workflow from Positron’s Git pane</li>
+<li>How to undo things in Git</li>
+<li>How to read git history</li>
 </ul>
 </section>
-<section id="main-points" class="slide level2">
-<h2>Main Points</h2>
-<p>“Using a series of data points to reconstruct an individual’s intentions and behaviors (whether incriminating or exculpatory) rests on the assumption of an infallible state, or the assumption that law enforcement will draw a correct conclusion. And, as the analyst above implied, you are not able to consent—or refuse consent—to the collection of your data at each point.” (86)</p>
-</section>
-<section id="questions" class="slide level2">
-<h2>Questions?</h2>
-<p>“High-frequency data collection makes alert-based systems possible, and that carries enormous implications for the relational structure of surveillance.” (73)</p>
+<section id="tip-1-git-status-is-your-best-friend" class="slide level2">
+<h2>Tip 1: <code>git status</code> is your best friend</h2>
 <ul>
-<li>How do alert systems change the relational structure of surveillance?</li>
-<li>How could changing structures of surveillance impact police accountability and the burden of responsibility?</li>
-</ul>
-<p>Brayne says that “even dragnet surveillance serves to reinscribe inequality” (87)</p>
-<ul>
-<li><p>How does the ability to exercise agency or refuse consent to surveillance map onto societal inequalities?</p></li>
-<li><p>How, if at all, has this chapter influenced your perception of your own digital trail?</p></li>
-</ul>
-<!-- Discussion Leader: End your slides -->
-</section>
-<section id="reminder" class="slide level2">
-<h2>Reminder</h2>
-<ul>
-<li>next class (9/30) your pull requests need to be OPEN and BUILDING.</li>
+<li>Run it constantly! It tells you what’s changed, what’s staged, and what’s untracked</li>
+<li>When in doubt, run <code>git status</code> first.</li>
 </ul>
 </section>
-<section id="checkout" class="slide level2">
-<h2>Checkout</h2>
-<p>On a sheet of paper, write your name and then:</p>
+<section id="tip-2-git-workflow" class="slide level2 scrollable">
+<h2>Tip 2: Git Workflow</h2>
+<ol type="1">
+<li>Pull</li>
+<li>Create/switch branch</li>
+<li>Make your changes</li>
+<li>Commit</li>
+<li>Push</li>
+</ol>
+</section>
+<section id="tip-3-dont-forget-to-use-multiple-branches" class="slide level2">
+<h2>Tip 3: Don’t forget to use multiple branches</h2>
+<ul>
+<li>Once you’ve used a branch and made a commit, <em>delete</em> it</li>
+</ul>
+</section>
+<section id="tip-4-how-to-read-git-history" class="slide level2">
+<h2>Tip 4: How to read git history</h2>
+<ul>
+<li>git log in the terminal</li>
+<li>Gives entire history of commits in the repository</li>
+<li>git log –oneline</li>
+</ul>
+</section>
+<section id="tip-5-have-good-commit-descriptions" class="slide level2">
+<h2>Tip 5: Have good commit descriptions</h2>
+<ul>
+<li>Better able to read git log + collaborate</li>
+</ul>
+</section>
+<section id="tip-6-always-review-before-commiting" class="slide level2">
+<h2>Tip 6: Always review before commiting</h2>
+<ul>
+<li>See exactly what you changed with git status or git diff</li>
+</ul>
+</section>
+<section id="tip-7-be-intentional-with-commits" class="slide level2">
+<h2>Tip 7: Be intentional with commits</h2>
+<ul>
+<li>You don’t need to commit every file</li>
+<li>Option to commit gitignore, you don’t need to</li>
+</ul>
+</section>
+<section id="tip-8-changing-themes" class="slide level2">
+<h2>Tip 8: Changing themes</h2>
+<ul>
+<li>You can change your theme&nbsp;</li>
+</ul>
+</section>
+<section id="tip-9-you-can-always-re-add-a-repository-to-your-computer" class="slide level2">
+<h2>Tip 9: You can always re-add a repository to your computer</h2>
+<ul>
+<li>I’ve found that if my local git is tweaking, just recopy it from github</li>
+</ul>
+</section>
+<section id="tip-10-git-can-undo-things" class="slide level2">
+<h2>Tip 10: Git can undo things</h2>
+<ul>
+<li>Undo an unstaged file</li>
+<li>Undo a staged file</li>
+<li>Undo/ammend a commit</li>
+<li>https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things</li>
+</ul>
+</section>
+<section id="key-takeaways" class="slide level2 scrollable">
+<h2>Key Takeaways</h2>
+<ol type="1">
+<li>Check <code>git status</code> and <code>git diff</code> before every commit</li>
+<li>Write clear commit messages and use branches</li>
+<li>Git can undo most mistakes, so don’t panic</li>
+</ol>
+</section>
+<section id="next-steps" class="slide level2">
+<h2>Next Steps</h2>
+<ul>
+<li>Live demo</li>
+</ul>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -238,7 +278,7 @@ Nikko Stevens
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': false,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,

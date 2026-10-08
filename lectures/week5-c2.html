@@ -9,8 +9,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <meta name="author" content="Nikko Stevens">
-  <title>SDS316 - Fall 2026 – Dragnet Surveillance</title>
+  <meta name="author" content="Rae Traver-Fallick">
+  <title>SDS316 - Fall 2026 – Virtual Environments</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -35,7 +35,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-85eb8c06bcb51f44e3e2fbc190663744.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a8385bbf955fbb4448938bc10efacf4.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -133,82 +133,128 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Dragnet Surveillance</h1>
-  <p class="subtitle">Brayne, Chapter 3</p>
+  <h1 class="title">Virtual Environments</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Nikko Stevens
+Rae Traver-Fallick
 </div>
 </div>
 </div>
 
 </section>
-<section id="todays-agenda" class="slide level2">
-<h2>Today’s Agenda</h2>
+<section id="first-some-vocab" class="slide level2">
+<h2>First, some vocab:</h2>
 <ul>
-<li>Tanisha is our discussion leader!</li>
-<li></li>
-<li></li>
+<li><strong>Python dependency:</strong> an external package that a script (or other package requires to run)</li>
+<li><strong>Executable:</strong> a script that can be read and run by your computer without additional compiling</li>
+<li><strong>Interpreter:</strong> an executable file that takes a .py script and actually runs it <!-- ^[https://pydevtools.com/handbook/explanation/what-is-a-python-interpreter/] --></li>
+<li><strong>symlinks:</strong> pointers that lead to a file</li>
+<li><strong>PATH executable:</strong> the directory in which a computer can search for executables when the full path name isn’t given</li>
 </ul>
+<!--^[https://pydevtools.com/handbook/explanation/what-is-a-python-interpreter/] -->
+</section>
+<section id="why-not-just-install-packages-globally" class="slide level2">
+<h2>Why not just install packages globally?</h2>
+<ul>
+<li>Dependency conflicts! Different projects need different versions of packages (and each package may need a specific version of its dependencies)</li>
+</ul>
+<!-- ## What about just adding packages to your local directory? 
+That should be enough isolation, right? 
+
+No. You may have mulitple versions of Python/a Python interpreter downloaded; installing into your local directory doesn't allow you to specify what interpreter to use.  -->
+</section>
+<section id="enter-virtual-environments" class="slide level2">
+<h2>Enter Virtual Environments…</h2>
+<p>Essentially, a subfolder specific to a single Python version containing all of the executables and packages needed for your project.</p>
+<p>Two types we’ll cover today:</p>
+<ol type="1">
+<li><p>Python’s built-in environment manager: venv</p></li>
+<li><p>uv, modern package installer built in Rust</p></li>
+</ol>
+</section>
+<section id="pros-of-venv" class="slide level2">
+<h2>Pros of Venv</h2>
+<ol type="1">
+<li><p>Built-in (no additional install)</p></li>
+<li><p>Easy to use and conceptualize</p></li>
+</ol>
+<p>Venv is used largely for dependency isolation.</p>
+</section>
+<section id="what-happens-when-you-use-venv" class="slide level2">
+<h2>What happens when you use venv?</h2>
+<p>Activating a venv changes where your computer assumes your files are! Here’s what changes:</p>
+<ol type="1">
+<li>sys.prefix and sys.exec_prefix:</li>
+</ol>
+<ul>
+<li>sys.prefix: path to platform-<em>independent</em> (OS-independent) Python packages</li>
+<li>sys.exec_prefix: path to platform-<em>dependent</em> (OS-ndependent) Python packages</li>
+</ul>
+</section>
+<section id="what-happens-when-you-use-venv-cont." class="slide level2">
+<h2>What happens when you use venv (cont.)</h2>
+<ol start="2" type="1">
+<li>PYTHONPATH:</li>
+</ol>
+<ul>
+<li>tells Python where to look for modules (i.e., to go to venv sites-packaes NOT the base sites-packages)</li>
+</ul>
+<ol start="3" type="1">
+<li>PATH variable changes</li>
+</ol>
+<ul>
+<li>modifies the PATH variable to include the virtual environment Python executable</li>
+</ul>
+<p>In short: Python is told to STOP looking for exectuables, modules, and 3rd-party packages in the directory where base Python is installed. Instead, Python looks for files inside the virtual environment</p>
+</section>
+<section id="what-does-a-venv-include" class="slide level2">
+<h2>What does a “venv” include?</h2>
+
+<img data-src="images/venv_breakdown.png" class="r-stretch quarto-figure-center"><p class="caption">A typical virtual environment file setup</p><ul>
+<li><p><strong>/bin:</strong> stores the python interpreter, pip, and activation symlinks</p></li>
+<li><p><strong>lib/sites-packages:</strong> directory where 3rd party packages are installed</p></li>
+<li><p><strong>/include</strong> directory where C headers for packages are stored</p></li>
+<li><p><strong>Configuration file:</strong> all details needed to configure the venv</p></li>
+</ul>
+</section>
+<section id="what-about-uv" class="slide level2">
+<h2>What about uv?</h2>
+<ul>
+<li>faster package installation than venv/pip install</li>
+<li>more robust dependency handling</li>
+<li>project initialization (will initialize a root directory, git repo, .gitignore, etc.)</li>
+</ul>
+</section>
+<section id="what-does-uv-include" class="slide level2">
+<h2>What does uv include?</h2>
+
+<img data-src="images/uv_breakdown.png" class="r-stretch quarto-figure-center"><p class="caption">A uv project file setup for a project called “rpcats”</p><p>Here the .toml file is a configuration file!</p>
+</section>
+<section id="in-conclusion" class="slide level2">
+<h2>In conclusion…</h2>
+<ul>
+<li>always use some kind of virtual environment / project isolation method</li>
+<li>use venv for “simple and dirty”</li>
+<li>use uv for more complex projects that involve publishing or development</li>
+</ul>
+</section>
+<section id="sources" class="slide level2">
+<h2>Sources</h2>
+<ol type="1">
+<li>https://ashutosh-batra.medium.com/understanding-python-virtual-environments-venv-vs-uv-9d9811f2c073</li>
+<li>https://snarky.ca/how-virtual-environments-work/</li>
+<li>https://janelbrandon.medium.com/understanding-the-path-variable-6eae0936e976</li>
+<li>https://medium.com/<span class="citation" data-cites="dakota.lillie/an-introduction-to-virtual-environments-in-python-ce16cda92853">@dakota.lillie/an-introduction-to-virtual-environments-in-python-ce16cda92853</span></li>
+<li>https://www.w3schools.com/python/ref_module_sys.asp</li>
+<li>https://realpython.com/python-uv/#installing-uv-to-manage-python-projects</li>
+<li>https://realpython.com/python-virtual-environments-a-primer/#a-folder-structure</li>
+</ol>
 <!--https://quarto.org/docs/presentations/revealjs/ -->
-</section>
-<section>
-<section id="discussion" class="title-slide slide level1 center">
-<h1>Discussion</h1>
-<!-- Discussion Leader: Add your slides here -->
-<!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
-</section>
-<section id="related" class="slide level2">
-<h2>Related</h2>
-<p><a href="https://prisonwitness.org/apwa-essay/crime-shows-and-jurrors/">Crime shows and jurrors</a> by Randy A. Waterson from American Prison Writing Archive <a href="https://www.nytimes.com/2025/12/03/business/dealbook/palantir-alex-karp-ice-trump.html">Palantir’s Chief Defends His Company’s Work With ICE</a> by Michael J. de la Merced from New York Times - Dec 3 2025</p>
-<ul>
-<li>news and media’s emphasis on violent crime feeds into the “danger imperative” mentioned in the reading, referring to the cultural frame officers are socialized into in which they may face lethal violence at a moment’s notice</li>
-<li>Palantir CEO saying he doesn’t want to surveil innocent Americans but “completely” supports efforts to surveil America’s adversaries, and the concept of “function creep”</li>
-</ul>
-</section>
-<section id="reading" class="slide level2">
-<h2>Reading</h2>
-<ul>
-<li>Dragnet surveillance or “the collection and analysis of information on everyone, rather than only people under suspicion” on an unprecedented scale</li>
-<li>Through tagging and generating links among previously separate data points, entirely new searches can be performed almost instantly</li>
-<li>one of the most transformative features of the big data landscape: the creep of criminal justice surveillance into other, non–criminal justice institutions</li>
-<li>Alert-base systems shift the relational structure of surveillance</li>
-<li>Decrease in human mediation</li>
-<li>In auditable big data systems, queries are serving as quantified proxies for suspiciousness.</li>
-</ul>
-</section>
-<section id="main-points" class="slide level2">
-<h2>Main Points</h2>
-<p>“Using a series of data points to reconstruct an individual’s intentions and behaviors (whether incriminating or exculpatory) rests on the assumption of an infallible state, or the assumption that law enforcement will draw a correct conclusion. And, as the analyst above implied, you are not able to consent—or refuse consent—to the collection of your data at each point.” (86)</p>
-</section>
-<section id="questions" class="slide level2">
-<h2>Questions?</h2>
-<p>“High-frequency data collection makes alert-based systems possible, and that carries enormous implications for the relational structure of surveillance.” (73)</p>
-<ul>
-<li>How do alert systems change the relational structure of surveillance?</li>
-<li>How could changing structures of surveillance impact police accountability and the burden of responsibility?</li>
-</ul>
-<p>Brayne says that “even dragnet surveillance serves to reinscribe inequality” (87)</p>
-<ul>
-<li><p>How does the ability to exercise agency or refuse consent to surveillance map onto societal inequalities?</p></li>
-<li><p>How, if at all, has this chapter influenced your perception of your own digital trail?</p></li>
-</ul>
-<!-- Discussion Leader: End your slides -->
-</section>
-<section id="reminder" class="slide level2">
-<h2>Reminder</h2>
-<ul>
-<li>next class (9/30) your pull requests need to be OPEN and BUILDING.</li>
-</ul>
-</section>
-<section id="checkout" class="slide level2">
-<h2>Checkout</h2>
-<p>On a sheet of paper, write your name and then:</p>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
