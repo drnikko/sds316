@@ -47,6 +47,12 @@ These have more tha one dataset, but are not massive clearinghouses
 ## What about _______?
 The Prison Policy Initative has a list of [datasets they wish existed](https://www.prisonpolicy.org/blog/2024/12/19/data-wishlist/), but which do not.
 
+## Catherine's Datasets
+1. (https://www.atlasofsurveillance.org/search?location=New+York+City%2C+NY&sort=) Dataset with government information and nonprofit reports on different surveillance technologies in New York City. 
+2. (https://www.nyc.gov/assets/dfta/downloads/pdf/reports/Demographics_by_NTA.pdf) A tabulation of the proportion of racial demographics, broken down by neighborhood in each borough in New York. 
+3. (https://raw.githubusercontent.com/vera-institute/incarceration-trends/refs/heads/main/incarceration_trends_state.csv) US state-level data on incarceration rates based on racial demographics. 
+4. (https://mappingpoliceviolence.us) A database corresponding to a map of police killings across the United States, along with the victim's  information like race and gender. 
+5. (https://github.com/Changing-Cities-Research-Lab/surveillance-replication) Data showing the prevalence of surveillance cameras in different neighborhoods across 10 US cities. 
 ## Kayla's Potential Data Sets
 - https://github.com/jkbren/incarcerated-populations-data/tree/main/data This data set is about incarcerated populations and has variables of race and state. 
 - https://openpolicing.stanford.edu/data/
