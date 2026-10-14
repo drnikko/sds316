@@ -2,23 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Assignments – SDS316 - Fall 2026</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-283806461d87d7bdc96c8e860487c4d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -135,12 +129,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignments.html" aria-current="page"> <i class="bi bi-file-earmark" role="img">
+    <a class="nav-link active" href="./assignments.html" aria-current="page"> <i class="bi bi-list-task" role="img">
 </i> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lectures.html"> <i class="bi bi-file-earmark" role="img">
+    <a class="nav-link" href="./lectures.html"> <i class="bi bi-chat" role="img">
 </i> 
 <span class="menu-text">Lectures</span></a>
   </li>  
@@ -148,6 +142,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./schedule.html"> <i class="bi bi-calendar-minus" role="img">
 </i> 
 <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./projects/index.html"> <i class="bi bi-rocket-takeoff" role="img">
+</i> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -314,7 +313,7 @@ Important
 <h3 class="anchored" data-anchor-id="what-it-is-2">What it is</h3>
 <p>Leading class discussion involves preparing materials about the day’s topic, summarizing the reading, and then leading class through ~15 minutes of discussion.</p>
 <p>When it’s your day to lead, you’ll need to create a branch and make edits to the day’s lecture slides before class. The lecture files are markdown in the <code>lectures</code> folder. You’ll find the appropriate file (week number, class number (for example the Class 1 of Week 2 <code>week2-c1.qmd</code>) . You’ll know where to add your slides by reading the code and finding the comment:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Discussion Leader: Add your slides here --&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Discussion Leader: Add your slides here --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When it’s your turn to lead discussion, you will make these edits:</p>
 <ol type="1">
 <li><p>Create <strong>1</strong> slide with</p>
@@ -423,12 +422,47 @@ Finals Conversations will happen in person <em>during the final exam period.</em
 <li><p>discussing your results with your research cluster</p></li>
 <li><p>exploring data visualizations</p></li>
 </ul>
-<section id="key-deliverables" class="level4">
-<h4 class="anchored" data-anchor-id="key-deliverables">Key Deliverables</h4>
-<p><em>More details about these deliverables and what you’ll turn in will appear closer to the due date!</em></p>
+<section id="final-deliverable-1" class="level4">
+<h4 class="anchored" data-anchor-id="final-deliverable-1">Final Deliverable</h4>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+You will lose 10% per day this is late, beginning at 12:01 on Thursday morning (aka late Wednesday night)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>By 11:59pm EST on <strong>Wednesday October 21</strong>, you will need to have an open PR that:</p>
+<ol type="1">
+<li><em>builds</em>. This means that if you run <code>quarto preview</code>, everything works okay</li>
+<li><em>has no merge conflicts</em>. This means that when I go to merge it in, it’s not in conflict with any code from main. This should be trivial since you’re working in your own folder now</li>
+<li><em>contains the necessary content (below)</em>. Is everything there? Are you <em>sure</em>? Double check one more time so that we don’t go back and forth (and you don’t lose points).</li>
+</ol>
+<p><strong>Your PR should contain:</strong></p>
 <ul>
-<li><p>Project and Report scaffold</p></li>
-<li><p>Updated (if necessary) research questions / investigation description</p></li>
+<li><p>An up-to-date <code>research-plan.qmd.</code> If your questions haven’t changed, you probably don’t need to edit this</p></li>
+<li><p>An <code>index.qmd</code> file that links to ALL of your other pages. See the code in <code>projects/template-stage2/index.qmd</code> for examples. Think about browsing your classmates’ projects via the browser - you need links to know what’s there.</p></li>
+<li><p>One or two files (up to you) with <strong>8</strong> questions asked and answered. These questions should contain some text, and some code – that is, I am not interested in the <em>answers</em> to the questions, but in your thinking and the code you’re writing.</p>
+<ul>
+<li>Some folks are doing work in files called <code>stage2.qmd</code> and <code>stage2.2.qmd</code>, and some are putting them all into <code>stage2.qmd</code>. Either is fine</li>
+</ul></li>
+<li><p>A completed <code>stage2-writing.qmd</code> file. Follow the instructions in the file <code>projects/template-stage2/stage2-writing.qmd</code>!</p></li>
+</ul>
+<p><strong>Your PR should NOT contain:</strong></p>
+<ul>
+<li><p><em>any</em> of your commits from Stage 1 – only new commits and new/updated files</p>
+<ul>
+<li>The easiest way to achieve this is to make sure that you’re on a different branch from your stage 1 work</li>
+</ul></li>
+<li><p><em>any placeholder text.</em> Look at your project on the <a href="https://nikkostevens.com/sds316/projects/">project listing page</a>. Does it look complete? Do the images load? Are the tags correct? Do ANY of your files have any left over placeholder content? (check!!! there were a lot on the <code>research-plan.qmd</code> files that I saw)</p>
+<ol type="1">
+<li>NOTE: You can view previews locally <code>quarto preview</code> - just visit <code>/projects</code> at your localhost’s URL and see how your project looks</li>
+</ol></li>
 </ul>
 </section>
 </section>
@@ -441,8 +475,8 @@ Finals Conversations will happen in person <em>during the final exam period.</em
 <li><p>Making decisions about the best ways to visualize information</p></li>
 <li><p>Telling stories with data / questioning what data may be telling us</p></li>
 </ul>
-<section id="key-deliverables-1" class="level4">
-<h4 class="anchored" data-anchor-id="key-deliverables-1">Key Deliverables</h4>
+<section id="key-deliverables" class="level4">
+<h4 class="anchored" data-anchor-id="key-deliverables">Key Deliverables</h4>
 <p><em>More details about these deliverables and what you’ll turn in will appear closer to the due date!</em></p>
 <ul>
 <li><p>final-first-draft report</p></li>
@@ -453,14 +487,14 @@ Finals Conversations will happen in person <em>during the final exam period.</em
 <section id="stage-4---reflection-refinement" class="level3">
 <h3 class="anchored" data-anchor-id="stage-4---reflection-refinement">Stage 4 - Reflection + Refinement</h3>
 <p><strong>Due December 15, 2026</strong></p>
-<p>During the first stage of the project, we’re practicing:</p>
+<p>During the final stage of the project, we’re practicing:</p>
 <ul>
 <li><p>revising key findings</p></li>
 <li><p>viewing and critiquing others’ work</p></li>
 <li><p>reflecting on the process and what we’ve learned</p></li>
 </ul>
-<section id="key-deliverables-2" class="level4">
-<h4 class="anchored" data-anchor-id="key-deliverables-2">Key Deliverables</h4>
+<section id="key-deliverables-1" class="level4">
+<h4 class="anchored" data-anchor-id="key-deliverables-1">Key Deliverables</h4>
 <ul>
 <li><p>final report</p></li>
 <li><p>Updated <code>g.cluster-name.qmd</code> file to list all of the projects from the group.</p></li>
@@ -537,14 +571,13 @@ Finals Conversations will happen in person <em>during the final exam period.</em
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

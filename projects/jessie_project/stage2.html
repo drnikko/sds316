@@ -2,33 +2,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your name here">
-<meta name="author" content="If you had help, their name here">
-<meta name="dcterms.date" content="2026-09-01">
-<meta name="description" content="Copy This Template For your Project">
+<meta name="author" content="Jessie Wang">
 
-<title>Template Project – SDS316 - Fall 2026</title>
+<title>Initial Questions – SDS316 - Fall 2026</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -46,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-283806461d87d7bdc96c8e860487c4d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,12 +130,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../assignments.html"> <i class="bi bi-file-earmark" role="img">
+    <a class="nav-link" href="../../assignments.html"> <i class="bi bi-list-task" role="img">
 </i> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../lectures.html"> <i class="bi bi-file-earmark" role="img">
+    <a class="nav-link" href="../../lectures.html"> <i class="bi bi-chat" role="img">
 </i> 
 <span class="menu-text">Lectures</span></a>
   </li>  
@@ -117,6 +143,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../schedule.html"> <i class="bi bi-calendar-minus" role="img">
 </i> 
 <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> <i class="bi bi-rocket-takeoff" role="img">
+</i> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -175,7 +206,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#stage-2.1-initial-explorations-of-the-dataset." id="toc-stage-2.1-initial-explorations-of-the-dataset." class="nav-link active" data-scroll-target="#stage-2.1-initial-explorations-of-the-dataset.">Stage 2.1: Initial Explorations of the Dataset.</a>
+  <ul class="collapse">
+  <li><a href="#about" id="toc-about" class="nav-link" data-scroll-target="#about">About</a>
+  <ul class="collapse">
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
+  </ul></li>
+  <li><a href="#total" id="toc-total" class="nav-link" data-scroll-target="#total">Total</a></li>
+  <li><a href="#federal" id="toc-federal" class="nav-link" data-scroll-target="#federal">Federal</a></li>
+  <li><a href="#federal-prisons-by-state" id="toc-federal-prisons-by-state" class="nav-link" data-scroll-target="#federal-prisons-by-state">Federal Prisons by State</a></li>
+  <li><a href="#public" id="toc-public" class="nav-link" data-scroll-target="#public">Public?</a></li>
+  <li><a href="#state-distribution-of-public" id="toc-state-distribution-of-public" class="nav-link" data-scroll-target="#state-distribution-of-public">state distribution of public?</a></li>
+  <li><a href="#state-distribution-of-private" id="toc-state-distribution-of-private" class="nav-link" data-scroll-target="#state-distribution-of-private">state distribution of private?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -184,41 +228,20 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Template Project</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Investigation</div>
-    <div class="quarto-category">Capture</div>
-    <div class="quarto-category">Trial</div>
-    <div class="quarto-category">Detention</div>
-    <div class="quarto-category">Supervision</div>
-    <div class="quarto-category">Release</div>
-    <div class="quarto-category">Re-entry</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Copy This Template For your Project
-  </div>
+<h1 class="title">Initial Questions</h1>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your name here </p>
-             <p>If you had help, their name here </p>
+             <p>Jessie Wang </p>
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 1, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -228,11 +251,207 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-overview" class="level2">
-<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
-<p>Write about 100 - 150 words describing your project. This description will change over the semester, so each time you make a deliverable, you might need to update it. Each time, do your best to be accurate to the focus of the project <em>as it is that that moment</em></p>
+<section id="stage-2.1-initial-explorations-of-the-dataset." class="level1">
+<h1>Stage 2.1: Initial Explorations of the Dataset.</h1>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<section id="dataset" class="level3">
+<h3 class="anchored" data-anchor-id="dataset">Dataset</h3>
+<p>The dataset is <a href="https://github.com/miolow/US_prisons/blob/master/allprisons.csv">US Federal and Private Prisons</a>. It is stored in the <code>data</code> folder, and the csv is in two sections for some reason, so we will wrangle.</p>
+<div id="03d2b400" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here <span class="co"># this helps us navigate tricky path stuff between local runs and quarto builds</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the data using here() with the path from the project root</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> here(<span class="st">"projects/jessie_project/data/allprisons.csv"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(file_path, sep<span class="op">=</span><span class="st">','</span>) </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># one = df[:216] </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># two = df[217:]</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># one = one.rename(columns = {"coordinates": "geometry", "coordinates_rev": "coordinates"})</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># two = two.rename(columns={"PrisonName": "name"})</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># two["longitude"] = two["longitude"].astype(str)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># two["latitude"] = two["latitude"].astype(str)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># two["coordinates"] = "(" + two["longitude"] + ", " + two["latitude"] + ")"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># # combined = pd.concat([one, two], sort=False)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># # combined[216:218]</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># df = pd.concat([one, two], axis=0, join='outer', ignore_index=False)</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># df.head(10)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="research-question" class="level3">
+<h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
+<p>My first research question is <em>“Where are prisons located?”</em> Which is vague. But I want to focus on prison systems in the US.</p>
+</section>
+</section>
+<section id="total" class="level2">
+<h2 class="anchored" data-anchor-id="total">Total</h2>
+<p>Whats the total distribution of prisons accross states?</p>
+<div id="6a5b6221" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>common_states2 <span class="op">=</span> df[<span class="st">'State'</span>].value_counts().head(<span class="dv">10</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(common_states2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>State
+Texas             88
+Florida           77
+North Carolina    59
+California        54
+New York          48
+Illinois          45
+Georgia           43
+Virginia          43
+Colorado          39
+Oklahoma          34
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>Texas 88 Florida 77 North Carolina 59 California 54 New York 48 Illinois 45 Georgia 43 Virginia 43 Colorado 39 Oklahoma 34 Name: count, dtype: int64</p>
+</section>
+<section id="federal" class="level2">
+<h2 class="anchored" data-anchor-id="federal">Federal</h2>
+<p>Since the data set is split into federal and not, let’s check what the distribution is of federal vs not federal</p>
+<div id="1adc511d" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># how many federal prisons are there?</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>count_gov <span class="op">=</span> <span class="bu">len</span>(df[(df[<span class="st">'govprisons'</span>] <span class="op">==</span> <span class="fl">1.0</span>) <span class="op">|</span> (df[<span class="st">'stateprison'</span>] <span class="op">==</span> <span class="fl">0.0</span>)]) </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># total rows in dataset</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>total_rows <span class="op">=</span> <span class="bu">len</span>(df)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># lil percent count</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>gov_breakdown <span class="op">=</span> count_gov <span class="op">/</span> total_rows <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of Federal Prisons: "</span>, count_gov)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Rows "</span>, total_rows)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Percentage of prisons: "</span>,  gov_breakdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of Federal Prisons:  973
+Total Rows  1107
+Percentage of prisons:  87.8952122854562</code></pre>
+</div>
+</div>
+<p>Number of Federal Prisons: 973 Total Rows 1107 Percentage of prisons: 87.8952122854562</p>
+<p>Hmm.. lets zoom in</p>
+</section>
+<section id="federal-prisons-by-state" class="level2">
+<h2 class="anchored" data-anchor-id="federal-prisons-by-state">Federal Prisons by State</h2>
+<p>What is the state breakdown?</p>
+<div id="82079f93" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assign Subset</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>federal <span class="op">=</span> df[(df[<span class="st">'govprisons'</span>] <span class="op">==</span> <span class="fl">1.0</span>) <span class="op">|</span> (df[<span class="st">'stateprison'</span>] <span class="op">==</span> <span class="fl">0.0</span>)]</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># What are the most common states that these prisons are in?</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>most_common_states <span class="op">=</span> federal[<span class="st">'State'</span>].value_counts().head(<span class="dv">10</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(most_common_states)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>State
+Florida           70
+Texas             60
+North Carolina    56
+New York          46
+Illinois          45
+Virginia          41
+California        40
+Georgia           35
+Michigan          30
+Pennsylvania      29
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>State Florida 70 Texas 60 North Carolina 56 New York 46 Illinois 45 Virginia 41 California 40 Georgia 35 Michigan 30 Pennsylvania 29</p>
+<p>The most common state is Florida! Im not 100% surprised but not unexpected.</p>
+</section>
+<section id="public" class="level2">
+<h2 class="anchored" data-anchor-id="public">Public?</h2>
+<p>let’s check the distribution of prisons for public prisons</p>
+<div id="7fd56c8f" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># how many federal prisons are there?</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>count_pub <span class="op">=</span> <span class="bu">len</span>(df[df[<span class="st">'private'</span>] <span class="op">==</span> <span class="fl">0.0</span>]) </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># total rows in dataset</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>total_rows <span class="op">=</span> <span class="bu">len</span>(df)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># lil percent count</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>pub_breakdown <span class="op">=</span> count_pub <span class="op">/</span> total_rows <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of Public Prisons: "</span>, count_pub)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of Private Prisons: "</span>, total_rows <span class="op">-</span> count_pub)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Rows "</span>, total_rows)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Percentage of prisons: "</span>,  pub_breakdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of Public Prisons:  973
+Number of Private Prisons:  134
+Total Rows  1107
+Percentage of prisons:  87.8952122854562</code></pre>
+</div>
+</div>
+<p>Number of Public Prisons: 973 Number of Private Prisons: 134 Total Rows 1107 Percentage of prisons: 87.8952122854562</p>
+<p>Majority are public!</p>
+</section>
+<section id="state-distribution-of-public" class="level2">
+<h2 class="anchored" data-anchor-id="state-distribution-of-public">state distribution of public?</h2>
+<p>What states make up most of the distribution?</p>
+<div id="4a691196" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>public <span class="op">=</span> df[df[<span class="st">'private'</span>] <span class="op">==</span> <span class="fl">0.0</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>public.head(<span class="dv">10</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>most_common_states2 <span class="op">=</span> public[<span class="st">'State'</span>].value_counts().head(<span class="dv">10</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(most_common_states2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>State
+Florida           70
+Texas             60
+North Carolina    56
+New York          46
+Illinois          45
+Virginia          41
+California        40
+Georgia           35
+Michigan          30
+Pennsylvania      29
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>State Florida 70 Texas 60 North Carolina 56 New York 46 Illinois 45 Virginia 41 California 40 Georgia 35 Michigan 30 Pennsylvania 29 Name: count, dtype: int64</p>
+<p>It’s still florida at the top. Big surprise. But because most of the prisons are public, let’s look at private next.</p>
+</section>
+<section id="state-distribution-of-private" class="level2">
+<h2 class="anchored" data-anchor-id="state-distribution-of-private">state distribution of private?</h2>
+<p>What states make up most of the distribution?</p>
+<div id="abe4472b" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>priv <span class="op">=</span> df[df[<span class="st">'private'</span>] <span class="op">==</span> <span class="fl">1.0</span>]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>priv.head(<span class="dv">10</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>most_common_states3 <span class="op">=</span> priv[<span class="st">'State'</span>].value_counts().head(<span class="dv">10</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(most_common_states3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>State
+Texas         28
+Colorado      19
+California    14
+Arizona        9
+Oklahoma       9
+Georgia        8
+Florida        7
+Tennessee      6
+New Mexico     5
+Louisiana      4
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>Texas 28 Colorado 19 California 14 Arizona 9 Oklahoma 9 Georgia 8 Florida 7 Tennessee 6 New Mexico 5 Louisiana 4 Name: count, dtype: int64</p>
+<p>Oooh, now this is different. Texas has the most public prisons, it doesnt seem like the rest are that proportional to how many total prisons the state has.</p>
+<p>This dataset doesnt have a lot of other information, so the next step for me is to find a new dataset about the demographics.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -287,14 +506,13 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

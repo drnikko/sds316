@@ -2,174 +2,234 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://drnikko.github.io/sds316/schedule.html</loc>
-    <lastmod>2026-10-07T21:38:07.658Z</lastmod>
+    <lastmod>2026-10-14T18:22:12.055Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week3-c1.html</loc>
-    <lastmod>2026-09-28T21:56:11.860Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week5-c2.html</loc>
-    <lastmod>2026-10-08T13:22:43.463Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/template-seminar.html</loc>
-    <lastmod>2026-09-28T21:56:11.858Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week2-c1.html</loc>
-    <lastmod>2026-09-28T21:56:11.859Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week4-c1.html</loc>
-    <lastmod>2026-10-05T22:37:35.009Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/syllabus.html</loc>
-    <lastmod>2026-09-28T21:56:11.881Z</lastmod>
+    <lastmod>2026-10-14T18:22:12.057Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/class-log.html</loc>
-    <lastmod>2026-09-28T21:56:11.815Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.689Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/index.html</loc>
-    <lastmod>2026-09-28T21:56:11.823Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.704Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/projects/kaylas-deliverable1/research-plan.html</loc>
-    <lastmod>2026-10-05T23:18:55.147Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.765Z</lastmod>
   </url>
   <url>
-    <loc>https://drnikko.github.io/sds316/projects/tanisha-template/research-plan.html</loc>
-    <lastmod>2026-10-05T22:37:39.261Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/rae/research-plan.html</loc>
-    <lastmod>2026-10-05T23:18:55.191Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/wa-state-police-social-spending/index.html</loc>
-    <lastmod>2026-10-05T22:37:39.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/hayden_project/index.html</loc>
-    <lastmod>2026-10-08T13:22:09.601Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/immigrants-crime/index.html</loc>
-    <lastmod>2026-10-05T23:18:55.188Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/index.html</loc>
-    <lastmod>2026-09-28T21:56:11.878Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/jessie_project/index.html</loc>
-    <lastmod>2026-10-08T13:22:09.612Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/jessie_stage_1/research-plan.html</loc>
-    <lastmod>2026-10-08T13:22:09.642Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/reagan/research-plan.html</loc>
-    <lastmod>2026-10-05T23:18:55.195Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/demo/index.html</loc>
-    <lastmod>2026-09-28T21:56:11.876Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/examples.html</loc>
-    <lastmod>2026-09-28T21:56:11.816Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/tech-stack.html</loc>
-    <lastmod>2026-09-28T21:56:11.881Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/assignments.html</loc>
-    <lastmod>2026-10-07T21:38:07.657Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/demo/stage2.2.html</loc>
-    <lastmod>2026-09-28T21:56:11.877Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/demo/stage2.html</loc>
-    <lastmod>2026-10-01T00:00:27.194Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/reagan/index.html</loc>
-    <lastmod>2026-10-05T23:18:55.193Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/jessie_stage_1/index.html</loc>
-    <lastmod>2026-10-08T13:22:09.639Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/g.demographics-cluster.html</loc>
-    <lastmod>2026-10-05T22:37:39.255Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/immigrants-crime/research-plan.html</loc>
-    <lastmod>2026-10-05T22:37:39.258Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/hayden_project/research-plan.html</loc>
-    <lastmod>2026-10-08T13:22:09.610Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/wa-state-police-social-spending/research-plan.html</loc>
-    <lastmod>2026-10-05T22:37:39.274Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drnikko.github.io/sds316/projects/g.geography.html</loc>
-    <lastmod>2026-10-05T22:37:39.256Z</lastmod>
+    <loc>https://drnikko.github.io/sds316/projects/tanisha-template/stage-2.html</loc>
+    <lastmod>2026-10-14T18:22:12.046Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/projects/rae/index.html</loc>
-    <lastmod>2026-10-05T23:18:55.190Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/g.geography.html</loc>
+    <lastmod>2026-10-14T18:22:09.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/wa-state-police-social-spending/index.html</loc>
+    <lastmod>2026-10-14T18:22:12.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/hayden_project/index.html</loc>
+    <lastmod>2026-10-14T18:22:09.745Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/immigrants-crime/index.html</loc>
+    <lastmod>2026-10-14T18:22:09.745Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/g.government-involvement.html</loc>
+    <lastmod>2026-10-14T18:22:09.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/template-stage2/index.html</loc>
+    <lastmod>2026-10-14T22:19:27.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/template-stage2/stage2-writing.html</loc>
+    <lastmod>2026-10-14T22:21:26.935Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/surveillance NYC/research-plan.html</loc>
+    <lastmod>2026-10-14T20:42:37.533Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/g.demographics-cluster.html</loc>
+    <lastmod>2026-10-14T18:22:09.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/research project/research-plan.html</loc>
+    <lastmod>2026-10-14T20:42:37.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/jessie_project/index.html</loc>
+    <lastmod>2026-10-14T18:22:09.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/jessie_stage_1/index.html</loc>
+    <lastmod>2026-10-14T18:22:09.761Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/reagan/stage2.html</loc>
+    <lastmod>2026-10-14T18:22:12.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/reagan/research-plan.html</loc>
+    <lastmod>2026-10-14T18:22:12.029Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/template-stage1/research-plan.html</loc>
+    <lastmod>2026-10-14T21:54:12.817Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/demo/index.html</loc>
+    <lastmod>2026-10-14T22:19:05.122Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/examples.html</loc>
+    <lastmod>2026-10-14T18:22:09.690Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/tech-stack.html</loc>
+    <lastmod>2026-10-14T18:22:12.058Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/assignments.html</loc>
+    <lastmod>2026-10-14T22:31:50.617Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/demo/stage2.2.html</loc>
+    <lastmod>2026-10-14T18:22:09.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/demo/stage2.html</loc>
+    <lastmod>2026-10-14T18:22:09.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/reagan/index.html</loc>
+    <lastmod>2026-10-14T18:22:12.021Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/jessie_stage_1/research-plan.html</loc>
+    <lastmod>2026-10-14T18:22:09.761Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/jessie_project/research-plan.html</loc>
+    <lastmod>2026-10-14T18:22:09.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/jessie_project/stage2.html</loc>
+    <lastmod>2026-10-14T18:22:09.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/research project/index.html</loc>
+    <lastmod>2026-10-14T20:42:37.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/index.html</loc>
+    <lastmod>2026-10-14T20:42:37.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/surveillance NYC/index.html</loc>
+    <lastmod>2026-10-14T20:42:37.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/template-stage2/research-plan.html</loc>
+    <lastmod>2026-10-14T22:03:42.417Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/template-stage2/stage2-data.html</loc>
+    <lastmod>2026-10-14T22:20:53.263Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/immigrants-crime/research-plan.html</loc>
+    <lastmod>2026-10-14T18:22:09.745Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/hayden_project/research-plan.html</loc>
+    <lastmod>2026-10-14T18:22:09.745Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/wa-state-police-social-spending/research-plan.html</loc>
+    <lastmod>2026-10-14T18:22:12.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/wa-state-police-social-spending/stage2.html</loc>
+    <lastmod>2026-10-14T20:51:08.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/rae/research-plan.html</loc>
+    <lastmod>2026-10-14T18:22:09.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drnikko.github.io/sds316/projects/tanisha-template/research-plan.html</loc>
+    <lastmod>2026-10-14T18:22:12.046Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/projects/tanisha-template/index.html</loc>
-    <lastmod>2026-10-05T22:37:39.260Z</lastmod>
+    <lastmod>2026-10-14T18:22:12.043Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/projects/kaylas-deliverable1/index.html</loc>
-    <lastmod>2026-10-05T23:18:55.146Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.765Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures.html</loc>
-    <lastmod>2026-09-28T21:56:11.824Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.704Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/datasets.html</loc>
-    <lastmod>2026-10-08T13:22:09.522Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.689Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week4-c2.html</loc>
-    <lastmod>2026-10-05T22:37:39.252Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/template-lab.html</loc>
-    <lastmod>2026-09-28T21:56:11.858Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week2-c2.html</loc>
-    <lastmod>2026-09-28T21:56:11.860Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week5-c1.html</loc>
-    <lastmod>2026-10-05T22:37:39.254Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week3-c2.html</loc>
-    <lastmod>2026-09-28T21:56:11.861Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
   <url>
     <loc>https://drnikko.github.io/sds316/lectures/week1-c1.html</loc>
-    <lastmod>2026-09-28T21:56:11.859Z</lastmod>
+    <lastmod>2026-10-14T18:22:09.732Z</lastmod>
   </url>
 </urlset>

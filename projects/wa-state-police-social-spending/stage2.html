@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Julia Laney">
+<meta name="dcterms.date" content="2026-10-07">
+
+<title>Stage 2: Initial Data Exploration – SDS316 - Fall 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">SDS316 - Fall 2026</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html"> <i class="bi bi-file-earmark" role="img">
+</i> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../assignments.html"> <i class="bi bi-list-task" role="img">
+</i> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lectures.html"> <i class="bi bi-chat" role="img">
+</i> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../schedule.html"> <i class="bi bi-calendar-minus" role="img">
+</i> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> <i class="bi bi-rocket-takeoff" role="img">
+</i> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-tools" role="img">
+</i> 
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../../datasets.html"><i class="bi bi-table" role="img">
+</i> 
+ <span class="dropdown-text">Datasets</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tech-stack.html"><i class="bi bi-laptop" role="img">
+</i> 
+ <span class="dropdown-text">Working Environment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../examples.html"><i class="bi bi-bar-chart-steps" role="img">
+</i> 
+ <span class="dropdown-text">Examples</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../class-log.html"><i class="bi bi-box-arrow-in-right" role="img">
+</i> 
+ <span class="dropdown-text">Class Log</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://docs.google.com/document/d/1PpndXanj3ffEbUn9nla2POWdhno5BHOCkrkRx4DyzTc/edit?tab=t.0#heading=h.5xdobrmir9r2"> <i class="bi bi-envelope" role="img" aria-label="Contact and Office Hours">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/drnikko/sds316"> <i class="bi bi-github" role="img" aria-label="Github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#wa-state-police-social-spending" id="toc-wa-state-police-social-spending" class="nav-link active" data-scroll-target="#wa-state-police-social-spending">WA State Police &amp; Social Spending</a>
+  <ul class="collapse">
+  <li><a href="#project-stage-2" id="toc-project-stage-2" class="nav-link" data-scroll-target="#project-stage-2">Project Stage 2</a>
+  <ul class="collapse">
+  <li><a href="#research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending" id="toc-research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending" class="nav-link" data-scroll-target="#research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending">Research question: How does King County allocate its resources between police spending and social spending?</a></li>
+  </ul></li>
+  <li><a href="#how-should-i-rigorously-define-police-spending-and-social-spending" id="toc-how-should-i-rigorously-define-police-spending-and-social-spending" class="nav-link" data-scroll-target="#how-should-i-rigorously-define-police-spending-and-social-spending">How should I rigorously define “police spending” and “social spending”?</a></li>
+  <li><a href="#what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category" id="toc-what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category" class="nav-link" data-scroll-target="#what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category">What are the major spending categories? How can I classify each row of data into a category?</a></li>
+  <li><a href="#what-spending-category-did-king-county-spend-the-most-on-in-2025" id="toc-what-spending-category-did-king-county-spend-the-most-on-in-2025" class="nav-link" data-scroll-target="#what-spending-category-did-king-county-spend-the-most-on-in-2025">What spending category did King County spend the most on in 2025?</a></li>
+  <li><a href="#is-this-data-relevant-to-my-project" id="toc-is-this-data-relevant-to-my-project" class="nav-link" data-scroll-target="#is-this-data-relevant-to-my-project">Is this data relevant to my project?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stage 2: Initial Data Exploration</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Julia Laney </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 7, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="wa-state-police-social-spending" class="level1">
+<h1>WA State Police &amp; Social Spending</h1>
+<section id="project-stage-2" class="level2">
+<h2 class="anchored" data-anchor-id="project-stage-2">Project Stage 2</h2>
+<section id="research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending" class="level3">
+<h3 class="anchored" data-anchor-id="research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending">Research question: How does King County allocate its resources between police spending and social spending?</h3>
+<p>Initially, I want to explore the dataset containing Washington state fiscal information. To simplify this exploration, I am looking at just the fiscal year 2025.</p>
+<div id="7b451763" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#python cell = CMD Shift I</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#importing dataset containing fiscal info by entity</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> here(<span class="st">'projects/wa-state-police-social-spending/_data/OSTAllEntity.csv'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(file_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="752edc5a" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#I want to look at just the 2025 fiscal year for now</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#the data included a space behind each year</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"FiscalYear"</span>] <span class="op">=</span> df[<span class="st">"FiscalYear"</span>].<span class="bu">str</span>.strip()</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df_2025 <span class="op">=</span> df[df[<span class="st">"FiscalYear"</span>] <span class="op">==</span> <span class="st">"FY 2025"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="how-should-i-rigorously-define-police-spending-and-social-spending" class="level2">
+<h2 class="anchored" data-anchor-id="how-should-i-rigorously-define-police-spending-and-social-spending">How should I rigorously define “police spending” and “social spending”?</h2>
+<p>After just visually looking through some of the data, I’m seeing that a lot of spending items in this data are for municipal governments to support local law enforcement, courts, and crime prevention. This is making me consider that “police spending” may be a narrow term for this project, though I don’t think I should expand this term to “criminal justice spending”. A better term for this type of spending is something I am thinking about moving forward.</p>
+<p>I used King County to obtain the spending items used in the mapping process because it is the largest county per capita and includes the city of Seattle. I figured it would likely have the most spending items, so when I applied the mapping to other counties, it would (hopefully) include all possible items.</p>
+</section>
+<section id="what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category">What are the major spending categories? How can I classify each row of data into a category?</h2>
+<div id="683fa933" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#now I want to look at spending categories</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#using King county because it's the largest county in the state, and I noticed it had the most spending categories</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df_2025[df_2025[<span class="st">"EntityTitle1"</span>] <span class="op">==</span> <span class="st">"King County"</span>][<span class="st">"TaxTitle4"</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>&lt;StringArray&gt;
+[                                                                       'County Arterial Road Preservation',
+                                               'County Auditor Historical Document Preservation Assistance',
+                                                                           'County Autopsy Cost Assistance',
+                                                                       'County Criminal Justice Assistance',
+                                                                        'County DUI Enforcement Assistance',
+                                        'County Elected Prosecuting Attorney Salaries - State Contribution',
+                                                             'County Juvenile Crime Enforcement Assistance',
+                                                                 'County Legal Financial Obligation Grants',
+                                   'County Superior Court Judge Salaries and Benefits - State Contribution',
+                                                      'Court Appointed Special Advocate Coordinator Grants',
+                                                                             'Court Interpreter Assistance',
+                                        'District and Municipal Court Judges Salaries - State Contribution',
+                                                             'Family and Juvenile Court Improvement Grants',
+                                                                     'Federal Flood Control Lease Payments',
+ 'Federal Secure Rural Schools and Community Self-Determination Act Fund  - County Roads or Public Schools',
+                  'Law Enforcement Officers and Firefighters Retirement System - Plan 2 State Contribution',
+                                                                             'Leasehold Excise Tax Sharing',
+                                                                                'Liquor Excise Tax Sharing',
+                                                                                   'Liquor Profits Sharing',
+                                                                                     'Marijuana Excise Tax',
+                                                       'Motor Vehicle Fuel Tax Additional Sharing - County',
+                                                                  'Motor Vehicle Fuel Tax Sharing - County',
+                                                       'Multimodal Transportation Account Sharing - County',
+                                                                           'Parents Representation Program',
+                                                                        'Public Defense Improvement Grants',
+                                                            'Public Utility District Privilege Tax Sharing',
+                                            'Runaway and At-Risk Youth (Becca) County Juvenile Court Costs',
+                                                                                'State Lodging Tax Sharing',
+        'State Payments in Lieu of Taxes - Natural Area Preserves and Natural Resources Conservation Areas',
+                                                                  'State Payments of Deferred Property Tax',
+                                                                           'State Vessel Registration Fees',
+                                                        'Streamlined Sales and Use Tax Mitigation Payments',
+                                                                                'Timber Excise Tax Sharing']
+Length: 33, dtype: str</code></pre>
+</div>
+</div>
+<p>Looking at the spending categories, I’ll sort each into police/law enforcement spending, criminal justice legal system spending, social spending, and other spending by making a new column “SpendingCategory” in the 2025 dataframe. A portion of spending goes to courts, which I don’t think should be included as police/law enforcement spending. For example, one spending item is judges’ salaries, this shouldn’t be included in police spending. This goes back to my earlier note about how I need to define “police/law enforcement” spending.</p>
+<div id="f94d1c71" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#creating a new column with 3 categories of spending using a map</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>category_map <span class="op">=</span> {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Arterial Road Preservation"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Auditor Historical Document Preservation Assistance"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Autopsy Cost Assistance"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Criminal Justice Assistance"</span>: <span class="st">"Criminal Legal System"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County DUI Enforcement Assistance"</span>: <span class="st">"Police/Law Enforcement"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Elected Prosecuting Attorney Salaries - State Contribution"</span>: <span class="st">"Criminal Legal System"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Juvenile Crime Enforcement Assistance"</span>: <span class="st">"Police/Law Enforcement"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Legal Financial Obligation Grants"</span>: <span class="st">"Criminal Legal System"</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Superior Court Judge Salaries and Benefits - State Contribution"</span>: <span class="st">"Criminal Legal System"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Court Appointed Special Advocate Coordinator Grants"</span>: <span class="st">"Social"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Court Interpreter Assistance"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"District and Municipal Court Judges Salaries - State Contribution"</span>: <span class="st">"Criminal Legal System"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Family and Juvenile Court Improvement Grants"</span>: <span class="st">"Social"</span>,</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Federal Flood Control Lease Payments"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Federal Secure Rural Schools and Community Self-Determination Act Fund  - County Roads or Public Schools"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Law Enforcement Officers and Firefighters Retirement System - Plan 2 State Contribution"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Leasehold Excise Tax Sharing"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Liquor Excise Tax Sharing"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Liquor Profits Sharing"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Marijuana Excise Tax"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Motor Vehicle Fuel Tax Additional Sharing - County"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Motor Vehicle Fuel Tax Sharing - County"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Multimodal Transportation Account Sharing - County"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Parents Representation Program"</span>: <span class="st">"Social"</span>,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Public Defense Improvement Grants"</span>: <span class="st">"Criminal Legal System"</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Public Utility District Privilege Tax Sharing"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Runaway and At-Risk Youth (Becca) County Juvenile Court Costs"</span>: <span class="st">"Social"</span>,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State Lodging Tax Sharing"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State Payments in Lieu of Taxes - Natural Area Preserves and Natural Resources Conservation Areas"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State Payments of Deferred Property Tax"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State Vessel Registration Fees"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Streamlined Sales and Use Tax Mitigation Payments"</span>: <span class="st">"Other"</span>,</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Timber Excise Tax Sharing"</span>: <span class="st">"Other"</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>df_2025[<span class="st">"SpendingCategory"</span>] <span class="op">=</span> df_2025[<span class="st">"TaxTitle4"</span>].<span class="bu">map</span>(category_map)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="co">#let's check that this categorizing worked</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>df_2025[[<span class="st">"EntityTitle1"</span>, <span class="st">"TaxTitle4"</span>, <span class="st">"Amount6"</span>, <span class="st">"SpendingCategory"</span>]] <span class="co">#it did!</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co">#some missing values are present here because the first observations in the df correspond to Aberdeen (a city) and the cities and counties have some naming differences for the same spending items</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_2025.head(n<span class="op">=</span><span class="dv">15</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    EntityTitle1                                          TaxTitle4  \
+7       Aberdeen      City Criminal Justice Assistance - High Crime   
+16      Aberdeen  City Criminal Justice Assistance - Innovative ...   
+25      Aberdeen      City Criminal Justice Assistance - Population   
+34      Aberdeen   City Criminal Justice Assistance - Violent Crime   
+43      Aberdeen                    City DUI Enforcement Assistance   
+52      Aberdeen                       Court Interpreter Assistance   
+61      Aberdeen                         Distressed City Assistance   
+70      Aberdeen                 Fire Insurance Premium Tax Sharing   
+79      Aberdeen  Law Enforcement Officers and Firefighters Reti...   
+88      Aberdeen                       Leasehold Excise Tax Sharing   
+97      Aberdeen                          Liquor Excise Tax Sharing   
+106     Aberdeen                             Liquor Profits Sharing   
+115     Aberdeen                               Marijuana Excise Tax   
+124     Aberdeen   Motor Vehicle Fuel Tax Additional Sharing - City   
+133     Aberdeen              Motor Vehicle Fuel Tax Sharing - City   
+
+    FiscalYear  Amount6 SpendingCategory  
+7      FY 2025   57,196              NaN  
+16     FY 2025   23,479              NaN  
+25     FY 2025    6,695              NaN  
+34     FY 2025      NaN              NaN  
+43     FY 2025    1,416              NaN  
+52     FY 2025    2,668            Other  
+61     FY 2025  136,561              NaN  
+70     FY 2025   67,097              NaN  
+79     FY 2025  322,111            Other  
+88     FY 2025   68,747            Other  
+97     FY 2025  107,387            Other  
+106    FY 2025  128,210            Other  
+115    FY 2025   50,988            Other  
+124    FY 2025   19,052              NaN  
+133    FY 2025  278,460              NaN  </code></pre>
+</div>
+</div>
+</section>
+<section id="what-spending-category-did-king-county-spend-the-most-on-in-2025" class="level2">
+<h2 class="anchored" data-anchor-id="what-spending-category-did-king-county-spend-the-most-on-in-2025">What spending category did King County spend the most on in 2025?</h2>
+<div id="0e9bb307" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#making a copy of the 2025 df looking just at King county</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_2025_king <span class="op">=</span> df_2025[df_2025[<span class="st">"EntityTitle1"</span>] <span class="op">==</span> <span class="st">"King County"</span>].copy()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_2025_king.head(n<span class="op">=</span><span class="dv">15</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      EntityTitle1                                          TaxTitle4  \
+18259  King County                  County Arterial Road Preservation   
+18268  King County  County Auditor Historical Document Preservatio...   
+18277  King County                     County Autopsy Cost Assistance   
+18286  King County                 County Criminal Justice Assistance   
+18295  King County                  County DUI Enforcement Assistance   
+18304  King County  County Elected Prosecuting Attorney Salaries -...   
+18313  King County       County Juvenile Crime Enforcement Assistance   
+18322  King County           County Legal Financial Obligation Grants   
+18331  King County  County Superior Court Judge Salaries and Benef...   
+18340  King County  Court Appointed Special Advocate Coordinator G...   
+18349  King County                       Court Interpreter Assistance   
+18358  King County  District and Municipal Court Judges Salaries -...   
+18367  King County       Family and Juvenile Court Improvement Grants   
+18376  King County               Federal Flood Control Lease Payments   
+18385  King County  Federal Secure Rural Schools and Community Sel...   
+
+      FiscalYear     Amount6        SpendingCategory  
+18259    FY 2025     593,092                   Other  
+18268    FY 2025     307,371                   Other  
+18277    FY 2025     748,469                   Other  
+18286    FY 2025  15,055,432   Criminal Legal System  
+18295    FY 2025     147,869  Police/Law Enforcement  
+18304    FY 2025     114,131   Criminal Legal System  
+18313    FY 2025      74,896  Police/Law Enforcement  
+18322    FY 2025     176,446   Criminal Legal System  
+18331    FY 2025   8,937,203   Criminal Legal System  
+18340    FY 2025     412,821                  Social  
+18349    FY 2025     994,562                   Other  
+18358    FY 2025     581,358   Criminal Legal System  
+18367    FY 2025     152,721                  Social  
+18376    FY 2025      51,757                   Other  
+18385    FY 2025   (356,652)                   Other  </code></pre>
+</div>
+</div>
+<div id="3733c58e" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#the integers in Amount6 were being treated as strings </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#df_2025["Amount6"] = (df_2025["Amount6"].str.replace(",","").str.replace("(", "-")</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a> <span class="co">#   .str.replace(")", "").astype(float)) #the df used () to represent negative numbers</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#remaking df after cleaning Amount6</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>df_2025_king <span class="op">=</span> df_2025[df_2025[<span class="st">"EntityTitle1"</span>] <span class="op">==</span> <span class="st">"King County"</span>].copy()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#finding the totals of each spending category</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>king_cat_totals <span class="op">=</span> (df_2025_king.groupby(<span class="st">"SpendingCategory"</span>)[<span class="st">"Amount6"</span>].<span class="bu">sum</span>())</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(king_cat_totals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SpendingCategory
+Criminal Legal System     15,055,432114,131176,4468,937,203581,3581,219,718
+Other                     593,092307,371748,469994,56251,757(356,652)5,2...
+Police/Law Enforcement                                        147,86974,896
+Social                                       412,821152,7217,045,534926,062
+Name: Amount6, dtype: str</code></pre>
+</div>
+</div>
+<p>These numbers look really off! After reading more about the source of this data, this appears to be showing money that Washington distributes to local governments through taxes, revenue sharing programs, and grants. I initially understood the data as budgetary information.</p>
+</section>
+<section id="is-this-data-relevant-to-my-project" class="level2">
+<h2 class="anchored" data-anchor-id="is-this-data-relevant-to-my-project">Is this data relevant to my project?</h2>
+<p>Maybe? This data doesn’t capture police spending vs.&nbsp;social spending but contains information about how much criminal justice funding each county receives from the state. This is not really a main point of my project but it could be a supplementary point.</p>
+<div id="8a7fe6a0" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#taking a look at pierce county</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df_2025_pierce <span class="op">=</span> df_2025[df_2025[<span class="st">"EntityTitle1"</span>] <span class="op">==</span> <span class="st">"Pierce County"</span>].copy()</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#same process I did for King</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>pierce_cat_totals <span class="op">=</span> (df_2025_pierce.groupby(<span class="st">"SpendingCategory"</span>)[<span class="st">"Amount6"</span>].<span class="bu">sum</span>())</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pierce_cat_totals)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pierce_cat_totals[<span class="st">"Criminal Legal System"</span>]) <span class="co"># when I run this i get "6,520,247114,131113,9903,799,482180,919638,449" and then a TypeError in the next cell bc you can't divide a string by an int </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SpendingCategory
+Criminal Legal System        6,520,247114,131113,9903,799,482180,919638,449
+Other                     912,976137,815404,834237,5491,424,9611,400,806...
+Police/Law Enforcement                                         64,04032,436
+Social                                       346,661151,2954,230,189708,291
+Name: Amount6, dtype: str
+6,520,247114,131113,9903,799,482180,919638,449</code></pre>
+</div>
+</div>
+<div id="576e2f1e" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#per capita funding</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#pierce_pc = pierce_cat_totals["Criminal Legal System"] / 946288</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#king_pc = king_cat_totals["Criminal Legal System"] / 2344939</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#print("Pierce County:", pierce_pc)</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#print("King County:", king_pc)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In 2025, Pierce County received about $12.01 per capita in distributions related to the criminal legal system. King County received about $11.12 per capita in distributions related to the criminal legal system. It’s important to note that this is just state funding and not the counties’ own criminal legal system spending. I’m curious - is this difference an effect of each counties’ crime rates?</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/drnikko\.github\.io\/sds316\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
