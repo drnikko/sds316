@@ -1,4 +1,6 @@
 ---
+
+---
 title: "Assignments"
 ---
 
@@ -104,7 +106,7 @@ These are graded credit/no credit for each of 7 components:
 
 The midterm and final checkins will be a mix between a conversation and an oral exam. You'll schedule a 20-minute block to come to my office where we will talk generally about how the class is going for you and how your project is going. I'll then ask you to respond to two questions, one about the reading, and one about the technical stack we're using. All questions will be shared at least a week before the exams.
 
-Midterm Conversations will happen between **October 14 and 19**. Note that we have no class on 10/21 \
+Midterm Conversations will happen between **October 14 and 19**. Note that we have no class on 10/21\
 Finals Conversations will happen in person *during the final exam period.*
 
 ### How its graded

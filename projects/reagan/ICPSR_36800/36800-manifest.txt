@@ -1,0 +1,1389 @@
+File Manifest for ICPSR 36800
+
+Mulvey, Edward P. Research on Pathways to Desistance [Maricopa County, AZ
+and Philadelphia County, PA]: Subject Measures - Scales, 2000-2010.
+ICPSR36800-v4. Ann Arbor, MI: Inter-university Consortium for Political and
+Social Research [distributor], 2017-12-14.
+http://doi.org/10.3886/ICPSR36800.v4
+
+Details on the version history can be found below the file listings.
+
+
+Study-level Documentation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-descriptioncitation.pdf       -       -         -       2019-05-20  -
+
+    36800-related_literature.txt        -       -         -       daily       -
+
+    36800-manifest.txt                  -       -         -       daily       -
+
+    36800-User_guide.pdf                -       -         -       2017-12-14  f0608ea5bfd1f071db24ded64e8bc64d
+
+
+DS0001 Acculturation Rating Scale for Mexican Americans - II (ARSMA-II)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0001-Codebook.pdf             -       -         -       2017-10-17  8153c7a2823f3f0a2c40513dea28f9de
+
+    36800-0001-Data.dta                 -       1,354     606     2017-10-17  166dd179a493843fd64f816d08beea74
+
+    36800-0001-Data.rda                 -       1,354     606     2017-10-17  b204182683dbcb81aa861eece41375e0
+
+    36800-0001-Data.sav                 -       1,354     606     2017-10-17  edd7efdbb0ee08543ff0a350d4ac5c4b
+
+    36800-0001-Data.stc                 -       1,354     606     2017-10-17  e18b1e666e7bbe76c3cb59f2cd138a07
+
+    36800-0001-Data.tsv                 -       1,354     606     2017-10-17  5122aed2bf2aff9d932151e758c097e9
+
+    36800-0001-Data.txt                 3092    1,354     606     2017-10-17  826daf0bfa6a1a14a3eec825c5bd307a
+
+    36800-0001-Setup.dct                -       -         -       2017-10-17  d3ab141b72c8cbe082f057d0e524d652
+
+    36800-0001-Setup.do                 -       -         -       2017-10-17  60ef691c964362e93917f29c1e50197e
+
+    36800-0001-Setup.sas                -       -         -       2017-10-17  861d930b8bf7a2f61b4085d1fbe54c76
+
+    36800-0001-Setup.sps                -       -         -       2017-10-17  9153ab3e78f6048509592d9f6aa44e24
+
+    36800-0001-Supplemental_syntax.do   -       -         -       2017-10-17  fa95e432d6d1f216c4ba91da1c5fbd64
+
+    36800-0001-Supplemental_syntax.sas  -       -         -       2017-10-17  05f92cf6d936f89b4e40ebb0b79668c8
+
+
+DS0002 Brief Symptom Inventory (BSI) [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0002-Codebook.pdf             -       -         -       2017-12-14  a3e78a423e44f7126567d61512738c36
+
+
+DS0003 Caring Adult
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0003-Codebook.pdf             -       -         -       2017-12-14  666e8930c4cacf04892368835b4f19d3
+
+    36800-0003-Data.dta                 -       1,354     479     2017-12-14  941707ff41c8ff24426879fc1ecd1d1a
+
+    36800-0003-Data.rda                 -       1,354     479     2017-12-14  2563d02201df30f8c0cbc8e3872e0894
+
+    36800-0003-Data.sav                 -       1,354     479     2017-12-14  d039a32da8686c795d2f731d0749eaeb
+
+    36800-0003-Data.stc                 -       1,354     479     2017-12-14  b1c8b7fd8baa2dbf5e952aca280d813d
+
+    36800-0003-Data.tsv                 -       1,354     479     2017-12-14  9964e69426bb858fd29c7baaf27d8b20
+
+    36800-0003-Data.txt                 1816    1,354     479     2017-12-14  9559c0ce5d97f079e3ee4ebd6b922267
+
+    36800-0003-Setup.dct                -       -         -       2017-12-14  b5494eb2b8a05f5249ba7d938eb6d959
+
+    36800-0003-Setup.do                 -       -         -       2017-12-14  a1fa51ef539a9919d73150d81e9ac33a
+
+    36800-0003-Setup.sas                -       -         -       2017-12-14  109c1aa808d4b7e9fc445d4aed474e94
+
+    36800-0003-Setup.sps                -       -         -       2017-12-14  db464e53f2815f010f323a9274e9058d
+
+    36800-0003-Supplemental_syntax.do   -       -         -       2017-12-14  9d4927c903af033fd929e404bef869a4
+
+    36800-0003-Supplemental_syntax.sas  -       -         -       2017-12-14  8e81f7fd59529503d12643f9f597fc6f
+
+
+DS0004 Characteristics of Family [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0004-Codebook.pdf             -       -         -       2017-12-14  4293337535daf0d702c9fb129c8be056
+
+
+DS0005 Characteristics of Friends
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0005-Codebook.pdf             -       -         -       2017-12-14  bd73ec1aa6ba008df92d9d40b91a6cab
+
+    36800-0005-Data.dta                 -       1,354     497     2017-12-14  b1d6d16dad37517b5e59df516d108e7e
+
+    36800-0005-Data.rda                 -       1,354     497     2017-12-14  4e5e08c051d48de7156addfba24f4a76
+
+    36800-0005-Data.sav                 -       1,354     497     2017-12-14  f3be0c8a6593f0fb61a5e1ea478758e9
+
+    36800-0005-Data.stc                 -       1,354     497     2017-12-14  cb3fb91bf2aaee7447a0790cd3f99f9e
+
+    36800-0005-Data.tsv                 -       1,354     497     2017-12-14  d44e6a864222ff3db7d71de60de90a28
+
+    36800-0005-Data.txt                 2360    1,354     497     2017-12-14  07566833c0882d81204b450c548843b6
+
+    36800-0005-Setup.dct                -       -         -       2017-12-14  ed6b66a7dfb4a7faaf6b57092f78b4ef
+
+    36800-0005-Setup.do                 -       -         -       2017-12-14  995a1d133383771c80030bc881a66ce8
+
+    36800-0005-Setup.sas                -       -         -       2017-12-14  5460a51f94a61afd3e1f65102cef247a
+
+    36800-0005-Setup.sps                -       -         -       2017-12-14  b4dd585d4a49dc9263a70e68da3d2179
+
+    36800-0005-Supplemental_syntax.do   -       -         -       2017-12-14  101da0edda7b16e0468b5624162b6045
+
+    36800-0005-Supplemental_syntax.sas  -       -         -       2017-12-14  b4c55c1e059ba16b628953395df3246c
+
+
+DS0006 Characteristics of Romantic Relationships
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0006-Codebook.pdf             -       -         -       2017-12-14  170b8133d17a5a9b3a0a46583e6d21a0
+
+    36800-0006-Data.dta                 -       1,354     17      2017-12-14  c95b7a80b0bfe2a7aca75a7312c33b96
+
+    36800-0006-Data.rda                 -       1,354     17      2017-12-14  fa33b9a6dde5299e21c6c88b0efbbd86
+
+    36800-0006-Data.sav                 -       1,354     17      2017-12-14  f072aafde7802fd2f771209ee02ca146
+
+    36800-0006-Data.stc                 -       1,354     17      2017-12-14  faa64a1bf118d9c44a963da381a94b93
+
+    36800-0006-Data.tsv                 -       1,354     17      2017-12-14  0e86b6ad2cac162821ecf120564c2001
+
+    36800-0006-Data.txt                 67      1,354     17      2017-12-14  744f861a38e83fd1f0cee362f2c0991e
+
+    36800-0006-Setup.dct                -       -         -       2017-12-14  034e90e63b0e86124b6dc8be7f5798b6
+
+    36800-0006-Setup.do                 -       -         -       2017-12-14  9123e09ade36ae3fa740c5bd969c42a9
+
+    36800-0006-Setup.sas                -       -         -       2017-12-14  5d8a19e4a2c0db06dfe465ee0bccd669
+
+    36800-0006-Setup.sps                -       -         -       2017-12-14  eca7588c894209ba09475b7a371c87e8
+
+    36800-0006-Supplemental_syntax.do   -       -         -       2017-12-14  55992908387280eefed81d8ee9af2896
+
+    36800-0006-Supplemental_syntax.sas  -       -         -       2017-12-14  e9cf4a16bdfb596179856e0b2f487175
+
+
+DS0007 Children's Emotional Intensity Child Report [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0007-Codebook.pdf             -       -         -       2017-12-14  03a213942c2d3b82aebb85dbdf3a7aaf
+
+
+DS0008 Community Involvement
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0008-Codebook.pdf             -       -         -       2017-12-14  05cfa035e1c16d68b382d6e7aaf81ea8
+
+    36800-0008-Data.dta                 -       1,354     112     2017-12-14  be80906e27a6b644d32b622a1a4204ea
+
+    36800-0008-Data.rda                 -       1,354     112     2017-12-14  bd6b00f8b3c305d5f33034c019e3880f
+
+    36800-0008-Data.sav                 -       1,354     112     2017-12-14  28bf20f9506dd786d5e062c0bc27b0fc
+
+    36800-0008-Data.stc                 -       1,354     112     2017-12-14  2c28e24ad7e9532c6574d774ad5d0d3d
+
+    36800-0008-Data.tsv                 -       1,354     112     2017-12-14  e458a0f4f88bf15fa6719655203fa3e2
+
+    36800-0008-Data.txt                 449     1,354     112     2017-12-14  9882281170c71b01812ac42573305115
+
+    36800-0008-Setup.dct                -       -         -       2017-12-14  acfdc76cdab8e0f0b6c070bfbac09657
+
+    36800-0008-Setup.do                 -       -         -       2017-12-14  43daf4e2947aff563f36898e6a429871
+
+    36800-0008-Setup.sas                -       -         -       2017-12-14  4f5034f7806724426da3035c0dfced89
+
+    36800-0008-Setup.sps                -       -         -       2017-12-14  dfb532c30b36023a3cfca22e63193c70
+
+    36800-0008-Supplemental_syntax.do   -       -         -       2017-12-14  149d1571eaf522ebfeda32c6c0f0da03
+
+    36800-0008-Supplemental_syntax.sas  -       -         -       2017-12-14  066aa8a471be0477c10e42f2f70e0138
+
+
+DS0009 Demographics [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0009-Codebook.pdf             -       -         -       2017-12-14  14d50e339dfa69475906b6a1c5053c0e
+
+
+DS0010 Psychopathy Checklist: Youth Version [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0010-Codebook.pdf             -       -         -       2017-12-14  a64deae25f5275b115c9caf00852e7e3
+
+
+DS0011 Domestic Violence [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0011-Codebook.pdf             -       -         -       2017-12-14  58c8f8c80ea12653c0ccfe055c1f67b6
+
+
+DS0012 Early Onset of Behavior Problems
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0012-Codebook.pdf             -       -         -       2017-12-14  1813f2cc1138c68c5ea9c9c83302558d
+
+    36800-0012-Data.dta                 -       1,354     7       2017-12-14  531151876eaf7f32dbc9aa554da130fc
+
+    36800-0012-Data.rda                 -       1,354     7       2017-12-14  51fb8541e367014ac9f6c5e51a0d8256
+
+    36800-0012-Data.sav                 -       1,354     7       2017-12-14  6a44559decc7d4fab44865530f3c25f1
+
+    36800-0012-Data.stc                 -       1,354     7       2017-12-14  38b9555f86b73dc05f00bda05dccc53a
+
+    36800-0012-Data.tsv                 -       1,354     7       2017-12-14  6c89bd77ef14c247646bd65291efb9ec
+
+    36800-0012-Data.txt                 19      1,354     7       2017-12-14  4f4512a07ca6cf0e64576e7e1f5c5944
+
+    36800-0012-Setup.dct                -       -         -       2017-12-14  a804b1f00cb117c1cfcaa2ddc6b1e2ae
+
+    36800-0012-Setup.do                 -       -         -       2017-12-14  df049e41d24ffd6bd8a6393d58cc0117
+
+    36800-0012-Setup.sas                -       -         -       2017-12-14  7d8c00ffb8714ae4dee0b9502590ddce
+
+    36800-0012-Setup.sps                -       -         -       2017-12-14  9eef9af1164b4996c9e26491fab2f060
+
+    36800-0012-Supplemental_syntax.do   -       -         -       2017-12-14  5d9d8cb723e4864f66580aa3f8da4090
+
+    36800-0012-Supplemental_syntax.sas  -       -         -       2017-12-14  4b2ce14cbf877ff18e989426fc29af3e
+
+
+DS0013 EASI
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0013-Codebook.pdf             -       -         -       2017-12-14  cec1152c1a162a6ffe806be527493225
+
+    36800-0013-Data.dta                 -       1,354     17      2017-12-14  2144d804281ddc530b29693c20667c2a
+
+    36800-0013-Data.rda                 -       1,354     17      2017-12-14  22f8ae62cc671b883d95fae4400c969b
+
+    36800-0013-Data.sav                 -       1,354     17      2017-12-14  648563dfd190fe6b8334a5bc78399cc9
+
+    36800-0013-Data.stc                 -       1,354     17      2017-12-14  8465c644254e987685cd817f7396c5a5
+
+    36800-0013-Data.tsv                 -       1,354     17      2017-12-14  37bed36070cb90f864bf8feaa30a92bd
+
+    36800-0013-Data.txt                 50      1,354     17      2017-12-14  6712ebc48dfac1ef9fc278da703fbb16
+
+    36800-0013-Setup.dct                -       -         -       2017-12-14  74982a639bb29bfd425fa857ee59ec54
+
+    36800-0013-Setup.do                 -       -         -       2017-12-14  f85678d649840bdd540cf4c45ecd4f76
+
+    36800-0013-Setup.sas                -       -         -       2017-12-14  56f27d19d7ff1d55d028142807d2a44b
+
+    36800-0013-Setup.sps                -       -         -       2017-12-14  879b58cdfdddf106a0b25e109c1a9c0f
+
+    36800-0013-Supplemental_syntax.do   -       -         -       2017-12-14  53220d1f26a46b3c5aaa8d2945c9b288
+
+    36800-0013-Supplemental_syntax.sas  -       -         -       2017-12-14  dd7530a837779c5597d9504cd6f98352
+
+
+DS0014 Education (Baseline): School Bonding, Attendance, Activities, and
+Orientation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0014-Codebook.pdf             -       -         -       2017-12-14  aed26d899b3b23e00a7afdaeafc031b8
+
+    36800-0014-Data.dta                 -       1,354     107     2017-12-14  78f38522e0aa6bb17135726079ec4e85
+
+    36800-0014-Data.rda                 -       1,354     107     2017-12-14  0dfc9ad6731ecbf8bb895b8053a6be67
+
+    36800-0014-Data.sav                 -       1,354     107     2017-12-14  327c193638945900e0ea9f174f864d39
+
+    36800-0014-Data.stc                 -       1,354     107     2017-12-14  72edadd2a865ca7cc2e474b3cb1695ae
+
+    36800-0014-Data.tsv                 -       1,354     107     2017-12-14  8fcb25b4581f97751e7d88d546321b5a
+
+    36800-0014-Data.txt                 476     1,354     107     2017-12-14  a191b4c9f5127c9d97646de9027a0ae2
+
+    36800-0014-Setup.dct                -       -         -       2017-12-14  00ebfb44f1ce198e879bb1c1f47ca08b
+
+    36800-0014-Setup.do                 -       -         -       2017-12-14  804bc7608b42c8424e624a07cd118f72
+
+    36800-0014-Setup.sas                -       -         -       2017-12-14  5cc7526b980d3fe7ed9494adbc22245c
+
+    36800-0014-Setup.sps                -       -         -       2017-12-14  b089b627507ffd3ecd1ebefb5a0a778b
+
+    36800-0014-Supplemental_syntax.do   -       -         -       2017-12-14  b5a5528495cf0efea7ec403f6fdc626b
+
+    36800-0014-Supplemental_syntax.sas  -       -         -       2017-12-14  6f68deaa6531e2557db673b4ecb1eaec
+
+
+DS0015 Education (Follow-Up): School Bonding, Grades, Activities, and
+Orientation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0015-Codebook.pdf             -       -         -       2017-12-14  4b72906f51171d41c18c0a5fa704ee74
+
+    36800-0015-Data.dta                 -       1,354     931     2017-12-14  f961fb3684b57ad9e0378848fb4b9eff
+
+    36800-0015-Data.rda                 -       1,354     931     2017-12-14  e54de1e37b049690e953d911fc7a5bee
+
+    36800-0015-Data.sav                 -       1,354     931     2017-12-14  3984eee3e6392824cca0607afc352f79
+
+    36800-0015-Data.stc                 -       1,354     931     2017-12-14  00543dba2cb1deb49b42a46090152501
+
+    36800-0015-Data.tsv                 -       1,354     931     2017-12-14  92bcfdf5b56f2f8231d259d11f8b1b9d
+
+    36800-0015-Data.txt                 5442    1,354     931     2017-12-14  5f53b7f31a73c186f6691bf158907d1e
+
+    36800-0015-Setup.dct                -       -         -       2017-12-14  6681f32e2844ed32a398189dca100bdc
+
+    36800-0015-Setup.do                 -       -         -       2017-12-14  b3018ec4a9ebc3e58fc34d091f4d8bb8
+
+    36800-0015-Setup.sas                -       -         -       2017-12-14  8b5eee77aa5e52476ff5132adc10fd5a
+
+    36800-0015-Setup.sps                -       -         -       2017-12-14  2e36204f9d9d514e0b717810c5cd76ca
+
+    36800-0015-Supplemental_syntax.do   -       -         -       2017-12-14  a240456a9e64bde2a82aa3107a418db7
+
+    36800-0015-Supplemental_syntax.sas  -       -         -       2017-12-14  61daedcedbad9f9edca134bb7bd799fd
+
+
+DS0016 Employment
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0016-Codebook.pdf             -       -         -       2017-12-14  63b670aa40ee73531d4c4ac9d7c74bc5
+
+    36800-0016-Data.dta                 -       1,354     36      2017-12-14  52c86250721de998e09955b22d24502f
+
+    36800-0016-Data.rda                 -       1,354     36      2017-12-14  b6c6561ffa45a4306fc400c12fdbefdb
+
+    36800-0016-Data.sav                 -       1,354     36      2017-12-14  99936f658266a57ff4987c1940728a67
+
+    36800-0016-Data.stc                 -       1,354     36      2017-12-14  4d3bd653ee19256c18dfe0a8de8c4965
+
+    36800-0016-Data.tsv                 -       1,354     36      2017-12-14  f79c62a03fd579e37244ba909f16a59a
+
+    36800-0016-Data.txt                 154     1,354     36      2017-12-14  e2eca4ca7341c61b60ee834257418676
+
+    36800-0016-Setup.dct                -       -         -       2017-12-14  a329739ea7f7b7155c75a6ead6b099e9
+
+    36800-0016-Setup.do                 -       -         -       2017-12-14  1b037c007e3f52198e2edaf379ce1c49
+
+    36800-0016-Setup.sas                -       -         -       2017-12-14  f612a7549c667338665c72d8aa7e69ce
+
+    36800-0016-Setup.sps                -       -         -       2017-12-14  7a000d391c2d7f17dfd566fc5a3b651b
+
+    36800-0016-Supplemental_syntax.do   -       -         -       2017-12-14  8255e7fd70db07b9766e452b43c9de58
+
+    36800-0016-Supplemental_syntax.sas  -       -         -       2017-12-14  8c9a4e7909b24d79c4b958b506de77ed
+
+
+DS0017 Exposure to Violence [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0017-Codebook.pdf             -       -         -       2017-12-14  4471c4b26e92f951c49fb6c7a68b952e
+
+
+DS0018 Friendship Quality
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0018-Codebook.pdf             -       -         -       2017-12-14  e37b76fd5f1349baa7a65c75dcf2cc5f
+
+    36800-0018-Data.dta                 -       1,354     154     2017-12-14  6a147ef1689f98947756f9bef99d7be6
+
+    36800-0018-Data.rda                 -       1,354     154     2017-12-14  6ccb7454188c218a1634711990baef87
+
+    36800-0018-Data.sav                 -       1,354     154     2017-12-14  d8a60bf95dad38051cc61f050e009f92
+
+    36800-0018-Data.stc                 -       1,354     154     2017-12-14  6569ab708fd265fff9925fa45c6e5fe6
+
+    36800-0018-Data.tsv                 -       1,354     154     2017-12-14  30fecf7876913d8d8093db0308af3b24
+
+    36800-0018-Data.txt                 737     1,354     154     2017-12-14  d1faedf1c460a9b88178892afa5437dc
+
+    36800-0018-Setup.dct                -       -         -       2017-12-14  bd9855f6e6f94b9239ad4fbd36822607
+
+    36800-0018-Setup.do                 -       -         -       2017-12-14  b45ce866d9abaef22d2ce671574f00bf
+
+    36800-0018-Setup.sas                -       -         -       2017-12-14  a65885ee9a1ce21c19220e3c6f310def
+
+    36800-0018-Setup.sps                -       -         -       2017-12-14  bc47257072ade8266f52cdb73dab81d4
+
+    36800-0018-Supplemental_syntax.do   -       -         -       2017-12-14  a54f5d5c33d53201327b611e1d2b2b88
+
+    36800-0018-Supplemental_syntax.sas  -       -         -       2017-12-14  00f720a0df62879230a08c3f7af3bfce
+
+
+DS0019 Future Orientation Inventory
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0019-Codebook.pdf             -       -         -       2017-12-14  9d56e091bcac6cfb6a0283cb9e529118
+
+    36800-0019-Data.dta                 -       1,354     177     2017-12-14  466112764e0851bc55bffb6d3a1b6325
+
+    36800-0019-Data.rda                 -       1,354     177     2017-12-14  d1bb7d0e0dfb4272b6f8771aa6efd4d6
+
+    36800-0019-Data.sav                 -       1,354     177     2017-12-14  3372375becddd0d29e6f300a6a922a4d
+
+    36800-0019-Data.stc                 -       1,354     177     2017-12-14  dd3cfa67175c4eeeadf0893ffbdf326d
+
+    36800-0019-Data.tsv                 -       1,354     177     2017-12-14  a1729a1dbbbb2542a02d65d91b7010af
+
+    36800-0019-Data.txt                 816     1,354     177     2017-12-14  2ccb19934715adffe4cedea79100a4e6
+
+    36800-0019-Setup.dct                -       -         -       2017-12-14  6ba6b30116fe93ce254b3c0d830b2ff2
+
+    36800-0019-Setup.do                 -       -         -       2017-12-14  fa7a906cd054fd370e3972be612f0b2d
+
+    36800-0019-Setup.sas                -       -         -       2017-12-14  2759a006f2ce4f1d2a42760d9d7821f3
+
+    36800-0019-Setup.sps                -       -         -       2017-12-14  0733931f1e046d7f86402e81537c7add
+
+    36800-0019-Supplemental_syntax.do   -       -         -       2017-12-14  efee4dd38880309101499f75363d9980
+
+    36800-0019-Supplemental_syntax.sas  -       -         -       2017-12-14  9187390184c63d36a19f5661f5772fb2
+
+
+DS0020 Gang Involvement [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0020-Codebook.pdf             -       -         -       2017-12-14  048eddb592f8af8aaae4250ade2b1cc3
+
+
+DS0021 Gun Accessibility
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0021-Codebook.pdf             -       -         -       2017-12-14  2de139ccf9a553b561bb563c32caadd6
+
+    36800-0021-Data.dta                 -       1,354     34      2017-12-14  7a2c40d7d968b6bdbefad83f5ff81224
+
+    36800-0021-Data.rda                 -       1,354     34      2017-12-14  3731529693217372c72a05aee2fbaa8c
+
+    36800-0021-Data.sav                 -       1,354     34      2017-12-14  e80bcfba5c6b97dabbb3ddb8edae5745
+
+    36800-0021-Data.stc                 -       1,354     34      2017-12-14  25f4a29d0bc37fc5764014a92c6652bb
+
+    36800-0021-Data.tsv                 -       1,354     34      2017-12-14  87b64569cd2cc9dda2439467e9168bba
+
+    36800-0021-Data.txt                 135     1,354     34      2017-12-14  0842ebe2377ff826069be3293b9c1060
+
+    36800-0021-Setup.dct                -       -         -       2017-12-14  dd3c37398bea343a72201ccf60c100da
+
+    36800-0021-Setup.do                 -       -         -       2017-12-14  cb9a2a7762cc58cf011b023c58290321
+
+    36800-0021-Setup.sas                -       -         -       2017-12-14  254020635450cc545ed405354ae0068b
+
+    36800-0021-Setup.sps                -       -         -       2017-12-14  25adf5bd6d41473ccfb5e9f5d17befc3
+
+    36800-0021-Supplemental_syntax.do   -       -         -       2017-12-14  64711f79d716b2e8250705fe93a3baca
+
+    36800-0021-Supplemental_syntax.sas  -       -         -       2017-12-14  3e101cac15a74fc7f49ec31a97cc0841
+
+
+DS0022 Head Injury
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0022-Codebook.pdf             -       -         -       2017-12-14  e0bf1580884115e261a80de42bb80393
+
+    36800-0022-Data.dta                 -       1,354     235     2017-12-14  ce9609447c43958a3469f5c8dd3d954d
+
+    36800-0022-Data.rda                 -       1,354     235     2017-12-14  9abc7861cd9d426fc31b842bfe45ebf7
+
+    36800-0022-Data.sav                 -       1,354     235     2017-12-14  d85b0e2dda12b4e68906c0e733ca27cc
+
+    36800-0022-Data.stc                 -       1,354     235     2017-12-14  344b99dfb437690b2bd06c2d1634ceba
+
+    36800-0022-Data.tsv                 -       1,354     235     2017-12-14  50497773a65192738824474e4813e38a
+
+    36800-0022-Data.txt                 933     1,354     235     2017-12-14  f7d3dd90a4f47b7f8399289cc869b6e7
+
+    36800-0022-Setup.dct                -       -         -       2017-12-14  7ad3a6d2ba3634a2d0c0f6e78e6e3513
+
+    36800-0022-Setup.do                 -       -         -       2017-12-14  a695443262ca8ce4f7551185326fcee7
+
+    36800-0022-Setup.sas                -       -         -       2017-12-14  aa1ff3143c7e953955b7dcf32bccd25f
+
+    36800-0022-Setup.sps                -       -         -       2017-12-14  1162e1aae01595a35bd0f82e8387ce69
+
+    36800-0022-Supplemental_syntax.do   -       -         -       2017-12-14  1b670f740253c883d90bc24b21df82b2
+
+    36800-0022-Supplemental_syntax.sas  -       -         -       2017-12-14  fc009e7efd169fe8f8da1a8e091262c2
+
+
+DS0023 Health Care
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0023-Codebook.pdf             -       -         -       2017-12-14  f9a066f6e0527d35f70772b71e583c71
+
+    36800-0023-Data.dta                 -       1,354     22      2017-12-14  7f557a3c9092ded579775b3fc4eed9c1
+
+    36800-0023-Data.rda                 -       1,354     22      2017-12-14  9a2efa308e09821da34733bdbc3a638c
+
+    36800-0023-Data.sav                 -       1,354     22      2017-12-14  162340e0a72a466578a0b4ebc165c724
+
+    36800-0023-Data.stc                 -       1,354     22      2017-12-14  fa6f8dff435cc2125b26576051fb8d77
+
+    36800-0023-Data.tsv                 -       1,354     22      2017-12-14  3c1992b15b1be782374fe8ceb950683f
+
+    36800-0023-Data.txt                 89      1,354     22      2017-12-14  6633078c9134a519e43b1c8ec457e127
+
+    36800-0023-Setup.dct                -       -         -       2017-12-14  477b590438c3b99382df7ed8b124e5d4
+
+    36800-0023-Setup.do                 -       -         -       2017-12-14  6e4566b6c84fec4f236861f9fe725e62
+
+    36800-0023-Setup.sas                -       -         -       2017-12-14  8f48fc54c2f8900f77093e8646546638
+
+    36800-0023-Setup.sps                -       -         -       2017-12-14  39d35a09b055553453dc8f75b50b054a
+
+    36800-0023-Supplemental_syntax.do   -       -         -       2017-12-14  e242c12f50c11a6af5ea6a6e9493d824
+
+    36800-0023-Supplemental_syntax.sas  -       -         -       2017-12-14  26166703ee12b265afb152335d1b5411
+
+
+DS0024 HIV Risk Behaviors [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0024-Codebook.pdf             -       -         -       2017-12-14  3d9a8dcc746d04125b59c8cfc2ea3bb4
+
+
+DS0025 Importance of Spirituality
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0025-Codebook.pdf             -       -         -       2017-12-14  8dd195c41be57c0e0d1a0f36bc496b5b
+
+    36800-0025-Data.dta                 -       1,354     67      2017-12-14  04b9d125677fc9d4d6d79a2c2a3afe52
+
+    36800-0025-Data.rda                 -       1,354     67      2017-12-14  10b21a3ce94f9fc4ce18c0ba39046279
+
+    36800-0025-Data.sav                 -       1,354     67      2017-12-14  ecd77ee50c3b719aaf29e09ab6c7ffec
+
+    36800-0025-Data.stc                 -       1,354     67      2017-12-14  d707131869c0635fe0794d13e8e063f0
+
+    36800-0025-Data.tsv                 -       1,354     67      2017-12-14  385d0bc4d20944d877a88047d30912ff
+
+    36800-0025-Data.txt                 390     1,354     67      2017-12-14  75b66aa98cddac24d6451b39e8add0f7
+
+    36800-0025-Setup.dct                -       -         -       2017-12-14  64e04616f4a494e43e7125612e99d2da
+
+    36800-0025-Setup.do                 -       -         -       2017-12-14  24449ca216a520922c165a4db7e3012e
+
+    36800-0025-Setup.sas                -       -         -       2017-12-14  845d57f1a93a3110cbd206f4a870aeae
+
+    36800-0025-Setup.sps                -       -         -       2017-12-14  312091714b3d8b603e98a389053b1081
+
+    36800-0025-Supplemental_syntax.do   -       -         -       2017-12-14  0c1c3582638b748e5d70d47e368424cc
+
+    36800-0025-Supplemental_syntax.sas  -       -         -       2017-12-14  36c812161a46ee2ce39b75d6a68be1b5
+
+
+DS0026 Indices of Personal and Social Costs and Rewards
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0026-Codebook.pdf             -       -         -       2017-12-14  142caf9e191aeedaf3620c4f50e265ab
+
+    36800-0026-Data.dta                 -       1,354     1040    2017-12-14  c25dd1a9568afaf90914790d940647d3
+
+    36800-0026-Data.rda                 -       1,354     1040    2017-12-14  e8c489f9d7ae35ee5ac324e861d7c7d1
+
+    36800-0026-Data.sav                 -       1,354     1040    2017-12-14  d4b018513a807c536186c232b7c6afaf
+
+    36800-0026-Data.stc                 -       1,354     1040    2017-12-14  9010057ee6d9cc4bf1822f46c4344c25
+
+    36800-0026-Data.tsv                 -       1,354     1040    2017-12-14  7ef4eb0a67e6e37f35e19226c23bf5c5
+
+    36800-0026-Data.txt                 4895    1,354     1040    2017-12-14  7809b40e78b1d1371c493310b8588e28
+
+    36800-0026-Setup.dct                -       -         -       2017-12-14  1c3309bcd2f29be102626c40f10eef20
+
+    36800-0026-Setup.do                 -       -         -       2017-12-14  768e782386633b2444263fc2b8949ec4
+
+    36800-0026-Setup.sas                -       -         -       2017-12-14  dcd964985952b30822f2dc1dde194815
+
+    36800-0026-Setup.sps                -       -         -       2017-12-14  1291ff98314befcfb9fb760d6a878105
+
+    36800-0026-Supplemental_syntax.do   -       -         -       2017-12-14  c43a53b250d56af8ee69fdecd3a620bf
+
+    36800-0026-Supplemental_syntax.sas  -       -         -       2017-12-14  6bd95f73314292d4ebcb7639a79added
+
+
+DS0027 Information Related to Pregnancy and Children [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0027-Codebook.pdf             -       -         -       2017-12-14  db192a64efb5ead6c595c18d95cac510
+
+
+DS0028 Interview Information
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0028-Codebook.pdf             -       -         -       2017-12-14  605427f8969a06cc97ca4c8a25e57f13
+
+    36800-0028-Data.dta                 -       1,354     86      2017-12-14  690e74aa89add51f739b7f3e90367f47
+
+    36800-0028-Data.rda                 -       1,354     86      2017-12-14  f1421b0250a932369c25e935effc2e10
+
+    36800-0028-Data.sav                 -       1,354     86      2017-12-14  66dfb815a8e0d6bcaa6c95c164ed3a9a
+
+    36800-0028-Data.stc                 -       1,354     86      2017-12-14  0f16abfa565ab5e849dff48474de6f16
+
+    36800-0028-Data.tsv                 -       1,354     86      2017-12-14  443c673dfbaea0f2a841f34d1ab76c7e
+
+    36800-0028-Data.txt                 399     1,354     86      2017-12-14  e2d6329e594e5febfcf1d2b400207dc6
+
+    36800-0028-Setup.dct                -       -         -       2017-12-14  a10e3d725c7933b43a15872144ce223d
+
+    36800-0028-Setup.do                 -       -         -       2017-12-14  e9bd147f9db9e68dad8b74b28becf115
+
+    36800-0028-Setup.sas                -       -         -       2017-12-14  40da3f7887b60090d21ef55ebe05b458
+
+    36800-0028-Setup.sps                -       -         -       2017-12-14  f5b4be0f00221a44159bf6b960065c80
+
+    36800-0028-Supplemental_syntax.do   -       -         -       2017-12-14  1979ba0c5169b5bf856d041dc64cadab
+
+    36800-0028-Supplemental_syntax.sas  -       -         -       2017-12-14  39452df51cbd9d343ed1dd22f484b8de
+
+
+DS0029 Miscellaneous (Household Composition, Street Time, Probation, Number
+of Weeks Working)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0029-Codebook.pdf             -       -         -       2017-12-14  2a79cb43ad35160e4ad86b96f39ffdbf
+
+    36800-0029-Data.dta                 -       1,354     551     2017-12-14  3458f992d21b0d76fc2505cb19151479
+
+    36800-0029-Data.rda                 -       1,354     551     2017-12-14  bf5bcbbff7c56ef7c1a64976301d113d
+
+    36800-0029-Data.sav                 -       1,354     551     2017-12-14  cf40ecad2268083548e58d5202fbc7cb
+
+    36800-0029-Data.stc                 -       1,354     551     2017-12-14  fc7582401ea246e61c6addf60724ac67
+
+    36800-0029-Data.tsv                 -       1,354     551     2017-12-14  9ef42df0a25f2badcb748a21c2c6508d
+
+    36800-0029-Data.txt                 2952    1,354     551     2017-12-14  51a4ac3801ad6e773f39b7d8bfdaa4be
+
+    36800-0029-Setup.dct                -       -         -       2017-12-14  3b7e8ff42b2cdc5d2e65200e09d18341
+
+    36800-0029-Setup.do                 -       -         -       2017-12-14  0d219de0c340c951db659940d84020ad
+
+    36800-0029-Setup.sas                -       -         -       2017-12-14  a8efdc78a88115c08265137ca715f1c6
+
+    36800-0029-Setup.sps                -       -         -       2017-12-14  234e4c5b6abbee4eee2b8acae0978435
+
+    36800-0029-Supplemental_syntax.do   -       -         -       2017-12-14  5741f4c3099cc22cf1805ccf448587fb
+
+    36800-0029-Supplemental_syntax.sas  -       -         -       2017-12-14  a12b6296e4556155cdc2cd0ce9f6f0b0
+
+
+DS0030 Moral Thinking
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0030-Codebook.pdf             -       -         -       2017-12-14  2aa822152201429aa6ceaa58dc2b98bc
+
+    36800-0030-Data.dta                 -       1,354     375     2017-12-14  e1bb3c1e03e253ae080d0a524b0102dc
+
+    36800-0030-Data.rda                 -       1,354     375     2017-12-14  5477431ffcc7c526cd44d7951c202fa5
+
+    36800-0030-Data.sav                 -       1,354     375     2017-12-14  e7c51b062b297b2f77e99b241d84d902
+
+    36800-0030-Data.stc                 -       1,354     375     2017-12-14  4e9999af537769d5721eff9f4c8d69ec
+
+    36800-0030-Data.tsv                 -       1,354     375     2017-12-14  410baf18286bc94c6a30f7399d435b92
+
+    36800-0030-Data.txt                 1617    1,354     375     2017-12-14  e0467e4752826e4579f45a5a1beca780
+
+    36800-0030-Setup.dct                -       -         -       2017-12-14  58339aa9bd2575af30531919b16994f7
+
+    36800-0030-Setup.do                 -       -         -       2017-12-14  45f0b7d37004251edc208682e65fca48
+
+    36800-0030-Setup.sas                -       -         -       2017-12-14  6fbe77c8508e11d48e49918c2b54bbe1
+
+    36800-0030-Setup.sps                -       -         -       2017-12-14  5e946ee979140b2e18e4f780bb634677
+
+    36800-0030-Supplemental_syntax.do   -       -         -       2017-12-14  52ce5dc526d3a8a45f5f8dac9447b7be
+
+    36800-0030-Supplemental_syntax.sas  -       -         -       2017-12-14  8f4a230f411acda7dcc0889fa562fba9
+
+
+DS0031 Motivation to Succeed
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0031-Codebook.pdf             -       -         -       2017-12-14  29311bb4e23bb61ff764f36002842397
+
+    36800-0031-Data.dta                 -       1,354     144     2017-12-14  ecbd07ebcb03a082236d10838dfab6c6
+
+    36800-0031-Data.rda                 -       1,354     144     2017-12-14  1f65107680d6ae80da11a1dab43212c6
+
+    36800-0031-Data.sav                 -       1,354     144     2017-12-14  0d982f09b1cf7ee3500ab38f293da331
+
+    36800-0031-Data.stc                 -       1,354     144     2017-12-14  2460893100cb7b9ad897b9c9f2d35e74
+
+    36800-0031-Data.tsv                 -       1,354     144     2017-12-14  6f9a66add2c94f9a1743a7538a8d48a0
+
+    36800-0031-Data.txt                 674     1,354     144     2017-12-14  54a43d4d67bc298fce593a0dbb22b026
+
+    36800-0031-Setup.dct                -       -         -       2017-12-14  9d95825d6e2223f629b78c1430a6ae0c
+
+    36800-0031-Setup.do                 -       -         -       2017-12-14  cd300ba1bcd64be4e83811fca06ff6d4
+
+    36800-0031-Setup.sas                -       -         -       2017-12-14  23b546ab4fe43fccc12e0095335cab60
+
+    36800-0031-Setup.sps                -       -         -       2017-12-14  c8d370cc3644a87e73411fbf8558ac78
+
+    36800-0031-Supplemental_syntax.do   -       -         -       2017-12-14  028955e808e5ee936b3bc437278d59d6
+
+    36800-0031-Supplemental_syntax.sas  -       -         -       2017-12-14  33b48932194a97aaca935eb0d4254eb2
+
+
+DS0032 Multigroup Measure of Ethnic Identity
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0032-Codebook.pdf             -       -         -       2017-12-14  8fb3ab726fff561c9ff1ccad3ca88457
+
+    36800-0032-Data.dta                 -       1,354     182     2017-12-14  2966915fc323b88a5e407936617587ce
+
+    36800-0032-Data.rda                 -       1,354     182     2017-12-14  3a8246bc59ed52c12b42422f6de1ab9b
+
+    36800-0032-Data.sav                 -       1,354     182     2017-12-14  e0d246c899e7ba5358453557f5950536
+
+    36800-0032-Data.stc                 -       1,354     182     2017-12-14  2b5de545d895a5b0af8c413ccff114e2
+
+    36800-0032-Data.tsv                 -       1,354     182     2017-12-14  349ab1301bdf16caca7d96af8e6f73e0
+
+    36800-0032-Data.txt                 1298    1,354     182     2017-12-14  733d1fbee744e5e17d9548711ed56dc0
+
+    36800-0032-Setup.dct                -       -         -       2017-12-14  76ba5d7c7215869895a5f7da32797ffe
+
+    36800-0032-Setup.do                 -       -         -       2017-12-14  3ee8340efc1a727d9745d21cf697e03d
+
+    36800-0032-Setup.sas                -       -         -       2017-12-14  c20363399c24c37b25ce77b50d4497f4
+
+    36800-0032-Setup.sps                -       -         -       2017-12-14  ac680d8b8d7f2f4abbcd9d2c90eb7d09
+
+    36800-0032-Supplemental_syntax.do   -       -         -       2017-12-14  3b719366e4d656443c1a1dfc7772097b
+
+    36800-0032-Supplemental_syntax.sas  -       -         -       2017-12-14  ce6f483fb5090641079c4aade4f7b279
+
+
+DS0033 Neighborhood Conditions
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0033-Codebook.pdf             -       -         -       2017-12-14  ad715f718bda4ad76c1d4e2adb2b2dab
+
+    36800-0033-Data.dta                 -       1,354     386     2017-12-14  9485b8ecf94947df1757ff2b241fbe7c
+
+    36800-0033-Data.rda                 -       1,354     386     2017-12-14  ffd90982cd4bb8305aebca350aacd5b7
+
+    36800-0033-Data.sav                 -       1,354     386     2017-12-14  cf48282d7b0e120608e05dfa90d67efc
+
+    36800-0033-Data.stc                 -       1,354     386     2017-12-14  ba3dc0caa63c471fd80fb43e464abdd0
+
+    36800-0033-Data.tsv                 -       1,354     386     2017-12-14  7b0323bb1fb218bf0e8185429dd34b39
+
+    36800-0033-Data.txt                 1998    1,354     386     2017-12-14  48a0412a018790ce7fa7bafb0fff88dc
+
+    36800-0033-Setup.dct                -       -         -       2017-12-14  57c15dee742a95346b7041d57e7a3889
+
+    36800-0033-Setup.do                 -       -         -       2017-12-14  798dc7f2ab30b7adc74924ff531127ea
+
+    36800-0033-Setup.sas                -       -         -       2017-12-14  d2b1a99602740bf8a07adb615d5a9796
+
+    36800-0033-Setup.sps                -       -         -       2017-12-14  125e85acf6b7d3031194fb77681b1539
+
+    36800-0033-Supplemental_syntax.do   -       -         -       2017-12-14  f109383d22c65df134caf7a6e958945b
+
+    36800-0033-Supplemental_syntax.sas  -       -         -       2017-12-14  34730243b8226095be0ac2d11bc85940
+
+
+DS0034 NEO Personality Inventory [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0034-Codebook.pdf             -       -         -       2017-12-14  0ccbd3604a51752e18a26724a56f9891
+
+
+DS0035 Offense History
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0035-Codebook.pdf             -       -         -       2017-12-14  9cd07f3a4def4bae15320c96d9aca2eb
+
+    36800-0035-Data.dta                 -       1,354     12      2017-12-14  730a48b964adfa494bf79d2dd5ba3305
+
+    36800-0035-Data.rda                 -       1,354     12      2017-12-14  c666b306531d46606323776bcf38441f
+
+    36800-0035-Data.sav                 -       1,354     12      2017-12-14  392e053bfd61cdede5817590c6f4c325
+
+    36800-0035-Data.stc                 -       1,354     12      2017-12-14  ef1fab851f64d6e0c974bfc6dd2874ff
+
+    36800-0035-Data.tsv                 -       1,354     12      2017-12-14  a1cd675bbb3bdd049c3a7c2089797162
+
+    36800-0035-Data.txt                 40      1,354     12      2017-12-14  2a69c74e07d143709587d8a0caa151ac
+
+    36800-0035-Setup.dct                -       -         -       2017-12-14  9d01f4d8ef3e1d39d060a9ae59f89337
+
+    36800-0035-Setup.do                 -       -         -       2017-12-14  ce87fa2654b1a05b7aa30d2e9eeef2e3
+
+    36800-0035-Setup.sas                -       -         -       2017-12-14  e1ede5ed27ef48bc8f0540d6958b8535
+
+    36800-0035-Setup.sps                -       -         -       2017-12-14  c94bccbfdbd5ec23430c8c39638fd960
+
+    36800-0035-Supplemental_syntax.do   -       -         -       2017-12-14  ab355d8afb50cda9545a0c96f2068992
+
+    36800-0035-Supplemental_syntax.sas  -       -         -       2017-12-14  6168b678e2ff9e3c4d122ef53f3a505b
+
+
+DS0036 Parental Monitoring
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0036-Codebook.pdf             -       -         -       2017-12-14  6587f204ab1deeb92c1005dcae7d5f1f
+
+    36800-0036-Data.dta                 -       1,354     124     2017-12-14  c898796af90503efc0c1d1645d3faff1
+
+    36800-0036-Data.rda                 -       1,354     124     2017-12-14  85d4d1b4b6f7feab62e20a131b000990
+
+    36800-0036-Data.sav                 -       1,354     124     2017-12-14  257201906cefda918d4f1db3c03a5106
+
+    36800-0036-Data.stc                 -       1,354     124     2017-12-14  71f52190379db2a61dfe87e9c214507a
+
+    36800-0036-Data.tsv                 -       1,354     124     2017-12-14  b3706be155a2ccea1945b4cf7b5eeeff
+
+    36800-0036-Data.txt                 579     1,354     124     2017-12-14  5934a273c627d9e185862feb78ef0ee9
+
+    36800-0036-Setup.dct                -       -         -       2017-12-14  8dbb7b2149086f7dc66dfb13a425ddc7
+
+    36800-0036-Setup.do                 -       -         -       2017-12-14  b2606627b6e2015a40810f12cb2edc7c
+
+    36800-0036-Setup.sas                -       -         -       2017-12-14  fa2b4f3a9a0c525d419086b2b070185f
+
+    36800-0036-Setup.sps                -       -         -       2017-12-14  7872564f45b4a40116be011b3e84ad22
+
+    36800-0036-Supplemental_syntax.do   -       -         -       2017-12-14  6e76c8a69e3d9d1e50ab715249838068
+
+    36800-0036-Supplemental_syntax.sas  -       -         -       2017-12-14  1ed6e2a83d0206994fd1a1f881b300a2
+
+
+DS0037 Parental Orientation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0037-Codebook.pdf             -       -         -       2017-12-14  2fee8aa48eab287b49ff77f9421eead2
+
+    36800-0037-Data.dta                 -       1,354     143     2017-12-14  40169da98c4c38bc0f05eef41eeb7985
+
+    36800-0037-Data.rda                 -       1,354     143     2017-12-14  1393fca46f5a593c857a5d981b18a54c
+
+    36800-0037-Data.sav                 -       1,354     143     2017-12-14  6426e2d4f9c8b56b5b540bff97fb35bc
+
+    36800-0037-Data.stc                 -       1,354     143     2017-12-14  4e14af60772c02e57065a4cfd7d8c3b8
+
+    36800-0037-Data.tsv                 -       1,354     143     2017-12-14  a55cfa02840017bbf9a98c2149e3e657
+
+    36800-0037-Data.txt                 694     1,354     143     2017-12-14  3e38f4ba2c834c4d0683556913cf249a
+
+    36800-0037-Setup.dct                -       -         -       2017-12-14  ed53aaf58a4cd331f993d123284838d0
+
+    36800-0037-Setup.do                 -       -         -       2017-12-14  4dc016aadb8f5ece61522f3aa3bdc893
+
+    36800-0037-Setup.sas                -       -         -       2017-12-14  9dba2f076fd5d29f6e87dd40524c2486
+
+    36800-0037-Setup.sps                -       -         -       2017-12-14  157b300c486c02792135948c1c190a22
+
+    36800-0037-Supplemental_syntax.do   -       -         -       2017-12-14  06907d3da43cb08e44312cfdd991c714
+
+    36800-0037-Supplemental_syntax.sas  -       -         -       2017-12-14  9f5b0ff28869083c9e5582a8e0fcc9c2
+
+
+DS0038 Parental Warmth and Hostility
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0038-Codebook.pdf             -       -         -       2017-12-14  f3b781782895a2a82b17b2f06c4a5044
+
+    36800-0038-Data.dta                 -       1,354     1231    2017-12-14  53895d6ee9250c678207ee8ef2c41b39
+
+    36800-0038-Data.rda                 -       1,354     1231    2017-12-14  c9d632465cb26dc090e53d67a8cec879
+
+    36800-0038-Data.sav                 -       1,354     1231    2017-12-14  61eb6101c718540ff14c2558850c68dc
+
+    36800-0038-Data.stc                 -       1,354     1231    2017-12-14  48cf92aba194b072a9c5d28e6ddce2e6
+
+    36800-0038-Data.tsv                 -       1,354     1231    2017-12-14  bde709eaf92eebfa0e6faf477d710650
+
+    36800-0038-Data.txt                 5321    1,354     1231    2017-12-14  f1ca8a55dd4b2d136436882abf1f9121
+
+    36800-0038-Setup.dct                -       -         -       2017-12-14  823c393d64285796e25dc98e2e3f105f
+
+    36800-0038-Setup.do                 -       -         -       2017-12-14  116704c6873f663415262e5c98a75ddc
+
+    36800-0038-Setup.sas                -       -         -       2017-12-14  1045e2a21142c03677640e88be3b7ff7
+
+    36800-0038-Setup.sps                -       -         -       2017-12-14  0bf116a7243a801760e5f5ef556bf07d
+
+    36800-0038-Supplemental_syntax.do   -       -         -       2017-12-14  a0d85e5e3b8071d99f8e92f0e3398cd8
+
+    36800-0038-Supplemental_syntax.sas  -       -         -       2017-12-14  f0af83dd386e3a733cfb735afa8403ed
+
+
+DS0039 Peer Delinquency [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0039-Codebook.pdf             -       -         -       2017-12-14  959aec178fc1d10fdb9def6c96fb07da
+
+
+DS0040 Perceptions of Chances for Success
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0040-Codebook.pdf             -       -         -       2017-12-14  1e17cca612e1a9a5ec0ac8cb5acb984f
+
+    36800-0040-Data.dta                 -       1,354     189     2017-12-14  58098c9d671139308ac067daee622047
+
+    36800-0040-Data.rda                 -       1,354     189     2017-12-14  818db94f99b4d5d211e83f8413f1de42
+
+    36800-0040-Data.sav                 -       1,354     189     2017-12-14  4e6dc23d575bcc73820052fd539fd222
+
+    36800-0040-Data.stc                 -       1,354     189     2017-12-14  7ea813bce8157317e96aee65a3b7211a
+
+    36800-0040-Data.tsv                 -       1,354     189     2017-12-14  6305a84cf1d91874b3bc64b68db56424
+
+    36800-0040-Data.txt                 1120    1,354     189     2017-12-14  c6b8a4527eff91c3d86916423f4d66bf
+
+    36800-0040-Setup.dct                -       -         -       2017-12-14  4962ac80a716b4bd46a6e5d0c0273263
+
+    36800-0040-Setup.do                 -       -         -       2017-12-14  f83ce3bd82797407dd987acd0d0c8dbe
+
+    36800-0040-Setup.sas                -       -         -       2017-12-14  747bda443273e4337f0bc474c08a471a
+
+    36800-0040-Setup.sps                -       -         -       2017-12-14  2a74a7cc727138e619417fec13311df9
+
+    36800-0040-Supplemental_syntax.do   -       -         -       2017-12-14  b06b2cf814c2950119eaebfc4a5e02d8
+
+    36800-0040-Supplemental_syntax.sas  -       -         -       2017-12-14  791f942c919740eb61beaa81e530befe
+
+
+DS0041 Personality Assessment Inventory [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0041-Codebook.pdf             -       -         -       2017-12-14  ddea3a5914266d2b3d754d5e33eec52a
+
+
+DS0042 Procedural Justice
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0042-Codebook.pdf             -       -         -       2017-12-14  1641d4a848bd95f094aec76934bd61b1
+
+    36800-0042-Data.dta                 -       1,354     1335    2017-12-14  a304aed0cb71aabd59472a5c3cf39efe
+
+    36800-0042-Data.rda                 -       1,354     1335    2017-12-14  14ded4c9295992b88f118e212d3f91a2
+
+    36800-0042-Data.sav                 -       1,354     1335    2017-12-14  fe46584f41efd7116de41f17866ff681
+
+    36800-0042-Data.stc                 -       1,354     1335    2017-12-14  aa3c09124ae2e14d32bcd74c94d4bdab
+
+    36800-0042-Data.tsv                 -       1,354     1335    2017-12-14  db6e7d89744f14e7e0a4487d845309b6
+
+    36800-0042-Data.txt                 6641    1,354     1335    2017-12-14  47fc9f0e7e1917443e441be583a454c9
+
+    36800-0042-Setup.dct                -       -         -       2017-12-14  d97f384933cd9889f1db0eadf690753f
+
+    36800-0042-Setup.do                 -       -         -       2017-12-14  4ebf0d4b8e7c9e6f9db9cfd2b0355c82
+
+    36800-0042-Setup.sas                -       -         -       2017-12-14  729d3de5daf10697ec23b01cfb906377
+
+    36800-0042-Setup.sps                -       -         -       2017-12-14  b4a0a215624f8a2edb110927387b51cb
+
+    36800-0042-Supplemental_syntax.do   -       -         -       2017-12-14  8355b4fd1e44dd766ee012b959e10e27
+
+    36800-0042-Supplemental_syntax.sas  -       -         -       2017-12-14  833825d21bd280ada5d63acddd67447e
+
+
+DS0043 Psychosocial Maturity Inventory (PSMI) [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0043-Codebook.pdf             -       -         -       2017-12-14  b7384def5ba28c1f1af92a7abb7e5542
+
+
+DS0044 Quality of Romantic Relationships [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0044-Codebook.pdf             -       -         -       2017-12-14  8d0d382ab88d0beddb09d2e8c3f7d988
+
+
+DS0045 Resistance to Peer Influence
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0045-Codebook.pdf             -       -         -       2017-12-14  11dc633c0396956c9636413620850e8c
+
+    36800-0045-Data.dta                 -       1,354     342     2017-12-14  14d7d9601df32f6bee441527282c5655
+
+    36800-0045-Data.rda                 -       1,354     342     2017-12-14  b7a770376eff0696e625f8750a7ce579
+
+    36800-0045-Data.sav                 -       1,354     342     2017-12-14  13e65d9f5a513cc0f88200f5865a0379
+
+    36800-0045-Data.stc                 -       1,354     342     2017-12-14  b8e6d95b3580037a13e47f7d48b4320b
+
+    36800-0045-Data.tsv                 -       1,354     342     2017-12-14  65ee58cfa3953eeb13453773d00c9c9f
+
+    36800-0045-Data.txt                 1483    1,354     342     2017-12-14  f48d44d5946da0c98cadc1590b4d0899
+
+    36800-0045-Setup.dct                -       -         -       2017-12-14  99b718c648eeef6e22b313439bcb9031
+
+    36800-0045-Setup.do                 -       -         -       2017-12-14  93fd362eb2b86c4634fa8cac0158d6c1
+
+    36800-0045-Setup.sas                -       -         -       2017-12-14  bf66325d05e9b2b7f8e48535dd564ebe
+
+    36800-0045-Setup.sps                -       -         -       2017-12-14  7a16379ad553cb7c412ab9391e6ef322
+
+    36800-0045-Supplemental_syntax.do   -       -         -       2017-12-14  e6ce80a8fc20b5d0145858e161a937da
+
+    36800-0045-Supplemental_syntax.sas  -       -         -       2017-12-14  55c97311b467054ffb6688df2142feaf
+
+
+DS0046 Revised Children's Manifest Anxiety Scale (RCMAS)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0046-Codebook.pdf             -       -         -       2017-12-14  9b55e1a15dc9153684bba9b9fc551ff3
+
+    36800-0046-Data.dta                 -       1,354     44      2017-12-14  b08c2ba0bcde922930dd089a1e9326f0
+
+    36800-0046-Data.rda                 -       1,354     44      2017-12-14  06093f61229075b90114abd77a1ed528
+
+    36800-0046-Data.sav                 -       1,354     44      2017-12-14  0cb0ae3feca6ff169027aef3414b6c70
+
+    36800-0046-Data.stc                 -       1,354     44      2017-12-14  1bcb06daa13ecdbd5e932a6a75622200
+
+    36800-0046-Data.tsv                 -       1,354     44      2017-12-14  4c42cdf101c740a6021ed73a11bc52c8
+
+    36800-0046-Data.txt                 89      1,354     44      2017-12-14  029669714850311349809dec2cbbf32d
+
+    36800-0046-Setup.dct                -       -         -       2017-12-14  38a806571640e8052cef7c3d4ac92734
+
+    36800-0046-Setup.do                 -       -         -       2017-12-14  3e4cfb28e43dc07e1ba8dbff07d84153
+
+    36800-0046-Setup.sas                -       -         -       2017-12-14  9018dd7bfc2f709dc430a21a47468ee9
+
+    36800-0046-Setup.sps                -       -         -       2017-12-14  3e7936be330de75078b4b02b7d8990f4
+
+    36800-0046-Supplemental_syntax.do   -       -         -       2017-12-14  15bb485a2ae1e87a346bb707d61870e5
+
+    36800-0046-Supplemental_syntax.sas  -       -         -       2017-12-14  51c8bf975a091d40722a9476a19a5c67
+
+
+DS0047 Routine Activities
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0047-Codebook.pdf             -       -         -       2017-12-14  f0edec1efd308fbb60054be0bdfacbab
+
+    36800-0047-Data.dta                 -       1,354     86      2017-12-14  f7e0c8f77316c88f684ae9ab4ea45491
+
+    36800-0047-Data.rda                 -       1,354     86      2017-12-14  460193769f5484635534c08d094062e5
+
+    36800-0047-Data.sav                 -       1,354     86      2017-12-14  bb2b0d9626864661932a3cb035e38a32
+
+    36800-0047-Data.stc                 -       1,354     86      2017-12-14  7d5612ee6772cf945e6261043e8521ba
+
+    36800-0047-Data.tsv                 -       1,354     86      2017-12-14  e7abb39e5fcc0534413482f8653731eb
+
+    36800-0047-Data.txt                 426     1,354     86      2017-12-14  a453bb0d171c5016e12501c4963631d4
+
+    36800-0047-Setup.dct                -       -         -       2017-12-14  2be9570c5a4ebd915eda33d7de91aa26
+
+    36800-0047-Setup.do                 -       -         -       2017-12-14  6dc79c0710d507fb5bc4acf5fd269775
+
+    36800-0047-Setup.sas                -       -         -       2017-12-14  e4555fb1974560199e1e2a43dcfbe875
+
+    36800-0047-Setup.sps                -       -         -       2017-12-14  63898adb3035c885230b5436b6d70f05
+
+    36800-0047-Supplemental_syntax.do   -       -         -       2017-12-14  027eceb63d3daabd02796a9de5993927
+
+    36800-0047-Supplemental_syntax.sas  -       -         -       2017-12-14  170f236a2a9385b81baf089c4a304f38
+
+
+DS0048 Self-Reported Offending (SRO) [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0048-Codebook.pdf             -       -         -       2017-12-14  1adf5275766b690c3ca838fa14e06e69
+
+
+DS0049 Services and Medications
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0049-Codebook.pdf             -       -         -       2017-12-14  c705ac6d9045adc5b7d727c57d98bc01
+
+    36800-0049-Data.dta                 -       1,354     107     2017-12-14  a6f0693df4b46bfa10d74b29b8d08cb8
+
+    36800-0049-Data.rda                 -       1,354     107     2017-12-14  f44ed75e7190291f3ebc682638f66a5a
+
+    36800-0049-Data.sav                 -       1,354     107     2017-12-14  1519b1b15c8a49cd5b67264f3e61fb27
+
+    36800-0049-Data.stc                 -       1,354     107     2017-12-14  81be82fb5c648faad98aa6823f236a86
+
+    36800-0049-Data.tsv                 -       1,354     107     2017-12-14  bb117f397867f273eaa1e9dae3690a2e
+
+    36800-0049-Data.txt                 442     1,354     107     2017-12-14  a8eebfc6ffb987e664826dce63d8bd7f
+
+    36800-0049-Setup.dct                -       -         -       2017-12-14  6e3c66aedcd795d5c2d1fabaa3d6352e
+
+    36800-0049-Setup.do                 -       -         -       2017-12-14  1838d79748af74955f96090a03206d9d
+
+    36800-0049-Setup.sas                -       -         -       2017-12-14  71996609555422db3b43f75e6dd88328
+
+    36800-0049-Setup.sps                -       -         -       2017-12-14  7f3acc77296faaf937a423754f37e5fa
+
+    36800-0049-Supplemental_syntax.do   -       -         -       2017-12-14  607521f24564f52425bdacd996853d05
+
+    36800-0049-Supplemental_syntax.sas  -       -         -       2017-12-14  7ba1d2fadefd7d464cc18515a933145b
+
+
+DS0050 Social Capital
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0050-Codebook.pdf             -       -         -       2017-12-14  786d8ff73df26870479364509545997b
+
+    36800-0050-Data.dta                 -       1,354     240     2017-12-14  81dd0908079e3de2b691d3bf44055fe2
+
+    36800-0050-Data.rda                 -       1,354     240     2017-12-14  df05c2811070e108175311782c619bf9
+
+    36800-0050-Data.sav                 -       1,354     240     2017-12-14  24477092aa35f8e80673dd917ace7bc8
+
+    36800-0050-Data.stc                 -       1,354     240     2017-12-14  4efcb22f8c83279b8a0b3da9dcba210a
+
+    36800-0050-Data.tsv                 -       1,354     240     2017-12-14  ff151706367f86d04c4ee16a53a901bb
+
+    36800-0050-Data.txt                 1235    1,354     240     2017-12-14  63f41a476b13b339e61cf664187ccabb
+
+    36800-0050-Setup.dct                -       -         -       2017-12-14  ebcb5d069a84ed357ac5c2e5e8373456
+
+    36800-0050-Setup.do                 -       -         -       2017-12-14  b13bdf2d6cbe7de8314e31dccdc2526d
+
+    36800-0050-Setup.sas                -       -         -       2017-12-14  a4a951bccfeb733e7ccaf6e166e40072
+
+    36800-0050-Setup.sps                -       -         -       2017-12-14  5bcc4205ee33127e6d0d99524d950450
+
+    36800-0050-Supplemental_syntax.do   -       -         -       2017-12-14  a501e68aa15829e2a1b127599ce36bac
+
+    36800-0050-Supplemental_syntax.sas  -       -         -       2017-12-14  13fd4650ed808d697664a0af8618027e
+
+
+DS0051 Socioeconomic Status
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0051-Codebook.pdf             -       -         -       2017-12-14  39ed802c7aca2db583f5982c1eb0e541
+
+    36800-0051-Data.dta                 -       1,354     9       2017-12-14  989ea063beccec7e6f917568ee90ebf9
+
+    36800-0051-Data.rda                 -       1,354     9       2017-12-14  b8c4b23b4c2cabfe850ee00fe00f6d40
+
+    36800-0051-Data.sav                 -       1,354     9       2017-12-14  dd7e35471484e131cf3e4393d3373fe4
+
+    36800-0051-Data.stc                 -       1,354     9       2017-12-14  e46bf582a5db7f45f8ef056a558a1d02
+
+    36800-0051-Data.tsv                 -       1,354     9       2017-12-14  549f5e1986c9ce8f798815515b477577
+
+    36800-0051-Data.txt                 35      1,354     9       2017-12-14  777f4e8aa3c2f6b9026deb7e2d381daa
+
+    36800-0051-Setup.dct                -       -         -       2017-12-14  3dcf1e1f2ca8b9d0f513ddf2ba91bf49
+
+    36800-0051-Setup.do                 -       -         -       2017-12-14  0e9eb72649796c6f7b17468b1543f338
+
+    36800-0051-Setup.sas                -       -         -       2017-12-14  20f734c88e87e7e9cb6ee75cb73f01ca
+
+    36800-0051-Setup.sps                -       -         -       2017-12-14  0b0bf530e72b648609e855776e685f7a
+
+    36800-0051-Supplemental_syntax.do   -       -         -       2017-12-14  659ad0d31ab75418636f6a0704190410
+
+    36800-0051-Supplemental_syntax.sas  -       -         -       2017-12-14  aa72dddf4267d66bbf8da5ef432a7fd9
+
+
+DS0052 Substance Abuse
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0052-Codebook.pdf             -       -         -       2017-12-14  7a2a4bf654ad9a6218d94d5ef6243b80
+
+    36800-0052-Data.dta                 -       1,354     1244    2017-12-14  384da9f40e8ae12ce50b1edf471832b5
+
+    36800-0052-Data.rda                 -       1,354     1244    2017-12-14  cb22466d6291cbe9e44a2a7775254384
+
+    36800-0052-Data.sav                 -       1,354     1244    2017-12-14  899b77f8731cb1fd631ce0da4b8b8e68
+
+    36800-0052-Data.stc                 -       1,354     1244    2017-12-14  0ea59e60ef45328387aa54bbf4c6d6bf
+
+    36800-0052-Data.tsv                 -       1,354     1244    2017-12-14  28cca50e651123b8fad85fd5edeb0076
+
+    36800-0052-Data.txt                 5022    1,354     1244    2017-12-14  f0aecc07edd79096860b0d287cd2613f
+
+    36800-0052-Setup.dct                -       -         -       2017-12-14  334f82cb3c39d3b5dcb01e48e8cddc40
+
+    36800-0052-Setup.do                 -       -         -       2017-12-14  e26885801e304d908387529b5fc83fc1
+
+    36800-0052-Setup.sas                -       -         -       2017-12-14  78a0d85ecf2a173051d61bad17c5de85
+
+    36800-0052-Setup.sps                -       -         -       2017-12-14  ba343106792273374d85231a479191e4
+
+    36800-0052-Supplemental_syntax.do   -       -         -       2017-12-14  3ba4b118356825fb9d44683009cf4222
+
+    36800-0052-Supplemental_syntax.sas  -       -         -       2017-12-14  265702ce64ab072ec42a3957d70836d9
+
+
+DS0053 Threat Control Override (TCO)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0053-Codebook.pdf             -       -         -       2017-12-14  cdb8c0040fb4bc432cff59aaed60f730
+
+    36800-0053-Data.dta                 -       1,354     45      2017-12-14  91a13714cfd8e9df05572d5a5353f6c8
+
+    36800-0053-Data.rda                 -       1,354     45      2017-12-14  dfb13df3f1be902859127ff096c3469b
+
+    36800-0053-Data.sav                 -       1,354     45      2017-12-14  f67aab3742631edc0cdbf43444bac4cd
+
+    36800-0053-Data.stc                 -       1,354     45      2017-12-14  ef3b49c60c1e11eab3d44bf27f00f55a
+
+    36800-0053-Data.tsv                 -       1,354     45      2017-12-14  64a2a868faa202a9be1cd5354e9f6e39
+
+    36800-0053-Data.txt                 181     1,354     45      2017-12-14  c2743a0748d9179d5be1e5eb979886b6
+
+    36800-0053-Setup.dct                -       -         -       2017-12-14  a0b78adf0bfc7b278901f13cc9a0cebc
+
+    36800-0053-Setup.do                 -       -         -       2017-12-14  b4811f59af8b24752d19595e5e23dad1
+
+    36800-0053-Setup.sas                -       -         -       2017-12-14  fe665860c10b78a1e7b5324a048a58d2
+
+    36800-0053-Setup.sps                -       -         -       2017-12-14  e879cdb77b34da08b07cb925414f8e6e
+
+    36800-0053-Supplemental_syntax.do   -       -         -       2017-12-14  5f9a9a5c7927df66ccdeb72a49fd057d
+
+    36800-0053-Supplemental_syntax.sas  -       -         -       2017-12-14  3b56c1ba86123385b527688974d12d77
+
+
+DS0054 Weinberger Adjustment Inventory (WAI) [RESTRICTED]
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0054-Codebook.pdf             -       -         -       2017-12-14  8fd3784ae5717478b4e0fc01866fad76
+
+
+DS0055 Youth Psychopathic Traits Inventory (YPI)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    36800-0055-Codebook.pdf             -       -         -       2017-12-14  df939db2da5dd57a7703da03408cc677
+
+    36800-0055-Data.dta                 -       1,354     671     2017-12-14  598564fa951a585ea85c2c2b061c84b6
+
+    36800-0055-Data.rda                 -       1,354     671     2017-12-14  a4553880a42bdeccc37d0fcf7d7c3e77
+
+    36800-0055-Data.sav                 -       1,354     671     2017-12-14  85d488edbae10a21a90d267c75c832da
+
+    36800-0055-Data.stc                 -       1,354     671     2017-12-14  0235aefd1900b64c98df403ec8f924a6
+
+    36800-0055-Data.tsv                 -       1,354     671     2017-12-14  c912144e7d0736b698c4e555e4eeca71
+
+    36800-0055-Data.txt                 2685    1,354     671     2017-12-14  309373c6b021b2cb21cdf18aa6fe1e95
+
+    36800-0055-Setup.dct                -       -         -       2017-12-14  e96709d7936948865886fbe716cd4a42
+
+    36800-0055-Setup.do                 -       -         -       2017-12-14  8e00e612ab749386f1f47d1f062f2c2c
+
+    36800-0055-Setup.sas                -       -         -       2017-12-14  c5eb701c16a73c9902b1956e0da3d94a
+
+    36800-0055-Setup.sps                -       -         -       2017-12-14  45fab2880fed7a17eae2064585dc7806
+
+    36800-0055-Supplemental_syntax.do   -       -         -       2017-12-14  5bb56f38ee1c6c64b0adfdb8220a64fe
+
+    36800-0055-Supplemental_syntax.sas  -       -         -       2017-12-14  bad953924843ce557a214f2088989f22
+
+
+Version History
+
+2017-12-14 Data for the remaining 21 parts were added to the collection.
+The User Guide was updated to include information about these new parts.
+2017-10-17 Data for parts 1, 7, 10, 16, 24, 30, 31, 34, 36, 37, 42, 49, and
+50 were added to the collection. The User Guide was updated to include
+information about these 13 new parts.  2017-09-05 Data for parts 8, 9, 12,
+21, 22, 28, 35, 39, 46, 47, 51, 53, and 55 were added to the collection.
+The User Guide was updated to include information about these 13 new parts.

@@ -10,7 +10,7 @@
 *_cache/
 /env/
 /_site/
-
+_freeze/*
 
 ### Github's standard .gitignore for Python projects is below
 
@@ -172,6 +172,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv/bin
+sds316/venv/bin
+sds316/venv
 
 # Spyder project settings
 .spyderproject
