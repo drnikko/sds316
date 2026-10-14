@@ -1,0 +1,90 @@
+---
+title: "Directed Surveillance and Police Pushback"
+subtitle: "Brayne, Chapter 4+5"
+description: "Brayne, Ch 4 and 5" # appears in the lecture notes round up
+author: "Nikko Stevens"
+topics:
+- "Directed Surveillance"
+- "Police Pushback"
+categories: ["seminar"]
+format:
+  revealjs:
+    theme: [serif, seminar.scss]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+---
+
+## Today's Agenda
+
+- Jessie is our discussion leader!
+-  
+-   
+
+
+<!--https://quarto.org/docs/presentations/revealjs/ -->
+
+# Discussion
+
+<!-- Discussion Leader: Add your slides here -->
+
+<!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
+
+## Related
+[Living in a Prison Town](http://www.corrections.com/news/article/49712-living-in-a-prison-town)
+
+- This one relates to my topic about prison towns! This is an article written by someone who has lived and worked in a prison town before retiring.
+
+[Be Cautious About Data-Driven Policing](https://www.nytimes.com/roomfordebate/2015/11/18/can-predictive-policing-be-ethical-and-effective/be-cautious-about-data-driven-policing)
+
+- a discussion of the effectiveness of predictive policing
+
+
+## Main Points
+
+Ch 4: "The basic underlying assumption for all is, again, well supported by empirical data: crime is not randomly dispersed." (58)
+
+Ch 5: "When law enforcement officers become the subjects of surveillance, their relative power enables them to engage in more effective indicidualized organized resistance than most civilians." (98)
+
+## Reading
+
+Ch 4:
+
+reaction to prediction:
+
+- person based
+  - points system
+- place based
+  - predictive boxes
+
+Ch 5:
+
+up vs down: 
+
+- lower level employees vs higher ups/superiors
+- data sharing going "up" but not "down"
+
+us vs them:
+
+- officers vs employees 
+  - street knowledge vs "eggheads"
+- managers vs front-line workers
+
+**function creep!**
+
+
+## Questions?
+
+"Operation LASER was not simply about removing violent offenders with “laser like precision”, it was also functioning to justify mass intelligence gathering and functioning as a deterrent, signaling to people that they’re being tracked by law enforcement"(78).
+
+- We've had a similar conversation about the justification of big data. At what level does data collection cross the line and is no longer justifiable? 
+
+
+Brayne discusses friction in the form of an "us vs them" mentality between many different groups (e.g. officers vs employees). Did any of them surprise you? 
+
+
+One of the captains compared the rate of crime to unemployment rates, and how there is a point of "friction". He then said that after that, you need to innovate. Brayne notes that "innovating has increasingly meant more data[...]" (58-59)
+
+- Does innovating have to mean more data? What other innovative strategies are there to lower crime?
+
+<!-- Discussion Leader: End your slides -->

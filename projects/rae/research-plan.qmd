@@ -1,0 +1,97 @@
+---
+title: Research Plan
+author: Rae Traver-Fallick
+execute:
+ code-fold: true
+---
+
+
+## Phase 1 Research Questions
+
+
+1. Research has shown that prison gerrymandering (PG) has partisan and rural/urban impacts, but do the electoral consequences of PG actually result in differential policy outcomes?
+2. How does reallocating prisoners to their home communities shift the distribution of legal districting maps in Texas?
+3. Prison gerrymandering has been proven to dilute the black and brown vote. LGBTQ+ individuals are also at higher risk of incarceration compared to the general population; does PG have a similarly disenfranchising impact on queer individuals in New York State?
+
+
+## Personal Motivation
+Write about 100 words about your motivation for undertaking this topic.  Why are you _personally_ interested in this material?  You can be as personal or as general as you wish here, but this section is about YOUR interest in the material
+
+
+I'm currently researching partisan gerrymandering and helping a professor in the mathematics department develop a new baseline against which to judge fair redistricting, with a focus on preserving minority-majority districts. I've  been interested in this topic since I discovered Dr. Wes Pedgen's research using Markov Chain Monte Carlo for redistricting, as it was the first time I really understood that my passions for math, computers, and government/political science could intersect. Since then, I've followed the work of Moon Duchin, who works out of UChicago's Data and Democracy lab on some of the more advanced models for fair redistricting. I chose Texas as my region of interest since Texas is a state with a large penal population, many districts, and a large Latino population whose interests must be protected under the Voting Rights Act during redistricting. Furthermore, I lived in Dallas this summer!    
+
+
+## Broader Relevance
+Write about 100 words discussing why you think the answers to these questions might matter to others. Is this an understudied topic?  Have the conclusions you've been seeing about it been wrong or missing something? This is your answer to the "so what?" question
+
+
+Gerrymandering is a topic that has gotten an increasingly large amount of attention in recent years; however, it appears that academic research on prison gerrymandering has not kept pace, with most well-cited articles on the topic dating back at least four years, if not more. This is unfortunate since prison gerrymandering, just like other kinds of gerrymandering, disproportionately impacts black and brown voters and shifts power from urban centers to rural areas. These effects compound the existing voter suppression and disengagement that is prevalent in communities with high incarceration rates. Prison gerrymandering also violates the "One person, one vote" tenet. In one region, a representative won with just two write-in votes (one of whom was his wife) because only 58 of the over 1300 individuals assigned to his district were part of the non-incarcerated and therefore eligible voting population. The Census Bureau is aware of prison gerrymandering as a pressing issue, as, during the 2020 census process, over 77,000 comments were submitted asking it to reconsider the way it assigns imprisoned individuals to home addresses, with only 4 comments advocating for the current allocation scheme. So this is clearly a topic on which the public has an opinion, yet academic research and government action lag behind.
+
+
+## Example Projects
+
+
+Link to three example projects that are related to your questions or how you'd like to display your results.  List them like so:
+
+
+**[Alarm Redistricting Project](https://alarm-redist.org/fifty-states/NY_cd_2020/):** Since I want to look at the universe of possible maps, why not have users create there own? However, instead of attempting to simply crack or pack districts in a state, users will also be able to view information about imprisoned populations within the state and attempt to gerrymander given this additional information.
+
+
+**[Matt Gerken Built Environment Map Tool](https://mattgerken.github.io/dc-built-environment-map-tool/):** I like the idea of a sliding horizontal bar. One side could reveal a map as it currently appears, another could be the "average" map that could occur if PG was rectified or banned.
+
+
+**[MCMC On a 7x7 Grid](https://mggg.org/metagraph/7x7.html):** I like the simulation within "Gridlandia" and the idea that users can modify the partisan makeup and district boundaries. Here, perhaps users could also modify the prison population within each cell of the grid and then generate the distribution of possible partisan outcomes.
+
+
+## Relevant Literature
+
+
+Build a **ten** item literature review for work related to your questions.
+
+
+As you consider which 10 to include, try to satisfy these criteria:
+
+
+- 1 - 2 written by someone on the inside or system impacted
+- 3ish non-academic sources
+- at least 5 academic sources
+- no more than 2 items that we've discussed in class / from the syllabus
+
+
+No need to include a full citation.  Instead, list them:
+
+
+**[Shifting Power: The Impact of Incarceration on Political Representation](https://drive.google.com/file/d/1b8OONWTFI0tIzPn-nblvcmlO8DE1bC3e/view?usp=sharing):** This article looks at how prison gerrymandering shifts power from urban to suburban and rural areas as well as dilutes the vote of minority/black and brown voters. It gives an idea not just of what prison gerrymandering is, but precisely who benefits. It inspired my third research question around queer folks and redistricting.
+
+
+**[Redistricting and Incarceration: Examining the Electoral Consequences of New York’s Prohibition on Prison Gerrymandering](https://drive.google.com/file/d/1EAT8NId69MtMfWBR0eZHNlgzt9vO3ejK/view?usp=sharing):** This article is interesting because it doesn't use hypothetical or counterfactual data, but actual maps drawn before and after NYS's ban on PG. It also focuses more on partisan impacts than other articles, concluding that prison gerrymandering does have partisan consequences.
+
+
+**[The Strategic Use of Prisons in Partisan Gerrymandering](https://drive.google.com/file/d/1nBW0SzlF3GsatXWlHpG1U1zI2OJmplc7/view?usp=drive_link):** This article provides the best description of the mechanism by which PG can be used to create partisan advantages. Whereas other articles highlight empirical number crunching and descriptive analysis, this article acknowledges parties' agency, asking not just how PG leads to partisan impacts but how parties use PG to gain an advantage.
+
+
+**[The End of Prison Gerrymandering: Has Illinois Done Enough to End Prison Gerrymandering by 2030?](https://drive.google.com/file/d/1xBwUX4Ji7_1njKOALzcsqN0wY9g18p1W/view?usp=drive_link):** This is a great resource with a background on the beginning of mass incarceration, the history of prison gerrymandering, and its current legacy/effects.
+
+
+**[Final 2020 Census Residence Criteria and Residence Situations](https://www.federalregister.gov/documents/2018/02/08/2018-02370/final-2020-census-residence-criteria-and-residence-situations):** This is an overview of the comments the Census Bureau received about its "usual residence" (UR) definition ahead of the 2020 census. The comments overwhelmingly support changing the definition of UR to allow prisoners to be assigned to their home neighborhoods and give an overview of the main arguments against prison gerrymandering. This gives me background on public perception/opinion regarding the UR definition and further background on the harm caused by the current UR criteria. This was as close as I could find to "lived experience" or unpolished commentary on prison gerrymandering, unfortunately.
+
+
+**[ReCom: A family of Markov Chains for Redistricting](https://mggg.org/uploads/ReCom.pdf):** This is the paper introducing Moon Duchin's ReCom ensemble which is one way to sample from the distribution of existing maps. It also provides some overview of ensembles (so called flip chains) and current model's drawbacks. It provides theoretical grounding for answering Q2. 
+
+
+**[Incarcerate LGBTQ+ Adults and Youth](https://www.sentencingproject.org/app/uploads/2022/10/):** Incarcerated-LGBTQ-Youth-and-Adults.pdf This gives an overview of the LGBTQ+ prison population: who they are, why they are incarcerated at higher rates, and the common issues they  face inside. It also presents potential reforms for decreasing the queer incarcerated population. Though it doesn't directly connect to a research question, it gives a broad overview of the population of interest for Q3. 
+
+
+**[States were incredibly successful at reallocating incarcerated people to their home addresses in 2020: A review of the data](https://www.prisonersofthecensus.org/news/2024/06/10/state_success_rates/):** This article discusses the current limitations of reallocating individuals to their home addresses and examines how successful states were. Two limits were the presence of federal prisons and arbitrary limitations on reallocation by states, which may be useful if I decide to take a counterfactual approach to answering my research question.
+
+
+**[Prison Gerrymandering": How much do prison population counts matter for redistricting outcomes?](https://drive.google.com/file/d/1wT7BOX5vE66hRfaPfZgOaMM1TfSnqayy/view?usp=drive_link):** This article essentially takes the approach that I am interested in using, but with a different sampling algorithm and using NY 2010 redistricting data. I am interested in using 2020 data (or 2030 projection data) in Texas, but my methods and limitations will largely be similar. I did not know this study existed when I was crafting my initial research question so any similarity is coincidental.
+
+
+One area of future work mentioned in this article is to simulate higher incarceration numbers for NYS on which to repeat the methodology. This, in part, motivates my use of Texas as a case study in my research, since Texas has an incarceration rate doubling NY's, so may give insight into PG dynamics within high-incarceration states.
+
+
+**[Sequential Monte Carlo for sampling balanced and compact redistricting plans](https://imai.fas.harvard.edu/research/files/SMCredist.pdf):** This is the paper that introduced the sampling method used in the previous paper. Though I am most familiar with Moon Duchin's Recom method, I am interested in learning more about other sampling methods that could be useful in my analysis.
+
+
+**[Prison Gerrymandering in Texas: Distorting Political Representation and Exacerbating Racial Disparities](https://drive.google.com/file/d/1VWinCQ7BibIjG0oRTxAKRKKS1jCR0GUQ/view?usp=drive_link):** This is a very recent article about Texas' prison gerrymandering. It delineates the harms that prison gerrymandering may lead to in Texas, and it serves to motivate my focus on the state of Texas, which currently has no laws banning PG.

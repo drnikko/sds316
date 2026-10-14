@@ -1,0 +1,53 @@
+---
+title: Research Plan
+author: Nikko Stevens
+execute:
+  code-fold: true
+---
+
+## Phase 1 Research Questions
+
+1. How, if at all, has the prison population of Texas changed between 2000 and 2026?
+2. How, if at all, have the crimes with which inmates in Texas are charged changed between 2000 and 2026?
+3. How, if at all, has the rate of incarceration in Texas changed between 2000 and 2026?
+
+## Personal Motivation
+I was born and raised in Portland, OR, and after my first year of college, my parents and brother moved to Texas. But since the move happened while I was already in college, I don't know many people in Texas, and I don't really spend much time outside my house when I do visit during breaks. Although I haven't spent much time in Texas myself, or perhaps because of that, I feel like it is important for me to understand the political landscape of the state in which I technically live. Additionally, one of my closest friend's father used to be incarcerated in Texas, so I would like to generally be more familiar with the landscape of Texas prisons.
+
+## Broader Relevance
+In addition to my personal connection to Texas, I would say Texas is a relatively prominent state in the national political sphere, with Governor Abbott making headlines and prominent companies such as Tesla moving to Texas. Furthermore, Texas has experienced an influx of people moving to the state over the past few years, and it would be interesting to see whether or not the change in the state's overall population has had any effect on the prison population. Texas has also placed stricter laws on THC products and severely restricted healthcare access to abortion and gender-affirming care, and it would be interesting to contextualize those legislative changes with prison data. 
+
+
+## Example Projects
+
+Link to three example projects that are related to your questions or how you'd like to display your results.  List them like so:
+
+**[Charts and Data Stories from Vital NYC](https://www.vitalcitynyc.org/data/):** I really like the moving graph at the top of the website. I like that it displays different crime counts visually in two forms and also has the year displayed, which I could potentially recreate with changing crime counts in Texas.
+
+**[Text Analysis of Last Meals](https://www.marlo.works/posts/last-meals/):** I like how clear and concise the results are presented; it makes the results and analysis a lot easier to digest. I also like the code being integrated into the results because it provides more context on what was done to the data, and this would be easy to implement in my project.
+
+**[Disease Related Deaths Maps](https://public.tableau.com/app/profile/josh.tapley/viz/DiseaseRelatedDeaths/CountyMap):** I like the mapping visualization in this project. I appreicate that it uses both a color gradient and has specific numbers when you hover over the maps. I could incorporate something similar on a smaller scale using just a map of changes in Texas prison populations.
+
+## Relevant Literature
+
+Build a **ten** item literature review for work related to your questions. 
+
+**[Prison Population Reductions and COVID-19: A Latent Profile Analysis Synthesizing Recent Evidence From the Texas State Prison System](https://link.springer.com/content/pdf/10.1007/s11524-020-00504-z?pdf=openurl):** The pandemic had a large impact on every facet of life in the early 2020s. I think to understand changing prison populations within the past 25 years, this paper would help contextualize the impact of COVID-19, especially in terms of related deaths and resulting changing in prison population.
+
+**[Propertied bodies: race, welfare, and the carceral state the Texas way](https://research.ebsco.com/c/4e4lys/viewer/pdf/dg5ijdq5rz):** This paper approaches the question of incarceration in Texas with an emphasis on structural inequality. The article specifically discusses how shifting demographics and neoliberal conceptions of whiteness contextualize Texas incarceration.
+
+**[Disentangling Differences in Homicide Incarceration Rates by Immigration Status: A Comparison in Texas](https://journals.sagepub.com/doi/pdf/10.1177/0011128720940963):** This paper provides helpful context for immigration and incarceration. It discusses the impact immigration status has on homicide incarceration rates, specifically in Texas.
+
+**[Why Can’t I Get a Clean Food Tray at this Texas Prison?](https://prisonjournalismproject.org/2026/08/11/how-bad-is-prison-food-really/):** This article provides important perspective from someone on the inside of a Texas prison. It specifically discusses inequalities within the prison system, and how the experience of prison can greatly differ. 
+
+**[How many people are in prisons in Texas?](https://usafacts.org/answers/how-many-people-are-in-prisons-in-the-us/state/texas/):** This website provides a high-level overview of incarceration rates in Texas. The web page has multiple graphics and interactive visualizations that contain data similar to what I would draw upon for my project. 
+
+**[Families of Victims Who Died From Heat in Prison Fight to Prevent More Deaths](https://truthout.org/articles/families-of-victims-who-died-from-heat-in-prison-fight-to-prevent-more-deaths/):** This article shares discusses the conditions inside Texas prisons that have resulted in deaths. It shares perspective from system impacted communities regarding the poor conditions in Texas prisons.
+
+**[Steeped in a Culture of Violence : Murder, Racial Injustice, and Other Violent Crimes in Texas, 1965-2020](https://ebookcentral.proquest.com/lib/smith/detail.action?docID=31497137):** This book examines trends associated with various types of violence within the state as well as social and political responses from 1965 to 2020. This will provide important historical context to my examination that begins at 2000.
+
+**[Tall walls and high fences : officers and offenders, the Texas prison story / Bob Alexander. Richard K Alford.](https://ebookcentral.proquest.com/lib/smith/reader.action?docID=6424188&ppg=8&c=RVBVQg):** This paper provides a more qualitative approach to Texas prisons. It outlines the historical context of Texas prisons from the perspective of former employees. 
+
+**[Federal Census policy breaks Texas’s democracy — state lawmakers can fix it](https://www.prisonersofthecensus.org/news/2025/09/30/texas_prison_gerrymandering/):** This article from the Prison Policy Initiative outlines inequalities that exist in the counting of incarcerated people. It describes the ways in which prison gerrymandering disproportionately harms Black inmates.
+
+**[Texas profile from the Prison Policy Initiative](https://www.prisonpolicy.org/profiles/TX.html):** This article discusses a high level overview of various prison statistics in Texas. It includes discussion about more recent data from Texas prisons.

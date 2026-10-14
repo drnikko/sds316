@@ -1,0 +1,67 @@
+---
+title: Research Plan
+author: Ruolin Kang
+execute:
+  code-fold: true
+---
+
+## Phase 1 Research Questions
+
+1. How is perhaps Immigrants being treated differently from US born citizen in the criminal justice system?
+2. Is Covid-19 Pandemic one of the factor that fostered a bigger difference?
+3. Specifically during criminal court and/or incarceration how are noncitizens treated differently.
+
+## Personal Motivation
+Being an international student, I'm not that familiar with the Criminal Justice System in the US. From news I've seen, I acknowledge these differences exist, but I don't know how these differences actually plays out on people/this population of people.
+
+## Broader Relevance
+When the same charge can mean probation for a citizen but months in detention for an immigrant, it is against the basic promise that the law treats everyone alike. I want to know whether that gap is real and, if it is, whether the Covid-19 Pandemic made it even wider. The answer matters to anyone who cares about family stability and the way we define belonging in the U.S.. If immigration status quietly shapes bail, sentencing, or release decisions, researching on it is the first step to promote fairness.
+
+
+## Example Projects
+
+**[Detention Mapping Project](https://www.freedomforimmigrants.org/map):** First, this interactive map project and my ideal research would both focus on the situation of non-citizens/immigrants within the U.S. criminal justice/detention systems. The Detention Mapping Project categorize information by theme and visualize them by temporal and geographical dimensions. This inspire me on how I organizes multiple measures over time.
+
+**[The Marshall Project - Immigration](https://www.themarshallproject.org/records/31-immigration):** 
+The Marshall Project’s immigration section combine hard data with individual stories. Many of their pieces trace the arc from a local criminal charge to ICE custody, mirroring my focus on how immigration status can stretch a single case into extra time behind bars.
+
+**[Transactional Records Access Clearinghouse (TRAC)](https://tracreports.org/immigration/):** 
+The TRAC shows how raw FOIA files can be transformed into transparent, time-series data. Their public dashboards also let readers move from headline numbers down to the underlying records.
+
+## Relevant Literature
+
+
+1. [Noncitizen Justice: The Criminal Case Processing of Non-US Citizens in Texas and California](https://www.journals.uchicago.edu/doi/full/10.1086/725390?casa_token=pButRWSVRV8AAAAA%3AvLmROMenk7fSwUum_M0p1YuaByzfGoXh0umwHuT5_h5aVJ7403f_GcDEWYmnu8NDNFRCm9JvQA)
+This article uses court records from Texas and California (2005-2019) to show how charging, pleabargains, and sentence lengths differ for immigrants (undocumented people, lawful permanent residents, and visa holders). The model used in the article give me an overview of people's status in two of the very highly populated states.
+
+2. [Law-Abiding Immigrants: The Incarceration Gap between Immigrants and the US-Born, 1870–2020](https://www.aeaweb.org/articles?id=10.1257/aeri.20230459)
+
+ The source documented immigrant–native incarceration gaps and include detailed figures for 2000-2020,using census micro-data and prison rosters. The data for the 2000–2020 period overlaps with my timeframe I'm aiming for. I see it as a research I can try to build apon.
+
+3. [Immigrants are not criminals: Respectability, immigration reform, and hyperincarceration](https://access.heinonline.com/HOL/LandingPage?handle=hein.journals/inlr37&div=18&id=&page=)
+he article argues that the “good immigrant / bad immigrant” storyline has steered lawmakers toward policies that cage non-citizens far more often than the actual crime data would warrant. That lens helps me read my own numbers. If my results show longer sentences or more pre-trial jail time for non-citizens, this piece offers an explanation (stigma and policy design). 
+
+4. [TRAC Immigration](https://tracreports.org/immigration/quickfacts/detention.html)
+This source provides annual data on ICE detention figures, lengths of stay, and transfer sources from the year 2000 onwards. I can connect this with state prison or federal sentencing data to estimate exactly how much longer non-citizens were detained due to the "criminal-to-immigration" pipeline. 
+
+5. [A day in the life of a 19-year-old in ICE detention: ‘I feel that this nightmare is not going to end’](https://www.theguardian.com/us-news/2026/apr/09/day-in-the-life-19-year-old-ice-detention)
+The report tells an undocumented minor who was transferred from a county detention facility to ICE custody, only to face indefinite detention. The article clearly explains the process of "dual detention" for the same case. It inspire me to consider the issues of transparency regarding detention reviews in the post-pandemic era.
+
+6. [Letters From Detention](https://lettersfromdetention.org/)
+The website collects hundreds of handwritten letters from detained immigrants, covering topics such as pending transfers, denied bail, and the hardships faced by their families. These letters make me understand more the lived experiences behind the "extra days of detention" figures in the data tables.
+
+
+7. [Citizenship and Punishment: The Salience of National Membership in U.S. Criminal Courts](https://journals.sagepub.com/doi/full/10.1177/0003122414543659?casa_token=HPC9YD5A6QEAAAAA%3A4jIhUlHHbH3DRvHl3zNiXuHD3LbxfixiFFGmt-lEkc2TwCpcWOnKDLWzM0ZJ7cxVj831RD6xk4g) 
+The author calculated that non-citizens receive sentences averaging 4–11% longer than those of citizens. It concluded that 'Noncitizens face harsher U.S. prison sentences compared to citizens'. This article presents standard control variables and models, I can maybe try adopt this framework.
+
+8. [Disparities in the Pretrial Process: Race, Ethnicity, and Citizenship](https://www.tandfonline.com/doi/full/10.1080/07418825.2023.2209151)
+Research shows that non-citizens face greater difficulty obtaining bail and endure longer periods awaiting trial, meaning the disparity begins to accumulate well before sentencing. This makes me realize that the disadvantage is not merely compounded at the sentencing stage. It let me think more about my analysis of total detention duration.
+
+9. [Federally Sentenced Non-U.S. Citizens by United States Sentencing Commission](https://www.ussc.gov/research/quick-facts/federally-sentenced-non-us-citizens)
+This show tells me, officially, exactly how many non-citizens were sentenced by federal courts, which offenses were most common, and the average sentence lengths. I can compare it against the trends I’ve mapped out for the 2000–2026 period to check for any discrepancies.
+
+
+10. [What Happens if an Undocumented Immigrant is Facing a DUI Charge?](https://www.portnerandshure.com/blog/2025/april/what-happens-if-an-undocumented-immigrant-is-facing-a-dui-charge/)
+The article breaks down the entire process—from an undocumented person’s arrest for drunk driving to the issuance of an ICE detainer—into clear steps, while also highlighting specific pain points such as exorbitant bail and prolonged detention. It gave me insight into the practical realities of how immigration status affects the handling of misdemeanor cases.
+
+

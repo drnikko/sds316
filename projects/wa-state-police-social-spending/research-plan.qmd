@@ -1,0 +1,63 @@
+---
+title: Research Plan
+author: Julia Laney
+execute:
+  code-fold: true
+---
+
+## Phase 1 Research Questions
+
+1. How do Washington state counties allocate their resources between social and police spending?
+2. Is higher police spending associated with lower crime rates? Is higher social spending associated with lower crime rates?
+3. Which type of spending is most effective in reducing crime long-term?
+
+## Personal Motivation
+ I am studying economics in addition to data science and I’ve thought about the allocation of government resources from an economic lens. I’m curious to use real data to explore how different types of government spending (police spending and social spending) affect crime rates. I am focusing on Washington state because I am from Seattle and I have a basic knowledge of the challenges faced by local police as well as their short- and long-term goals. I also have an understanding of the social issues that take the highest priority in the state and the state’s existing channels for social support.
+
+## Broader Relevance
+This research matters because the efficient allocation of resources can create better societal outcomes. Police departments across the country receive a large share of municipal funding, but the outcomes of policing don’t necessarily reflect the amount of resources invested. Further, concerns about police violence and misconduct question the effectiveness of police in response to certain types of social issues. Some people have argued that a share of police funding should be redirected to social services such as cash assistance programs, housing, education, and health services. Analyzing the allocation of police versus social spending in a given county can offer insights into the effectiveness of both types of funding in reducing crime.
+
+## Example Projects
+
+Link to three example projects that are related to your questions or how you'd like to display your results.  List them like so:
+
+**[Example Project 1](https://github.com/YuxinLin121/CrimePatternsProject):** This is a data science project that analyzes crime statistics, demographics, economic indicators, housing, education, and government expenditures to see which factors are the most predictive of crime rates. While this is a statistics-heavy project, it relates to my research questions in that one of the factors it looks at is government expenditures as a predictor of crime rates. This project exemplifies how to navigate the type of data I'll be working with.
+
+**[Example Project 2](https://www.vitalcitynyc.org/data/):** I really like the visualization in this project that shows reductions in major crime categories through percent change from 2019-2025. The visualization uses red to show an increase and green to show a decrease. It could be cool to look at 2 separate years (or a range of years) and see if there were changes in one category of spending that may correspond to changes in crime.
+
+**[Example Project 3](https://features.csis.org/hiddenreach/china-shipyard-tiers/):** I like the way this project separates the shipyards into tiers by risk level. I could work with tiers in my project by separating counties by the per capita crime levels in each (or separate by police spending level, whichever makes the most sense after working with my data).
+
+## Relevant Literature
+
+Build a **ten** item literature review for work related to your questions. 
+
+As you consider which 10 to include, try to satisfy these criteria:
+
+- 1 - 2 written by someone on the inside or system impacted
+- 3ish non-academic sources
+- at least 5 academic sources
+- no more than 2 items that we've discussed in class / from the syllabus
+
+No need to include a full citation.  Instead, list them:
+
+**[Title of Book/Article/Movie](http://linktoplaceotread.com):** 2-3  sentences about the connection between this work and your research questions.  Do not guess at these - do enough research on each item to have definite ways that the material is connected to your research
+
+**[More Law Enforcement Spending Accompanies Worse, Not Improved Crime-solving](https://www.cjcj.org/reports-publications/report/more-law-enforcement-spending-accompanies-worse-not-improved-crime-solving):** This paper explores police spending in California and finds that police departments are spending more money and solving fewer crimes than they did decades ago. This paper is a good addition to my research as it helps to explain why different levels of police spending are associated with different levels of crime (I'm not sure what my data will show yet but this offers insights that my research will not be answering so including this paper will make my work more comprehensive). -- Academic source
+
+**[Fight violence with more social spending, not more police](https://policyoptions.irpp.org/2020/09/fight-violence-with-more-social-spending-not-more-police/):** This article looks at mutliple instances where social spending successfully decreased crime. One example is Operation Ceasefire, a Boston anti-gang intervention that has decreased murder rates through investment in job skills training, substance abuse counseling, and community education efforts to incentivize the discontinuation of violent activities. This source connects to my research questions as it posits that higher social spending has been associated with lower crime in some situations. -- Non-academic source
+
+**[Policing Studies Measure Benefits To Crime Reduction—But Not Social Costs](https://theappeal.org/policing-studies/):** This article argues that the social costs of policing are overlooked when people discuss the costs of policing. An example of a social cost stated in the article is a death that results from an unnecessary or extreme use of police force. This is an interesting idea to consider as I discuss the costs of policing alongside the costs of social services. It might not fit perfectly into my research but it definitely addresses an important dimension of "cost" -- the social costs. -- Non-academic source
+
+**[Local Government Spending: Policing Versus Social Services](https://www.annualreviews.org/content/journals/10.1146/annurev-criminol-111523-122639):** In recent years, US cities have increased the share of their budgets devoted to policing and decreased the share devoted to social services. However, existing research shows that social services can reduce crime in the long-run and police spending may only reduce crime in the short-run. This adds important context to my research, as it's necessary to consider the long-term effects of government spending. -- Academic source
+
+**[Abolitionist Disjuncture: Reducing Police Violence in Frontline Social Work](https://intersectionalities.mun.ca/index.php/IJ/article/view/2248):** This paper is written by a social worker who comments on the reality that social workers sometimes rely on police. The author writes that it's not as simple as redirecting police funding towards social services to solve social issues. This adds important nuance to my research: we can't simply conclude that social services need a portion of police funding. The allocation of resources is important, not just the total amount that goes to each sector. -- Written by someone on the inside
+
+**[Defund the Police: Moving Towards an Anti-Carceral Social Work](https://pdxscholar.library.pdx.edu/edu_fac/159/):** This article is written by people within the field of social work and argues that social work’s collaboration with police and use of policing constitutes "carceral social work". Anti-carceral social work includes interventions that decenter police collaborations and focus on community and mutual aid alternatives. This is relevant to my project because it questions traditional methods of social work and thus channels of social spending. -- Written by someone on the inside
+
+**[Washington's Current Budget](https://www.urban.org/policy-centers/cross-center-initiatives/state-and-local-finance-initiative/projects/state-fiscal-briefs/washington):** This report is relevant to my research because it breaks down the largest spending areas per capita in state and local expenditures. This report highlights the main areas that the state is targeting with social spending. Public welfare is listed as one of the largest spending areas per capita. -- Non-academic source
+
+**[The Economics of Policing and Public Safety](https://www.jstor.org/stable/27074123):** This article discusses how in the US, the misallocation of police resources in local departments is disproportionately carried by Black and Hispanic people. As I work on my project, it's important to know that "police spending" is a vague term and there are insights to be gained by looking at where police spending actually goes in each county. -- Academic source
+
+**[Governing Through Police? Housing Market Reliance, Welfare Retrenchment, and Police Budgeting in an Era of Declining Crime](https://www.jstor.org/stable/26617489?seq=1):** This article discusses how cities address social problems through criminal justice rather than social service capacities. This paper uses similar data to my project, looking at police expenditures between 1992-2010. They find that police expanded partly as a substitute for social service spending. This is relevant to my project as they are looking at police expenditures in addition to social expenditures. -- Academic source
+
+**[Law Enforcement Expenditures and Urban Crime](https://www.jstor.org/stable/41861994?seq=1):** This paper looks at law enforcement expenditures and crime rates, but specifically expenditure as a determinant of crime. The paper ends with recommendations for resource allocation in light of its findings. This kind of analysis is similar to what I hope to achieve with my project, and this work includes insights into resource allocation that will be key to the analysis I offer in my project. -- Academic source

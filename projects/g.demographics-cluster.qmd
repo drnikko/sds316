@@ -1,0 +1,10 @@
+
+Demographics Cluster (Ruolin, Reagan, Tanisha)
+
+Ruolin’s research project is about whether the incarceration of non-citizens in the United States changed during the past 20 years (2000-2026), and how it may differ by immigration status (e.g., undocumented migrants, legal permanent residents, and asylum seekers) . She wants to specifically look into whether the onset of Covid-19 Pandemic in 2020 would be another external factor that creates a more statistically significant difference.
+
+Reagan's research project examines how the criminal justice system decides when a young person is treated as a child or an adult, and what that decision looks like from the inside. She will combine national and state data to examine disparities by demographic factors such as race, gender, and age. She also hopes to interview someone who was charged as an adult before turning 18, to explore how young people charged as adults come to see themselves and the world around them.
+
+Tanisha’s research project is about change in the incarcerated population of Texas between 2000 and 2026. They also hope to answer questions about if the rate of incarceration has changed and whether the crimes people are being charged with have changed. Additionally, this research project hopes to explore any demographic changes that have occurred within the incarcerated population of Texas. 
+
+Within the research cluster of demographics, we might rely on a few common datasets, such as census data. Although our research projects vary pretty widely in scope, we might share more expansive datasets and pull different information based on the specifics of our projects. Reagan might pull information subsetted by age, Tanisha might subset information based on Texas prisons, or Ruolin might subset incarceration figures by immigration statutes cross temporally. We might also use similar techniques to analyze our data and collaborate more generally through sharing our personal knowledge about effective ways to analyze data.
