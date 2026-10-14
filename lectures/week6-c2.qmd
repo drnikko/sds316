@@ -1,0 +1,58 @@
+---
+title: "Terminal Review & Tips"
+description: "Terminal review and demo" # appears in the lecture notes round up
+author: "Julia Laney"
+topics:
+- "mac terminal"
+format:
+  revealjs:
+    theme: [solarized]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+    highlight-style: dracula  # Matches syntax highlighting to the slide theme
+    code-line-numbers: true   # Adds line numbers to code blocks
+    code-copy: true           # Adds a 1-click "Copy" button for students
+    code-overflow: wrap       # Prevents long code lines from clipping off-screen
+    preview-links: auto       # OPENS LINKS IN AN IN-SLIDE POPUP OVERLAY!
+    scrollable: true          # Allows vertical scrolling if code output is tall
+
+---
+
+
+## Goals
+
+
+- Refresh knowledge of basic commands
+- Use the terminal with our projects
+- Disclaimer: I use macOS but some of this still works on Windows or Linux
+
+
+## Terminology: Terminal vs. Shell vs. Command
+
+- terminal: the application itself
+- shell: the program that interprets and executes your commands (default for macs is zsh)
+- command: what you type into the terminal
+
+
+## Basic commands
+
+- cd: change directory
+- pwd: print working directory
+- ls: list all files & folders
+- mkdir: make a new directory
+- touch: make a new file
+- open: opens in Finder or your development environment
+- rm: delete
+- . : current directory
+- .. : parent directory
+
+
+
+## Make Positron a command in your terminal
+
+- open Positron
+- View -> Command Palette -> Search "install 'positron' command in PATH"
+
+
+## DEMO
