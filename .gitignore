@@ -10,7 +10,7 @@
 *_cache/
 /env/
 /_site/
-
+_freeze/*
 
 ### Github's standard .gitignore for Python projects is below
 
