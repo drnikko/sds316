@@ -73,6 +73,10 @@ OKKK!!! I can finally ask my first question. I want to get a general understandi
 # Looking only at all students rather than individual subgroups
 meck_all = meck_2025[meck_2025['subgroup'] == 'ALL'].copy()
 
+meck_all.to_csv(
+    here("projects/hayden_project/datasets_files/meck_all.csv"),
+    index=False)
+
 print(meck_all.shape)
 print(meck_all['name'].nunique())
 ```
