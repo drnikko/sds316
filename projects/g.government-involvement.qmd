@@ -1,0 +1,26 @@
+---
+title: Research Cluster
+author: Leah Levensailor and Julia Laney
+execute:
+  code-fold: true
+---
+
+
+Our research cluster is connected under the umbrella of government intervention. The decisions of local, state, and federal governments have a 
+huge impact on the lives of civilians and prisoners alike. Leah is focusing on how the government is surveilling, or in some cases choosing 
+not to surveil the citizens while Julia is focused on how the government is choosing to spend money. Leah’s research project is based on Flock 
+camera usage within the state of Massachusetts by county, which counties are for or against and how Flock is being used within the police 
+force. Julia’s research project is exploring the allocation of government spending by county in Washington state, and its effect on crime 
+statistics. 
+
+We plan on using the cluster to lean on each other when we are struggling with certain aspects of our projects and compare the data we are 
+exploring. We will provide each other with different resources if we find a particular website that offers lots of data. Since both of the 
+projects are looking at the government responses and decision making, we can help each other find supporting data and research opportunities. 
+We are looking at two sides of the same coin with the government. Julia is looking at government spending while Leah is looking at actual 
+legislative response. This type of partnership will help fill in the gaps of each other's research to create a bigger picture. 
+
+Our topics also build off of each other. Governments that choose to use the Flock system are spending money on surveillance, which indicates 
+they are allocating funds to that particular project. We will be able to show which counties are allocating their funds to increase 
+surveillance while which are choosing to use different systems of policing. New technologies and surveillance cost a lot of money so when 
+these new systems are developed, money has to be moved from one place to another. Julia will be able to see where the money is being focused 
+and where it is being taken away from. 
