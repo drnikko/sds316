@@ -105,7 +105,7 @@ These are graded credit/no credit for each of 7 components:
 The midterm and final checkins will be a mix between a conversation and an oral exam. You'll schedule a 20-minute block to come to my office where we will talk generally about how the class is going for you and how your project is going. I'll then ask you to respond to two questions, one about the reading, and one about the technical stack we're using. All questions will be shared at least a week before the exams.
 
 Midterm Conversations will happen between **October 14 and 19**. Note that we have no class on 10/21\
-Finals Conversations will happen *in person during the final exam period.*
+Finals Conversations will happen in person *during the final exam period.*
 
 ### How its graded
 
@@ -214,10 +214,9 @@ By 11:59pm EST on **Wednesday October 21**, you will need to have an open PR tha
 
 **Your PR should NOT contain:**
 
--   ~~*any* of your commits from Stage 1 – only new commits and new/updated files~~
+-   *any* of your commits from Stage 1 – only new commits and new/updated files
 
-    -   ~~The easiest way to achieve this is to make sure that you're on a different branch from your stage 1 work~~
-    -   **Don't worry about this!!!**
+    -   The easiest way to achieve this is to make sure that you're on a different branch from your stage 1 work
 
 -   *any placeholder text.* Look at your project on the [project listing page](https://nikkostevens.com/sds316/projects/). Does it look complete? Do the images load? Are the tags correct? Do ANY of your files have any left over placeholder content? (check!!! there were a lot on the `research-plan.qmd` files that I saw)
 
