@@ -1,5 +1,5 @@
 ---
-title: "Template Project"
+title: "Washington State Law Enforcement & Social Spending"
 author: 
   - "Julia Laney"
 date: 2026-09-30
@@ -14,5 +14,5 @@ This project explores the breakdown of police spending and social spending in ea
 ### Components
 
 - [Research Plan](research-plan.qmd) 
-- [Exploratory Data Analysis](stage2-data.qmd)
+- [Exploratory Data Analysis](stage2.qmd)
 - [Initial draft writing & reflection](stage2-writing.qmd)
