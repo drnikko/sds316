@@ -1,0 +1,13 @@
+---
+title: "Influence of Race on Domestic Violence Arrests and Convictions"
+author: 
+  - "Catherine Xu"
+date: 2026-10-22
+description: "A revamp of my project idea"
+categories: [Legal Background, Data Sources, Analysis, Discussion]  #  These are some of the categories you might use
+image: "images/gavel.jpg"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+---
+
+## Project Overview
+
+I will be researching whether or not race plays a role in the rate of domestic violence-related arrests and the length and/or severity of charges, and if so in what ways and to what extent is it indicative of a broader pattern of racial discrimination within US criminal courts and legal decision-making? I will provide background for my topic by identifying the legal frameworks surrounding what constitutes domestic violence  in criminal courts, and then I will try to find relevant demographic data for arrests and convictions in domestic violence crimes to identify what role race may play in justice decisions for these crimes and in what specific ways this bias manifests. 
