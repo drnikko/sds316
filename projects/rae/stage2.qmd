@@ -334,7 +334,8 @@ df_150[df_150['district_h'].isin(rel_districts)].plot(ax = ax3, column = 'Dem_vo
 
 df_150[df_150['toosmall'] == 1.0].plot(ax = ax3, column = 'size', alpha = 0.5, hatch = '||', hatchcolor = 'white')
 
-plt.title('Pct of Non-adjusted District - Dem', ax = ax3)
+ax3.set_title('Pct of Non-adjusted District - Dem')
+#plt.title('Pct of Non-adjusted District - Dem', ax = ax3)
 ```
 
 There are much clearer partisan pattersn to this. Most of the counties that are "too big" after reallocation voted Democratic, so this confirms that theres are partisan consquences to prison gerrymandering in Texas, as the literature suggests. 
