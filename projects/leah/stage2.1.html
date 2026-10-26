@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>Initial Questions – SDS316 - Fall 2026</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -72,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e4e5fc554ff6d11e35549898add934ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -265,8 +271,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="first-question-which-states" class="level2">
 <h2 class="anchored" data-anchor-id="first-question-which-states">First question: which states?</h2>
 <p>I first want to know where the flock cameras are showing up. Which states have the most flock cameras?</p>
-<div id="9aae2af6" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div id="acaa2edb" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here <span class="co"># this helps us navigate tricky path stuff between local runs and quarto builds</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the data using here() with the path from the project root</span></span>
@@ -278,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># sort the states in to descending order based on the flock camera number  </span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span> <span class="op">=</span> per_state_df.sort_values(by<span class="op">=</span>[<span class="st">"Flock Cameras"</span>], ascending<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>.head(<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>.head(<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         State  Flock Cameras
 4   California          15636
@@ -293,8 +299,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="second-question-where" class="level2">
 <h2 class="anchored" data-anchor-id="second-question-where">Second Question: where?</h2>
 <p>Before I move on with this line, I want to figure out where the cameras are placed within the states. Specifically what kind of establishments have the cameras on their property. For this, I am going to explore the private operators of Flock cameras. Who invests in flock cameras, meaning where within the states/cities are they found?</p>
-<div id="284cb3b8" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>file_path_2 <span class="op">=</span> here(<span class="st">"projects/leah/_data/private-operators.csv"</span>)</span>
+<div id="f1a905d9" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>file_path_2 <span class="op">=</span> here(<span class="st">"projects/leah/_data/private-operators.csv"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pd.read_csv(file_path_2, sep<span class="op">=</span><span class="st">','</span>)  </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># removing the commas and making the column numeric </span></span>
@@ -302,7 +308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># same as above, sort the states in to descending order based on the flock camera number  </span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>sort <span class="op">=</span> df2.sort_values(by<span class="op">=</span>[<span class="st">"Cameras"</span>], ascending<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sort.head(<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sort.head(<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>               Operator  Cameras  \
 0                Lowe's     1665   
@@ -323,8 +329,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="third-question-cities-in-california-and-political-party" class="level2">
 <h2 class="anchored" data-anchor-id="third-question-cities-in-california-and-political-party">Third Question: Cities in California and political party?</h2>
-<div id="2d7cda7b" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>file_path_cities <span class="op">=</span> here(<span class="st">"projects/leah/_data/findingflock-cameras-by-city.csv"</span>)</span>
+<div id="93be6b62" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>file_path_cities <span class="op">=</span> here(<span class="st">"projects/leah/_data/findingflock-cameras-by-city.csv"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df_cities <span class="op">=</span> pd.read_csv(file_path_cities, sep<span class="op">=</span><span class="st">','</span>) </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Source - https://stackoverflow.com/a/17071908 </span></span>
@@ -333,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#sorting the subset to find the top five cities with the most cameras </span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>ca_sorted <span class="op">=</span> ca_only.sort_values(by<span class="op">=</span>[<span class="st">"flock"</span>], ascending<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ca_sorted.head(<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ca_sorted.head(<span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     geoid           city          place_name state  state_name  cameras  \
 7   668000       San Jose       San Jose city    CA  California      586   
@@ -367,14 +373,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I wanted to see which cities had specifically flock cameras because there are some other ones on the market that I am not looking into. I am curious what political party these cities fall into, I have to find out which county they are first since my dataset containing the election results are sorted by county. I used this website <a href="https://attorneysearchnetwork.com/resources/cities.htm">California Counties</a> to find my answers.</p>
 <p>San Jose: Santa Clara County Oakland: Alameda County San Francisco: San Francisco County Los Angeles: Los Angeles County Santa Rosa: Sonoma County</p>
 <p>Now I can see which party won in the 2024 election within those counties. I know historically California is a very blue state so I am expecting the democratic party, in this case Kamala Harris, to be the winner.</p>
-<div id="83fe7dd7" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>file_path_election <span class="op">=</span> here(<span class="st">"projects/leah/_data/Presidential-Election-Results-by-US-County-2024.csv"</span>)</span>
+<div id="c91ba913" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>file_path_election <span class="op">=</span> here(<span class="st">"projects/leah/_data/Presidential-Election-Results-by-US-County-2024.csv"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_election <span class="op">=</span> pd.read_csv(file_path_election, sep<span class="op">=</span><span class="st">','</span>)  </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Source - https://stackoverflow.com/a/17071908 </span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#I am new to python for data anaylsis so stack overflow has been my best friend! </span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I want to only have the rows that are the five counties</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_election.loc[df_election[<span class="st">'COUNTY_NAME'</span>].isin([<span class="st">'Santa Clara County'</span>,<span class="st">'Alameda County'</span>, <span class="st">'San Francisco County'</span>, <span class="st">'Los Angeles County'</span>, <span class="st">'Sonoma County'</span> ])])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_election.loc[df_election[<span class="st">'COUNTY_NAME'</span>].isin([<span class="st">'Santa Clara County'</span>,<span class="st">'Alameda County'</span>, <span class="st">'San Francisco County'</span>, <span class="st">'Los Angeles County'</span>, <span class="st">'Sonoma County'</span> ])])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     OBJECTID           COUNTY_NAME  STATE_NAME STATE_ABBR  FIPS  Votes_Tot  \
 157       188        Alameda County  California         CA  6001   669907.0   
@@ -402,15 +408,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="fourth-question-immigration" class="level2">
 <h2 class="anchored" data-anchor-id="fourth-question-immigration">Fourth Question: Immigration?</h2>
-<div id="013ac01d" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>file_path_immigration <span class="op">=</span> here(<span class="st">"projects/leah/_data/mpi-data-hub_immigrants_n-percent-us-population-by-state-2024.csv"</span>)</span>
+<div id="ea659e33" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>file_path_immigration <span class="op">=</span> here(<span class="st">"projects/leah/_data/mpi-data-hub_immigrants_n-percent-us-population-by-state-2024.csv"</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df_immigration <span class="op">=</span> pd.read_csv(file_path_immigration, sep<span class="op">=</span><span class="st">','</span>)  </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># accidentally had 6000 extra empty lines from the excel file that I downloaded whoops!</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>df_immigration <span class="op">=</span> df_immigration.drop(df_immigration.index[<span class="dv">52</span>:<span class="dv">6225</span>])</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>top_states <span class="op">=</span> df_immigration.loc[df_immigration[<span class="st">'State'</span>].isin([<span class="st">'California'</span>,<span class="st">'Texas'</span>, <span class="st">'Florida'</span>, <span class="st">'Georgia'</span>, <span class="st">'Illinois'</span> ])]</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(top_states)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_immigration)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_immigration)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         State Total Population90 Immigrant Population90  \
 5   California         29,760,000              6,458,800   
@@ -901,10 +907,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>I want to be able to compare these reults with something so I am going to find the average Immigrant Share of Total State Population for all 50 states. There is a row for the whole United States already but I want the average of all individual states in 2024.</p>
-<div id="d0c3d081" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#i have to make the column numeric and take away the percent</span></span>
+<div id="f793c28e" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#i have to make the column numeric and take away the percent</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>avg_immigration <span class="op">=</span> df_immigration[<span class="st">'Immigrant Share of Total State Population24'</span>].<span class="bu">str</span>[:<span class="op">-</span><span class="dv">1</span>].astype(<span class="bu">float</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(avg_immigration)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(avg_immigration)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0     14.8
 1      4.5
@@ -961,13 +967,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Name: Immigrant Share of Total State Population24, dtype: float64</code></pre>
 </div>
 </div>
-<div id="6f001b23" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I also have to take away the first row because that represents the entire United States</span></span>
+<div id="04b75c30" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I also have to take away the first row because that represents the entire United States</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>avg_immigration <span class="op">=</span> avg_immigration.iloc[<span class="dv">1</span>:]</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(avg_immigration)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># now I can find the average of the 50 states plus DC</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(avg_immigration.mean())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(avg_immigration.mean())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1      4.5
 2      7.7
@@ -1082,13 +1088,14 @@ Name: Immigrant Share of Total State Population24, dtype: float64
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

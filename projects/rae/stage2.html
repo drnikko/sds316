@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>Initial Questions – SDS316 - Fall 2026</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -59,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -72,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e4e5fc554ff6d11e35549898add934ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,10 +109,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -284,13 +290,13 @@ Note
 <section id="research-question" class="level3">
 <h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
 <p>My initial research question is pretty vague – <em>“Are there trends in the crimes for which people have been executed in the United States?”</em> And if I’m being honest, this isn’t the right question for someone with both my disciplinary background and my technical skillset/interests. I’m more interested in how this dataset is shaped, and what I might learn from the kinds of values I’m seeing in it. (This is a more <a href="https://socialsci.libretexts.org/Bookshelves/Social_Work_and_Human_Services/Scientific_Inquiry_in_Social_Work_(DeCarlo)/06:_Linking_Methods_with_Theory/6.03:_Inductive_and_deductive_reasoning">inductive approach</a>.)</p>
-<div id="6f71f687" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div id="55f80bbd" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="4e6a0260" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here <span class="co"># this helps us navigate tricky path stuff between local runs and quarto builds</span></span>
+<div id="d13ade6f" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here <span class="co"># this helps us navigate tricky path stuff between local runs and quarto builds</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the data using here() with the path from the project root</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>file_dist <span class="op">=</span> here(<span class="st">"projects/rae/data/Texas_district_reallocation_results.xlsx"</span>)</span>
@@ -299,12 +305,12 @@ Note
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>df_dist <span class="op">=</span> pd.read_excel(file_dist)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df_block <span class="op">=</span> pd.read_csv(file_block)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>df_dist.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>df_dist.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -331,7 +337,7 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>1</td>
 <td>194995</td>
 <td>128452</td>
@@ -353,7 +359,7 @@ Note
 <td>0.0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>2</td>
 <td>196284</td>
 <td>139560</td>
@@ -375,7 +381,7 @@ Note
 <td>0.0</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>3</td>
 <td>202477</td>
 <td>120870</td>
@@ -397,7 +403,7 @@ Note
 <td>0.0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>4</td>
 <td>195819</td>
 <td>115380</td>
@@ -419,7 +425,7 @@ Note
 <td>0.0</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>5</td>
 <td>186084</td>
 <td>125669</td>
@@ -446,11 +452,11 @@ Note
 </div>
 </div>
 </div>
-<div id="8a5ecac1" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#this is the same results as above but broken down by block group </span></span>
+<div id="394f376b" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#this is the same results as above but broken down by block group </span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df_block.head()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df_dist.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df_dist.columns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>Index(['district_h', 'total', 'white', 'black', 'latino', 'other', 'pctwhite',
        'adjtotal', 'adjwhite', 'adjblack', 'adjlatino', 'adjother',
@@ -464,8 +470,8 @@ Note
 <section id="first-question-change-in-population" class="level2">
 <h2 class="anchored" data-anchor-id="first-question-change-in-population">First question: Change in population</h2>
 <p>I notice there’s a column in the districts dataset that examines the change in total population, and the change disaggregated by racial group. What’s the average change in the House Districts’ total populations?</p>
-<div id="853e5fd8" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
+<div id="c835ff92" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># from pyprojroot import here # this helps us navigate tricky path stuff between local runs and quarto builds</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # Load the data using here() with the path from the project root</span></span>
@@ -475,7 +481,7 @@ Note
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>df_dist[<span class="st">'changepop'</span>].<span class="bu">abs</span>().aggregate(<span class="st">'mean'</span>)</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#did more districts lose or gain population? GAIN</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>np.sign(df_dist[<span class="st">'changepop'</span>]).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>np.sign(df_dist[<span class="st">'changepop'</span>]).<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>np.float64(89.0)</code></pre>
 </div>
@@ -484,8 +490,8 @@ Note
 </section>
 <section id="second-question-change-in-population-by-demographic" class="level2">
 <h2 class="anchored" data-anchor-id="second-question-change-in-population-by-demographic">Second question: Change in population by demographic</h2>
-<div id="3fb2b0d3" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's assign that subset to it's own data frame so that we can work just with it</span></span>
+<div id="f513d945" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's assign that subset to it's own data frame so that we can work just with it</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>it_list <span class="op">=</span> [<span class="st">'changew'</span>,<span class="st">'changeb'</span>, <span class="st">'changel'</span>, <span class="st">'changeo'</span>]</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -493,7 +499,7 @@ Note
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"=======</span><span class="sc">{</span>item<span class="sc">}</span><span class="ss">======="</span>)</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Mean"</span>, df_dist[item].mean())</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Mean Abs"</span>, df_dist[item].<span class="bu">abs</span>().mean())</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Gain or Lose?"</span>, np.sign(df_dist[item].<span class="bu">sum</span>()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Gain or Lose?"</span>, np.sign(df_dist[item].<span class="bu">sum</span>()))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>=======changew=======
 Mean 3.200000010110671e-06
@@ -518,19 +524,19 @@ Gain or Lose? 1.0</code></pre>
 </section>
 <section id="third-question-now-im-curious-how-much-each-districts-total-population-is-under-or-over-the-actual-population-baseline-for-a-single-congressional-district-in-tx" class="level2">
 <h2 class="anchored" data-anchor-id="third-question-now-im-curious-how-much-each-districts-total-population-is-under-or-over-the-actual-population-baseline-for-a-single-congressional-district-in-tx">Third question: Now I’m curious how much each districts total population is under or over the actual population baseline for a single congressional district in TX</h2>
-<div id="ce196079" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ideal <span class="op">=</span> <span class="dv">194303</span></span>
+<div id="382374cd" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ideal <span class="op">=</span> <span class="dv">194303</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df_dist[<span class="st">'dif_from_ideal'</span>] <span class="op">=</span> df_dist[<span class="st">'adjtotal'</span>] <span class="op">-</span> ideal</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>df_dist.sort_values(<span class="st">'dif_from_ideal'</span>, ascending <span class="op">=</span> <span class="va">False</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#if negative then ideal is greater than the adjusted, aka its too small compared to ideal once adjusted </span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#if greater then ideal is greater than the adjusted, aka its too large compared to ideal once adjusted </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#if greater then ideal is greater than the adjusted, aka its too large compared to ideal once adjusted </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -558,7 +564,7 @@ Gain or Lose? 1.0</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">150</td>
+<th data-quarto-table-cell-role="th">150</th>
 <td>Total N</td>
 <td>29145505</td>
 <td>11584597</td>
@@ -581,7 +587,7 @@ Gain or Lose? 1.0</code></pre>
 <td>28951204.0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">94</td>
+<th data-quarto-table-cell-role="th">94</th>
 <td>95</td>
 <td>203993</td>
 <td>38168</td>
@@ -604,7 +610,7 @@ Gain or Lose? 1.0</code></pre>
 <td>10970.5</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">121</td>
+<th data-quarto-table-cell-role="th">121</th>
 <td>122</td>
 <td>203881</td>
 <td>99012</td>
@@ -627,7 +633,7 @@ Gain or Lose? 1.0</code></pre>
 <td>10348.6</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">6</td>
+<th data-quarto-table-cell-role="th">6</th>
 <td>7</td>
 <td>202803</td>
 <td>116958</td>
@@ -650,7 +656,7 @@ Gain or Lose? 1.0</code></pre>
 <td>10332.0</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">143</td>
+<th data-quarto-table-cell-role="th">143</th>
 <td>144</td>
 <td>203960</td>
 <td>27741</td>
@@ -673,7 +679,7 @@ Gain or Lose? 1.0</code></pre>
 <td>10323.1</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -696,7 +702,7 @@ Gain or Lose? 1.0</code></pre>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">87</td>
+<th data-quarto-table-cell-role="th">87</th>
 <td>88</td>
 <td>186059</td>
 <td>86426</td>
@@ -719,7 +725,7 @@ Gain or Lose? 1.0</code></pre>
 <td>-11318.0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">30</td>
+<th data-quarto-table-cell-role="th">30</th>
 <td>31</td>
 <td>184966</td>
 <td>45168</td>
@@ -742,7 +748,7 @@ Gain or Lose? 1.0</code></pre>
 <td>-11776.0</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">21</td>
+<th data-quarto-table-cell-role="th">21</th>
 <td>22</td>
 <td>186322</td>
 <td>51597</td>
@@ -765,7 +771,7 @@ Gain or Lose? 1.0</code></pre>
 <td>-12054.0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
+<th data-quarto-table-cell-role="th">7</th>
 <td>8</td>
 <td>192599</td>
 <td>115289</td>
@@ -788,7 +794,7 @@ Gain or Lose? 1.0</code></pre>
 <td>-14506.4</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">24</td>
+<th data-quarto-table-cell-role="th">24</th>
 <td>25</td>
 <td>186855</td>
 <td>80425</td>
@@ -822,18 +828,18 @@ Gain or Lose? 1.0</code></pre>
 <h3 class="anchored" data-anchor-id="fourth-question-geographic-patterns">Fourth question: Geographic patterns?</h3>
 <p>Since gerrymandering is inherently geographic, I’m curious whether there are geographic patterns to the districts that gain vs.&nbsp;lose population after adjustment. This should be the same thing as finding whether the adjusted districts are too big (i.e., population was gained) or too small (i.e., population was lost).</p>
 <p>First I need to get the Texas house district shape files to plot.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div id="23bed33f" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#importing the 2022 HD shapes (this should be pre- recent mid-decade redistricting)</span></span>
+<div id="9364134d" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#importing the 2022 HD shapes (this should be pre- recent mid-decade redistricting)</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>file_dist_shape <span class="op">=</span> here(<span class="st">'projects/rae/data/TX-2022-State-House-district-shapes-no-landmarks.geojson'</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>district_shape <span class="op">=</span> gpd.read_file(file_dist_shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>district_shape <span class="op">=</span> gpd.read_file(file_dist_shape)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="6d0344d1" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#switching the coordinate system for plotting</span></span>
+<div id="2b50d338" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#switching the coordinate system for plotting</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>district_shape.crs</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>district_shape <span class="op">=</span> district_shape.to_crs(<span class="st">'EPSG:3081'</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>district_shape.crs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>district_shape.crs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>&lt;Projected CRS: EPSG:3081&gt;
 Name: NAD83 / Texas State Mapping System
@@ -852,13 +858,13 @@ Datum: North American Datum 1983
 </div>
 </div>
 <p>Why do i get two different results for the plots below? Probably because toobig and toosmall variables are based on the legal definition of being too big or small.</p>
-<div id="259c05ea" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_dist_wshape <span class="op">=</span> pd.concat([district_shape[[<span class="st">'geometry'</span>]],df_dist], axis <span class="op">=</span> <span class="dv">1</span>) </span>
+<div id="38e6ff14" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_dist_wshape <span class="op">=</span> pd.concat([district_shape[[<span class="st">'geometry'</span>]],df_dist], axis <span class="op">=</span> <span class="dv">1</span>) </span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>df_dist_wshape[<span class="st">'color'</span>] <span class="op">=</span> df_dist_wshape[<span class="st">'dif_from_ideal'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="st">'red'</span> <span class="cf">if</span> x <span class="op">&gt;</span> <span class="fl">0.0</span> <span class="cf">else</span> <span class="st">'green'</span> )</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>df_dist_wshape.plot(color <span class="op">=</span> df_dist_wshape[<span class="st">'color'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>df_dist_wshape.plot(color <span class="op">=</span> df_dist_wshape[<span class="st">'color'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -867,11 +873,11 @@ Datum: North American Datum 1983
 </div>
 </div>
 </div>
-<div id="dd7071e4" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>color_map <span class="op">=</span> {<span class="op">-</span><span class="fl">1.0</span>: <span class="st">'blue'</span>, <span class="fl">1.0</span>: <span class="st">'red'</span>, <span class="fl">0.0</span>: <span class="st">'green'</span>}</span>
+<div id="9182ff4d" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>color_map <span class="op">=</span> {<span class="op">-</span><span class="fl">1.0</span>: <span class="st">'blue'</span>, <span class="fl">1.0</span>: <span class="st">'red'</span>, <span class="fl">0.0</span>: <span class="st">'green'</span>}</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> df_dist_wshape[<span class="st">'toobig'</span>].<span class="bu">map</span>(color_map)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>df_dist_wshape.plot(color <span class="op">=</span> color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>df_dist_wshape.plot(color <span class="op">=</span> color)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -880,8 +886,8 @@ Datum: North American Datum 1983
 </div>
 </div>
 </div>
-<div id="89dbde6d" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df_dist_wshape[<span class="st">'toobig'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="211d00e5" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df_dist_wshape[<span class="st">'toobig'</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>toobig
 0.0    139
@@ -890,17 +896,17 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Okay, so I assume that some districts can be too big, too small, or niether, but because toobig and toosmall are binary indicators, I need to make a column that accounts for all three options.</p>
-<div id="d490cc07" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df_dist_wshape[<span class="st">'size'</span>] <span class="op">=</span> np.where(df_dist_wshape[<span class="st">'toobig'</span>] <span class="op">==</span> <span class="fl">1.0</span>, <span class="st">'big'</span>,</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>np.where(df_dist_wshape[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>, <span class="st">'small'</span>, <span class="st">'neither'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="72f98f66" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df_dist_wshape[<span class="st">'size'</span>] <span class="op">=</span> np.where(df_dist_wshape[<span class="st">'toobig'</span>] <span class="op">==</span> <span class="fl">1.0</span>, <span class="st">'big'</span>,</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>np.where(df_dist_wshape[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>, <span class="st">'small'</span>, <span class="st">'neither'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="82de017c" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df_dist_wshape.head()</span>
+<div id="e25191b9" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df_dist_wshape.head()</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>color_map <span class="op">=</span> {<span class="st">'neither'</span>: <span class="st">'lightgrey'</span>, <span class="st">'big'</span>: <span class="st">'red'</span>, <span class="st">'small'</span>: <span class="st">'orange'</span>}</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> df_dist_wshape[<span class="st">'size'</span>].<span class="bu">map</span>(color_map)</span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>df_dist_wshape.plot(color <span class="op">=</span> color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>df_dist_wshape.plot(color <span class="op">=</span> color)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -915,27 +921,27 @@ Name: count, dtype: int64</code></pre>
 <section id="fifth-question-racial-demographics" class="level2">
 <h2 class="anchored" data-anchor-id="fifth-question-racial-demographics">Fifth question: Racial Demographics</h2>
 <p>Now lets look at the demographic breakdowns of these counties; specifically the percent of the population that is black.</p>
-<div id="6e72596f" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>file_tx_dist <span class="op">=</span> here(<span class="st">'projects/rae/data/district-data.csv'</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>tx_dist_info <span class="op">=</span> pd.read_csv(file_tx_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0b7633b4" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>file_tx_dist <span class="op">=</span> here(<span class="st">'projects/rae/data/district-data.csv'</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>tx_dist_info <span class="op">=</span> pd.read_csv(file_tx_dist)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="bbcb319b" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>rel_districts <span class="op">=</span> <span class="bu">list</span>(df_dist_wshape[df_dist_wshape[<span class="st">'size'</span>] <span class="op">!=</span> <span class="st">'neither'</span>][<span class="st">'district_h'</span>])</span>
+<div id="b76863c8" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>rel_districts <span class="op">=</span> <span class="bu">list</span>(df_dist_wshape[df_dist_wshape[<span class="st">'size'</span>] <span class="op">!=</span> <span class="st">'neither'</span>][<span class="st">'district_h'</span>])</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">#texas demo info is by district so should map perfectly!</span></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># tx_dist_info['Label'].value_counts()</span></span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># df_dist_wshape['district_h'].value_counts()</span></span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>tx_dist_info <span class="op">=</span> tx_dist_info.drop(<span class="dv">0</span>, axis <span class="op">=</span> <span class="dv">0</span> ).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>tx_dist_info <span class="op">=</span> tx_dist_info.drop(<span class="dv">0</span>, axis <span class="op">=</span> <span class="dv">0</span> ).reset_index()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="b3d7dff3" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df_150 <span class="op">=</span> pd.concat([tx_dist_info, df_dist_wshape], axis <span class="op">=</span> <span class="dv">1</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>df_150.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="640a1cf7" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df_150 <span class="op">=</span> pd.concat([tx_dist_info, df_dist_wshape], axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>df_150.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -964,7 +970,7 @@ Name: count, dtype: int64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>1.0</td>
 <td>1.0</td>
 <td>1</td>
@@ -988,7 +994,7 @@ Name: count, dtype: int64</code></pre>
 <td>neither</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>2.0</td>
 <td>2.0</td>
 <td>2</td>
@@ -1012,7 +1018,7 @@ Name: count, dtype: int64</code></pre>
 <td>neither</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>3.0</td>
 <td>3.0</td>
 <td>3</td>
@@ -1036,7 +1042,7 @@ Name: count, dtype: int64</code></pre>
 <td>neither</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>4.0</td>
 <td>4.0</td>
 <td>4</td>
@@ -1060,7 +1066,7 @@ Name: count, dtype: int64</code></pre>
 <td>neither</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>5.0</td>
 <td>5.0</td>
 <td>5</td>
@@ -1090,11 +1096,11 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div id="f33bf76d" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lets check that the T_20 CENS total is the same as/close to as the pre-reallocation totals</span></span>
+<div id="f344a921" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lets check that the T_20 CENS total is the same as/close to as the pre-reallocation totals</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_150.columns)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>df_150[[<span class="st">'T_20_CENS_Total'</span>, <span class="st">'total'</span>]]</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'CENS_total_diff'</span>] <span class="op">=</span> df_150[<span class="st">'T_20_CENS_Total'</span>]<span class="op">-</span> df_150[<span class="st">'total'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'CENS_total_diff'</span>] <span class="op">=</span> df_150[<span class="st">'T_20_CENS_Total'</span>]<span class="op">-</span> df_150[<span class="st">'total'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Index(['index', 'ID', 'Label', 'T_20_CENS_Total', 'T_20_CENS_White',
        'T_20_CENS_Hispanic', 'T_20_CENS_Black', 'T_20_CENS_Asian',
@@ -1109,28 +1115,28 @@ Name: count, dtype: int64</code></pre>
       dtype='str')</code></pre>
 </div>
 </div>
-<div id="a62842e3" class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'CENS_total_diff_pct'</span>] <span class="op">=</span> df_150[<span class="st">'CENS_total_diff'</span>]<span class="op">/</span>df_150[<span class="st">'total'</span>]</span>
+<div id="b10f11ff" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'CENS_total_diff_pct'</span>] <span class="op">=</span> df_150[<span class="st">'CENS_total_diff'</span>]<span class="op">/</span>df_150[<span class="st">'total'</span>]</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'CENS_total_diff_pct'</span>].sort_values()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'CENS_total_diff_pct'</span>].sort_values()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>0      0.0
-96     0.0
-97     0.0
-98     0.0
-99     0.0
+1      0.0
+2      0.0
+3      0.0
+4      0.0
       ... 
-52     0.0
-53     0.0
-55     0.0
+146    0.0
+147    0.0
+148    0.0
 149    0.0
 150    NaN
 Name: CENS_total_diff_pct, Length: 151, dtype: float64</code></pre>
 </div>
 </div>
 <p>There is no difference between the 2020 Census totals and the totals in the adjusted data!</p>
-<div id="5c3eb126" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tx_dist_info.index)</span>
+<div id="394ad106" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tx_dist_info.index)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_dist_wshape.index)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>df_150.head()</span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1147,18 +1153,15 @@ Name: CENS_total_diff_pct, Length: 151, dtype: float64</code></pre>
 <span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>].plot(ax <span class="op">=</span> ax, column <span class="op">=</span> <span class="st">'size'</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>, hatch <span class="op">=</span> <span class="st">'||'</span>, hatchcolor <span class="op">=</span> <span class="st">'white'</span>)</span>
 <span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Pct of Non-adjusted District - Black'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Pct of Non-adjusted District - Black'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>RangeIndex(start=0, stop=150, step=1)
 RangeIndex(start=0, stop=151, step=1)</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="19">
-<pre><code>Text(0.5, 1.0, 'Pct of Non-adjusted District - Black')</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="stage2_files/figure-html/cell-20-output-3.png" width="531" height="449" class="figure-img"></p>
+<p><img src="stage2_files/figure-html/cell-20-output-2.png" width="531" height="449" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1168,40 +1171,40 @@ RangeIndex(start=0, stop=151, step=1)</code></pre>
 <section id="sixth-question-prison-locations" class="level2">
 <h2 class="anchored" data-anchor-id="sixth-question-prison-locations">Sixth question: Prison locations</h2>
 <p>Lets plot the 5 largest state correctional facilities . I think I know which districts in which they might fall…</p>
-<div id="da0d960e" class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># #five largest state run prisons in texas, 3 seem to be in the same place</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># adresses = pd.Series(['2661 FM 2054, Tennessee Colony, TX 75884', '2101 FM 369, Iowa Park, TX 76367', '9601 Spur 591, Amarillo, TX 79107', '1391 FM 3328, Tennessee Colony, TX 75880', '2664 FM 2054, Tennessee Colony, TX 75886'])</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_gdf  = gpd.tools.geocode(adresses)</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co"># #, verify = False) this doesn't work :(</span></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_gdf.head()</span></span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># file_prisons = here('projects/rae/data/allprisons.csv')</span></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="co"># prison_gdf = gpd.read_file(file_prisons)</span></span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="co"># prison_gdf = prison_gdf[prison_gdf['stateshortname'] == 'TX']</span></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_1 = prison_gdf[['name', 'coordinates']]</span></span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_2 = prison_gdf[['PrisonName', 'geometry']]</span></span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_1.rename(columns = {'name': 'PrisonName', 'coordinates': 'geometry'}, inplace = True)</span></span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged = pd.concat([prisons_1, prisons_2], axis = 0).reset_index()</span></span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged = prisons_merged[prisons_merged['geometry'].str.contains(')', regex = False)]</span></span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged['geometry'] = shapely.from_wkt(prisons_merged['geometry'])</span></span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged = prisons_merged.set_geometry('geometry', crs = 4326)</span></span>
-<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged = prisons_merged.to_crs('EPSG:3081')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="2f738b25" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># #five largest state run prisons in texas, 3 seem to be in the same place</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># adresses = pd.Series(['2661 FM 2054, Tennessee Colony, TX 75884', '2101 FM 369, Iowa Park, TX 76367', '9601 Spur 591, Amarillo, TX 79107', '1391 FM 3328, Tennessee Colony, TX 75880', '2664 FM 2054, Tennessee Colony, TX 75886'])</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_gdf  = gpd.tools.geocode(adresses)</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co"># #, verify = False) this doesn't work :(</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_gdf.head()</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co"># file_prisons = here('projects/rae/data/allprisons.csv')</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co"># prison_gdf = gpd.read_file(file_prisons)</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># prison_gdf = prison_gdf[prison_gdf['stateshortname'] == 'TX']</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_1 = prison_gdf[['name', 'coordinates']]</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_2 = prison_gdf[['PrisonName', 'geometry']]</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_1.rename(columns = {'name': 'PrisonName', 'coordinates': 'geometry'}, inplace = True)</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged = pd.concat([prisons_1, prisons_2], axis = 0).reset_index()</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged = prisons_merged[prisons_merged['geometry'].str.contains(')', regex = False)]</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged['geometry'] = shapely.from_wkt(prisons_merged['geometry'])</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged = prisons_merged.set_geometry('geometry', crs = 4326)</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged = prisons_merged.to_crs('EPSG:3081')</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="63118668" class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shapely</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>df_150 <span class="op">=</span> df_150.set_geometry(<span class="st">'geometry'</span>, crs <span class="op">=</span> <span class="dv">3081</span>)</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>fig, axis <span class="op">=</span> plt.subplots()</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>df_150.plot(ax <span class="op">=</span> axis, color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'district_h'</span>].isin(rel_districts)].plot(ax <span class="op">=</span> axis, column <span class="op">=</span> <span class="st">'pct_black'</span>, legend <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>].plot(ax <span class="op">=</span> axis, column <span class="op">=</span> <span class="st">'size'</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>, hatch <span class="op">=</span> <span class="st">'||'</span>, hatchcolor <span class="op">=</span> <span class="st">'white'</span>)</span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged.plot(ax = axis, color = 'red', markersize = 3)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="1875a09f" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shapely</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>df_150 <span class="op">=</span> df_150.set_geometry(<span class="st">'geometry'</span>, crs <span class="op">=</span> <span class="dv">3081</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>fig, axis <span class="op">=</span> plt.subplots()</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>df_150.plot(ax <span class="op">=</span> axis, color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'district_h'</span>].isin(rel_districts)].plot(ax <span class="op">=</span> axis, column <span class="op">=</span> <span class="st">'pct_black'</span>, legend <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>].plot(ax <span class="op">=</span> axis, column <span class="op">=</span> <span class="st">'size'</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>, hatch <span class="op">=</span> <span class="st">'||'</span>, hatchcolor <span class="op">=</span> <span class="st">'white'</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="co"># prisons_merged.plot(ax = axis, color = 'red', markersize = 3)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1212,32 +1215,29 @@ RangeIndex(start=0, stop=151, step=1)</code></pre>
 </div>
 <p>Hmm, it seems like prisons also exist in areas that become “too big” after reallocation. However, that may be due to the existance of lower security or municipal prisons in the area.</p>
 <p>Not sure how to get rid of the outlier point!</p>
-<div id="4cf54bc4" class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#shapely.from_wkt(prisons_merged['geometry'].iloc[0])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b34bdf87" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#shapely.from_wkt(prisons_merged['geometry'].iloc[0])</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
 <section id="seventh-question-the-plots-above-used-the-pct_black-with-the-unadjusted-totalscensus-counts.-do-the-results-change-when-we-ue-the-adjusted-data" class="level1">
 <h1>Seventh question: The plots above used the pct_black with the unadjusted totals/Census counts. Do the results change when we ue the adjusted data?</h1>
-<div id="ea83520c" class="cell" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>fig, ax2 <span class="op">=</span> plt.subplots()</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'adj_pct_black'</span>] <span class="op">=</span> df_150[<span class="st">'adjblack'</span>] <span class="op">/</span> df_150[<span class="st">'adjtotal'</span>]</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>df_150.plot(ax <span class="op">=</span> ax2, color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'district_h'</span>].isin(rel_districts)].plot(ax <span class="op">=</span> ax2, column <span class="op">=</span> <span class="st">'adj_pct_black'</span>, legend <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>].plot(ax <span class="op">=</span> ax2, column <span class="op">=</span> <span class="st">'size'</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>, hatch <span class="op">=</span> <span class="st">'||'</span>, hatchcolor <span class="op">=</span> <span class="st">'white'</span>)</span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Pct of Adjusted District - Black'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="23">
-<pre><code>Text(0.5, 1.0, 'Pct of Adjusted District - Black')</code></pre>
-</div>
+<div id="0b322450" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>fig, ax2 <span class="op">=</span> plt.subplots()</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'adj_pct_black'</span>] <span class="op">=</span> df_150[<span class="st">'adjblack'</span>] <span class="op">/</span> df_150[<span class="st">'adjtotal'</span>]</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>df_150.plot(ax <span class="op">=</span> ax2, color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'district_h'</span>].isin(rel_districts)].plot(ax <span class="op">=</span> ax2, column <span class="op">=</span> <span class="st">'adj_pct_black'</span>, legend <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>].plot(ax <span class="op">=</span> ax2, column <span class="op">=</span> <span class="st">'size'</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>, hatch <span class="op">=</span> <span class="st">'||'</span>, hatchcolor <span class="op">=</span> <span class="st">'white'</span>)</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Pct of Adjusted District - Black'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="stage2_files/figure-html/cell-24-output-2.png" width="531" height="449" class="figure-img"></p>
+<p><img src="stage2_files/figure-html/cell-24-output-1.png" width="531" height="449" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1246,38 +1246,35 @@ RangeIndex(start=0, stop=151, step=1)</code></pre>
 </section>
 <section id="eighth-question-what-about-partisanship-are-there-partisan-patterns-to-the-way-in-which-people-are-distributed" class="level1">
 <h1>Eighth question: What about partisanship? Are there partisan patterns to the way in which people are distributed?</h1>
-<div id="b2d21ac0" class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>file_elect <span class="op">=</span> here(<span class="st">'projects/rae/data/district-election-data.csv'</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>df_elect <span class="op">=</span> pd.read_csv(file_elect)[[<span class="st">'E_16-20_COMP_Total'</span>, <span class="st">'E_16-20_COMP_Dem'</span>, <span class="st">'E_16-20_COMP_Rep'</span>]]</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>df_elect <span class="op">=</span> df_elect.drop(<span class="dv">0</span>, axis <span class="op">=</span> <span class="dv">0</span>).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="aee1698a" class="cell" data-execution_count="24">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>file_elect <span class="op">=</span> here(<span class="st">'projects/rae/data/district-election-data.csv'</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>df_elect <span class="op">=</span> pd.read_csv(file_elect)[[<span class="st">'E_16-20_COMP_Total'</span>, <span class="st">'E_16-20_COMP_Dem'</span>, <span class="st">'E_16-20_COMP_Rep'</span>]]</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>df_elect <span class="op">=</span> df_elect.drop(<span class="dv">0</span>, axis <span class="op">=</span> <span class="dv">0</span>).reset_index()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="aae57fb0" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>df_elect.head()</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>df_elect_shape <span class="op">=</span> pd.concat([df_elect, df_dist_wshape], axis <span class="op">=</span> <span class="dv">1</span>)</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>df_elect_shape.head()</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>fig, ax3 <span class="op">=</span> plt.subplots()</span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'Dem_vote_share'</span>] <span class="op">=</span> df_150[<span class="st">'E_16-20_COMP_Dem'</span>] <span class="op">/</span> df_150[<span class="st">'E_16-20_COMP_Total'</span>]</span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>df_150.plot(ax <span class="op">=</span> ax3, color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'district_h'</span>].isin(rel_districts)].plot(ax <span class="op">=</span> ax3, column <span class="op">=</span> <span class="st">'Dem_vote_share'</span>, legend <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>].plot(ax <span class="op">=</span> ax3, column <span class="op">=</span> <span class="st">'size'</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>, hatch <span class="op">=</span> <span class="st">'||'</span>, hatchcolor <span class="op">=</span> <span class="st">'white'</span>)</span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">'Pct of Non-adjusted District - Dem'</span>)</span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.title('Pct of Non-adjusted District - Dem', ax = ax3)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
-<pre><code>Text(0.5, 1.0, 'Pct of Non-adjusted District - Dem')</code></pre>
-</div>
+<div id="0f07708b" class="cell" data-execution_count="25">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>df_elect.head()</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>df_elect_shape <span class="op">=</span> pd.concat([df_elect, df_dist_wshape], axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>df_elect_shape.head()</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>fig, ax3 <span class="op">=</span> plt.subplots()</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>df_150[<span class="st">'Dem_vote_share'</span>] <span class="op">=</span> df_150[<span class="st">'E_16-20_COMP_Dem'</span>] <span class="op">/</span> df_150[<span class="st">'E_16-20_COMP_Total'</span>]</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>df_150.plot(ax <span class="op">=</span> ax3, color <span class="op">=</span> <span class="st">'lightgrey'</span>)</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'district_h'</span>].isin(rel_districts)].plot(ax <span class="op">=</span> ax3, column <span class="op">=</span> <span class="st">'Dem_vote_share'</span>, legend <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>df_150[df_150[<span class="st">'toosmall'</span>] <span class="op">==</span> <span class="fl">1.0</span>].plot(ax <span class="op">=</span> ax3, column <span class="op">=</span> <span class="st">'size'</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>, hatch <span class="op">=</span> <span class="st">'||'</span>, hatchcolor <span class="op">=</span> <span class="st">'white'</span>)</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">'Pct of Non-adjusted District - Dem'</span>)</span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.title('Pct of Non-adjusted District - Dem', ax = ax3)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="stage2_files/figure-html/cell-26-output-2.png" width="531" height="449" class="figure-img"></p>
+<p><img src="stage2_files/figure-html/cell-26-output-1.png" width="531" height="449" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1287,86 +1284,86 @@ RangeIndex(start=0, stop=151, step=1)</code></pre>
 <section id="th-question-whats-the-distribution-of-legal-maps-after-reallocation" class="level1">
 <h1>9th question: What’s the distribution of legal maps after reallocation?</h1>
 <p>Below I’m attempting to run the Flip Chain MCMC method using Gerrychain. This seems to work so next, let me try to do this with Texas 2020 VTD data.</p>
-<div id="67f6db19" class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain <span class="im">import</span>  (</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    GeographicPartition,</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    Partition,</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    Graph,</span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    MarkovChain,</span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    updaters,</span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    constraints,</span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    accept,</span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>    Election,</span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.proposals <span class="im">import</span> ReCom</span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.constraints <span class="im">import</span> contiguous</span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.examples <span class="im">import</span> gerrymandria</span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas</span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.accept <span class="im">import</span> always_accept</span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.constraints <span class="im">import</span> single_flip_contiguous</span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.proposals <span class="im">import</span> propose_random_flip</span>
-<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.constraints <span class="im">import</span> contiguous</span>
-<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>pa_chain <span class="op">=</span> MarkovChain(</span>
-<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a>    total_steps<span class="op">=</span><span class="dv">40</span>,</span>
-<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a>    rng<span class="op">=</span><span class="dv">2024</span>,</span>
-<span id="cb37-24"><a href="#cb37-24" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="aa861525" class="cell" data-execution_count="26">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain <span class="im">import</span>  (</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    GeographicPartition,</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    Partition,</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    Graph,</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    MarkovChain,</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    updaters,</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    constraints,</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>    accept,</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>    Election,</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.proposals <span class="im">import</span> ReCom</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.constraints <span class="im">import</span> contiguous</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.examples <span class="im">import</span> gerrymandria</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.accept <span class="im">import</span> always_accept</span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.constraints <span class="im">import</span> single_flip_contiguous</span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.proposals <span class="im">import</span> propose_random_flip</span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> gerrychain.constraints <span class="im">import</span> contiguous</span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>pa_chain <span class="op">=</span> MarkovChain(</span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>    total_steps<span class="op">=</span><span class="dv">40</span>,</span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a>    rng<span class="op">=</span><span class="dv">2024</span>,</span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="774dac65" class="cell" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>file_graph <span class="op">=</span> here(<span class="st">"projects/rae/data/PA_VTDs.json"</span>)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>graph <span class="op">=</span> Graph.from_json(file_graph)</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>my_updaters <span class="op">=</span> {<span class="st">"population"</span>: updaters.Tally(<span class="st">"TOT_POP"</span>, alias<span class="op">=</span><span class="st">"population"</span>)}</span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>pa_chain.initial_partition <span class="op">=</span> GeographicPartition(</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    graph, assignment<span class="op">=</span><span class="st">"2011_PLA_1"</span>, updaters<span class="op">=</span>my_updaters</span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>elections_updaters <span class="op">=</span> {</span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SEN10"</span>: Election(<span class="st">"SEN10"</span>, {<span class="st">"Democratic"</span>: <span class="st">"SEN10D"</span>, <span class="st">"Republican"</span>: <span class="st">"SEN10R"</span>}),</span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SEN12"</span>: Election(<span class="st">"SEN12"</span>, {<span class="st">"Democratic"</span>: <span class="st">"USS12D"</span>, <span class="st">"Republican"</span>: <span class="st">"USS12R"</span>}),</span>
-<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SEN16"</span>: Election(<span class="st">"SEN16"</span>, {<span class="st">"Democratic"</span>: <span class="st">"T16SEND"</span>, <span class="st">"Republican"</span>: <span class="st">"T16SENR"</span>}),</span>
-<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PRES12"</span>: Election(<span class="st">"PRES12"</span>, {<span class="st">"Democratic"</span>: <span class="st">"PRES12D"</span>, <span class="st">"Republican"</span>: <span class="st">"PRES12R"</span>}),</span>
-<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PRES16"</span>: Election(<span class="st">"PRES16"</span>, {<span class="st">"Democratic"</span>: <span class="st">"T16PRESD"</span>, <span class="st">"Republican"</span>: <span class="st">"T16PRESR"</span>}),</span>
-<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>pa_chain.add_updaters(elections_updaters)</span>
-<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a>ideal_population <span class="op">=</span> <span class="bu">sum</span>(pa_chain.initial_partition[<span class="st">"population"</span>].values()) <span class="op">/</span> <span class="bu">len</span>(</span>
-<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a>    pa_chain.initial_partition</span>
-<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a><span class="co"># pa_chain.proposal_fn = build_recom_proposal_fn(</span></span>
-<span id="cb38-24"><a href="#cb38-24" aria-hidden="true" tabindex="-1"></a><span class="co">#     pop_col="TOT_POP",</span></span>
-<span id="cb38-25"><a href="#cb38-25" aria-hidden="true" tabindex="-1"></a><span class="co">#     pop_target=ideal_population,</span></span>
-<span id="cb38-26"><a href="#cb38-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     epsilon=0.02,</span></span>
-<span id="cb38-27"><a href="#cb38-27" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
-<span id="cb38-28"><a href="#cb38-28" aria-hidden="true" tabindex="-1"></a>pa_chain.proposal_fn <span class="op">=</span> propose_random_flip</span>
-<span id="cb38-29"><a href="#cb38-29" aria-hidden="true" tabindex="-1"></a>pa_chain.add_constraint(contiguous)</span>
-<span id="cb38-30"><a href="#cb38-30" aria-hidden="true" tabindex="-1"></a>pa_chain.acceptance_fn <span class="op">=</span> always_accept</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="112fe521" class="cell" data-execution_count="27">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>file_graph <span class="op">=</span> here(<span class="st">"projects/rae/data/PA_VTDs.json"</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>graph <span class="op">=</span> Graph.from_json(file_graph)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>my_updaters <span class="op">=</span> {<span class="st">"population"</span>: updaters.Tally(<span class="st">"TOT_POP"</span>, alias<span class="op">=</span><span class="st">"population"</span>)}</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>pa_chain.initial_partition <span class="op">=</span> GeographicPartition(</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>    graph, assignment<span class="op">=</span><span class="st">"2011_PLA_1"</span>, updaters<span class="op">=</span>my_updaters</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>elections_updaters <span class="op">=</span> {</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SEN10"</span>: Election(<span class="st">"SEN10"</span>, {<span class="st">"Democratic"</span>: <span class="st">"SEN10D"</span>, <span class="st">"Republican"</span>: <span class="st">"SEN10R"</span>}),</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SEN12"</span>: Election(<span class="st">"SEN12"</span>, {<span class="st">"Democratic"</span>: <span class="st">"USS12D"</span>, <span class="st">"Republican"</span>: <span class="st">"USS12R"</span>}),</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SEN16"</span>: Election(<span class="st">"SEN16"</span>, {<span class="st">"Democratic"</span>: <span class="st">"T16SEND"</span>, <span class="st">"Republican"</span>: <span class="st">"T16SENR"</span>}),</span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PRES12"</span>: Election(<span class="st">"PRES12"</span>, {<span class="st">"Democratic"</span>: <span class="st">"PRES12D"</span>, <span class="st">"Republican"</span>: <span class="st">"PRES12R"</span>}),</span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PRES16"</span>: Election(<span class="st">"PRES16"</span>, {<span class="st">"Democratic"</span>: <span class="st">"T16PRESD"</span>, <span class="st">"Republican"</span>: <span class="st">"T16PRESR"</span>}),</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>pa_chain.add_updaters(elections_updaters)</span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>ideal_population <span class="op">=</span> <span class="bu">sum</span>(pa_chain.initial_partition[<span class="st">"population"</span>].values()) <span class="op">/</span> <span class="bu">len</span>(</span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>    pa_chain.initial_partition</span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a><span class="co"># pa_chain.proposal_fn = build_recom_proposal_fn(</span></span>
+<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a><span class="co">#     pop_col="TOT_POP",</span></span>
+<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a><span class="co">#     pop_target=ideal_population,</span></span>
+<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     epsilon=0.02,</span></span>
+<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>pa_chain.proposal_fn <span class="op">=</span> propose_random_flip</span>
+<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a>pa_chain.add_constraint(contiguous)</span>
+<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a>pa_chain.acceptance_fn <span class="op">=</span> always_accept</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="0360289c" class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cut_edges_length(partition):</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">len</span>(partition[<span class="st">"cut_edges"</span>])</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>pa_chain.add_constraint(</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    constraints.UpperBound(cut_edges_length, <span class="dv">2</span> <span class="op">*</span> <span class="bu">len</span>(pa_chain.initial_partition[<span class="st">"cut_edges"</span>]))</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="8817c832" class="cell" data-execution_count="28">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cut_edges_length(partition):</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">len</span>(partition[<span class="st">"cut_edges"</span>])</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>pa_chain.add_constraint(</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    constraints.UpperBound(cut_edges_length, <span class="dv">2</span> <span class="op">*</span> <span class="bu">len</span>(pa_chain.initial_partition[<span class="st">"cut_edges"</span>]))</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="2dcb29c5" class="cell" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tqdm</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pandas.DataFrame(</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">sorted</span>(partition[<span class="st">"SEN12"</span>].percents(<span class="st">"Democratic"</span>))</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> partition <span class="kw">in</span> pa_chain.with_progress_bar()</span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> data.boxplot(positions<span class="op">=</span><span class="bu">range</span>(<span class="bu">len</span>(data.columns)))</span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>plt.plot(data.iloc[<span class="dv">0</span>], <span class="st">"ro"</span>)</span>
-<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="68e520d0" class="cell" data-execution_count="29">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tqdm</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pandas.DataFrame(</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">sorted</span>(partition[<span class="st">"SEN12"</span>].percents(<span class="st">"Democratic"</span>))</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> partition <span class="kw">in</span> pa_chain.with_progress_bar()</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> data.boxplot(positions<span class="op">=</span><span class="bu">range</span>(<span class="bu">len</span>(data.columns)))</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>plt.plot(data.iloc[<span class="dv">0</span>], <span class="st">"ro"</span>)</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"2301215d0ccd4ccdb128ec3c08445396","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"489a5ed037ed4d429c31900dc4e949f8","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 <div class="cell-output cell-output-display">
@@ -1389,7 +1386,7 @@ RangeIndex(start=0, stop=151, step=1)</code></pre>
 </ol>
 </section></div></main> <!-- /main -->
 <script type="application/vnd.jupyter.widget-state+json">
-{"state":{"1f6a87edda0f425e97081c38015a15cc":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HTMLView","description":"","description_allow_html":false,"layout":"IPY_MODEL_c592b50ddd6149d490d163981a067f11","placeholder":"​","style":"IPY_MODEL_aab6f50d3560407190a6f56cbaa5897a","tabbable":null,"tooltip":null,"value":"100%"}},"2301215d0ccd4ccdb128ec3c08445396":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HBoxModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HBoxModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HBoxView","box_style":"","children":["IPY_MODEL_1f6a87edda0f425e97081c38015a15cc","IPY_MODEL_e4da63bf617a4bad848c80fa27ee3be4","IPY_MODEL_8bcd91259c24408e9720ff93266102b9"],"layout":"IPY_MODEL_c68664d2c5c940f98e45c4a698a0e88b","tabbable":null,"tooltip":null}},"87990de686b646c5af492035041a8c9b":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"8bcd91259c24408e9720ff93266102b9":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HTMLView","description":"","description_allow_html":false,"layout":"IPY_MODEL_87990de686b646c5af492035041a8c9b","placeholder":"​","style":"IPY_MODEL_96d49f805aa04a01a97e5d9f4e946a0f","tabbable":null,"tooltip":null,"value":" 40/40 [00:00&lt;00:00, 453.74it/s]"}},"96d49f805aa04a01a97e5d9f4e946a0f":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","background":null,"description_width":"","font_size":null,"text_color":null}},"aab6f50d3560407190a6f56cbaa5897a":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","background":null,"description_width":"","font_size":null,"text_color":null}},"c592b50ddd6149d490d163981a067f11":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"c68664d2c5c940f98e45c4a698a0e88b":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"c7f87da10cf74abc871eb3d6d4f2f53f":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"e4da63bf617a4bad848c80fa27ee3be4":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"FloatProgressModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"FloatProgressModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"ProgressView","bar_style":"success","description":"","description_allow_html":false,"layout":"IPY_MODEL_c7f87da10cf74abc871eb3d6d4f2f53f","max":40,"min":0,"orientation":"horizontal","style":"IPY_MODEL_f9641fedaee24fe98226eeca3f185700","tabbable":null,"tooltip":null,"value":40}},"f9641fedaee24fe98226eeca3f185700":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"ProgressStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"ProgressStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","bar_color":null,"description_width":""}}},"version_major":2,"version_minor":0}
+{"state":{"0dfcc694bc744214b767b229f9bffe34":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"0f73f802819b42fabff1273826647778":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"31846f399c3f4038bd9062737652ab34":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"FloatProgressModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"FloatProgressModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"ProgressView","bar_style":"success","description":"","description_allow_html":false,"layout":"IPY_MODEL_655ab5948a09414fbbbde7d2b7bfe723","max":40,"min":0,"orientation":"horizontal","style":"IPY_MODEL_606cdde5edbe4458a5f34c6ec5b3b181","tabbable":null,"tooltip":null,"value":40}},"37400aff3a844e408bf9491ba54547a2":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"489a5ed037ed4d429c31900dc4e949f8":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HBoxModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HBoxModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HBoxView","box_style":"","children":["IPY_MODEL_ba9e721e51144c1fb475823323f695b6","IPY_MODEL_31846f399c3f4038bd9062737652ab34","IPY_MODEL_cbd0f7d49367495a98e5349f3d335b71"],"layout":"IPY_MODEL_0f73f802819b42fabff1273826647778","tabbable":null,"tooltip":null}},"4be5743224f8436cbb7fd3c1cc5c8d65":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","background":null,"description_width":"","font_size":null,"text_color":null}},"606cdde5edbe4458a5f34c6ec5b3b181":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"ProgressStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"ProgressStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","bar_color":null,"description_width":""}},"655ab5948a09414fbbbde7d2b7bfe723":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"7f367df82cc043cf854dc0f3a62a4554":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","background":null,"description_width":"","font_size":null,"text_color":null}},"ba9e721e51144c1fb475823323f695b6":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HTMLView","description":"","description_allow_html":false,"layout":"IPY_MODEL_0dfcc694bc744214b767b229f9bffe34","placeholder":"​","style":"IPY_MODEL_4be5743224f8436cbb7fd3c1cc5c8d65","tabbable":null,"tooltip":null,"value":"100%"}},"cbd0f7d49367495a98e5349f3d335b71":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"HTMLModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"HTMLModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"HTMLView","description":"","description_allow_html":false,"layout":"IPY_MODEL_37400aff3a844e408bf9491ba54547a2","placeholder":"​","style":"IPY_MODEL_7f367df82cc043cf854dc0f3a62a4554","tabbable":null,"tooltip":null,"value":" 40/40 [00:00&lt;00:00, 747.67it/s]"}}},"version_major":2,"version_minor":0}
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1442,13 +1439,14 @@ RangeIndex(start=0, stop=151, step=1)</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
