@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Julia Laney">
-<meta name="dcterms.date" content="2026-10-07">
+<meta name="dcterms.date" content="2026-10-21">
 
-<title>Stage 2: Initial Data Exploration – SDS316 - Fall 2026</title>
+<title>Stage 2: Analyzing Data &amp; Scaffolding the Report – SDS316 - Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -207,17 +207,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#wa-state-police-social-spending" id="toc-wa-state-police-social-spending" class="nav-link active" data-scroll-target="#wa-state-police-social-spending">WA State Police &amp; Social Spending</a>
-  <ul class="collapse">
-  <li><a href="#project-stage-2" id="toc-project-stage-2" class="nav-link" data-scroll-target="#project-stage-2">Project Stage 2</a>
-  <ul class="collapse">
-  <li><a href="#research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending" id="toc-research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending" class="nav-link" data-scroll-target="#research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending">Research question: How does King County allocate its resources between police spending and social spending?</a></li>
-  </ul></li>
-  <li><a href="#how-should-i-rigorously-define-police-spending-and-social-spending" id="toc-how-should-i-rigorously-define-police-spending-and-social-spending" class="nav-link" data-scroll-target="#how-should-i-rigorously-define-police-spending-and-social-spending">How should I rigorously define “police spending” and “social spending”?</a></li>
-  <li><a href="#what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category" id="toc-what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category" class="nav-link" data-scroll-target="#what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category">What are the major spending categories? How can I classify each row of data into a category?</a></li>
-  <li><a href="#what-spending-category-did-king-county-spend-the-most-on-in-2025" id="toc-what-spending-category-did-king-county-spend-the-most-on-in-2025" class="nav-link" data-scroll-target="#what-spending-category-did-king-county-spend-the-most-on-in-2025">What spending category did King County spend the most on in 2025?</a></li>
-  <li><a href="#is-this-data-relevant-to-my-project" id="toc-is-this-data-relevant-to-my-project" class="nav-link" data-scroll-target="#is-this-data-relevant-to-my-project">Is this data relevant to my project?</a></li>
-  </ul></li>
+  <li><a href="#how-many-offenses-were-logged-in-each-county-in-2025" id="toc-how-many-offenses-were-logged-in-each-county-in-2025" class="nav-link active" data-scroll-target="#how-many-offenses-were-logged-in-each-county-in-2025">1. How many offenses were logged in each county in 2025?</a></li>
+  <li><a href="#how-many-offenses-were-violent-and-how-many-were-nonviolent" id="toc-how-many-offenses-were-violent-and-how-many-were-nonviolent" class="nav-link" data-scroll-target="#how-many-offenses-were-violent-and-how-many-were-nonviolent">2. How many offenses were violent and how many were nonviolent?</a></li>
+  <li><a href="#how-much-do-washington-state-counties-spend-on-law-enforcement-activities-how-much-do-counties-spend-on-social-services" id="toc-how-much-do-washington-state-counties-spend-on-law-enforcement-activities-how-much-do-counties-spend-on-social-services" class="nav-link" data-scroll-target="#how-much-do-washington-state-counties-spend-on-law-enforcement-activities-how-much-do-counties-spend-on-social-services">3. How much do Washington state counties spend on law enforcement activities? How much do counties spend on social services?</a></li>
+  <li><a href="#do-counties-spend-more-on-law-enforcement-activities-or-social-services-on-average" id="toc-do-counties-spend-more-on-law-enforcement-activities-or-social-services-on-average" class="nav-link" data-scroll-target="#do-counties-spend-more-on-law-enforcement-activities-or-social-services-on-average">4. Do counties spend more on law enforcement activities or social services, on average?</a></li>
+  <li><a href="#do-counties-with-higher-police-spending-have-more-offenses" id="toc-do-counties-with-higher-police-spending-have-more-offenses" class="nav-link" data-scroll-target="#do-counties-with-higher-police-spending-have-more-offenses">5. Do counties with higher police spending have more offenses?</a></li>
+  <li><a href="#whats-the-crime-rate-in-each-washington-state-county" id="toc-whats-the-crime-rate-in-each-washington-state-county" class="nav-link" data-scroll-target="#whats-the-crime-rate-in-each-washington-state-county">6. What’s the crime rate in each Washington state county?</a></li>
+  <li><a href="#do-counties-with-higher-crime-rates-have-more-law-enforcement-spending" id="toc-do-counties-with-higher-crime-rates-have-more-law-enforcement-spending" class="nav-link" data-scroll-target="#do-counties-with-higher-crime-rates-have-more-law-enforcement-spending">7. Do counties with higher crime rates have more law enforcement spending?</a></li>
+  <li><a href="#do-counties-with-higher-crime-rates-have-more-social-spending" id="toc-do-counties-with-higher-crime-rates-have-more-social-spending" class="nav-link" data-scroll-target="#do-counties-with-higher-crime-rates-have-more-social-spending">Do counties with higher crime rates have more social spending?</a></li>
+  <li><a href="#do-counties-with-higher-law-enforcement-spending-have-lower-violent-crime-rates" id="toc-do-counties-with-higher-law-enforcement-spending-have-lower-violent-crime-rates" class="nav-link" data-scroll-target="#do-counties-with-higher-law-enforcement-spending-have-lower-violent-crime-rates">8. Do counties with higher law enforcement spending have lower violent crime rates?</a></li>
+  <li><a href="#do-counties-with-higher-social-spending-have-lower-violent-crime-rates" id="toc-do-counties-with-higher-social-spending-have-lower-violent-crime-rates" class="nav-link" data-scroll-target="#do-counties-with-higher-social-spending-have-lower-violent-crime-rates">Do counties with higher social spending have lower violent crime rates?</a></li>
   </ul>
 </nav>
     </div>
@@ -226,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stage 2: Initial Data Exploration</h1>
+<h1 class="title">Stage 2: Analyzing Data &amp; Scaffolding the Report</h1>
 </div>
 
 
@@ -243,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 7, 2026</p>
+      <p class="date">October 21, 2026</p>
     </div>
   </div>
   
@@ -255,266 +254,394 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="wa-state-police-social-spending" class="level1">
-<h1>WA State Police &amp; Social Spending</h1>
-<section id="project-stage-2" class="level2">
-<h2 class="anchored" data-anchor-id="project-stage-2">Project Stage 2</h2>
-<section id="research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending" class="level3">
-<h3 class="anchored" data-anchor-id="research-question-how-does-king-county-allocate-its-resources-between-police-spending-and-social-spending">Research question: How does King County allocate its resources between police spending and social spending?</h3>
-<p>Initially, I want to explore the dataset containing Washington state fiscal information. To simplify this exploration, I am looking at just the fiscal year 2025.</p>
-<div id="7b451763" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#python cell = CMD Shift I</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#importing dataset containing fiscal info by entity</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> here(<span class="st">'projects/wa-state-police-social-spending/_data/OSTAllEntity.csv'</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(file_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>I am using three datasets to explore my research questions about spending and crime rates in Washington state counties.</p>
+<section id="how-many-offenses-were-logged-in-each-county-in-2025" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-offenses-were-logged-in-each-county-in-2025">1. How many offenses were logged in each county in 2025?</h3>
+<div id="dc553422" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#dependencies</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#importing crime dataset</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> here(<span class="st">'projects/wa-state-police-social-spending/_data/wa_crime_2025.csv'</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>crime_2025 <span class="op">=</span> pd.read_csv(file_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="752edc5a" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#I want to look at just the 2025 fiscal year for now</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#the data included a space behind each year</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"FiscalYear"</span>] <span class="op">=</span> df[<span class="st">"FiscalYear"</span>].<span class="bu">str</span>.strip()</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df_2025 <span class="op">=</span> df[df[<span class="st">"FiscalYear"</span>] <span class="op">==</span> <span class="st">"FY 2025"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>‘crime_2025’ is a dataset containing observations of all offenses logged by every police department in Washington in 2025. Each offense also notes the county corresponding to the department that logged it. I want to sum the number of offenses by county.</p>
+<div id="39f23929" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>crime_2025.columns.tolist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>['ORI',
+ 'County',
+ 'Agency',
+ 'Reference Number',
+ 'Report Date',
+ 'Victim',
+ 'Offense',
+ 'Location']</code></pre>
 </div>
+</div>
+<div id="d195af71" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#cleaning </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#dropping columns I'm not interested in</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>crime_2025_clean <span class="op">=</span> crime_2025.drop(columns<span class="op">=</span>[<span class="st">"Reference Number"</span>, <span class="st">"Victim"</span>, <span class="st">"ORI"</span>, <span class="st">"Location"</span>, <span class="st">"Agency"</span>])</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#remove caps lock</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>crime_2025_clean[<span class="st">"County"</span>] <span class="op">=</span> crime_2025_clean[<span class="st">"County"</span>].<span class="bu">str</span>.title()</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#let's get total counts of the number of the offenses in each county in 2025</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>county_crime_2025 <span class="op">=</span> (crime_2025_clean</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"County"</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    .size()</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    .reset_index(name<span class="op">=</span><span class="st">"Total Offenses"</span>))</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">#there's a county listed in crime called "state agency" I am dropping before joining</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>county_crime_2025 <span class="op">=</span> county_crime_2025[county_crime_2025[<span class="st">"County"</span>] <span class="op">!=</span> <span class="st">"State Agency"</span>]</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">#county_crime_2025 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I choose to drop a column called State Agency, which listed 620 offenses in 2025. After some brief research, I have not been able to determine what State Agency means in this context, but I suspect those may be offenses logged by the Washington State Patrol. Since I am looking at counties specifically, and I do not have spending data for “State Agency”, I choose to drop this column.</p>
 </section>
+<section id="how-many-offenses-were-violent-and-how-many-were-nonviolent" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-offenses-were-violent-and-how-many-were-nonviolent">2. How many offenses were violent and how many were nonviolent?</h3>
+<p>Now I’m going to use the ‘crime_2025_clean’ data that lists all offenses to sum by violent and nonviolent crime.</p>
+<div id="5ebb026c" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#let's see all of the offenses</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>crime_2025_clean[<span class="st">"Offense"</span>].unique()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#now I'll divide based on FBI UCR definitions of violent &amp; other crime</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>violent_offenses <span class="op">=</span> [</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Murder Non Negligent Manslaughter"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rape"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Robbery"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Aggravated Assault"</span>]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">#sorting into violent and other</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>crime_2025_clean[<span class="st">"Crime Type"</span>] <span class="op">=</span> np.where(</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    crime_2025_clean[<span class="st">"Offense"</span>].isin(violent_offenses),</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Violent"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Other"</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co">#sum types of crime by county</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>county_crime_type <span class="op">=</span> (crime_2025_clean</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    .groupby([<span class="st">"County"</span>, <span class="st">"Crime Type"</span>])</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    .size()</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    .unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    .reset_index())</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co">#see violent, other, and total all in one df</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>county_crime_type[<span class="st">"Total Offenses"</span>] <span class="op">=</span> (</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    county_crime_type[<span class="st">"Violent"</span>] <span class="op">+</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    county_crime_type[<span class="st">"Other"</span>])</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">#drop 'State Agency' in this df too</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>county_crime_type <span class="op">=</span> county_crime_type[county_crime_type[<span class="st">"County"</span>] <span class="op">!=</span> <span class="st">"State Agency"</span>]</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co">#county_crime_type</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Deciding how to define “violent crime” in this case was difficult because the offenses listed in this dataset are not specific. I initially wanted to use Washington state law’s definition of a violent offense, but it defines violent crime by degree. For example, rape in the first degree is classified as a violent offense but rape in the second degree is not (<a href="https://app.leg.wa.gov/rcw/default.aspx?cite=9.94A.030">Source</a>). My data simply lists ‘Rape’, so I don’t feel that I have the ability use the Washington state legal definition without proper specification. I insteaed defined violent crime using the common crime statistics defintion, which is based on the FBI’s Uniform Crime Reporting defintion. UCR lists the following as violent offenses (no matter the degree): murder and nonnegligent manslaughter, rape, robbery, and aggravated assault. I choose to label the categories “Violent” and “Other” because crimes that don’t fall into the FBI’s definition of violent crime are not necessarily nonviolent.</p>
 </section>
-<section id="how-should-i-rigorously-define-police-spending-and-social-spending" class="level2">
-<h2 class="anchored" data-anchor-id="how-should-i-rigorously-define-police-spending-and-social-spending">How should I rigorously define “police spending” and “social spending”?</h2>
-<p>After just visually looking through some of the data, I’m seeing that a lot of spending items in this data are for municipal governments to support local law enforcement, courts, and crime prevention. This is making me consider that “police spending” may be a narrow term for this project, though I don’t think I should expand this term to “criminal justice spending”. A better term for this type of spending is something I am thinking about moving forward.</p>
-<p>I used King County to obtain the spending items used in the mapping process because it is the largest county per capita and includes the city of Seattle. I figured it would likely have the most spending items, so when I applied the mapping to other counties, it would (hopefully) include all possible items.</p>
-</section>
-<section id="what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category" class="level2">
-<h2 class="anchored" data-anchor-id="what-are-the-major-spending-categories-how-can-i-classify-each-row-of-data-into-a-category">What are the major spending categories? How can I classify each row of data into a category?</h2>
-<div id="683fa933" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#now I want to look at spending categories</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#using King county because it's the largest county in the state, and I noticed it had the most spending categories</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df_2025[df_2025[<span class="st">"EntityTitle1"</span>] <span class="op">==</span> <span class="st">"King County"</span>][<span class="st">"TaxTitle4"</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>&lt;StringArray&gt;
-[                                                                       'County Arterial Road Preservation',
-                                               'County Auditor Historical Document Preservation Assistance',
-                                                                           'County Autopsy Cost Assistance',
-                                                                       'County Criminal Justice Assistance',
-                                                                        'County DUI Enforcement Assistance',
-                                        'County Elected Prosecuting Attorney Salaries - State Contribution',
-                                                             'County Juvenile Crime Enforcement Assistance',
-                                                                 'County Legal Financial Obligation Grants',
-                                   'County Superior Court Judge Salaries and Benefits - State Contribution',
-                                                      'Court Appointed Special Advocate Coordinator Grants',
-                                                                             'Court Interpreter Assistance',
-                                        'District and Municipal Court Judges Salaries - State Contribution',
-                                                             'Family and Juvenile Court Improvement Grants',
-                                                                     'Federal Flood Control Lease Payments',
- 'Federal Secure Rural Schools and Community Self-Determination Act Fund  - County Roads or Public Schools',
-                  'Law Enforcement Officers and Firefighters Retirement System - Plan 2 State Contribution',
-                                                                             'Leasehold Excise Tax Sharing',
-                                                                                'Liquor Excise Tax Sharing',
-                                                                                   'Liquor Profits Sharing',
-                                                                                     'Marijuana Excise Tax',
-                                                       'Motor Vehicle Fuel Tax Additional Sharing - County',
-                                                                  'Motor Vehicle Fuel Tax Sharing - County',
-                                                       'Multimodal Transportation Account Sharing - County',
-                                                                           'Parents Representation Program',
-                                                                        'Public Defense Improvement Grants',
-                                                            'Public Utility District Privilege Tax Sharing',
-                                            'Runaway and At-Risk Youth (Becca) County Juvenile Court Costs',
-                                                                                'State Lodging Tax Sharing',
-        'State Payments in Lieu of Taxes - Natural Area Preserves and Natural Resources Conservation Areas',
-                                                                  'State Payments of Deferred Property Tax',
-                                                                           'State Vessel Registration Fees',
-                                                        'Streamlined Sales and Use Tax Mitigation Payments',
-                                                                                'Timber Excise Tax Sharing']
-Length: 33, dtype: str</code></pre>
+<section id="how-much-do-washington-state-counties-spend-on-law-enforcement-activities-how-much-do-counties-spend-on-social-services" class="level3">
+<h3 class="anchored" data-anchor-id="how-much-do-washington-state-counties-spend-on-law-enforcement-activities-how-much-do-counties-spend-on-social-services">3. How much do Washington state counties spend on law enforcement activities? How much do counties spend on social services?</h3>
+<div id="b5e13a5b" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>file_lawenf <span class="op">=</span> here(<span class="st">"projects/wa-state-police-social-spending/_data/fit_lawenforcementactivities.csv"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>fit_lawenforcement <span class="op">=</span> pd.read_csv(file_lawenf, skiprows<span class="op">=</span><span class="dv">6</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>file_social <span class="op">=</span> here(<span class="st">"projects/wa-state-police-social-spending/_data/fit_socialservices.csv"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>fit_social <span class="op">=</span> pd.read_csv(file_social, skiprows<span class="op">=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>Looking at the spending categories, I’ll sort each into police/law enforcement spending, criminal justice legal system spending, social spending, and other spending by making a new column “SpendingCategory” in the 2025 dataframe. A portion of spending goes to courts, which I don’t think should be included as police/law enforcement spending. For example, one spending item is judges’ salaries, this shouldn’t be included in police spending. This goes back to my earlier note about how I need to define “police/law enforcement” spending.</p>
-<div id="f94d1c71" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#creating a new column with 3 categories of spending using a map</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>category_map <span class="op">=</span> {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Arterial Road Preservation"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Auditor Historical Document Preservation Assistance"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Autopsy Cost Assistance"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Criminal Justice Assistance"</span>: <span class="st">"Criminal Legal System"</span>,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County DUI Enforcement Assistance"</span>: <span class="st">"Police/Law Enforcement"</span>,</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Elected Prosecuting Attorney Salaries - State Contribution"</span>: <span class="st">"Criminal Legal System"</span>,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Juvenile Crime Enforcement Assistance"</span>: <span class="st">"Police/Law Enforcement"</span>,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Legal Financial Obligation Grants"</span>: <span class="st">"Criminal Legal System"</span>,</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"County Superior Court Judge Salaries and Benefits - State Contribution"</span>: <span class="st">"Criminal Legal System"</span>,</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Court Appointed Special Advocate Coordinator Grants"</span>: <span class="st">"Social"</span>,</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Court Interpreter Assistance"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"District and Municipal Court Judges Salaries - State Contribution"</span>: <span class="st">"Criminal Legal System"</span>,</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Family and Juvenile Court Improvement Grants"</span>: <span class="st">"Social"</span>,</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Federal Flood Control Lease Payments"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Federal Secure Rural Schools and Community Self-Determination Act Fund  - County Roads or Public Schools"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Law Enforcement Officers and Firefighters Retirement System - Plan 2 State Contribution"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Leasehold Excise Tax Sharing"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Liquor Excise Tax Sharing"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Liquor Profits Sharing"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Marijuana Excise Tax"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Motor Vehicle Fuel Tax Additional Sharing - County"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Motor Vehicle Fuel Tax Sharing - County"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Multimodal Transportation Account Sharing - County"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Parents Representation Program"</span>: <span class="st">"Social"</span>,</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Public Defense Improvement Grants"</span>: <span class="st">"Criminal Legal System"</span>,</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Public Utility District Privilege Tax Sharing"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Runaway and At-Risk Youth (Becca) County Juvenile Court Costs"</span>: <span class="st">"Social"</span>,</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State Lodging Tax Sharing"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State Payments in Lieu of Taxes - Natural Area Preserves and Natural Resources Conservation Areas"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State Payments of Deferred Property Tax"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State Vessel Registration Fees"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Streamlined Sales and Use Tax Mitigation Payments"</span>: <span class="st">"Other"</span>,</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Timber Excise Tax Sharing"</span>: <span class="st">"Other"</span></span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>df_2025[<span class="st">"SpendingCategory"</span>] <span class="op">=</span> df_2025[<span class="st">"TaxTitle4"</span>].<span class="bu">map</span>(category_map)</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="co">#let's check that this categorizing worked</span></span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>df_2025[[<span class="st">"EntityTitle1"</span>, <span class="st">"TaxTitle4"</span>, <span class="st">"Amount6"</span>, <span class="st">"SpendingCategory"</span>]] <span class="co">#it did!</span></span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co">#some missing values are present here because the first observations in the df correspond to Aberdeen (a city) and the cities and counties have some naming differences for the same spending items</span></span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_2025.head(n<span class="op">=</span><span class="dv">15</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    EntityTitle1                                          TaxTitle4  \
-7       Aberdeen      City Criminal Justice Assistance - High Crime   
-16      Aberdeen  City Criminal Justice Assistance - Innovative ...   
-25      Aberdeen      City Criminal Justice Assistance - Population   
-34      Aberdeen   City Criminal Justice Assistance - Violent Crime   
-43      Aberdeen                    City DUI Enforcement Assistance   
-52      Aberdeen                       Court Interpreter Assistance   
-61      Aberdeen                         Distressed City Assistance   
-70      Aberdeen                 Fire Insurance Premium Tax Sharing   
-79      Aberdeen  Law Enforcement Officers and Firefighters Reti...   
-88      Aberdeen                       Leasehold Excise Tax Sharing   
-97      Aberdeen                          Liquor Excise Tax Sharing   
-106     Aberdeen                             Liquor Profits Sharing   
-115     Aberdeen                               Marijuana Excise Tax   
-124     Aberdeen   Motor Vehicle Fuel Tax Additional Sharing - City   
-133     Aberdeen              Motor Vehicle Fuel Tax Sharing - City   
-
-    FiscalYear  Amount6 SpendingCategory  
-7      FY 2025   57,196              NaN  
-16     FY 2025   23,479              NaN  
-25     FY 2025    6,695              NaN  
-34     FY 2025      NaN              NaN  
-43     FY 2025    1,416              NaN  
-52     FY 2025    2,668            Other  
-61     FY 2025  136,561              NaN  
-70     FY 2025   67,097              NaN  
-79     FY 2025  322,111            Other  
-88     FY 2025   68,747            Other  
-97     FY 2025  107,387            Other  
-106    FY 2025  128,210            Other  
-115    FY 2025   50,988            Other  
-124    FY 2025   19,052              NaN  
-133    FY 2025  278,460              NaN  </code></pre>
-</div>
-</div>
-</section>
-<section id="what-spending-category-did-king-county-spend-the-most-on-in-2025" class="level2">
-<h2 class="anchored" data-anchor-id="what-spending-category-did-king-county-spend-the-most-on-in-2025">What spending category did King County spend the most on in 2025?</h2>
-<div id="0e9bb307" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#making a copy of the 2025 df looking just at King county</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_2025_king <span class="op">=</span> df_2025[df_2025[<span class="st">"EntityTitle1"</span>] <span class="op">==</span> <span class="st">"King County"</span>].copy()</span>
+<div id="cb98a744" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#sort into counties</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>fit_le_counties <span class="op">=</span> fit_lawenforcement[fit_lawenforcement[<span class="st">"Governments/$ Dollars"</span>].<span class="bu">str</span>.endswith(<span class="st">"County"</span>, na<span class="op">=</span><span class="va">False</span>)]</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_2025_king.head(n<span class="op">=</span><span class="dv">15</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      EntityTitle1                                          TaxTitle4  \
-18259  King County                  County Arterial Road Preservation   
-18268  King County  County Auditor Historical Document Preservatio...   
-18277  King County                     County Autopsy Cost Assistance   
-18286  King County                 County Criminal Justice Assistance   
-18295  King County                  County DUI Enforcement Assistance   
-18304  King County  County Elected Prosecuting Attorney Salaries -...   
-18313  King County       County Juvenile Crime Enforcement Assistance   
-18322  King County           County Legal Financial Obligation Grants   
-18331  King County  County Superior Court Judge Salaries and Benef...   
-18340  King County  Court Appointed Special Advocate Coordinator G...   
-18349  King County                       Court Interpreter Assistance   
-18358  King County  District and Municipal Court Judges Salaries -...   
-18367  King County       Family and Juvenile Court Improvement Grants   
-18376  King County               Federal Flood Control Lease Payments   
-18385  King County  Federal Secure Rural Schools and Community Sel...   
-
-      FiscalYear     Amount6        SpendingCategory  
-18259    FY 2025     593,092                   Other  
-18268    FY 2025     307,371                   Other  
-18277    FY 2025     748,469                   Other  
-18286    FY 2025  15,055,432   Criminal Legal System  
-18295    FY 2025     147,869  Police/Law Enforcement  
-18304    FY 2025     114,131   Criminal Legal System  
-18313    FY 2025      74,896  Police/Law Enforcement  
-18322    FY 2025     176,446   Criminal Legal System  
-18331    FY 2025   8,937,203   Criminal Legal System  
-18340    FY 2025     412,821                  Social  
-18349    FY 2025     994,562                   Other  
-18358    FY 2025     581,358   Criminal Legal System  
-18367    FY 2025     152,721                  Social  
-18376    FY 2025      51,757                   Other  
-18385    FY 2025   (356,652)                   Other  </code></pre>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#39 counties total in WA</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#len(fit_le_counties) #output is 39!</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#social services data</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>fit_social_counties <span class="op">=</span> fit_social[fit_social[<span class="st">"Governments/$ Dollars"</span>].<span class="bu">str</span>.endswith(<span class="st">"County"</span>, na<span class="op">=</span><span class="va">False</span>)]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#39 counties total in WA</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#len(fit_social_counties) #output is 39!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div id="c53e6b8d" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#cleaning dollar values in the data</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>fit_le_counties[<span class="st">"2025"</span>] <span class="op">=</span> (fit_le_counties[<span class="st">"2025"</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.replace(<span class="st">"$"</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.replace(<span class="st">","</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>fit_le_counties[<span class="st">"2025"</span>] <span class="op">=</span> pd.to_numeric(fit_le_counties[<span class="st">"2025"</span>], errors<span class="op">=</span><span class="st">"coerce"</span> ) <span class="co">#some unexpected values in the dollar column, so replacing these with NaN</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#cleaning dollar values in the data</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>fit_social_counties[<span class="st">"2025"</span>] <span class="op">=</span> (fit_social_counties[<span class="st">"2025"</span>]</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.replace(<span class="st">"$"</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.replace(<span class="st">","</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>fit_social_counties[<span class="st">"2025"</span>] <span class="op">=</span> pd.to_numeric(fit_social_counties[<span class="st">"2025"</span>], errors<span class="op">=</span><span class="st">"coerce"</span> ) <span class="co">#some unexpected values in the dollar column, so replacing these with NaN</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3733c58e" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#the integers in Amount6 were being treated as strings </span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#df_2025["Amount6"] = (df_2025["Amount6"].str.replace(",","").str.replace("(", "-")</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a> <span class="co">#   .str.replace(")", "").astype(float)) #the df used () to represent negative numbers</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#remaking df after cleaning Amount6</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>df_2025_king <span class="op">=</span> df_2025[df_2025[<span class="st">"EntityTitle1"</span>] <span class="op">==</span> <span class="st">"King County"</span>].copy()</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#finding the totals of each spending category</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>king_cat_totals <span class="op">=</span> (df_2025_king.groupby(<span class="st">"SpendingCategory"</span>)[<span class="st">"Amount6"</span>].<span class="bu">sum</span>())</span>
+<p>In the law enforcement spending dataset, law enforcement activities include police operations, traffic policing, administration, crime prevention, training, facilities, and property and evidence room. In the social spending dataset, social services include homeless services, mental health services, public safety services, chemical dependency services, welfare, child services, aging and disability services, veterans services, developmental disability services, and domestic violence services.</p>
+</section>
+<section id="do-counties-spend-more-on-law-enforcement-activities-or-social-services-on-average" class="level3">
+<h3 class="anchored" data-anchor-id="do-counties-spend-more-on-law-enforcement-activities-or-social-services-on-average">4. Do counties spend more on law enforcement activities or social services, on average?</h3>
+<div id="ce5078d4" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#dropping the columns that I don't want to be present in the eventual joined df</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>fit_le_counties <span class="op">=</span> fit_le_counties[[<span class="st">"Governments/$ Dollars"</span>, <span class="st">"2025"</span>]]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>fit_social_counties <span class="op">=</span> fit_social_counties[[<span class="st">"Governments/$ Dollars"</span>, <span class="st">"2025"</span>]]</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#these dataframes had a different name for the 'County' column</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>fit_le_counties <span class="op">=</span> fit_le_counties.rename(columns<span class="op">=</span>{</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Governments/$ Dollars"</span>: <span class="st">"County"</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2025"</span>: <span class="st">"Law Enforcement Spending"</span>})</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(king_cat_totals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>SpendingCategory
-Criminal Legal System     15,055,432114,131176,4468,937,203581,3581,219,718
-Other                     593,092307,371748,469994,56251,757(356,652)5,2...
-Police/Law Enforcement                                        147,86974,896
-Social                                       412,821152,7217,045,534926,062
-Name: Amount6, dtype: str</code></pre>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>fit_social_counties <span class="op">=</span> fit_social_counties.rename(columns<span class="op">=</span>{</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Governments/$ Dollars"</span>: <span class="st">"County"</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2025"</span>: <span class="st">"Social Spending"</span>})</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>fit_le_counties[<span class="st">"County"</span>] <span class="op">=</span> fit_le_counties[<span class="st">"County"</span>].<span class="bu">str</span>.replace(<span class="st">" County"</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>fit_social_counties[<span class="st">"County"</span>] <span class="op">=</span> fit_social_counties[<span class="st">"County"</span>].<span class="bu">str</span>.replace(<span class="st">" County"</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>spending <span class="op">=</span> fit_le_counties.merge(fit_social_counties,on<span class="op">=</span><span class="st">"County"</span>)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co">#spending[["Law Enforcement Spending", "Social Spending"]].mean()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>In 2025, Washington counties spent an average of $24,960,060 on law enforcement and $65,967,350 on social services.</p>
+<p>Now I am joining together the spending data, crime data, and population data.</p>
+<div id="1f723a30" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#population data</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>file_pop <span class="op">=</span> here(<span class="st">"projects/wa-state-police-social-spending/_data/populations.csv"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>population <span class="op">=</span> pd.read_csv(file_pop)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#only want county name</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>population[<span class="st">"County"</span>] <span class="op">=</span> population[<span class="st">"County"</span>].<span class="bu">str</span>.removeprefix(<span class="st">"."</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>population[<span class="st">"County"</span>] <span class="op">=</span> population[<span class="st">"County"</span>].<span class="bu">str</span>.replace(<span class="st">" County, Washington"</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#just 2025</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>population <span class="op">=</span> population[[<span class="st">"County"</span>, <span class="st">"2025"</span>]]</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">#rename year for clarity in joined df</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>population <span class="op">=</span> population.rename(columns<span class="op">=</span>{<span class="st">"2025"</span>: <span class="st">"2025 Population"</span>})</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">#removing comma and converting from string</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>population[<span class="st">"2025 Population"</span>] <span class="op">=</span> (population[<span class="st">"2025 Population"</span>].<span class="bu">str</span>.replace(<span class="st">","</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>population[<span class="st">"2025 Population"</span>] <span class="op">=</span> pd.to_numeric(population[<span class="st">"2025 Population"</span>], errors<span class="op">=</span><span class="st">"coerce"</span> )</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co">#population</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>These numbers look really off! After reading more about the source of this data, this appears to be showing money that Washington distributes to local governments through taxes, revenue sharing programs, and grants. I initially understood the data as budgetary information.</p>
-</section>
-<section id="is-this-data-relevant-to-my-project" class="level2">
-<h2 class="anchored" data-anchor-id="is-this-data-relevant-to-my-project">Is this data relevant to my project?</h2>
-<p>Maybe? This data doesn’t capture police spending vs.&nbsp;social spending but contains information about how much criminal justice funding each county receives from the state. This is not really a main point of my project but it could be a supplementary point.</p>
-<div id="8a7fe6a0" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#taking a look at pierce county</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df_2025_pierce <span class="op">=</span> df_2025[df_2025[<span class="st">"EntityTitle1"</span>] <span class="op">==</span> <span class="st">"Pierce County"</span>].copy()</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#same process I did for King</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>pierce_cat_totals <span class="op">=</span> (df_2025_pierce.groupby(<span class="st">"SpendingCategory"</span>)[<span class="st">"Amount6"</span>].<span class="bu">sum</span>())</span>
+<div id="7c21b93a" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#joining crime, spending, and population dfs</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>county_data_2025 <span class="op">=</span> (fit_le_counties</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    .merge(fit_social_counties, on<span class="op">=</span><span class="st">"County"</span>, how<span class="op">=</span><span class="st">"outer"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    .merge(county_crime_type, on<span class="op">=</span><span class="st">"County"</span>, how<span class="op">=</span><span class="st">"outer"</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    .merge(population, on<span class="op">=</span><span class="st">"County"</span>, how<span class="op">=</span><span class="st">"outer"</span>))</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pierce_cat_totals)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pierce_cat_totals[<span class="st">"Criminal Legal System"</span>]) <span class="co"># when I run this i get "6,520,247114,131113,9903,799,482180,919638,449" and then a TypeError in the next cell bc you can't divide a string by an int </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>SpendingCategory
-Criminal Legal System        6,520,247114,131113,9903,799,482180,919638,449
-Other                     912,976137,815404,834237,5491,424,9611,400,806...
-Police/Law Enforcement                                         64,04032,436
-Social                                       346,661151,2954,230,189708,291
-Name: Amount6, dtype: str
-6,520,247114,131113,9903,799,482180,919638,449</code></pre>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#county_data_2025</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#county_data_2025[county_data_2025.isna().any(axis=1)]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div id="576e2f1e" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#per capita funding</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#pierce_pc = pierce_cat_totals["Criminal Legal System"] / 946288</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#king_pc = king_cat_totals["Criminal Legal System"] / 2344939</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#print("Pierce County:", pierce_pc)</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#print("King County:", king_pc)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>In 2025, Pierce County received about $12.01 per capita in distributions related to the criminal legal system. King County received about $11.12 per capita in distributions related to the criminal legal system. It’s important to note that this is just state funding and not the counties’ own criminal legal system spending. I’m curious - is this difference an effect of each counties’ crime rates?</p>
-
-
+<p>Benton, Chelan, Grant, and Thurston Counties do not have spending data. This is consistent with the data source which explains that “These governments historically report in this dollar category, but have not filed or are currently editing their FY 2025 filing”. These counties will be excluded from analysis for now but hopefully can be included later.</p>
 </section>
+<section id="do-counties-with-higher-police-spending-have-more-offenses" class="level3">
+<h3 class="anchored" data-anchor-id="do-counties-with-higher-police-spending-have-more-offenses">5. Do counties with higher police spending have more offenses?</h3>
+<div id="670781d7" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#dropping the 4 counties with missing spending data</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> county_data_2025[[<span class="st">"Law Enforcement Spending"</span>, <span class="st">"Total Offenses"</span>]].dropna()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#making a scatterplot to represent law enforcement spending and total offenses</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> plot[<span class="st">"Law Enforcement Spending"</span>]</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> plot[<span class="st">"Total Offenses"</span>]</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">#line of best fit</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>m, b <span class="op">=</span> np.polyfit(x, y, <span class="dv">1</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.plot(x, m<span class="op">*</span>x <span class="op">+</span> b)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Law Enforcement Spending"</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Total Offenses"</span>)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Law Enforcement Spending and Total Offenses by Washington State County (2025)"</span>)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stage2_files/figure-html/cell-12-output-1.png" width="691" height="451" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This scatterplot shows a strong positive relationship between law enforcement spending and total offenses by county. This relationship can be explained by population differences.</p>
+</section>
+<section id="whats-the-crime-rate-in-each-washington-state-county" class="level3">
+<h3 class="anchored" data-anchor-id="whats-the-crime-rate-in-each-washington-state-county">6. What’s the crime rate in each Washington state county?</h3>
+<div id="b634e594" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#calculating crime rate (crime rate = numnber of crimes per 100k people)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>county_data_2025[<span class="st">"Offenses Per 100k (crime rate)"</span>] <span class="op">=</span> (county_data_2025[<span class="st">"Total Offenses"</span>] <span class="op">/</span> county_data_2025[<span class="st">"2025 Population"</span>]) <span class="op">*</span> <span class="dv">100000</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#county_data_2025</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#county_data_2025[["County", "Offenses Per 100k (crime rate)"]].sort_values("Offenses Per 100k (crime rate)", ascending=False)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Spokane, Garfield, and Benton counties have the highest crime rates. Crime rate captures the number of offenses per 100,000 people, calculated using population and number of total offenses.</p>
+</section>
+<section id="do-counties-with-higher-crime-rates-have-more-law-enforcement-spending" class="level3">
+<h3 class="anchored" data-anchor-id="do-counties-with-higher-crime-rates-have-more-law-enforcement-spending">7. Do counties with higher crime rates have more law enforcement spending?</h3>
+<div id="7ac624e9" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#per capita spending</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>county_data_2025[<span class="st">"Law Enforcement Spending Per Capita"</span>] <span class="op">=</span> (county_data_2025[<span class="st">"Law Enforcement Spending"</span>] <span class="op">/</span> county_data_2025[<span class="st">"2025 Population"</span>])</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>county_data_2025[<span class="st">"Social Spending Per Capita"</span>] <span class="op">=</span> (county_data_2025[<span class="st">"Social Spending"</span>] <span class="op">/</span> county_data_2025[<span class="st">"2025 Population"</span>])</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#county_data_2025</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="5ec454ec" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#scatterplot</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>plot2 <span class="op">=</span> county_data_2025[[<span class="st">"Offenses Per 100k (crime rate)"</span>, <span class="st">"Law Enforcement Spending Per Capita"</span>]].dropna()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> plot2[<span class="st">"Offenses Per 100k (crime rate)"</span>]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> plot2[<span class="st">"Law Enforcement Spending Per Capita"</span>]</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co">#line of best fit</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>m, b <span class="op">=</span> np.polyfit(x, y, <span class="dv">1</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>plt.plot(x, m<span class="op">*</span>x <span class="op">+</span> b)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Offenses per 100,000 People"</span>)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Law Enforcement Spending Per Capita"</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Crime Rate and Law Enforcement Spending by Washington State County (2025)"</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stage2_files/figure-html/cell-15-output-1.png" width="659" height="451" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>There is a weak relationship between crime rates and law enforcement spending per capita. The line of best fit is very slightly negatively sloped. Counties are widely dispersed around the line of best fit, which suggests that counties with higher crime rates do not always spend more per capita on law enforcement. Some counties stand out on this plot as they have high per capita law enforcement spending relative to the rest of the state’s counties.</p>
+<div id="29923a92" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#correlation coefficient</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>plot2[<span class="st">"Offenses Per 100k (crime rate)"</span>].corr(plot2[<span class="st">"Law Enforcement Spending Per Capita"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>np.float64(-0.03741767156195985)</code></pre>
+</div>
+</div>
+<p>The correlation coefficient between crime rate and law enforcement spending per capita is -0.037, meaning there’s essentially no linear relationship between these variables.</p>
+</section>
+<section id="do-counties-with-higher-crime-rates-have-more-social-spending" class="level3">
+<h3 class="anchored" data-anchor-id="do-counties-with-higher-crime-rates-have-more-social-spending">Do counties with higher crime rates have more social spending?</h3>
+<div id="afecb050" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#scatterplot</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>plot3 <span class="op">=</span> county_data_2025[[<span class="st">"Offenses Per 100k (crime rate)"</span>, <span class="st">"Social Spending Per Capita"</span>]].dropna()</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> plot3[<span class="st">"Offenses Per 100k (crime rate)"</span>]</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> plot3[<span class="st">"Social Spending Per Capita"</span>]</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co">#line of best fit</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>m, b <span class="op">=</span> np.polyfit(x, y, <span class="dv">1</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>plt.plot(x, m<span class="op">*</span>x <span class="op">+</span> b)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Offenses per 100,000 People"</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Social Spending Per Capita"</span>)</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Crime Rate and Social Spending by Washington State County (2025)"</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stage2_files/figure-html/cell-17-output-1.png" width="609" height="451" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>There is a negative relationship between crime rates and social spending per capita. The line of best fit is negatively sloped. Counties with higher crime rates appear to generally spend less per capita on social services. There is a lot of variation among counties which suggests that crime rates alone do not explain differences in social spending.</p>
+<div id="857bbf1b" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#correlation coefficient</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>plot3[<span class="st">"Offenses Per 100k (crime rate)"</span>].corr(plot3[<span class="st">"Social Spending Per Capita"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>np.float64(-0.22588718867005952)</code></pre>
+</div>
+</div>
+<p>The correlation coefficient between crime rate and law enforcement spending per capita is -0.226, meaning there’s a weak negative realtionship between the variables.</p>
+</section>
+<section id="do-counties-with-higher-law-enforcement-spending-have-lower-violent-crime-rates" class="level3">
+<h3 class="anchored" data-anchor-id="do-counties-with-higher-law-enforcement-spending-have-lower-violent-crime-rates">8. Do counties with higher law enforcement spending have lower violent crime rates?</h3>
+<div id="975ebfdf" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#calculating violent crime rate</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>county_data_2025[<span class="st">"Violent Offenses Per 100k (crime rate)"</span>] <span class="op">=</span> (county_data_2025[<span class="st">"Violent"</span>] <span class="op">/</span> county_data_2025[<span class="st">"2025 Population"</span>]) <span class="op">*</span> <span class="dv">100000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="bddc3594" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>plot4 <span class="op">=</span> county_data_2025[[<span class="st">"Law Enforcement Spending Per Capita"</span>, <span class="st">"Violent Offenses Per 100k (crime rate)"</span>]].dropna()</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> plot4[<span class="st">"Law Enforcement Spending Per Capita"</span>]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> plot4[<span class="st">"Violent Offenses Per 100k (crime rate)"</span>]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co">#line of best fit</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>m, b <span class="op">=</span> np.polyfit(x, y, <span class="dv">1</span>)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>plt.plot(x, m<span class="op">*</span>x <span class="op">+</span> b)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Law Enforcement Spending Per Capita"</span>)</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Violent Offenses per 100,000 People"</span>)</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Law Enforcement Spending and Violent Crime Rate by Washington State County (2025)"</span>)</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stage2_files/figure-html/cell-20-output-1.png" width="720" height="451" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>There is a positive relationship between law enforcement spending per capita and violent crime rates, which challenged my assumption that greater spending would be associated with lower violent crime. There is an extreme outlier in the upper right corner of the plot, which appears to be influencing the relationship.</p>
+<div id="88277d04" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#identify the outlier</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>county_data_2025.loc[county_data_2025[<span class="st">"Violent Offenses Per 100k (crime rate)"</span>].idxmax()]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<pre><code>County                                       Garfield
+Law Enforcement Spending                    1443127.0
+Social Spending                              170017.0
+Other                                             122
+Violent                                            30
+Total Offenses                                    152
+2025 Population                                  2416
+Offenses Per 100k (crime rate)            6291.390728
+Law Enforcement Spending Per Capita        597.320778
+Social Spending Per Capita                  70.371275
+Violent Offenses Per 100k (crime rate)    1241.721854
+Name: 11, dtype: object</code></pre>
+</div>
+</div>
+<p>The outlier is Garfield County, which happens to be the smallest county (by population) in Washington state. This exposes a limitation in my calculation of crime rate - a county with a small population will get a high crime rate even with very few offenses.</p>
+</section>
+<section id="do-counties-with-higher-social-spending-have-lower-violent-crime-rates" class="level3">
+<h3 class="anchored" data-anchor-id="do-counties-with-higher-social-spending-have-lower-violent-crime-rates">Do counties with higher social spending have lower violent crime rates?</h3>
+<div id="493b9629" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>plot5 <span class="op">=</span> county_data_2025[[<span class="st">"Social Spending Per Capita"</span>, <span class="st">"Violent Offenses Per 100k (crime rate)"</span>]].dropna()</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> plot5[<span class="st">"Social Spending Per Capita"</span>]</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> plot5[<span class="st">"Violent Offenses Per 100k (crime rate)"</span>]</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">#line of best fit</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>m, b <span class="op">=</span> np.polyfit(x, y, <span class="dv">1</span>)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>plt.plot(x, m<span class="op">*</span>x <span class="op">+</span> b)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Social Spending Per Capita"</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Violent Offenses per 100,000 People"</span>)</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Social Spending and Violent Crime Rate by Washington State County (2025)"</span>)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stage2_files/figure-html/cell-22-output-1.png" width="647" height="451" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This plot shows a slightly negative relationship between social spending per capita and violent crime rates, meaning higher social spending per capita is associated with a lower violent crime rate. Once again, Garfield County is a major outlier.</p>
+
+
 </section>
 
 </main> <!-- /main -->
