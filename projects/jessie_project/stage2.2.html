@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,16 +10,10 @@
 
 <title>Initial Questions – SDS316 - Fall 2026</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -65,7 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -78,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5d8dc168fd7aa616d26decb29c56e770.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
@@ -267,8 +261,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="dataset" class="level3">
 <h3 class="anchored" data-anchor-id="dataset">Dataset</h3>
 <p>The dataset is <a href="https://data.census.gov/table/DECENNIALDHC2020.P3?q=P3&amp;g=040XX00US12$1600000&amp;d=DEC+Demographic+and+Housing+Characteristics">Florida Cities</a>. It is stored in the <code>data</code> folder. I also have another dataset to combine with it. Last time, we saw that Texas and Florida have the most amount of prisons, with Florida with the most federal prisons. So that’s why I chose to get demographics for Florida.</p>
-<div id="41abd137" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div id="8e03e1e7" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here <span class="co"># this helps us navigate tricky path stuff between local runs and quarto builds</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -281,12 +275,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>file_path2 <span class="op">=</span> here(<span class="st">"projects/jessie_project/data/florida_cities.csv"</span>)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_csv(file_path2, sep<span class="op">=</span><span class="st">','</span>) </span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>df1.head(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>df1.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -315,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
+<td data-quarto-table-cell-role="th">0</td>
 <td>Total:</td>
 <td>398</td>
 <td>10,574</td>
@@ -339,7 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1,737</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
+<td data-quarto-table-cell-role="th">1</td>
 <td>White alone</td>
 <td>142</td>
 <td>6,518</td>
@@ -363,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>704</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
+<td data-quarto-table-cell-role="th">2</td>
 <td>Black or African American alone</td>
 <td>9</td>
 <td>2,250</td>
@@ -387,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>51</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
+<td data-quarto-table-cell-role="th">3</td>
 <td>American Indian and Alaska Native alone</td>
 <td>10</td>
 <td>59</td>
@@ -411,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>35</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
+<td data-quarto-table-cell-role="th">4</td>
 <td>Asian alone</td>
 <td>8</td>
 <td>271</td>
@@ -435,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>8</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">5</th>
+<td data-quarto-table-cell-role="th">5</td>
 <td>Native Hawaiian and Other Pacific Islander...</td>
 <td>0</td>
 <td>5</td>
@@ -459,7 +453,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>2</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">6</th>
+<td data-quarto-table-cell-role="th">6</td>
 <td>Some Other Race alone</td>
 <td>79</td>
 <td>423</td>
@@ -483,7 +477,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>435</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">7</th>
+<td data-quarto-table-cell-role="th">7</td>
 <td>Two or More Races</td>
 <td>150</td>
 <td>1,048</td>
@@ -517,8 +511,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="wrangling" class="level3">
 <h3 class="anchored" data-anchor-id="wrangling">Wrangling</h3>
 <p>Let’s wrangle the new data to be useful for us.</p>
-<div id="c2f07725" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_new <span class="op">=</span> df1.transpose()</span>
+<div id="c7afa83a" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_new <span class="op">=</span> df1.transpose()</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -529,12 +523,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>df_new.rename(columns <span class="op">=</span> {<span class="st">"index"</span>: <span class="st">"city"</span>}, </span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>          inplace <span class="op">=</span> <span class="va">True</span>)</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>df_new.head(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>df_new.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">Label (Grouping)</th>
@@ -551,7 +545,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
+<td data-quarto-table-cell-role="th">0</td>
 <td>Acacia Villas CDP, Florida</td>
 <td>398</td>
 <td>142</td>
@@ -563,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>150</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
+<td data-quarto-table-cell-role="th">1</td>
 <td>Alachua city, Florida</td>
 <td>10,574</td>
 <td>6,518</td>
@@ -575,7 +569,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1,048</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
+<td data-quarto-table-cell-role="th">2</td>
 <td>Alafaya CDP, Florida</td>
 <td>92,452</td>
 <td>43,346</td>
@@ -587,7 +581,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20,318</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
+<td data-quarto-table-cell-role="th">3</td>
 <td>Alford town, Florida</td>
 <td>484</td>
 <td>414</td>
@@ -599,7 +593,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>31</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
+<td data-quarto-table-cell-role="th">4</td>
 <td>Allentown CDP, Florida</td>
 <td>1,023</td>
 <td>871</td>
@@ -611,7 +605,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>100</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">5</th>
+<td data-quarto-table-cell-role="th">5</td>
 <td>Altamonte Springs city, Florida</td>
 <td>46,231</td>
 <td>23,889</td>
@@ -623,7 +617,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>8,410</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">6</th>
+<td data-quarto-table-cell-role="th">6</td>
 <td>Altha town, Florida</td>
 <td>496</td>
 <td>453</td>
@@ -635,7 +629,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">7</th>
+<td data-quarto-table-cell-role="th">7</td>
 <td>Altoona CDP, Florida</td>
 <td>98</td>
 <td>87</td>
@@ -647,7 +641,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>10</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">8</th>
+<td data-quarto-table-cell-role="th">8</td>
 <td>Alturas CDP, Florida</td>
 <td>4,084</td>
 <td>3,313</td>
@@ -659,7 +653,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>379</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">9</th>
+<td data-quarto-table-cell-role="th">9</td>
 <td>Alva CDP, Florida</td>
 <td>2,725</td>
 <td>2,469</td>
@@ -681,15 +675,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
 <p>My first research question is <em>“What are the demographics of each location?”</em> Which has a very wide scope. And so, I am focusing on Florida.</p>
 <p>Let’s adjust the old data.</p>
-<div id="fa1cb6f9" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> df[df[<span class="st">"stateshortname"</span>] <span class="op">!=</span> <span class="st">"FL"</span>].index</span>
+<div id="a50b09ec" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> df[df[<span class="st">"stateshortname"</span>] <span class="op">!=</span> <span class="st">"FL"</span>].index</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df.drop(rows, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df_new.head(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df_new.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">Label (Grouping)</th>
@@ -706,7 +700,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
+<td data-quarto-table-cell-role="th">0</td>
 <td>Acacia Villas CDP, Florida</td>
 <td>398</td>
 <td>142</td>
@@ -718,7 +712,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>150</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
+<td data-quarto-table-cell-role="th">1</td>
 <td>Alachua city, Florida</td>
 <td>10,574</td>
 <td>6,518</td>
@@ -730,7 +724,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1,048</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
+<td data-quarto-table-cell-role="th">2</td>
 <td>Alafaya CDP, Florida</td>
 <td>92,452</td>
 <td>43,346</td>
@@ -742,7 +736,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20,318</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
+<td data-quarto-table-cell-role="th">3</td>
 <td>Alford town, Florida</td>
 <td>484</td>
 <td>414</td>
@@ -754,7 +748,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>31</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
+<td data-quarto-table-cell-role="th">4</td>
 <td>Allentown CDP, Florida</td>
 <td>1,023</td>
 <td>871</td>
@@ -766,7 +760,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>100</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">5</th>
+<td data-quarto-table-cell-role="th">5</td>
 <td>Altamonte Springs city, Florida</td>
 <td>46,231</td>
 <td>23,889</td>
@@ -778,7 +772,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>8,410</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">6</th>
+<td data-quarto-table-cell-role="th">6</td>
 <td>Altha town, Florida</td>
 <td>496</td>
 <td>453</td>
@@ -790,7 +784,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">7</th>
+<td data-quarto-table-cell-role="th">7</td>
 <td>Altoona CDP, Florida</td>
 <td>98</td>
 <td>87</td>
@@ -802,7 +796,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>10</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">8</th>
+<td data-quarto-table-cell-role="th">8</td>
 <td>Alturas CDP, Florida</td>
 <td>4,084</td>
 <td>3,313</td>
@@ -814,7 +808,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>379</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">9</th>
+<td data-quarto-table-cell-role="th">9</td>
 <td>Alva CDP, Florida</td>
 <td>2,725</td>
 <td>2,469</td>
@@ -835,8 +829,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-are-the-demographics-of-florida" class="level3">
 <h3 class="anchored" data-anchor-id="what-are-the-demographics-of-florida">What are the demographics of Florida?</h3>
 <p>Let’s focus on Black people for now, as they are the most affected by the prison system.</p>
-<div id="7c37a222" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_new.iloc[:, <span class="dv">3</span>] <span class="op">=</span> df_new.iloc[:, <span class="dv">3</span>].<span class="bu">str</span>.replace(<span class="st">','</span>, <span class="st">''</span>)</span>
+<div id="e43fdead" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_new.iloc[:, <span class="dv">3</span>] <span class="op">=</span> df_new.iloc[:, <span class="dv">3</span>].<span class="bu">str</span>.replace(<span class="st">','</span>, <span class="st">''</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(df_new.iloc[:, <span class="dv">3</span>])):</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">type</span>(df_new.iloc[i, <span class="dv">3</span>]) <span class="op">==</span> <span class="bu">float</span>:</span>
@@ -856,7 +850,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>total_florida <span class="op">=</span> np.nansum(df_new.iloc[:, <span class="dv">1</span>])</span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>total_b<span class="op">/</span>total_florida</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>total_b<span class="op">/</span>total_florida</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>0.1677891779207831</code></pre>
 </div>
@@ -865,8 +859,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="what-cities-in-florida-have-prisons" class="level3">
 <h3 class="anchored" data-anchor-id="what-cities-in-florida-have-prisons">What Cities in Florida have prisons?</h3>
-<div id="6e0b0a4b" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"address"</span>].head(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="4dddbfe6" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"address"</span>].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>44                     3625 FCI ROAD, MARIANNA, FL 32446
 51              15801 S.W. 137TH AVENUE, MIAMI, FL 33177
@@ -895,8 +889,8 @@ Name: address, dtype: str</code></pre>
 </section>
 <section id="miami-demographics-black-people---percentage" class="level3">
 <h3 class="anchored" data-anchor-id="miami-demographics-black-people---percentage">Miami Demographics: Black people - percentage</h3>
-<div id="ad4801c5" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>l_city <span class="op">=</span> [<span class="st">"Marianna"</span>, <span class="st">"Miami"</span>, <span class="st">"Pensacola"</span>, <span class="st">"Tallahassee"</span>, <span class="st">"Milton"</span>, <span class="st">"Deerfield Beach"</span>, <span class="st">"Moor Haven"</span>, <span class="st">"South Bay"</span>, <span class="st">"Boca Raton"</span>]</span>
+<div id="80f25d40" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>l_city <span class="op">=</span> [<span class="st">"Marianna"</span>, <span class="st">"Miami"</span>, <span class="st">"Pensacola"</span>, <span class="st">"Tallahassee"</span>, <span class="st">"Milton"</span>, <span class="st">"Deerfield Beach"</span>, <span class="st">"Moor Haven"</span>, <span class="st">"South Bay"</span>, <span class="st">"Boca Raton"</span>]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>miami <span class="op">=</span> df_new[df_new[<span class="st">'city'</span>].<span class="bu">str</span>.contains(<span class="st">"Miami"</span>)]</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -907,10 +901,10 @@ Name: address, dtype: str</code></pre>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    miami.iloc[i, <span class="dv">3</span>] <span class="op">=</span> <span class="bu">int</span>(miami.iloc[i, <span class="dv">3</span>])</span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>total_b_m <span class="op">=</span> np.nansum(miami.iloc[:, <span class="dv">3</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>total_b_m <span class="op">=</span> np.nansum(miami.iloc[:, <span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3139f32e" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(miami.iloc[:, <span class="dv">1</span>])):</span>
+<div id="45e82a9f" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(miami.iloc[:, <span class="dv">1</span>])):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">type</span>(miami.iloc[i, <span class="dv">1</span>]) <span class="op">==</span> <span class="bu">float</span>:</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">continue</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
@@ -920,7 +914,7 @@ Name: address, dtype: str</code></pre>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>percent_b_m <span class="op">=</span> total_b_m<span class="op">/</span>total_miami <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>percent_b_m</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>percent_b_m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>21.9410950548935</code></pre>
 </div>
@@ -929,8 +923,8 @@ Name: address, dtype: str</code></pre>
 </section>
 <section id="south-bay" class="level3">
 <h3 class="anchored" data-anchor-id="south-bay">South Bay</h3>
-<div id="576b1de1" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>s_bay <span class="op">=</span> df_new[df_new[<span class="st">'city'</span>].<span class="bu">str</span>.contains(<span class="st">"South Bay"</span>)]</span>
+<div id="36660267" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>s_bay <span class="op">=</span> df_new[df_new[<span class="st">'city'</span>].<span class="bu">str</span>.contains(<span class="st">"South Bay"</span>)]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(s_bay.iloc[:, <span class="dv">3</span>])):</span>
@@ -940,13 +934,13 @@ Name: address, dtype: str</code></pre>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    s_bay.iloc[i, <span class="dv">3</span>] <span class="op">=</span> <span class="bu">int</span>(s_bay.iloc[i, <span class="dv">3</span>])</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>total_b_b <span class="op">=</span> np.nansum(s_bay.iloc[:, <span class="dv">3</span>])</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>total_b_b</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>total_b_b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>3159</code></pre>
 </div>
 </div>
-<div id="b48141a9" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(s_bay.iloc[:, <span class="dv">1</span>])):</span>
+<div id="7d59d07c" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(s_bay.iloc[:, <span class="dv">1</span>])):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">type</span>(s_bay.iloc[i, <span class="dv">1</span>]) <span class="op">==</span> <span class="bu">float</span>:</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">continue</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
@@ -956,7 +950,7 @@ Name: address, dtype: str</code></pre>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>percent_b_b <span class="op">=</span> total_b_b<span class="op">/</span>total_s_bay <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>percent_b_b</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>percent_b_b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>65.0</code></pre>
 </div>
@@ -1024,14 +1018,13 @@ Name: address, dtype: str</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

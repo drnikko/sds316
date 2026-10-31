@@ -2,23 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>kayla-stage2 – SDS316 - Fall 2026</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -64,7 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -77,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5d8dc168fd7aa616d26decb29c56e770.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0a89bf0cf7aa0ce8c7ce6fb99854ade3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,7 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
@@ -218,8 +212,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="c26775b5" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div id="6ce15ef7" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyprojroot <span class="im">import</span> here </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#loading the data sets</span></span>
@@ -269,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>largest_black_population_2022 <span class="op">=</span> most_recent_year.groupby(<span class="st">'state'</span>)[<span class="st">'incarcerated_black'</span>].mean().sort_values(ascending <span class="op">=</span> <span class="va">False</span>)</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>largest_black_population_2022.head(<span class="dv">11</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>largest_black_population_2022.head(<span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2022-10-01 1990-07-01
 data_or_inferred
@@ -311,13 +305,13 @@ Name: incarcerated_black, dtype: float64</code></pre>
 <p>Other than that, we found out that the average Black incarerated population across multiple 2022 observations is highest in Texas, which also tracked with the highest average Black incarcerated population over multiple observations across 1990-2022, which was also Texas.</p>
 <p>I do need to do some more data cleaning, but I did not want to clean too much during this round of EDA in case I hated the data set.</p>
 <p>Question 5 What happens to states when I remove inferred data?</p>
-<div id="4dd0a6b7" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># created a new df of just raw data in 2022 by filtering the data_or_inferred column in the most recent year df to raw data</span></span>
+<div id="e5246121" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># created a new df of just raw data in 2022 by filtering the data_or_inferred column in the most recent year df to raw data</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>raw_2022 <span class="op">=</span> most_recent_year[</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    most_recent_year[<span class="st">'data_or_inferred'</span>] <span class="op">==</span> <span class="st">'raw data'</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>]</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>raw_2022[<span class="st">'state'</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>raw_2022[<span class="st">'state'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>state
 Alaska                  9
@@ -372,17 +366,17 @@ Tennessee               1
 Name: count, dtype: int64</code></pre>
 </div>
 </div>
-<div id="df9ab22a" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># cross tab of state and raw data vs inferred data to see the count of raw v inferred data break down of states in 2022 </span></span>
+<div id="9dcd07ce" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># cross tab of state and raw data vs inferred data to see the count of raw v inferred data break down of states in 2022 </span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>pd.crosstab(</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    most_recent_year[<span class="st">'state'</span>],</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    most_recent_year[<span class="st">'data_or_inferred'</span>]</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">data_or_inferred</th>
@@ -399,313 +393,313 @@ Name: count, dtype: int64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Alabama</th>
+<td data-quarto-table-cell-role="th">Alabama</td>
 <td>0</td>
 <td>7</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Alaska</th>
+<td data-quarto-table-cell-role="th">Alaska</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Arizona</th>
+<td data-quarto-table-cell-role="th">Arizona</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Arkansas</th>
+<td data-quarto-table-cell-role="th">Arkansas</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">California</th>
+<td data-quarto-table-cell-role="th">California</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Colorado</th>
+<td data-quarto-table-cell-role="th">Colorado</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Connecticut</th>
+<td data-quarto-table-cell-role="th">Connecticut</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Delaware</th>
+<td data-quarto-table-cell-role="th">Delaware</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">District of Columbia</th>
+<td data-quarto-table-cell-role="th">District of Columbia</td>
 <td>0</td>
 <td>3</td>
 <td>4</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Federal</th>
+<td data-quarto-table-cell-role="th">Federal</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Florida</th>
+<td data-quarto-table-cell-role="th">Florida</td>
 <td>0</td>
 <td>7</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Georgia</th>
+<td data-quarto-table-cell-role="th">Georgia</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Hawaii</th>
+<td data-quarto-table-cell-role="th">Hawaii</td>
 <td>0</td>
 <td>7</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Idaho</th>
+<td data-quarto-table-cell-role="th">Idaho</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Illinois</th>
+<td data-quarto-table-cell-role="th">Illinois</td>
 <td>0</td>
 <td>3</td>
 <td>6</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Indiana</th>
+<td data-quarto-table-cell-role="th">Indiana</td>
 <td>0</td>
 <td>2</td>
 <td>5</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Iowa</th>
+<td data-quarto-table-cell-role="th">Iowa</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Kansas</th>
+<td data-quarto-table-cell-role="th">Kansas</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Kentucky</th>
+<td data-quarto-table-cell-role="th">Kentucky</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Louisiana</th>
+<td data-quarto-table-cell-role="th">Louisiana</td>
 <td>4</td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Maine</th>
+<td data-quarto-table-cell-role="th">Maine</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Maryland</th>
+<td data-quarto-table-cell-role="th">Maryland</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Massachusetts</th>
+<td data-quarto-table-cell-role="th">Massachusetts</td>
 <td>4</td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Michigan</th>
+<td data-quarto-table-cell-role="th">Michigan</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Minnesota</th>
+<td data-quarto-table-cell-role="th">Minnesota</td>
 <td>5</td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Mississippi</th>
+<td data-quarto-table-cell-role="th">Mississippi</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Missouri</th>
+<td data-quarto-table-cell-role="th">Missouri</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Montana</th>
+<td data-quarto-table-cell-role="th">Montana</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Nebraska</th>
+<td data-quarto-table-cell-role="th">Nebraska</td>
 <td>4</td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Nevada</th>
+<td data-quarto-table-cell-role="th">Nevada</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">New Hampshire</th>
+<td data-quarto-table-cell-role="th">New Hampshire</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">New Jersey</th>
+<td data-quarto-table-cell-role="th">New Jersey</td>
 <td>0</td>
 <td>1</td>
 <td>6</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">New Mexico</th>
+<td data-quarto-table-cell-role="th">New Mexico</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">New York</th>
+<td data-quarto-table-cell-role="th">New York</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">North Carolina</th>
+<td data-quarto-table-cell-role="th">North Carolina</td>
 <td>1</td>
 <td>7</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">North Dakota</th>
+<td data-quarto-table-cell-role="th">North Dakota</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Ohio</th>
+<td data-quarto-table-cell-role="th">Ohio</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Oklahoma</th>
+<td data-quarto-table-cell-role="th">Oklahoma</td>
 <td>0</td>
 <td>3</td>
 <td>6</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Oregon</th>
+<td data-quarto-table-cell-role="th">Oregon</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Pennsylvania</th>
+<td data-quarto-table-cell-role="th">Pennsylvania</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Rhode Island</th>
+<td data-quarto-table-cell-role="th">Rhode Island</td>
 <td>0</td>
 <td>0</td>
 <td>7</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">South Carolina</th>
+<td data-quarto-table-cell-role="th">South Carolina</td>
 <td>1</td>
 <td>1</td>
 <td>8</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">South Dakota</th>
+<td data-quarto-table-cell-role="th">South Dakota</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Tennessee</th>
+<td data-quarto-table-cell-role="th">Tennessee</td>
 <td>0</td>
 <td>1</td>
 <td>6</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Texas</th>
+<td data-quarto-table-cell-role="th">Texas</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Utah</th>
+<td data-quarto-table-cell-role="th">Utah</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Vermont</th>
+<td data-quarto-table-cell-role="th">Vermont</td>
 <td>0</td>
 <td>8</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Virginia</th>
+<td data-quarto-table-cell-role="th">Virginia</td>
 <td>0</td>
 <td>0</td>
 <td>7</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Washington</th>
+<td data-quarto-table-cell-role="th">Washington</td>
 <td>6</td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">West Virginia</th>
+<td data-quarto-table-cell-role="th">West Virginia</td>
 <td>5</td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Wisconsin</th>
+<td data-quarto-table-cell-role="th">Wisconsin</td>
 <td>0</td>
 <td>9</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Wyoming</th>
+<td data-quarto-table-cell-role="th">Wyoming</td>
 <td>5</td>
 <td>2</td>
 <td>0</td>
@@ -718,8 +712,8 @@ Name: count, dtype: int64</code></pre>
 </div>
 <p>Okay, so maybe I should not remove inferred data, if I do, I would basically be removing two states: Virginia and Rhode Island, which maybe is not helpful for my comparison. Also, this shows how uneven the current spread of data is, so it’s a methodical question of if I should remove inferred counts or not. For now, I will not. This does provide a clearer direction for my EDA, instead of looking at raw counts and averages, I should explore proportions.</p>
 <p>Question 6 Which states had the highest proportion of Black incarceration in 2022, on average</p>
-<div id="78996869" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#making a copy because I will be directly manipulating the df </span></span>
+<div id="1ba026ef" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#making a copy because I will be directly manipulating the df </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>most_recent_year <span class="op">=</span> most_recent_year.copy()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># creating the black proportion column</span></span>
@@ -731,7 +725,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># creating a new df using the copy, grouping by state and filtered to black proportion and getting the mean of black proportion, then sorting it by highest to lowest</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>black_proportion_2022 <span class="op">=</span> most_recent_year.groupby(<span class="st">'state'</span>)[<span class="st">'black_proportion'</span>].mean().sort_values(ascending <span class="op">=</span> <span class="va">False</span>)</span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>black_proportion_2022.head(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>black_proportion_2022.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>state
 District of Columbia    0.904050
@@ -750,8 +744,8 @@ Name: black_proportion, dtype: float64</code></pre>
 <p>Oh wow, this changes the story a lot. When we take into account the states incarcerated population, the states that we saw earlier (Florida, Texas, California) are not in the top 10, including DC (which is not a state, I mentioned earlier on excluding it, but we’ll save that for more formal data cleaning and based off of literature research since that’s a methodology decision).</p>
 <p>What’s interesting about this is that you can see both southern and northern states, so it isn’t just southern states with higher incarcerated Black individuals.</p>
 <p>Question 7: How do white and black incarerated populations compare within each state</p>
-<div id="e2b07aa2" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># same code, just replaced black with white</span></span>
+<div id="ae116628" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># same code, just replaced black with white</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>most_recent_year <span class="op">=</span> most_recent_year.copy()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>most_recent_year[<span class="st">'white_proportion'</span>] <span class="op">=</span> (most_recent_year[<span class="st">'incarcerated_white'</span>] <span class="op">/</span></span>
@@ -761,7 +755,7 @@ Name: black_proportion, dtype: float64</code></pre>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># to compare race proportions in 2022, i grouped by state, and filtered to black and white proprotions to calculate the mean</span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>race_compare_2022 <span class="op">=</span> most_recent_year.groupby(<span class="st">'state'</span>)[[<span class="st">'black_proportion'</span>, <span class="st">'white_proportion'</span>]].mean()</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(race_compare_2022)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(race_compare_2022)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                      black_proportion  white_proportion
 state                                                   
@@ -820,15 +814,15 @@ Wyoming                       0.049022          0.746909</code></pre>
 </div>
 </div>
 <p>Question 8: Within the top 10 states of Black incarceration, what are the incarceration rates for White individuals?</p>
-<div id="17ee9384" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this lists the values from the top 10 states </span></span>
+<div id="a5c44355" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this lists the values from the top 10 states </span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>race_compare_2022.loc[[<span class="st">'District of Columbia'</span>,    </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="st">'Maryland'</span>, <span class="st">'Louisiana'</span>, <span class="st">'New Jersey'</span>, <span class="st">'South Carolina'</span>, <span class="st">'Mississippi'</span>, <span class="st">'Georgia'</span>, <span class="st">'Delaware'</span>, <span class="st">'Virginia'</span>, <span class="st">'Illinois'</span> ]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="st">'Maryland'</span>, <span class="st">'Louisiana'</span>, <span class="st">'New Jersey'</span>, <span class="st">'South Carolina'</span>, <span class="st">'Mississippi'</span>, <span class="st">'Georgia'</span>, <span class="st">'Delaware'</span>, <span class="st">'Virginia'</span>, <span class="st">'Illinois'</span> ]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -843,52 +837,52 @@ Wyoming                       0.049022          0.746909</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">District of Columbia</th>
+<td data-quarto-table-cell-role="th">District of Columbia</td>
 <td>0.904050</td>
 <td>0.051789</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Maryland</th>
+<td data-quarto-table-cell-role="th">Maryland</td>
 <td>0.718048</td>
 <td>0.226487</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Louisiana</th>
+<td data-quarto-table-cell-role="th">Louisiana</td>
 <td>0.652354</td>
 <td>0.343451</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">New Jersey</th>
+<td data-quarto-table-cell-role="th">New Jersey</td>
 <td>0.613247</td>
 <td>0.221674</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">South Carolina</th>
+<td data-quarto-table-cell-role="th">South Carolina</td>
 <td>0.598433</td>
 <td>0.391361</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Mississippi</th>
+<td data-quarto-table-cell-role="th">Mississippi</td>
 <td>0.597512</td>
 <td>0.385876</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Georgia</th>
+<td data-quarto-table-cell-role="th">Georgia</td>
 <td>0.588328</td>
 <td>0.366895</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Delaware</th>
+<td data-quarto-table-cell-role="th">Delaware</td>
 <td>0.575319</td>
 <td>0.421237</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Virginia</th>
+<td data-quarto-table-cell-role="th">Virginia</td>
 <td>0.559781</td>
 <td>0.399758</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">Illinois</th>
+<td data-quarto-table-cell-role="th">Illinois</td>
 <td>0.542688</td>
 <td>0.320557</td>
 </tr>
@@ -955,14 +949,13 @@ Wyoming                       0.049022          0.746909</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
