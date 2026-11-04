@@ -30,6 +30,10 @@ format:
 
 -   Styling controls
 
+-   Some more skills
+
+-   Identifying Misleading Visualizations
+
 ## Importance
 
 A good visualization shouldn't be a puzzle. It should help the audience visually see the finding  
@@ -79,3 +83,95 @@ ACCESSIBILITY: is the figure still understandable in grayscale or for someone wh
 ## Example
 
 If we have time I'll show a live demo of changing some things!
+
+
+
+## Creating Multiple Plots
+-Subplot(plt.subplot) lets you display multiple plots in a single figure window
+
+-Useful when comparing several datasets or parameters side by side
+
+-Common use cases: for comparisons, different variable combinations, model results, control vs. treatment groups
+
+## 
+
+```{python}
+import matplotlib.pyplot as plt
+from adjustText import adjust_text
+import numpy as np
+import pandas as pd
+```
+
+```{python}
+plt.figure(figsize=(8, 4))
+
+plt.subplot(1, 2, 1)  
+plt.plot([1, 2, 3], [1, 4, 9])
+plt.title("First subplot")
+
+plt.subplot(1, 2, 2)  
+plt.plot([1, 2, 3], [1, 2, 3])
+plt.title("Second subplot")
+
+plt.show()
+```
+
+## Annotating Plots 
+- Annotations (plt.annotate) help highlight important points or trends directly on your plot
+- Makes your visualization easier to interpret and more informative
+- Can add text, arrows, or other marks to draw attention to specific data
+- Useful for pointing out outliers, maxima/minima, or noteworthy feature
+*Keep in Mind: Too many annotations can clutter the chart!
+
+
+## Example
+```{python}
+plt.scatter([2, 4, 6], [5, 10, 3])   
+
+plt.annotate(
+    "Look Here!",        
+    xy=(4, 10),           
+    xytext=(5, 12),       
+    arrowprops=dict(arrowstyle="->")
+)
+
+plt.show()
+```
+
+
+## Adjust Text/Annotation
+- When adding text labels to crowded scatter plots, labels often overlap and become unreadable
+- The “adjustText”  automatically moves text labels to minimize overlap
+- Makes plots more readable without lots of manual adjusting
+
+## 
+
+```{python}
+np.random.seed(0)
+x, y = np.random.random((2,30))
+fig, ax = plt.subplots()
+plt.plot(x, y, 'bo')
+texts = [plt.text(x[i], y[i], 'Text%s' %i, ha='center', va='center') for i in range(len(x))]
+```
+
+```{python}
+np.random.seed(0)
+x, y = np.random.random((2,30))
+fig, ax = plt.subplots()
+plt.plot(x, y, 'bo')
+texts = [ax.text(x[i], y[i], 'Text%s' %i, ha='center', va='center') for i in range(len(x))]
+adjust_text(texts);
+```
+
+## Identifying [Misleading Visualizations](https://rigorousthemes.com/blog/bad-data-visualization-examples/)
+### Common Mistakes to Avoid 
+- Broken axis  
+-- Starting y-axis above zero exaggerates minor differences
+
+- Cherry-picking/selective statistics    
+-- Hiding parts of the data or focusing only on extremes
+
+- Axis manipulation/Misleading Scales   
+--Stretching or compressing axes to make a trend look stronger/weaker
+
+- Unlabeled axes/confusing units
