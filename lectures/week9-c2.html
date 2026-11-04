@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.11.9">
 
   <meta name="author" content="Hayden Steinmann">
-  <title>SDS316 - Fall 2026 – Upgrading our Visualizations</title>
+  <title>SDS316 - Fall 2026 – Code Review / Peer Review + Upgrading our Visualizations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-46459700aa2103a526fa6557ecb5b8d0.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c46ad590d9d6bf206450aabcaf1bebcc.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -134,7 +134,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Upgrading our Visualizations</h1>
+  <h1 class="title">Code Review / Peer Review + Upgrading our Visualizations</h1>
   <p class="subtitle">How to make our visualizations nice to look at</p>
 
 <div class="quarto-title-authors">
@@ -149,10 +149,111 @@ Hayden Steinmann
 <section id="todays-plan" class="slide level2">
 <h2>Today’s Plan</h2>
 <ul>
-<li><p>Why visualization design matters</p></li>
-<li><p>Picking the right plot</p></li>
-<li><p>Styling controls</p></li>
+<li><p>Code Review / Peer Review Workshop</p></li>
+<li><p>Tech Talk! (Hayden!)</p>
+<ul>
+<li>Why visualization design matters</li>
+<li>Picking the right plot</li>
+<li>Styling controls</li>
+</ul></li>
 </ul>
+</section>
+<section id="how-to-do-a-code-review" class="slide level2">
+<h2>How to do a code review</h2>
+<p><a href="https://google.github.io/eng-practices/">Lots</a> of <a href="https://simpleprogrammer.com/code-reviews-definitive-guide/">advice</a> about <a href="https://www.augmentcode.com/guides/how-to-do-code-review-a-practical-guide-for-developers">how</a> to do a <a href="https://thectoclub.com/it-project-management/code-review-process/">review</a></p>
+<p>Reviews should feel:</p>
+<ul>
+<li><p>positive (safe, supportive, growth-driven)</p></li>
+<li><p>useful (constructive feedback, technical knowledge exchange)</p></li>
+<li><p>actionable (specific critiques -&gt; specific fixes)</p></li>
+<li><p>time-constrained (short enough that you are willing to do it again)</p></li>
+</ul>
+</section>
+<section id="positive" class="slide level2">
+<h2>Positive</h2>
+<div class="columns">
+<div class="column glow-col" style="width:48%;">
+<h3 id="reviewer">Reviewer</h3>
+<ul>
+<li>Look for <em>and say</em> nice things</li>
+<li>Focus on the code and not the person</li>
+<li>No fawning, no fighting</li>
+</ul>
+</div><div class="column glow-col" style="width:48%;">
+<h3 id="reviewee">Reviewee</h3>
+<ul>
+<li>Believe the compliments</li>
+<li>Don’t fix what’s working</li>
+<li>No fawning, no fighting</li>
+</ul>
+</div></div>
+</section>
+<section id="useful" class="slide level2">
+<h2>Useful</h2>
+<div class="columns">
+<div class="column glow-col" style="width:45%;">
+<h3 id="reviewer-1">Reviewer</h3>
+<ul>
+<li>Provide extra context / rationale</li>
+<li>Assume the best</li>
+</ul>
+</div><div class="column glow-col" style="width:45%;">
+<h3 id="reviewee-1">Reviewee</h3>
+<ul>
+<li>Follow-up on any information received</li>
+<li>Assume the best</li>
+<li>Note when you’re repeating mistakes</li>
+</ul>
+</div></div>
+</section>
+<section id="actionable" class="slide level2">
+<h2>Actionable</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="reviewer-2">Reviewer</h3>
+<ul>
+<li>Focus on what dev can control</li>
+<li>Identify <em>specific</em> changes</li>
+<li>Identify <em>specific</em> outcomes</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="reviewee-2">Reviewee</h3>
+<ul>
+<li>Literally fix the <em>specifics</em></li>
+<li>Ask for clarification (!!)</li>
+<li>Check: does this match the outcomes?</li>
+</ul>
+</div></div>
+</section>
+<section id="time-constrained" class="slide level2">
+<h2>Time-constrained</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="reviewer-3">Reviewer</h3>
+<ul>
+<li>No need to point out same error over and over</li>
+<li>Don’t demand perfection</li>
+<li>Follow-up <em>later</em> if it gets weird</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="reviewee-3">Reviewee</h3>
+<ul>
+<li>Check code for same problem throughout</li>
+<li>Don’t ruminate</li>
+<li>Fix and move on!</li>
+</ul>
+</div></div>
+</section>
+<section id="next" class="slide level2">
+<h2>Next</h2>
+<ul>
+<li>in assigned pairs - perform code review on each other’s projects.</li>
+</ul>
+</section>
+<section>
+<section id="hayden---make-better-visualizations" class="title-slide slide level1 center">
+<h1>Hayden - Make Better Visualizations</h1>
+
 </section>
 <section id="importance" class="slide level2">
 <h2>Importance</h2>
@@ -201,7 +302,7 @@ Hayden Steinmann
 <p>If we have time I’ll show a live demo of changing some things!</p>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
