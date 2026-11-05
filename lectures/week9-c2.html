@@ -253,7 +253,10 @@ Hayden Steinmann
 <section>
 <section id="hayden---make-better-visualizations" class="title-slide slide level1 center">
 <h1>Hayden - Make Better Visualizations</h1>
-
+<ul>
+<li><p>Some more skills</p></li>
+<li><p>Identifying Misleading Visualizations</p></li>
+</ul>
 </section>
 <section id="importance" class="slide level2">
 <h2>Importance</h2>
@@ -300,6 +303,87 @@ Hayden Steinmann
 <section id="example" class="slide level2">
 <h2>Example</h2>
 <p>If we have time I’ll show a live demo of changing some things!</p>
+</section>
+<section id="creating-multiple-plots" class="slide level2">
+<h2>Creating Multiple Plots</h2>
+<p>-Subplot(plt.subplot) lets you display multiple plots in a single figure window</p>
+<p>-Useful when comparing several datasets or parameters side by side</p>
+<p>-Common use cases: for comparisons, different variable combinations, model results, control vs.&nbsp;treatment groups</p>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div id="d8d97cba" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="week9-c2_files/figure-revealjs/cell-3-output-1.png" width="632" height="358"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="annotating-plots" class="slide level2">
+<h2>Annotating Plots</h2>
+<ul>
+<li>Annotations (plt.annotate) help highlight important points or trends directly on your plot</li>
+<li>Makes your visualization easier to interpret and more informative</li>
+<li>Can add text, arrows, or other marks to draw attention to specific data</li>
+<li>Useful for pointing out outliers, maxima/minima, or noteworthy feature *Keep in Mind: Too many annotations can clutter the chart!</li>
+</ul>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<div id="19c8035e" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="week9-c2_files/figure-revealjs/cell-4-output-1.png" width="790" height="501"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adjust-textannotation" class="slide level2">
+<h2>Adjust Text/Annotation</h2>
+<ul>
+<li>When adding text labels to crowded scatter plots, labels often overlap and become unreadable</li>
+<li>The “adjustText” automatically moves text labels to minimize overlap</li>
+<li>Makes plots more readable without lots of manual adjusting</li>
+</ul>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div id="64f0d8b7" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="week9-c2_files/figure-revealjs/cell-5-output-1.png" width="794" height="411"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="0ce5b842" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="week9-c2_files/figure-revealjs/cell-6-output-1.png" width="794" height="411"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="identifying-misleading-visualizations" class="slide level2">
+<h2>Identifying <a href="https://rigorousthemes.com/blog/bad-data-visualization-examples/">Misleading Visualizations</a></h2>
+<h3 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h3>
+<ul>
+<li><p>Broken axis<br>
+– Starting y-axis above zero exaggerates minor differences</p></li>
+<li><p>Cherry-picking/selective statistics<br>
+– Hiding parts of the data or focusing only on extremes</p></li>
+<li><p>Axis manipulation/Misleading Scales<br>
+–Stretching or compressing axes to make a trend look stronger/weaker</p></li>
+<li><p>Unlabeled axes/confusing units</p></li>
+</ul>
 
 
 </section></section>
