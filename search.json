@@ -329,81 +329,172 @@
     "text": "Sources\n\nhttps://ashutosh-batra.medium.com/understanding-python-virtual-environments-venv-vs-uv-9d9811f2c073\nhttps://snarky.ca/how-virtual-environments-work/\nhttps://janelbrandon.medium.com/understanding-the-path-variable-6eae0936e976\nhttps://medium.com/@dakota.lillie/an-introduction-to-virtual-environments-in-python-ce16cda92853\nhttps://www.w3schools.com/python/ref_module_sys.asp\nhttps://realpython.com/python-uv/#installing-uv-to-manage-python-projects\nhttps://realpython.com/python-virtual-environments-a-primer/#a-folder-structure"
   },
   {
-    "objectID": "lectures/week8-c1.html#todays-agenda",
-    "href": "lectures/week8-c1.html#todays-agenda",
-    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "objectID": "lectures/week3-c1.html#todays-agenda",
+    "href": "lectures/week3-c1.html#todays-agenda",
+    "title": "Brayne, Chs 1 & 2",
     "section": "Today’s Agenda",
-    "text": "Today’s Agenda\n\nData visualization idea is DUE Wednesday, to be built in class\nLeah’s our discussion leader!"
+    "text": "Today’s Agenda\n\ndiscussion!\nresearch topic &gt; research groups\nAaminah - last 15m"
   },
   {
-    "objectID": "lectures/week8-c1.html#related-events",
-    "href": "lectures/week8-c1.html#related-events",
-    "title": "Historical Significance, Carceral Space, Racial Criminalization",
-    "section": "Related Events",
-    "text": "Related Events\n\nShaw v. Reno: Racial Gerrymandering New York Law School *Supreme Court case in 1993, first time the courts recognized drawing state/county/town boundaries based on race of those who live there is unconstitutional, violating 14th amendment Equal Protections Clause.\nSystemic Racism in US - Aug 9, 2021 Human Rights Careers\n*Discusses the systemic racism present in the US. “According to a 2017 report, Black men got 19.1% longer sentences for the same federal crime than white men between 2012-2016.” “Despite making up just 13% of the US population, Black people make up 38% of the population in jails and prisons.”"
+    "objectID": "lectures/week3-c1.html#related",
+    "href": "lectures/week3-c1.html#related",
+    "title": "Brayne, Chs 1 & 2",
+    "section": "Related",
+    "text": "Related\n\nPrison surveillance videos should be public information by Jeffrey McKee from Prison Journalism Project\n[How rogue officers turned a nationwide camera network into a tool for stalking] - Aug 2, 2026 Washington Post\nhow surveillance material is collected and who has control over it is hugely important to conversations about whether or not surveillance infrastructure “works” or is “worth it”"
   },
   {
-    "objectID": "lectures/week8-c1.html#reading",
-    "href": "lectures/week8-c1.html#reading",
-    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "objectID": "lectures/week3-c1.html#reading",
+    "href": "lectures/week3-c1.html#reading",
+    "title": "Brayne, Chs 1 & 2",
     "section": "Reading",
-    "text": "Reading\nIntroduction - Set a historical significance of growing data, data collection has always been politically motivated - Creation of social datasets assists in the social heirarchy those in charge are trying to promote"
+    "text": "Reading\n\nwe are in a transitional moment from “traditional” police work to Big Data driven police work (recall the 3 vs - velocity, variety, volume)\nbig data only makes meaning in aggregate, thus we need mass collection for the technology to “work”\npolice departments used to collect data manually (in the “traditional” ways). That data collection is now being done by big tech / data brokers / surveillance-focused vendors"
   },
   {
-    "objectID": "lectures/week8-c1.html#continued",
-    "href": "lectures/week8-c1.html#continued",
-    "title": "Historical Significance, Carceral Space, Racial Criminalization",
-    "section": "Continued…",
-    "text": "Continued…\nChapter 1 - Data collection and analysis has always been to ostrosize the “inferior” racial group at the time, Irish, Italian, German, then Black people - Datasets including race were the catalist of grouping all of the hated European Immigrants into the white catagory, making the outliers the black category - Trying to explain crime as a social construct paved the way for ignoring physcial and only focusing on social demographics - More data means more reason to patrol"
-  },
-  {
-    "objectID": "lectures/week8-c1.html#main-points",
-    "href": "lectures/week8-c1.html#main-points",
-    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "objectID": "lectures/week3-c1.html#main-points",
+    "href": "lectures/week3-c1.html#main-points",
+    "title": "Brayne, Chs 1 & 2",
     "section": "Main Points",
-    "text": "Main Points\n\n“As such, computational criminology is incapable of grasping internal differentiations within the classes of offenders it tabulates. No distinctions are made between the individual who sells narcotics to support a family and the individual who sells them for a gun cartel in computational criminology’s system of reference, yet both are coded as targets for heightened police scrutiny.” (pg. 55) LOSS OF IDENTITY\n“From the start, the social function of computational criminology was to produce targets for patrol forces; it is one-dimensional thought operating in two-dimensional space.” (pg. 53) EFFICIENCY"
+    "text": "Main Points\n\n“private” data is not subject to same legal oversight as “public” data\n“objective” technlogy is used to justify police behavior and legitimize outcomes"
   },
   {
-    "objectID": "lectures/week8-c1.html#questions",
-    "href": "lectures/week8-c1.html#questions",
-    "title": "Historical Significance, Carceral Space, Racial Criminalization",
-    "section": "Questions!",
-    "text": "Questions!\n\nWhere do we go from here in order to break the self fulfilling prophecy of systemic racism, what can change about how we collect data and police to stop contributing to the problem?\nDoes collecting demographic data actually help, or does it contribute to putting people into boxes? What are examples of positive and negative uses of demographic data collection?"
+    "objectID": "lectures/week3-c1.html#questions",
+    "href": "lectures/week3-c1.html#questions",
+    "title": "Brayne, Chs 1 & 2",
+    "section": "Questions?",
+    "text": "Questions?\n\nHow do ideas of quantification show up in Brayne’s analysis of LAPD’s tech use?\nDo you think “old” ways of doing things is/were better? Is the trade off worth it?\nIn what meaningful ways are “Big Data” uses of data distinct? What differences are most distinct to you?\nHow (if at all) does this influence how you’re thinking about your own data sources?"
   },
   {
-    "objectID": "lectures/week9-c1.html#todays-agenda",
-    "href": "lectures/week9-c1.html#todays-agenda",
-    "title": "Carceral centralization and expansion",
-    "section": "Today’s Agenda",
-    "text": "Today’s Agenda\n\n1-2 data visualizations and 1-2 paragraphs of writing are DUE Wednesday\nRae’s our discussion leader!"
+    "objectID": "lectures/week3-c1.html#research-groups",
+    "href": "lectures/week3-c1.html#research-groups",
+    "title": "Brayne, Chs 1 & 2",
+    "section": "Research Groups!",
+    "text": "Research Groups!\n\nSay your close-enough-for-now research question\nGroups!\nMegan is coming on Wednesday to talk about the groups!"
   },
   {
-    "objectID": "lectures/week9-c1.html#related-events",
-    "href": "lectures/week9-c1.html#related-events",
-    "title": "Carceral centralization and expansion",
-    "section": "Related Events",
-    "text": "Related Events\n\nICE ankle monitors in Springfield , Ohio\nAn Ankle Monitor Gives a False Taste of Freedom\n\nRelevance?\nThe reading describes electronic ankle monitors as one way that the carceral apparatus extends its control into public and private life. Jefferson observes that these monitors are another way to micromanage devalued populations while appearing to address issues around prisoners rights and prison overcrowding. In separating urban space into inclusion and exclusion zones, electronic monitoring systems compound/codify existing urban divisions and reinforce geographic notions of criminality."
+    "objectID": "lectures/week8-c2.html#todays-plan",
+    "href": "lectures/week8-c2.html#todays-plan",
+    "title": "DATAVIZ",
+    "section": "Today’s Plan",
+    "text": "Today’s Plan\n\nMake sure EVERYONE knows how to build a data visualization\n(Using Seaborn)"
   },
   {
-    "objectID": "lectures/week9-c1.html#reading",
-    "href": "lectures/week9-c1.html#reading",
-    "title": "Carceral centralization and expansion",
-    "section": "Reading",
-    "text": "Reading\n\nUrban governments abdicate control to companies and respond to resultant increased wealth inequality by criminalizing poverty\nTech/tech-enabled companies fuel and capitalized on this inequality, building tools that both centralized and decentralized carceral control\nBeyond prisons, technology has become incorporated into the judicial system, further marginalizing devalued peoples\nUltimately, creates a carceral system akin to a factory, where control, speed, and cost-effectiveness predominate\nAltogether, the “barbarity” of the system is veiled by a combination of concerns over public-safety, intellectual property laws, and the social-scientific research apparatus"
+    "objectID": "lectures/week8-c2.html#by-the-end-of-today-you-will-probably-know-how-to",
+    "href": "lectures/week8-c2.html#by-the-end-of-today-you-will-probably-know-how-to",
+    "title": "DATAVIZ",
+    "section": "By the end of today, you will (probably) know how to:",
+    "text": "By the end of today, you will (probably) know how to:\n\nInstall Seaborn\nUse Seaborn to make a basic visualization\nBe able to add visualizations to your research project."
   },
   {
-    "objectID": "lectures/week9-c1.html#main-points",
-    "href": "lectures/week9-c1.html#main-points",
-    "title": "Carceral centralization and expansion",
-    "section": "Main Points",
-    "text": "Main Points\n\nPrisons have always been designed to micromanage certain populations (& the emergence of technology only made this easier and more expansive)\nCorporations seek/build new avenues of revenue to stave off stagnation; they aren’t only complicit in the implementation of carceral tech, but actively shape society’s hunger for it\nThis effects more than just incarcerated individuals – public space is increasingly under the influence of the carceral apparatus"
+    "objectID": "lectures/week8-c2.html#run-it",
+    "href": "lectures/week8-c2.html#run-it",
+    "title": "DATAVIZ",
+    "section": "Run it!",
+    "text": "Run it!\nThis charts the amount of the tip, the total bill, if the person was a smoker or nonsmoker, and the size of the party. see the tabular data"
   },
   {
-    "objectID": "lectures/week9-c1.html#questions",
-    "href": "lectures/week9-c1.html#questions",
-    "title": "Carceral centralization and expansion",
-    "section": "Questions!",
-    "text": "Questions!\n\nJefferson notes that there is a “scientific veil” that “conceals the barbarity” of the current carceral system, citing examples of social science researchers who assist in building risk algorithms, or journals dedicated to criminology and crime science research. What are the benefits of having academia involved in this work? What are the pitfalls? What responsibility do academic researchers have to engage/not engage in this kind of work?\nWhat does Jefferson mean by “disciplinary society”? “Control society”? What are the distinctions they draw between the two and how has the digitization of incarceration caused the two to merge?\nHow does the use of technology in court cases (particularly algorithms that assign defendants risk scores) undermine the notion of “innocent until proven guilty”? Is there a universe in which predictive technologies coexist with this standard?"
+    "objectID": "lectures/week8-c2.html#but-what",
+    "href": "lectures/week8-c2.html#but-what",
+    "title": "DATAVIZ",
+    "section": "But, what?",
+    "text": "But, what?\nWhat is sns.relplot?\n-&gt; To the Code Documentation! Relplot"
+  },
+  {
+    "objectID": "lectures/week8-c2.html#your-task",
+    "href": "lectures/week8-c2.html#your-task",
+    "title": "DATAVIZ",
+    "section": "Your task",
+    "text": "Your task\n\nChange the code from the previous slide so that the text is different on every label\n\n\nAdd kind=line to the parameters\nUnderneath sns.settheme() add sns.set_style('whitegrid')"
+  },
+  {
+    "objectID": "lectures/week8-c2.html#but-wait",
+    "href": "lectures/week8-c2.html#but-wait",
+    "title": "DATAVIZ",
+    "section": "But wait!",
+    "text": "But wait!\nOn the docs page, it shows so.Plot in addition to sns.relplot."
+  },
+  {
+    "objectID": "lectures/week8-c2.html#but-wait-again",
+    "href": "lectures/week8-c2.html#but-wait-again",
+    "title": "DATAVIZ",
+    "section": "But wait, again",
+    "text": "But wait, again\nWe can chain these together and stack them until we get what we want."
+  },
+  {
+    "objectID": "lectures/week8-c2.html#what-else-can-we-do",
+    "href": "lectures/week8-c2.html#what-else-can-we-do",
+    "title": "DATAVIZ",
+    "section": "What else can we do?",
+    "text": "What else can we do?\nThe gallery!"
+  },
+  {
+    "objectID": "lectures/week8-c2.html#next",
+    "href": "lectures/week8-c2.html#next",
+    "title": "DATAVIZ",
+    "section": "Next",
+    "text": "Next\n\nWhat kind of dataviz does your project need?"
+  },
+  {
+    "objectID": "lectures/week8-c2.html#by-your-powers-combined",
+    "href": "lectures/week8-c2.html#by-your-powers-combined",
+    "title": "DATAVIZ",
+    "section": "By Your Powers Combined!",
+    "text": "By Your Powers Combined!\nGet in groups with others making similar visualizations and help each other to get one built locally"
+  },
+  {
+    "objectID": "lectures/week10-c2.html#todays-plan",
+    "href": "lectures/week10-c2.html#todays-plan",
+    "title": "Creating a Website on Github",
+    "section": "Today’s Plan",
+    "text": "Today’s Plan\n\nWalk through steps for creating a website\nUpdating and maintaining"
+  },
+  {
+    "objectID": "lectures/week10-c2.html#by-the-end-you-should-know",
+    "href": "lectures/week10-c2.html#by-the-end-you-should-know",
+    "title": "Creating a Website on Github",
+    "section": "By the end, you should know:",
+    "text": "By the end, you should know:\n\nHow to make your own website for a portfolio, event, or just for fun!\nHow to create a custome domain"
+  },
+  {
+    "objectID": "lectures/week10-c2.html#using-a-template-or-starting-from-scratch",
+    "href": "lectures/week10-c2.html#using-a-template-or-starting-from-scratch",
+    "title": "Creating a Website on Github",
+    "section": "Using a template or starting from scratch",
+    "text": "Using a template or starting from scratch\n\nEither way is perfectly fine, its users preference.\nUtilize public github repos!!!!\nSearch on github for a template you like, clone repo!"
+  },
+  {
+    "objectID": "lectures/week10-c2.html#what-is-github-pages",
+    "href": "lectures/week10-c2.html#what-is-github-pages",
+    "title": "Creating a Website on Github",
+    "section": "What is Github Pages?",
+    "text": "What is Github Pages?\n\nStaic site hosting service\nTakes HTML, CSS, and JS files right from a repo, builds, and publishes a website\nYou can host your own domain or use the standard github.io/user domain"
+  },
+  {
+    "objectID": "lectures/week10-c2.html#necesssary-files",
+    "href": "lectures/week10-c2.html#necesssary-files",
+    "title": "Creating a Website on Github",
+    "section": "Necesssary Files",
+    "text": "Necesssary Files\n\nindex.qmd\n\nDefault homepage, primary entry point\n\n_quarto.yml\n\nConfig file, themes, layouts, visuals"
+  },
+  {
+    "objectID": "lectures/week10-c2.html#setting-up-pages",
+    "href": "lectures/week10-c2.html#setting-up-pages",
+    "title": "Creating a Website on Github",
+    "section": "Setting up Pages",
+    "text": "Setting up Pages\n\nBuild and deployment, deploy from branch chose main and /docs folder!"
+  },
+  {
+    "objectID": "lectures/week10-c2.html#custom-domain",
+    "href": "lectures/week10-c2.html#custom-domain",
+    "title": "Creating a Website on Github",
+    "section": "Custom domain",
+    "text": "Custom domain\n\nIf you choose, you can go to any domain site and pay cents for a domain, namecheap\nType in the settings, DNS check to see if it is a real domain"
+  },
+  {
+    "objectID": "lectures/week10-c2.html#live-demo",
+    "href": "lectures/week10-c2.html#live-demo",
+    "title": "Creating a Website on Github",
+    "section": "Live demo",
+    "text": "Live demo\n\nMy websites!"
   },
   {
     "objectID": "lectures/template-lab.html#todays-plan",
@@ -984,7 +1075,7 @@
     "href": "projects/tanisha-template/stage-2.html#qestion-6-what-are-the-criminal-offenses-people-are-primarily-in-for",
     "title": "Stage 2",
     "section": "QESTION #6: what are the criminal offenses people are primarily in for?",
-    "text": "QESTION #6: what are the criminal offenses people are primarily in for?\n\n#grouping by offense and seeing how big the categories are\noffense_groups = april26.groupby('TDCJ Offense')\nprint(offense_groups.ngroups)\nprint(offense_groups.size())\n\noffense_groups.size().sort_values(ascending=False)\n\n20690\nTDCJ Offense\n\"Z\"POSS CS PG1 4-200G             1\n(SUPER) AGG SEX ASLT CHILD U/6    1\n2D DEL OF MARIHUANA               2\n3D DEL MARIHUANA                  1\nAA/DW                             3\n                                 ..\nVOLUNTARY MANSLAUGHTER            3\nVOLUNTARY MANSLAUGTHER            1\nVOYEURISM VICTIM U/14             1\nWIT GAMMA HYDROXYBUTYRATE         1\nWPN POSS-PROH PLACE               1\nLength: 20690, dtype: int64\n\n\nTDCJ Offense\nMURDER                             11928\nAGG ROBBERY                         7532\nAGG SEX ASLT CHILD                  4213\nAGG ASLT W/DWPN                     3261\nROBBERY                             2645\n                                   ...  \nABAN ENDAN CHILD INT/KN/RCK/CN         1\nABAN ENDAN CHLD CRIM NEGLI             1\nABAN ENDANGER CHILD CRIM EPI           1\nABAN ENDANGER CHILD IMM DAN BI         1\nABAN ENDANGER CHILD INDV IMM BI        1\nLength: 20690, dtype: int64\n\n\nIt seems like the most common offenses are murder, aggravated robbery, aggravated sexual assult with a child, aggravated assault with a deadly weapon, and robbery."
+    "text": "QESTION #6: what are the criminal offenses people are primarily in for?\n\n#grouping by offense and seeing how big the categories are\noffense_groups = april26.groupby('TDCJ Offense')\nprint(offense_groups.ngroups)\nprint(offense_groups.size())\n\noffense_groups.size().sort_values(ascending=False)\n\n20690\nTDCJ Offense\n\"Z\"POSS CS PG1 4-200G             1\n(SUPER) AGG SEX ASLT CHILD U/6    1\n2D DEL OF MARIHUANA               2\n3D DEL MARIHUANA                  1\nAA/DW                             3\n                                 ..\nVOLUNTARY MANSLAUGHTER            3\nVOLUNTARY MANSLAUGTHER            1\nVOYEURISM VICTIM U/14             1\nWIT GAMMA HYDROXYBUTYRATE         1\nWPN POSS-PROH PLACE               1\nLength: 20690, dtype: int64\n\n\nTDCJ Offense\nMURDER                              11928\nAGG ROBBERY                          7532\nAGG SEX ASLT CHILD                   4213\nAGG ASLT W/DWPN                      3261\nROBBERY                              2645\n                                    ...  \nENGAGING ORG CRIM ACT/ARSON             1\nENGAGING ORG CRIM                       1\nENGAGING OR CRIMINAL ACT                1\nENGAGING IN ORGANIZED CRIM ACTIV        1\nENGAGING ORGAN CRIMINAL ACTIVITY        1\nLength: 20690, dtype: int64\n\n\nIt seems like the most common offenses are murder, aggravated robbery, aggravated sexual assult with a child, aggravated assault with a deadly weapon, and robbery."
   },
   {
     "objectID": "projects/tanisha-template/stage-2.html#question-7-how-much-of-the-incarcerated-population-is-carrying-some-sort-of-drug-charge-not-including-dwidui",
@@ -1929,7 +2020,7 @@
     "href": "projects/catherine project revamp/stage2-copy.html",
     "title": "Initial Questions",
     "section": "",
-    "text": "Note\n\n\n\n\n\n\n\n\n\n\nThe dataset I am using is The Intersection of Domestic Violence, Race, Ethnicity, and Sex from NYC Open Data. It is stored in my dataset folder. Its associated data dictionary that provides a brief overview of the dataset and how the data are collected is also stored in my dataset folder.\n\n\n\nBased on the information provided in this dataset, what role, if any, does both the race and the sex of the suspect and the victim play in the occurrence of domestic violence incident reports in New York City?\n\n\n\n\nI am particularly curious about the race of the victim in these domestic violence reports. I wonder if there is any correlation between the race of the victim and how often/if police file an incident reports.\n\nimport pandas as pd\nfrom pyprojroot import here\n\n\nfile_path = here(\"projects/catherine project revamp//dataset/GBVdata.csv\")\ndf = pd.read_csv(file_path)\n\n\n# breakdown of victim race\ncount_vr = df[\"Victim Race\"].value_counts()\n\n\nprint(count_vr)\n\nVictim Race\nBLACK                             195836\nWHITE                             121104\nOTHER                              41757\nASIAN / PACIFIC ISLANDER           20730\nWHITE HISPANIC                      5313\nAMERICAN INDIAN/ALASKAN NATIVE      1709\nBLACK HISPANIC                      1284\nName: count, dtype: int64\n\n\n/tmp/ipykernel_2955/3806392317.py:6: DtypeWarning: Columns (10: Suspect Reported Age) have mixed types. Specify dtype option on import or set low_memory=False.\n  df = pd.read_csv(file_path)\n\n\nFrom the value counts of each unique observation/racial group in this dataset, most of the victims in domestic violence incident reports were Black, with white victims following somewhat closely behind. There is quite a jump between victims identifying as white and victims identifying as ‘other’ (might need to check for documentation on what ‘other’ entails or if it just means the victim declined to report their race). Whether or not these counts are proportional to the total population of Black people and white people across all boroughs of NYC, given that this dataset was last updated in 2024, is something I will be looking into as I don’t live there and don’t have concrete data on the racial demographics of the city (this could also vary widely by borough).\n\n\n\n\n# breakdown of suspect race\ncount_sr = df[\"Suspect Race\"].value_counts()\n\n\nprint(count_sr)\n\nSuspect Race\nBLACK                             190848\nWHITE                             104458\nOTHER                              45283\nASIAN / PACIFIC ISLANDER           19130\nWHITE HISPANIC                      4385\nAMERICAN INDIAN/ALASKAN NATIVE      1661\nBLACK HISPANIC                      1395\nName: count, dtype: int64\n\n\nMost of the suspects in NYC domestic violence incident reports were also Black and white, but there seems to be a slightly wider gap between the number of Black suspects and white suspects (195.8K - 121.1K for Black and white victims, respectively versus 190.8K - 104.4K for Black and white suspects, respectively). I don’t think this is a huge gap/disparity, but there do seem to be more Black suspects and victims that get reported to the NYPD in general.\n\n\n\nI want to see if there is any correlation between the race of both suspect and victim in concert with each other. Is it possible that, in cases where the victim is white and/or the suspect is Black, the incident is more likely to be reported? Based purely off my intuition of the role racial bias may play in police reports.\n\nvsr_counts = (\ndf.groupby([\"Victim Race\", \"Suspect Race\"]).size().sort_values(ascending=False)\n)\n\n\nprint(vsr_counts)\n\nVictim Race                     Suspect Race                  \nBLACK                           BLACK                             164636\nWHITE                           WHITE                              90456\nOTHER                           OTHER                              30158\nWHITE                           BLACK                              17239\nASIAN / PACIFIC ISLANDER        ASIAN / PACIFIC ISLANDER           16298\nBLACK                           WHITE                               9327\n                                OTHER                               8108\nWHITE                           OTHER                               5607\nOTHER                           BLACK                               4971\nWHITE HISPANIC                  WHITE HISPANIC                      3379\nOTHER                           WHITE                               2111\nASIAN / PACIFIC ISLANDER        WHITE                               1607\nWHITE                           ASIAN / PACIFIC ISLANDER            1481\nASIAN / PACIFIC ISLANDER        BLACK                               1094\nAMERICAN INDIAN/ALASKAN NATIVE  AMERICAN INDIAN/ALASKAN NATIVE       948\nBLACK                           ASIAN / PACIFIC ISLANDER             765\nASIAN / PACIFIC ISLANDER        OTHER                                714\nWHITE HISPANIC                  BLACK                                623\nBLACK HISPANIC                  BLACK HISPANIC                       564\nWHITE HISPANIC                  BLACK HISPANIC                       506\nOTHER                           ASIAN / PACIFIC ISLANDER             364\nBLACK                           WHITE HISPANIC                       311\nWHITE                           AMERICAN INDIAN/ALASKAN NATIVE       296\nAMERICAN INDIAN/ALASKAN NATIVE  BLACK                                293\nBLACK                           AMERICAN INDIAN/ALASKAN NATIVE       268\nBLACK HISPANIC                  WHITE HISPANIC                       268\nWHITE                           WHITE HISPANIC                       260\nBLACK HISPANIC                  BLACK                                255\nAMERICAN INDIAN/ALASKAN NATIVE  WHITE                                224\nBLACK                           BLACK HISPANIC                       219\nWHITE HISPANIC                  WHITE                                142\nAMERICAN INDIAN/ALASKAN NATIVE  OTHER                                107\nASIAN / PACIFIC ISLANDER        AMERICAN INDIAN/ALASKAN NATIVE        80\n                                WHITE HISPANIC                        49\nWHITE                           BLACK HISPANIC                        49\nAMERICAN INDIAN/ALASKAN NATIVE  ASIAN / PACIFIC ISLANDER              41\nOTHER                           AMERICAN INDIAN/ALASKAN NATIVE        40\nWHITE HISPANIC                  ASIAN / PACIFIC ISLANDER              36\nBLACK HISPANIC                  WHITE                                 21\nASIAN / PACIFIC ISLANDER        BLACK HISPANIC                        12\nBLACK HISPANIC                  ASIAN / PACIFIC ISLANDER              10\nWHITE HISPANIC                  AMERICAN INDIAN/ALASKAN NATIVE         3\nAMERICAN INDIAN/ALASKAN NATIVE  BLACK HISPANIC                         1\n                                WHITE HISPANIC                         1\nBLACK HISPANIC                  AMERICAN INDIAN/ALASKAN NATIVE         1\ndtype: int64\n\n\nFrom the counts of victim-suspect race pairings, the most commonly reported seem to be victims and suspects of the same race, or where both victim and suspect are ‘other’ (again, I have to look into what this means, ie racial group not included in other observations or lack of identification?). The next most common occurrence seems to be a white victim and Black suspect, but this is much less common than incidents where victim and suspect are both the same race.\n\n\n\nI want to see what the breakdown of the number of incidents are per borough, which will lead into my next question about the proportion of suspects of a given race per borough.\n\n# number of incidents per borough?\ncount_borough = df[\"Borough Name\"].value_counts()\n\n\nprint(count_borough)\n\nBorough Name\nBRONX            144222\nBROOKLYN         141199\nQUEENS           102030\nMANHATTAN         72104\nSTATEN ISLAND     24235\nName: count, dtype: int64\n\n\nMost of the incident reports seem to have occurred in the Bronx, with Brooklyn following very closely. There was a bit of a gap between Brooklyn, Queens, and Manhattan in that order, and then Staten Island is last by quite a large margin. I will find NYC’s 2020 census data before the next stage to see how these numbers map onto racial demographics, given that most victims and suspects in this dataset were Black.\n\n\n\nI thought it might be a good idea to see how many of these incidents occurred within an established intimate/domestic relationship. I’m not sure yet how I want to relate this to race, but it is an interesting variable and I’m curious as to why they included it/what their definition of domestic violence is? Is the definition in this dataset extended to be between family members (ie. parent-child) too?\n\n# intimate relationship\ncount_ir = df[\"Intimate Relationship Flag\"].value_counts()\n\n\nprint(count_ir)\n\nIntimate Relationship Flag\nYES        218892\nNO         151574\nMISSING     94440\nYes         12151\nNo           6733\nName: count, dtype: int64\n\n\nI’m not entirely sure why some observations were inputted as ‘YES’ and some were entered as ‘Yes’, and same for ‘NO’/‘No’. I might do some work with the data to combine these. Most of the incidents that were reported were within the bounds of an intimate relationship, but it is about proportional with the number of incidents that weren’t. I want to look more thoroughly into the definitions they are using for these domestic violence crimes, because i’m assuming they are extending these crimes to include (reported) abuse that happens between parents and children/other blood-related or live-in family members.\n\n\n\nTo clarify my previous question, I obtained the counts of each specific type of domestic violence offense/crime.\n\n# offense type\ncount_ot = df[\"Offense Type\"].value_counts()\n\n\nprint(count_ot)\n\nOffense Type\nDIR               464906\nFELONY ASSAULT     17639\nRAPE                1245\nName: count, dtype: int64\n\n\nThe vast majority of the offenses were ‘DIRs’, which means general domestic incident reports. Only a few were specifically labeled felony assault or rape, which doesn’t really elucidate anything for my research question but does highlight how often something is reported as rape or sexual assault. Most of these were general domestic reports, but this is very vague and could imply a lot of different types of abuse (very few seem to have been labeled a felony assault, which I interpret to be strictly physical in nature).\n\n\n\nI need literature on the correlation between poverty, race, and the frequency of domestic violence. I have an intuitive belief (from lived experience and observation) that poverty has a lot to do with how often domestic violence occurs, and based on historical discrimination and structural violence that persists to this day it is inextricably tied up with race as well.\n\n# poverty counts\ncount_poverty = df[\"Poverty\"].value_counts()\n\n\nprint(count_poverty)\n\n\n# count total rows\ntotal_rows = len(df)\n\n\n# poverty proportion\npov_proportion = count_poverty / total_rows * 100\nprint(pov_proportion)\n\nPoverty\n1.0    202325\nName: count, dtype: int64\nPoverty\n1.0    41.820831\nName: count, dtype: float64\n\n\n202,325 of the reports in this dataset, which constitutes about 42% of all reports in this dataset, had a categorical indicator of ‘1’ == Yes for a high poverty rate. I am not sure if the rows lacking a ‘1’ imply the report occurred an area with a low poverty rate or if there was simply not enough information, but a significant proportion of these incidents tended to be in areas with high poverty rates.\n\n\n\n\nvictim_proportions = (pd.crosstab(df[\"Victim Race\"], df[\"Victim Sex\"], normalize=\"all\") * 100)\n\n\nsuspect_proportions = (pd.crosstab(df[\"Suspect Race\"], df[\"Suspect Sex\"], normalize=\"all\") * 100)\n\n\nprint(victim_proportions, suspect_proportions)\n\nVictim Sex                         FEMALE       MALE\nVictim Race                                         \nAMERICAN INDIAN/ALASKAN NATIVE   0.292926   0.149972\nASIAN / PACIFIC ISLANDER         3.660404   1.713369\nBLACK                           36.413777  14.331794\nBLACK HISPANIC                   0.228207   0.105526\nOTHER                            7.433871   2.873896\nWHITE                           22.686549   8.729294\nWHITE HISPANIC                   1.034727   0.345689 Suspect Sex                        FEMALE       MALE    UNKNWN\nSuspect Race                                                  \nAMERICAN INDIAN/ALASKAN NATIVE   0.130791   0.323942  0.000276\nASIAN / PACIFIC ISLANDER         1.557904   3.691951  0.000276\nBLACK                           16.187467  36.131177  0.009106\nBLACK HISPANIC                   0.096576   0.285036  0.001656\nOTHER                            3.845093   7.829530  0.000000\nWHITE                            9.226291  19.477112  0.000552\nWHITE HISPANIC                   0.308766   0.893739  0.002759\n\n\nI will write more about these variables later but wanted to see the relationship between victim sex and race alongside suspect sex and race."
+    "text": "Note\n\n\n\n\n\n\n\n\n\n\nThe dataset I am using is The Intersection of Domestic Violence, Race, Ethnicity, and Sex from NYC Open Data. It is stored in my dataset folder. Its associated data dictionary that provides a brief overview of the dataset and how the data are collected is also stored in my dataset folder.\n\n\n\nBased on the information provided in this dataset, what role, if any, does both the race and the sex of the suspect and the victim play in the occurrence of domestic violence incident reports in New York City?\n\n\n\n\nI am particularly curious about the race of the victim in these domestic violence reports. I wonder if there is any correlation between the race of the victim and how often/if police file an incident reports.\n\nimport pandas as pd\nfrom pyprojroot import here\n\n\nfile_path = here(\"projects/catherine project revamp//dataset/GBVdata.csv\")\ndf = pd.read_csv(file_path)\n\n\n# breakdown of victim race\ncount_vr = df[\"Victim Race\"].value_counts()\n\n\nprint(count_vr)\n\nVictim Race\nBLACK                             195836\nWHITE                             121104\nOTHER                              41757\nASIAN / PACIFIC ISLANDER           20730\nWHITE HISPANIC                      5313\nAMERICAN INDIAN/ALASKAN NATIVE      1709\nBLACK HISPANIC                      1284\nName: count, dtype: int64\n\n\n/tmp/ipykernel_3251/3806392317.py:6: DtypeWarning: Columns (10: Suspect Reported Age) have mixed types. Specify dtype option on import or set low_memory=False.\n  df = pd.read_csv(file_path)\n\n\nFrom the value counts of each unique observation/racial group in this dataset, most of the victims in domestic violence incident reports were Black, with white victims following somewhat closely behind. There is quite a jump between victims identifying as white and victims identifying as ‘other’ (might need to check for documentation on what ‘other’ entails or if it just means the victim declined to report their race). Whether or not these counts are proportional to the total population of Black people and white people across all boroughs of NYC, given that this dataset was last updated in 2024, is something I will be looking into as I don’t live there and don’t have concrete data on the racial demographics of the city (this could also vary widely by borough).\n\n\n\n\n# breakdown of suspect race\ncount_sr = df[\"Suspect Race\"].value_counts()\n\n\nprint(count_sr)\n\nSuspect Race\nBLACK                             190848\nWHITE                             104458\nOTHER                              45283\nASIAN / PACIFIC ISLANDER           19130\nWHITE HISPANIC                      4385\nAMERICAN INDIAN/ALASKAN NATIVE      1661\nBLACK HISPANIC                      1395\nName: count, dtype: int64\n\n\nMost of the suspects in NYC domestic violence incident reports were also Black and white, but there seems to be a slightly wider gap between the number of Black suspects and white suspects (195.8K - 121.1K for Black and white victims, respectively versus 190.8K - 104.4K for Black and white suspects, respectively). I don’t think this is a huge gap/disparity, but there do seem to be more Black suspects and victims that get reported to the NYPD in general.\n\n\n\nI want to see if there is any correlation between the race of both suspect and victim in concert with each other. Is it possible that, in cases where the victim is white and/or the suspect is Black, the incident is more likely to be reported? Based purely off my intuition of the role racial bias may play in police reports.\n\nvsr_counts = (\ndf.groupby([\"Victim Race\", \"Suspect Race\"]).size().sort_values(ascending=False)\n)\n\n\nprint(vsr_counts)\n\nVictim Race                     Suspect Race                  \nBLACK                           BLACK                             164636\nWHITE                           WHITE                              90456\nOTHER                           OTHER                              30158\nWHITE                           BLACK                              17239\nASIAN / PACIFIC ISLANDER        ASIAN / PACIFIC ISLANDER           16298\nBLACK                           WHITE                               9327\n                                OTHER                               8108\nWHITE                           OTHER                               5607\nOTHER                           BLACK                               4971\nWHITE HISPANIC                  WHITE HISPANIC                      3379\nOTHER                           WHITE                               2111\nASIAN / PACIFIC ISLANDER        WHITE                               1607\nWHITE                           ASIAN / PACIFIC ISLANDER            1481\nASIAN / PACIFIC ISLANDER        BLACK                               1094\nAMERICAN INDIAN/ALASKAN NATIVE  AMERICAN INDIAN/ALASKAN NATIVE       948\nBLACK                           ASIAN / PACIFIC ISLANDER             765\nASIAN / PACIFIC ISLANDER        OTHER                                714\nWHITE HISPANIC                  BLACK                                623\nBLACK HISPANIC                  BLACK HISPANIC                       564\nWHITE HISPANIC                  BLACK HISPANIC                       506\nOTHER                           ASIAN / PACIFIC ISLANDER             364\nBLACK                           WHITE HISPANIC                       311\nWHITE                           AMERICAN INDIAN/ALASKAN NATIVE       296\nAMERICAN INDIAN/ALASKAN NATIVE  BLACK                                293\nBLACK                           AMERICAN INDIAN/ALASKAN NATIVE       268\nBLACK HISPANIC                  WHITE HISPANIC                       268\nWHITE                           WHITE HISPANIC                       260\nBLACK HISPANIC                  BLACK                                255\nAMERICAN INDIAN/ALASKAN NATIVE  WHITE                                224\nBLACK                           BLACK HISPANIC                       219\nWHITE HISPANIC                  WHITE                                142\nAMERICAN INDIAN/ALASKAN NATIVE  OTHER                                107\nASIAN / PACIFIC ISLANDER        AMERICAN INDIAN/ALASKAN NATIVE        80\n                                WHITE HISPANIC                        49\nWHITE                           BLACK HISPANIC                        49\nAMERICAN INDIAN/ALASKAN NATIVE  ASIAN / PACIFIC ISLANDER              41\nOTHER                           AMERICAN INDIAN/ALASKAN NATIVE        40\nWHITE HISPANIC                  ASIAN / PACIFIC ISLANDER              36\nBLACK HISPANIC                  WHITE                                 21\nASIAN / PACIFIC ISLANDER        BLACK HISPANIC                        12\nBLACK HISPANIC                  ASIAN / PACIFIC ISLANDER              10\nWHITE HISPANIC                  AMERICAN INDIAN/ALASKAN NATIVE         3\nAMERICAN INDIAN/ALASKAN NATIVE  BLACK HISPANIC                         1\n                                WHITE HISPANIC                         1\nBLACK HISPANIC                  AMERICAN INDIAN/ALASKAN NATIVE         1\ndtype: int64\n\n\nFrom the counts of victim-suspect race pairings, the most commonly reported seem to be victims and suspects of the same race, or where both victim and suspect are ‘other’ (again, I have to look into what this means, ie racial group not included in other observations or lack of identification?). The next most common occurrence seems to be a white victim and Black suspect, but this is much less common than incidents where victim and suspect are both the same race.\n\n\n\nI want to see what the breakdown of the number of incidents are per borough, which will lead into my next question about the proportion of suspects of a given race per borough.\n\n# number of incidents per borough?\ncount_borough = df[\"Borough Name\"].value_counts()\n\n\nprint(count_borough)\n\nBorough Name\nBRONX            144222\nBROOKLYN         141199\nQUEENS           102030\nMANHATTAN         72104\nSTATEN ISLAND     24235\nName: count, dtype: int64\n\n\nMost of the incident reports seem to have occurred in the Bronx, with Brooklyn following very closely. There was a bit of a gap between Brooklyn, Queens, and Manhattan in that order, and then Staten Island is last by quite a large margin. I will find NYC’s 2020 census data before the next stage to see how these numbers map onto racial demographics, given that most victims and suspects in this dataset were Black.\n\n\n\nI thought it might be a good idea to see how many of these incidents occurred within an established intimate/domestic relationship. I’m not sure yet how I want to relate this to race, but it is an interesting variable and I’m curious as to why they included it/what their definition of domestic violence is? Is the definition in this dataset extended to be between family members (ie. parent-child) too?\n\n# intimate relationship\ncount_ir = df[\"Intimate Relationship Flag\"].value_counts()\n\n\nprint(count_ir)\n\nIntimate Relationship Flag\nYES        218892\nNO         151574\nMISSING     94440\nYes         12151\nNo           6733\nName: count, dtype: int64\n\n\nI’m not entirely sure why some observations were inputted as ‘YES’ and some were entered as ‘Yes’, and same for ‘NO’/‘No’. I might do some work with the data to combine these. Most of the incidents that were reported were within the bounds of an intimate relationship, but it is about proportional with the number of incidents that weren’t. I want to look more thoroughly into the definitions they are using for these domestic violence crimes, because i’m assuming they are extending these crimes to include (reported) abuse that happens between parents and children/other blood-related or live-in family members.\n\n\n\nTo clarify my previous question, I obtained the counts of each specific type of domestic violence offense/crime.\n\n# offense type\ncount_ot = df[\"Offense Type\"].value_counts()\n\n\nprint(count_ot)\n\nOffense Type\nDIR               464906\nFELONY ASSAULT     17639\nRAPE                1245\nName: count, dtype: int64\n\n\nThe vast majority of the offenses were ‘DIRs’, which means general domestic incident reports. Only a few were specifically labeled felony assault or rape, which doesn’t really elucidate anything for my research question but does highlight how often something is reported as rape or sexual assault. Most of these were general domestic reports, but this is very vague and could imply a lot of different types of abuse (very few seem to have been labeled a felony assault, which I interpret to be strictly physical in nature).\n\n\n\nI need literature on the correlation between poverty, race, and the frequency of domestic violence. I have an intuitive belief (from lived experience and observation) that poverty has a lot to do with how often domestic violence occurs, and based on historical discrimination and structural violence that persists to this day it is inextricably tied up with race as well.\n\n# poverty counts\ncount_poverty = df[\"Poverty\"].value_counts()\n\n\nprint(count_poverty)\n\n\n# count total rows\ntotal_rows = len(df)\n\n\n# poverty proportion\npov_proportion = count_poverty / total_rows * 100\nprint(pov_proportion)\n\nPoverty\n1.0    202325\nName: count, dtype: int64\nPoverty\n1.0    41.820831\nName: count, dtype: float64\n\n\n202,325 of the reports in this dataset, which constitutes about 42% of all reports in this dataset, had a categorical indicator of ‘1’ == Yes for a high poverty rate. I am not sure if the rows lacking a ‘1’ imply the report occurred an area with a low poverty rate or if there was simply not enough information, but a significant proportion of these incidents tended to be in areas with high poverty rates.\n\n\n\n\nvictim_proportions = (pd.crosstab(df[\"Victim Race\"], df[\"Victim Sex\"], normalize=\"all\") * 100)\n\n\nsuspect_proportions = (pd.crosstab(df[\"Suspect Race\"], df[\"Suspect Sex\"], normalize=\"all\") * 100)\n\n\nprint(victim_proportions, suspect_proportions)\n\nVictim Sex                         FEMALE       MALE\nVictim Race                                         \nAMERICAN INDIAN/ALASKAN NATIVE   0.292926   0.149972\nASIAN / PACIFIC ISLANDER         3.660404   1.713369\nBLACK                           36.413777  14.331794\nBLACK HISPANIC                   0.228207   0.105526\nOTHER                            7.433871   2.873896\nWHITE                           22.686549   8.729294\nWHITE HISPANIC                   1.034727   0.345689 Suspect Sex                        FEMALE       MALE    UNKNWN\nSuspect Race                                                  \nAMERICAN INDIAN/ALASKAN NATIVE   0.130791   0.323942  0.000276\nASIAN / PACIFIC ISLANDER         1.557904   3.691951  0.000276\nBLACK                           16.187467  36.131177  0.009106\nBLACK HISPANIC                   0.096576   0.285036  0.001656\nOTHER                            3.845093   7.829530  0.000000\nWHITE                            9.226291  19.477112  0.000552\nWHITE HISPANIC                   0.308766   0.893739  0.002759\n\n\nI will write more about these variables later but wanted to see the relationship between victim sex and race alongside suspect sex and race."
   },
   {
     "objectID": "projects/catherine project revamp/stage2-copy.html#about",
@@ -1943,7 +2034,7 @@
     "href": "projects/catherine project revamp/stage2-copy.html#q1-race-of-victim",
     "title": "Initial Questions",
     "section": "",
-    "text": "I am particularly curious about the race of the victim in these domestic violence reports. I wonder if there is any correlation between the race of the victim and how often/if police file an incident reports.\n\nimport pandas as pd\nfrom pyprojroot import here\n\n\nfile_path = here(\"projects/catherine project revamp//dataset/GBVdata.csv\")\ndf = pd.read_csv(file_path)\n\n\n# breakdown of victim race\ncount_vr = df[\"Victim Race\"].value_counts()\n\n\nprint(count_vr)\n\nVictim Race\nBLACK                             195836\nWHITE                             121104\nOTHER                              41757\nASIAN / PACIFIC ISLANDER           20730\nWHITE HISPANIC                      5313\nAMERICAN INDIAN/ALASKAN NATIVE      1709\nBLACK HISPANIC                      1284\nName: count, dtype: int64\n\n\n/tmp/ipykernel_2955/3806392317.py:6: DtypeWarning: Columns (10: Suspect Reported Age) have mixed types. Specify dtype option on import or set low_memory=False.\n  df = pd.read_csv(file_path)\n\n\nFrom the value counts of each unique observation/racial group in this dataset, most of the victims in domestic violence incident reports were Black, with white victims following somewhat closely behind. There is quite a jump between victims identifying as white and victims identifying as ‘other’ (might need to check for documentation on what ‘other’ entails or if it just means the victim declined to report their race). Whether or not these counts are proportional to the total population of Black people and white people across all boroughs of NYC, given that this dataset was last updated in 2024, is something I will be looking into as I don’t live there and don’t have concrete data on the racial demographics of the city (this could also vary widely by borough)."
+    "text": "I am particularly curious about the race of the victim in these domestic violence reports. I wonder if there is any correlation between the race of the victim and how often/if police file an incident reports.\n\nimport pandas as pd\nfrom pyprojroot import here\n\n\nfile_path = here(\"projects/catherine project revamp//dataset/GBVdata.csv\")\ndf = pd.read_csv(file_path)\n\n\n# breakdown of victim race\ncount_vr = df[\"Victim Race\"].value_counts()\n\n\nprint(count_vr)\n\nVictim Race\nBLACK                             195836\nWHITE                             121104\nOTHER                              41757\nASIAN / PACIFIC ISLANDER           20730\nWHITE HISPANIC                      5313\nAMERICAN INDIAN/ALASKAN NATIVE      1709\nBLACK HISPANIC                      1284\nName: count, dtype: int64\n\n\n/tmp/ipykernel_3251/3806392317.py:6: DtypeWarning: Columns (10: Suspect Reported Age) have mixed types. Specify dtype option on import or set low_memory=False.\n  df = pd.read_csv(file_path)\n\n\nFrom the value counts of each unique observation/racial group in this dataset, most of the victims in domestic violence incident reports were Black, with white victims following somewhat closely behind. There is quite a jump between victims identifying as white and victims identifying as ‘other’ (might need to check for documentation on what ‘other’ entails or if it just means the victim declined to report their race). Whether or not these counts are proportional to the total population of Black people and white people across all boroughs of NYC, given that this dataset was last updated in 2024, is something I will be looking into as I don’t live there and don’t have concrete data on the racial demographics of the city (this could also vary widely by borough)."
   },
   {
     "objectID": "projects/catherine project revamp/stage2-copy.html#q2-race-of-suspect",
@@ -2258,7 +2349,7 @@
     "href": "lectures.html",
     "title": "Course Lectures",
     "section": "",
-    "text": "Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered. You can view the slideshow (including any speaker notes), or head over to the repo and browse the source itself. If we paused the lecture to take notes on something in the middle, you’ll find those notes randomly in the slideshow wherever that happened.\nIf the class hasn’t happened yet, no need to review it - it’s available in the repo so that students can put their slides in early.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nDescription\n\n\n\ntopics\n\n\n\n\n\n\n\n\nCoding Inequality, Algorithms, Legality, and the end!\n\n\nLecture for Week7-C1\n\n\nCoding Inequality, Algorithms, Legality\n\n\n\n\n\n\nTerminal Review & Tips\n\n\nTerminal review and demo\n\n\nmac terminal\n\n\n\n\n\n\nCode Review / Peer Review + Upgrading our Visualizations\n\n\nA few tips on how to pick a good visualization, how to edit the visual appeal, and make them interesting!\n\n\nPositron, Data Visualizations\n\n\n\n\n\n\nCarceral centralization and expansion\n\n\nLecture for Week9-C1\n\n\nRacial Criminalization, History\n\n\n\n\n\n\nHistorical Significance, Carceral Space, Racial Criminalization\n\n\nLecture for Week8-C1\n\n\nRacial Criminalization, History\n\n\n\n\n\n\nBrayne, Chs 1 & 2\n\n\nDiscussion about Chs 1 & 2 of Brayne\n\n\nBrayne, Chs 1 & 2, Research Question review\n\n\n\n\n\n\nVirtual Environments\n\n\n\n\n\n \n\n\n\n\n\n\nWeek 2, Class 2\n\n\nWalkthrough of the tech stack\n\n\nPositron, git, python, demo projects\n\n\n\n\n\n\nWeek 2, Class 1\n\n\nHistory of data in the CLS\n\n\nJohnson - 2 regimes, UCR reports\n\n\n\n\n\n\nHow to use research groups\n\n\nResearch group round up\n\n\nresearch, group work\n\n\n\n\n\n\nDragnet Surveillance\n\n\nBrayne, Ch 3\n\n\nDragnet Surveillance\n\n\n\n\n\n\nDirected Surveillance and Police Pushback\n\n\nBrayne, Ch 4 and 5\n\n\nDirected Surveillance, Police Pushback\n\n\n\n\n\n\nMy Top 10 Git Tips\n\n\nTen practical git habits, plus a demo in Positron\n\n\ngit, github\n\n\n\n\n\n\nWeek 1, Class 1\n\n\nPhases of the criminal legal system\n\n\nsyllabus, how to read, steps of the CLS\n\n\n\n\n\n\nNo matching items"
+    "text": "Every slide deck that you see in class is listed here, along with a high-level list of the topics we covered. You can view the slideshow (including any speaker notes), or head over to the repo and browse the source itself. If we paused the lecture to take notes on something in the middle, you’ll find those notes randomly in the slideshow wherever that happened.\nIf the class hasn’t happened yet, no need to review it - it’s available in the repo so that students can put their slides in early.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nDescription\n\n\n\ntopics\n\n\n\n\n\n\n\n\nCoding Inequality, Algorithms, Legality, and the end!\n\n\nLecture for Week7-C1\n\n\nCoding Inequality, Algorithms, Legality\n\n\n\n\n\n\nTerminal Review & Tips\n\n\nTerminal review and demo\n\n\nmac terminal\n\n\n\n\n\n\nCode Review / Peer Review + Upgrading our Visualizations\n\n\nA few tips on how to pick a good visualization, how to edit the visual appeal, and make them interesting!\n\n\nPositron, Data Visualizations\n\n\n\n\n\n\nCreating a Website on Github\n\n\nA few tips on how to create, customize, and publish a website using Github!\n\n\nGithub, Web Building\n\n\n\n\n\n\nCarceral centralization and expansion\n\n\nLecture for Week9-C1\n\n\nRacial Criminalization, History\n\n\n\n\n\n\nHistorical Significance, Carceral Space, Racial Criminalization\n\n\nLecture for Week8-C1\n\n\nRacial Criminalization, History\n\n\n\n\n\n\nBrayne, Chs 1 & 2\n\n\nDiscussion about Chs 1 & 2 of Brayne\n\n\nBrayne, Chs 1 & 2, Research Question review\n\n\n\n\n\n\nVirtual Environments\n\n\n\n\n\n \n\n\n\n\n\n\nWeek 2, Class 2\n\n\nWalkthrough of the tech stack\n\n\nPositron, git, python, demo projects\n\n\n\n\n\n\nWeek 2, Class 1\n\n\nHistory of data in the CLS\n\n\nJohnson - 2 regimes, UCR reports\n\n\n\n\n\n\nHow to use research groups\n\n\nResearch group round up\n\n\nresearch, group work\n\n\n\n\n\n\nDragnet Surveillance\n\n\nBrayne, Ch 3\n\n\nDragnet Surveillance\n\n\n\n\n\n\nDirected Surveillance and Police Pushback\n\n\nBrayne, Ch 4 and 5\n\n\nDirected Surveillance, Police Pushback\n\n\n\n\n\n\nMy Top 10 Git Tips\n\n\nTen practical git habits, plus a demo in Positron\n\n\ngit, github\n\n\n\n\n\n\nWeek 1, Class 1\n\n\nPhases of the criminal legal system\n\n\nsyllabus, how to read, steps of the CLS\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "tech-stack.html",
@@ -2436,116 +2527,123 @@
     "text": "Identifying Misleading Visualizations\nCommon Mistakes to Avoid\n\nBroken axis\n– Starting y-axis above zero exaggerates minor differences\nCherry-picking/selective statistics\n– Hiding parts of the data or focusing only on extremes\nAxis manipulation/Misleading Scales\n–Stretching or compressing axes to make a trend look stronger/weaker\nUnlabeled axes/confusing units"
   },
   {
-    "objectID": "lectures/week8-c2.html#todays-plan",
-    "href": "lectures/week8-c2.html#todays-plan",
-    "title": "DATAVIZ",
-    "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nMake sure EVERYONE knows how to build a data visualization\n(Using Seaborn)"
-  },
-  {
-    "objectID": "lectures/week8-c2.html#by-the-end-of-today-you-will-probably-know-how-to",
-    "href": "lectures/week8-c2.html#by-the-end-of-today-you-will-probably-know-how-to",
-    "title": "DATAVIZ",
-    "section": "By the end of today, you will (probably) know how to:",
-    "text": "By the end of today, you will (probably) know how to:\n\nInstall Seaborn\nUse Seaborn to make a basic visualization\nBe able to add visualizations to your research project."
-  },
-  {
-    "objectID": "lectures/week8-c2.html#run-it",
-    "href": "lectures/week8-c2.html#run-it",
-    "title": "DATAVIZ",
-    "section": "Run it!",
-    "text": "Run it!\nThis charts the amount of the tip, the total bill, if the person was a smoker or nonsmoker, and the size of the party. see the tabular data"
-  },
-  {
-    "objectID": "lectures/week8-c2.html#but-what",
-    "href": "lectures/week8-c2.html#but-what",
-    "title": "DATAVIZ",
-    "section": "But, what?",
-    "text": "But, what?\nWhat is sns.relplot?\n-&gt; To the Code Documentation! Relplot"
-  },
-  {
-    "objectID": "lectures/week8-c2.html#your-task",
-    "href": "lectures/week8-c2.html#your-task",
-    "title": "DATAVIZ",
-    "section": "Your task",
-    "text": "Your task\n\nChange the code from the previous slide so that the text is different on every label\n\n\nAdd kind=line to the parameters\nUnderneath sns.settheme() add sns.set_style('whitegrid')"
-  },
-  {
-    "objectID": "lectures/week8-c2.html#but-wait",
-    "href": "lectures/week8-c2.html#but-wait",
-    "title": "DATAVIZ",
-    "section": "But wait!",
-    "text": "But wait!\nOn the docs page, it shows so.Plot in addition to sns.relplot."
-  },
-  {
-    "objectID": "lectures/week8-c2.html#but-wait-again",
-    "href": "lectures/week8-c2.html#but-wait-again",
-    "title": "DATAVIZ",
-    "section": "But wait, again",
-    "text": "But wait, again\nWe can chain these together and stack them until we get what we want."
-  },
-  {
-    "objectID": "lectures/week8-c2.html#what-else-can-we-do",
-    "href": "lectures/week8-c2.html#what-else-can-we-do",
-    "title": "DATAVIZ",
-    "section": "What else can we do?",
-    "text": "What else can we do?\nThe gallery!"
-  },
-  {
-    "objectID": "lectures/week8-c2.html#next",
-    "href": "lectures/week8-c2.html#next",
-    "title": "DATAVIZ",
-    "section": "Next",
-    "text": "Next\n\nWhat kind of dataviz does your project need?"
-  },
-  {
-    "objectID": "lectures/week8-c2.html#by-your-powers-combined",
-    "href": "lectures/week8-c2.html#by-your-powers-combined",
-    "title": "DATAVIZ",
-    "section": "By Your Powers Combined!",
-    "text": "By Your Powers Combined!\nGet in groups with others making similar visualizations and help each other to get one built locally"
-  },
-  {
-    "objectID": "lectures/week3-c1.html#todays-agenda",
-    "href": "lectures/week3-c1.html#todays-agenda",
-    "title": "Brayne, Chs 1 & 2",
+    "objectID": "lectures/week9-c1.html#todays-agenda",
+    "href": "lectures/week9-c1.html#todays-agenda",
+    "title": "Carceral centralization and expansion",
     "section": "Today’s Agenda",
-    "text": "Today’s Agenda\n\ndiscussion!\nresearch topic &gt; research groups\nAaminah - last 15m"
+    "text": "Today’s Agenda\n\n1-2 data visualizations and 1-2 paragraphs of writing are DUE Wednesday\nRae’s our discussion leader!"
   },
   {
-    "objectID": "lectures/week3-c1.html#related",
-    "href": "lectures/week3-c1.html#related",
-    "title": "Brayne, Chs 1 & 2",
-    "section": "Related",
-    "text": "Related\n\nPrison surveillance videos should be public information by Jeffrey McKee from Prison Journalism Project\n[How rogue officers turned a nationwide camera network into a tool for stalking] - Aug 2, 2026 Washington Post\nhow surveillance material is collected and who has control over it is hugely important to conversations about whether or not surveillance infrastructure “works” or is “worth it”"
+    "objectID": "lectures/week9-c1.html#related-events",
+    "href": "lectures/week9-c1.html#related-events",
+    "title": "Carceral centralization and expansion",
+    "section": "Related Events",
+    "text": "Related Events\n\nICE ankle monitors in Springfield , Ohio\nAn Ankle Monitor Gives a False Taste of Freedom\n\nRelevance?\nThe reading describes electronic ankle monitors as one way that the carceral apparatus extends its control into public and private life. Jefferson observes that these monitors are another way to micromanage devalued populations while appearing to address issues around prisoners rights and prison overcrowding. In separating urban space into inclusion and exclusion zones, electronic monitoring systems compound/codify existing urban divisions and reinforce geographic notions of criminality."
   },
   {
-    "objectID": "lectures/week3-c1.html#reading",
-    "href": "lectures/week3-c1.html#reading",
-    "title": "Brayne, Chs 1 & 2",
+    "objectID": "lectures/week9-c1.html#reading",
+    "href": "lectures/week9-c1.html#reading",
+    "title": "Carceral centralization and expansion",
     "section": "Reading",
-    "text": "Reading\n\nwe are in a transitional moment from “traditional” police work to Big Data driven police work (recall the 3 vs - velocity, variety, volume)\nbig data only makes meaning in aggregate, thus we need mass collection for the technology to “work”\npolice departments used to collect data manually (in the “traditional” ways). That data collection is now being done by big tech / data brokers / surveillance-focused vendors"
+    "text": "Reading\n\nUrban governments abdicate control to companies and respond to resultant increased wealth inequality by criminalizing poverty\nTech/tech-enabled companies fuel and capitalized on this inequality, building tools that both centralized and decentralized carceral control\nBeyond prisons, technology has become incorporated into the judicial system, further marginalizing devalued peoples\nUltimately, creates a carceral system akin to a factory, where control, speed, and cost-effectiveness predominate\nAltogether, the “barbarity” of the system is veiled by a combination of concerns over public-safety, intellectual property laws, and the social-scientific research apparatus"
   },
   {
-    "objectID": "lectures/week3-c1.html#main-points",
-    "href": "lectures/week3-c1.html#main-points",
-    "title": "Brayne, Chs 1 & 2",
+    "objectID": "lectures/week9-c1.html#main-points",
+    "href": "lectures/week9-c1.html#main-points",
+    "title": "Carceral centralization and expansion",
     "section": "Main Points",
-    "text": "Main Points\n\n“private” data is not subject to same legal oversight as “public” data\n“objective” technlogy is used to justify police behavior and legitimize outcomes"
+    "text": "Main Points\n\nPrisons have always been designed to micromanage certain populations (& the emergence of technology only made this easier and more expansive)\nCorporations seek/build new avenues of revenue to stave off stagnation; they aren’t only complicit in the implementation of carceral tech, but actively shape society’s hunger for it\nThis effects more than just incarcerated individuals – public space is increasingly under the influence of the carceral apparatus"
   },
   {
-    "objectID": "lectures/week3-c1.html#questions",
-    "href": "lectures/week3-c1.html#questions",
-    "title": "Brayne, Chs 1 & 2",
-    "section": "Questions?",
-    "text": "Questions?\n\nHow do ideas of quantification show up in Brayne’s analysis of LAPD’s tech use?\nDo you think “old” ways of doing things is/were better? Is the trade off worth it?\nIn what meaningful ways are “Big Data” uses of data distinct? What differences are most distinct to you?\nHow (if at all) does this influence how you’re thinking about your own data sources?"
+    "objectID": "lectures/week9-c1.html#questions",
+    "href": "lectures/week9-c1.html#questions",
+    "title": "Carceral centralization and expansion",
+    "section": "Questions!",
+    "text": "Questions!\n\nJefferson notes that there is a “scientific veil” that “conceals the barbarity” of the current carceral system, citing examples of social science researchers who assist in building risk algorithms, or journals dedicated to criminology and crime science research. What are the benefits of having academia involved in this work? What are the pitfalls? What responsibility do academic researchers have to engage/not engage in this kind of work?\nWhat does Jefferson mean by “disciplinary society”? “Control society”? What are the distinctions they draw between the two and how has the digitization of incarceration caused the two to merge?\nHow does the use of technology in court cases (particularly algorithms that assign defendants risk scores) undermine the notion of “innocent until proven guilty”? Is there a universe in which predictive technologies coexist with this standard?"
   },
   {
-    "objectID": "lectures/week3-c1.html#research-groups",
-    "href": "lectures/week3-c1.html#research-groups",
-    "title": "Brayne, Chs 1 & 2",
-    "section": "Research Groups!",
-    "text": "Research Groups!\n\nSay your close-enough-for-now research question\nGroups!\nMegan is coming on Wednesday to talk about the groups!"
+    "objectID": "lectures/week8-c1.html#todays-agenda",
+    "href": "lectures/week8-c1.html#todays-agenda",
+    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "section": "Today’s Agenda",
+    "text": "Today’s Agenda\n\nData visualization idea is DUE Wednesday, to be built in class\nLeah’s our discussion leader!"
+  },
+  {
+    "objectID": "lectures/week8-c1.html#related-events",
+    "href": "lectures/week8-c1.html#related-events",
+    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "section": "Related Events",
+    "text": "Related Events\n\nShaw v. Reno: Racial Gerrymandering New York Law School *Supreme Court case in 1993, first time the courts recognized drawing state/county/town boundaries based on race of those who live there is unconstitutional, violating 14th amendment Equal Protections Clause.\nSystemic Racism in US - Aug 9, 2021 Human Rights Careers\n*Discusses the systemic racism present in the US. “According to a 2017 report, Black men got 19.1% longer sentences for the same federal crime than white men between 2012-2016.” “Despite making up just 13% of the US population, Black people make up 38% of the population in jails and prisons.”"
+  },
+  {
+    "objectID": "lectures/week8-c1.html#reading",
+    "href": "lectures/week8-c1.html#reading",
+    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "section": "Reading",
+    "text": "Reading\nIntroduction - Set a historical significance of growing data, data collection has always been politically motivated - Creation of social datasets assists in the social heirarchy those in charge are trying to promote"
+  },
+  {
+    "objectID": "lectures/week8-c1.html#continued",
+    "href": "lectures/week8-c1.html#continued",
+    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "section": "Continued…",
+    "text": "Continued…\nChapter 1 - Data collection and analysis has always been to ostrosize the “inferior” racial group at the time, Irish, Italian, German, then Black people - Datasets including race were the catalist of grouping all of the hated European Immigrants into the white catagory, making the outliers the black category - Trying to explain crime as a social construct paved the way for ignoring physcial and only focusing on social demographics - More data means more reason to patrol"
+  },
+  {
+    "objectID": "lectures/week8-c1.html#main-points",
+    "href": "lectures/week8-c1.html#main-points",
+    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "section": "Main Points",
+    "text": "Main Points\n\n“As such, computational criminology is incapable of grasping internal differentiations within the classes of offenders it tabulates. No distinctions are made between the individual who sells narcotics to support a family and the individual who sells them for a gun cartel in computational criminology’s system of reference, yet both are coded as targets for heightened police scrutiny.” (pg. 55) LOSS OF IDENTITY\n“From the start, the social function of computational criminology was to produce targets for patrol forces; it is one-dimensional thought operating in two-dimensional space.” (pg. 53) EFFICIENCY"
+  },
+  {
+    "objectID": "lectures/week8-c1.html#questions",
+    "href": "lectures/week8-c1.html#questions",
+    "title": "Historical Significance, Carceral Space, Racial Criminalization",
+    "section": "Questions!",
+    "text": "Questions!\n\nWhere do we go from here in order to break the self fulfilling prophecy of systemic racism, what can change about how we collect data and police to stop contributing to the problem?\nDoes collecting demographic data actually help, or does it contribute to putting people into boxes? What are examples of positive and negative uses of demographic data collection?"
+  },
+  {
+    "objectID": "lectures/week10-c1.html#todays-agenda",
+    "href": "lectures/week10-c1.html#todays-agenda",
+    "title": "A Fully Automated Police Apparatus",
+    "section": "Today’s Agenda",
+    "text": "Today’s Agenda\n\nDiscussion leader: Julia\nBy Wednesday: Develop a full outline of your final project"
+  },
+  {
+    "objectID": "lectures/week10-c1.html#related-events",
+    "href": "lectures/week10-c1.html#related-events",
+    "title": "A Fully Automated Police Apparatus",
+    "section": "Related Events",
+    "text": "Related Events\nCoursework in N.Y.: Surviving the Police\n\nBlack law enforcement officers founded a group in the 1990s that spoke to Black communities on how to survive stop-and-frisk interactions during the heightened policing of the Giuliani era\n\nChicago Paid $2.7M for System Designed to Flag Officers With Multiple Complaints\n\nThis article highlights a tension Jefferson explores in this chapter about what happens when these types of systems are used on officers."
+  },
+  {
+    "objectID": "lectures/week10-c1.html#main-points",
+    "href": "lectures/week10-c1.html#main-points",
+    "title": "A Fully Automated Police Apparatus",
+    "section": "Main Points",
+    "text": "Main Points\nHistorical context of police digitization\n\nEconomic inequality increased in NYC and Chicago in the 80s and 90s: increases in unemployment and crime\nResponses to crime were motivated by capital losses: crime hurt businesses and lowered property values\nPredictive policing software amplified the disproportionate targeting of Black and Hispanic individuals; technological advances legitimized the existing patterns of racialized policing"
+  },
+  {
+    "objectID": "lectures/week10-c1.html#nyc",
+    "href": "lectures/week10-c1.html#nyc",
+    "title": "A Fully Automated Police Apparatus",
+    "section": "NYC",
+    "text": "NYC\n\n1994: Clinton’s Violent Crime Control and Law Enforcement Act\nMassive use of tax dollars integrating IT with the police\nGiuliani-era reform: zero-tolerance policing & broken windows theory\nCompStat created to identify crime hotspots and governmentalize police behavior\nImpact zoning deployed officers to hotspots"
+  },
+  {
+    "objectID": "lectures/week10-c1.html#chicago",
+    "href": "lectures/week10-c1.html#chicago",
+    "title": "A Fully Automated Police Apparatus",
+    "section": "Chicago",
+    "text": "Chicago\n\nGang violence was compared to the Colombian drug war to lobby for military technology\nOracle Corporation created the CLEAR (Citizen Law Enforcement Analysis and Reporting) system, a database that produced targets for patrol units\nDeployment Operations Center (DOC): a software that generated targets for patrol units and tried to predict future offenses\nCLEAR & DOC used to rationalize uneven distributions of patrol units"
+  },
+  {
+    "objectID": "lectures/week10-c1.html#questions",
+    "href": "lectures/week10-c1.html#questions",
+    "title": "A Fully Automated Police Apparatus",
+    "section": "Questions",
+    "text": "Questions\n\n“the city found itself confronted with the problem of populations whose hindrance on profit rates was increasing” (111). Jefferson argues that under capitalism, policing serves to protect economic interests rather than promote public safety. How do economic interests shape which behaviors/actions are criminalized and who is targeted by the police?\n“predictive policing identifies entire demographics and neighborhoods as criminally predisposed” (128). How might predictive policing create a self-fulfilling prophecy?\n“an organization’s turn to data analytics increases its demand for additional data” (116). Does the demand for more data ever end? How does this demand contribute to the expansion of surveillance, and will the expansion of surveillance ever end?"
   },
   {
     "objectID": "lectures/week2-c2.html#todays-agenda",
