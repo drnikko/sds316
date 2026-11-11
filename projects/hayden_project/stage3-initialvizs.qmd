@@ -1,0 +1,103 @@
+---
+title: Stage 3 Initial Visualizations
+author: Hayden Steinmann
+execute:
+ code-fold: true
+---
+
+```{python}
+import pandas as pd
+from pyprojroot import here
+import plotly.express as px
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+```{python}
+cms_race = pd.read_csv(here("projects/hayden_project/datasets_files/cms_race.csv"))
+
+school_locations = pd.read_csv(here("projects/hayden_project/datasets_files/cms_school_locations.csv"))
+
+school_coords = school_locations[['agency_code', 'latitude', 'longitude']].copy()
+
+cms_race["agency_code"] = cms_race["agency_code"].astype(str)
+school_coords["agency_code"] = school_coords["agency_code"].astype(str)
+
+cms_map_info = cms_race.merge(school_coords, on = 'agency_code', how = 'left')
+
+meck_all = pd.read_csv(here("projects/hayden_project/datasets_files/meck_all.csv"))
+
+```
+
+```{python}
+fig = px.scatter_map(
+    cms_map_info,
+    lat = 'latitude',
+    lon = 'longitude',
+    color = 'pct_black',
+    hover_name = 'name',
+    hover_data = {
+        'pct_black': ':.1f',
+        'sts_per1000': ':.1f',
+        'iss_per1000': ':.1f',
+        'rpt_per1000': ':.1f',
+        'arr_per1000': ':.1f',
+        'latitude': False,
+        'longitude': False},
+    color_continuous_scale = 'Viridis',
+    center = {'lat': 35.26, 'lon': -80.84},
+    zoom = 8,
+    title = 'Racial Composition of Charlotte-Mecklenburg Schools')
+
+fig.show()
+```
+
+I think that this map does a great job of visualizing the the racial organization of students throughout Mecklenburg County. While I don't think this is a finalized visualization in its self, I do think it's a good jumping off point for adding/altering. I'm considering adding a different layer that looks at school funding. I am struggling slightly with narrowing down my focus. Part of me feels that my project doesn't relate strongly enough to the criminal legal system. I need to put a bigger emphasis on the disciplinary rates, law enforcement referrals, and school-related arrests. I'm thinking that my second visualization could have a bigger focus on this. 
+
+```{python}
+fig, ax = plt.subplots(2, 2, figsize=(12, 9))
+
+# ISS vs. referrals
+ax[0, 0].scatter(
+    np.log1p(meck_all["iss_per1000"]),
+    np.log1p(meck_all["rpt_per1000"]),
+    alpha=0.5)
+ax[0, 0].set_title("ISS vs. Law Enforcement Referrals")
+ax[0, 0].set_xlabel("Log(1 + ISS rate)")
+ax[0, 0].set_ylabel("Log(1 + referral rate)")
+
+# STS vs. referrals
+ax[0, 1].scatter(
+    np.log1p(meck_all["sts_per1000"]),
+    np.log1p(meck_all["rpt_per1000"]),
+    alpha=0.5)
+ax[0, 1].set_title("STS vs. Law Enforcement Referrals")
+ax[0, 1].set_xlabel("Log(1 + STS rate)")
+ax[0, 1].set_ylabel("Log(1 + referral rate)")
+
+# ISS vs. arrests
+ax[1, 0].scatter(
+    np.log1p(meck_all["iss_per1000"]),
+    np.log1p(meck_all["arr_per1000"]),
+    alpha=0.5)
+ax[1, 0].set_title("ISS vs. School-Related Arrests")
+ax[1, 0].set_xlabel("Log(1 + ISS rate)")
+ax[1, 0].set_ylabel("Log(1 + arrest rate)")
+
+# STS vs. arrests
+ax[1, 1].scatter(
+    np.log1p(meck_all["sts_per1000"]),
+    np.log1p(meck_all["arr_per1000"]),
+    alpha=0.5)
+ax[1, 1].set_title("STS vs. School-Related Arrests")
+ax[1, 1].set_xlabel("Log(1 + STS rate)")
+ax[1, 1].set_ylabel("Log(1 + arrest rate)")
+
+plt.suptitle("School Discipline and Law Enforcement Contact Across Mecklenburg County")
+
+plt.show()
+```
+
+I think this visualization is also a good start thought the issue that I'm running into is the fact that a lot of schools have 0 law enforcement referrals and school-related arrests. This is why there's a long stream of dots at the bototm of each plot. I'm not sure if it would be representative or right to remove these values or if I should keep them. 
+
+Together I think these two visualizations could be good and I also think it could be really good if I incorporated school funding, racial demographics of Mecklenburg County as a whole, and maybe socioeconomic status of schools. Idk I need to fine tune and narrow down. 
