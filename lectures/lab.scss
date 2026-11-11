@@ -29,3 +29,15 @@ $link-color-hover: #ff79c6;   // Pink hover state
   border: 1px solid #44475a;
   border-radius: 6px;
 }
+
+
+// Column boxes with rounded corners and cyan glow
+.reveal .slide .glow-col {
+  background-color: #383a59; // Slightly lighter than body-bg to pop
+  border-radius: 16px;
+  padding: 1em;
+  margin: 1em;
+  box-sizing: border-box; // Prevents padding from breaking Quarto's column widths
+  border: 1px solid rgba(139, 233, 253, 0.2); // Very faint cyan border
+  box-shadow: 0 0 20px rgba(139, 233, 253, 0.15); // Soft cyan glow
+}
