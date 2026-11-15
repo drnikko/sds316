@@ -335,7 +335,13 @@ black_arrest_proportion
 
 ```
 
+
 ``` {python}
+overall_black_arrest = (
+(race_arrests["RACE"] == "BLACK").mean()
+)
+
+
 plt.figure(figsize=(10,8))
 
 ax = sns.barplot(
@@ -345,7 +351,11 @@ ax = sns.barplot(
 
 ax.xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 
-plt.title("Black Proportion of D.C Adult Arrests by top 20 Categories, 2013-2021")
+ax.axvline(overall_black_arrest,
+linestyle = "--",
+label = "Overall Black share of D.C. arrests")
+
+plt.title("Black Proportion of D.C. Adult Arrests by Top 20 Categories, 2013-2021")
 plt.xlabel("Black Proportion of Arrests")
 plt.ylabel("Arrest Category")
 ```
@@ -353,3 +363,36 @@ plt.ylabel("Arrest Category")
 From my first graph, which looks at incareration within the DMV and focused on the Black proportion of the incarcerated population from 2013 to 2021, we can see that D.C consistently had the highest Black incarcerataed population, with Maryland second, and Virginia having the lowest proportion in the region.However, this order changes once we take into account the racial makeup of each jurisdictions overall population. When I calculated the overrepresentation ratio, instead of D.C being the highest, Virginia was. Virginia has the highest ratio, at approximately three times its Black population, followed by Maryland at about 2.4 times, and D.C at around 1.9 times. This is improtant because it shows that having the highest percentage of Black incarcerated individuals in that jurisdiction does not necessarily mean that Black individuals are the most overrepresented in said place. D.C. has a much larger Black population overall than Virginia, so looking at the incarceration percentages alone made D.C. appear more extreme than it actually is relative to its population. What is also worth noting is how consistent these differences are across the same time period. From the graphs, we can see that there is some movement, but not enough for these places to switch positions. These results suggests to me that there are underlying, constant differeences between these legal systems across the years, not necessarily these results being driven by one particular odd year.
 
 Looking earlier in the criminal legal process through D.C.'s arrest data shows that the high Black representation seen in the incarerated population is also seen at the arrest stage. From the same years, 2013 to 2021, Black individuals made up the majority of arrests across every one of the 20 most common arrests. This majority ranged from about 79% for disorderly conduct to more than 95% for robbery. The fact that these proportions are pretty high across such different categories across the same time period is important because it suggets that Black representation in D.C.'s legal system is not necessarily being driven by one specifc of offense. This shows that although larger racial patterns exists throughout the arrest system, it is not equally strong across every type of crime which gives me more a more specific direction for understanding what may be producing these patterns and why. Rather than only asking whether Black indiviudals are overrepresented, I can also ask why that overrepresentation is greater for some types of arrests than others and what policies or systems that are contributing to those differences.
+
+
+# Federal sentencing data comes from the U.S. Sentencing Commission Interactive Data Analyzer.
+
+# I limited this analysis to Black defendants sentenced for federal firearms offenses in D.C., Maryland, and Virginia.
+
+# I chose firearms because it was the second most common federal offense category  in the DMV during this period, accounting for about 19% of cases. It also had a large enough number of cases in all three jurisdictions to make a comparison without relying on a very small group.
+
+# I used 2015-2021 because the USSC Interactive Data Analyzer begins in 2015, while my incarceration analysis ends in 2021. This gives the sentencing analysis the largest time period that overlaps with the main 2013-2021 analysis.
+
+
+``` {python}
+sentencing_data = pd.DataFrame({"state":
+["District of Columbia", "Maryland", "Virginia"],
+
+"median_imprisonment":
+[30, 51, 58]
+
+})
+
+plt.figure(figsize = (8,5))
+sns.barplot(data=sentencing_data, x = "state", y = "median_imprisonment")
+
+plt.title("Median Federal Imprisonment Length for Black Firearm charges, 2015-2021")
+
+plt.ylabel("Median Imprisonment Length in Months")
+plt.show()
+
+
+```
+
+
+Looking at federal sentencing outcomes, we can see that amoung Black individuals sentenced for federal firearm offenses from 2015 to 2021, the median imprisonment length was by month, was lowest in D.C, at 30 months, Maryland at 51 months, and the highest being Virginia at 58 months. This difference is interesting when taking into account the previous results, where Virginia also had the highest incarceration overrepresentation ratio in the DMV. However, the. differences in sentencing lengths are not simply Virginia is imprisoning Black defendants more often. During this specific time frame, around 98.6% of Black firearm charges in D.C. and 99.2% in Maryland got some type of imprisonment, compared to Virginia's 92.8%. So although Virginia stands out the more for length of imprisonment, it had the lowest percentage of Black firearm charges getting some form of imprisonment out of the three jurisdictions. This is improtant because it suggests that differences between this region may not only appear in who is represented within the incarcertated population, but also in the length/severity of the sentencing outcomes. While these results cannot explain the larger incarceration difference on their own, the fact that Virginia shows, for overlapping time periods, both the highest overrepresentation in incarceration and the longest median sentencing length makes it stand out from D.C and Maryland as I compare the similairties and differences in the DMV.
