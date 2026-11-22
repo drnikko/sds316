@@ -1,20 +1,418 @@
 ---
-title: "Racial Disparities in the Legal Systems within the DMV"
+title: "The Black Experience: Disparities in the Legal Systems within the DMV"
 author: 
   - "Kayla Tillmon"
 
-date: 2026-10-21
-description: "Index for Stage 2"
-categories: [Georgraphy-Group, DMV, Race, Incarceration, Data Anlaysis]  #  
+date: 2026-11-23
+description: "Examining differences and similarities in how Black individuals experience the legal system across D.C., Maryland, and Virginia"
+categories: [Geography-Group, DMV, Race, Incarceration]  #  
 image: "images/images.jpeg"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+execute:
+    cache: false
+bibliography: bibliography.bib      
+
 ---
+``` {python}
+#| include: false
 
-## Project Overview
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
+from pyprojroot import here
 
-My project is an investigation of the similarities and differences of how Black individuals are treated in the legal system, in different places: the DMV. The state of my project is finishing up Exploratory Data Analysis. I am currently exploring incarceration data within D.C., Maryland, and Virginia. I have got the incarcerated Black populations vs incarcerated White populations and now will be using other datasets and literature research to gather more of an understanding of hese statistics. My current ideas on how to gather this understanding is by analyzing exoneration rates by state and race, mass incarceration by state and race, types of arrest, federal sentencing to see if there’s a difference between sentencing by race by state, and traffic stops by race and state. 
+
+```
+
+
+## Introduction
+I originally became interested in this topic because of my personal experience in how geography shapes the experiences of Black individuals. I was born and raised in the South, but for the past few years I have spent most of my time in the North. As I think about where I may live after college, one question that continues to come up is how truly different the experience of being Black really is depending on where you live. I am not trying to answer the question of whether one place treats Black people "better" than another. Instead, I am using the legal system as a concrete way to examine and analyze some of those differences and similarities. 
+
+At first, I planned to compare the North and South as a whole, but after some exploratory data analysis, I decided to narrow the project to the metropolitan region of the DMV. These states are geographically close, but have different populations, histories, and criminal legal systems and structures. Existing research has already documented racial disparities within different parts of the legal system, so I am not necessarily trying to prove that those disparities exist. I am more interested in understanding which parts of the legal system these disparities materialize in and what their similarities and differences are across the DMV and what shapes that.
+
+::: {.callout-important}
+## Main Takeaway 
+Black individuals are highly represented across the legal systems of D.C., Maryland, and Virginia, but the results are not the same across the region. The differences change depending on the state, the part of the legal system, and how disparity itself is measured. 
+:::
+
+## About the Data 
+This project uses multiple data sources because I wanted to robustly examine the legal system, meaning looking at more than one part of the legal system. For incarceration, I use the incarcerated-populations dataset from Github [@Klein2023decarceration] and focus on D.C., Maryland, and Virginia from 2013-2021. I then paired this with population data from National Historical Geographic Information System (NHGIS) [@schroeder2026nhgis] to compare how large the Black incarcerated population is relative to the size of the Black population in each state. 
+
+To look earlier in the legal process, I use D.C. Metropolitan Police Department adult arrest data from 2013 to 2021 [@dcAdultArrests]. I used D.C. as a closer case study because detailed arrest-level data was available for the same time period as the incarceration data. Finally, I use U.S. Sentencing Commission Interactive Data Analyzer [@usscIDA] to compare federal sentencing outcomes for Black individuals charged with firearm offenses across the DMV from 2015 to 2021. Together, these sources allow me to look incarceration, arrests, and federal sentencing rather than relying on only one measure to be representative of treatment within the legal system. 
+
+
+## The Process 
+
+### Data Cleaning 
+For the incarceration data, I first filtered the dataset to D.C., Maryland, and Virginia. Because the original data was reported monthly and the amount of available data differed by year, I focused on 2013 to 2021, when all three states had complete monthly observations. I then calculated the Black proportion of the incarcerated population for each observation and then averaged those monthly values within each year. 
+
+The incarceration dataset also included both raw and inferred race counts. To make sure the inferred observations were not changing the observed pattern, I compared the results using the full dataset results to results using only raw observations. The values were not meaningfully different, so I kept the full dataset for the rest of the analysis. 
+
+I then combined the incarceration data with NHGIS population data. This allowed me to calculate an overrepresentation ratio by comparing the Black share of the incarcerated population to the Black share of the general population in each state. 
+
+For the D.C. arrest data, I limited the data to 2013 to 2021, removed unknown race values and focused on the 20 most common arrest, by filtering to the top 20. I also cleaned category labels when the same type of arrest appeared under different names. 
+
+For the first iteration of the federal sentencing analysis, I used the U.S. Sentencing Commission Interactive Data Analyzer rather than spending a large amount of time cleaning the full sentencing dataset before knowing whether there were meaningful differences to explore. I filtered the results to Black defendants, firearm offenses, D.C., Maryland, and Virginia from 2015 to 2021. In a later iteration, I may clean and use the full dataset and widen my analysis to include other offenses, specifically drug offenses. For this stage, I first wanted to see whether differences across the DMV existed, and if so, in what ways before committing to a data cleaning process. 
+
+``` {python}
+#| include: false
+
+DMV_filter = ["District of Columbia", "Maryland", "Virginia"]
+
+incarcerated_pop = pd.read_csv(
+    here("projects/kaylas-deliverable3/_data/populations_states.csv")
+)
+
+incarcerated_pop["date"] = pd.to_datetime(incarcerated_pop["date"])
+incarcerated_pop["year"] = incarcerated_pop["date"].dt.year
+
+incarcerated_filtered = incarcerated_pop[
+    incarcerated_pop["state"].isin(DMV_filter)
+].copy()
+
+incarcerated_filtered = incarcerated_filtered[
+    incarcerated_filtered["year"].between(2013, 2021)
+]
+
+incarcerated_filtered["black_proportion"] = (
+    incarcerated_filtered["incarcerated_black"]
+    / incarcerated_filtered["incarcerated_total"]
+)
+
+incar_annual = (
+    incarcerated_filtered
+    .groupby(["state", "year"])["black_proportion"]
+    .mean()
+    .reset_index()
+)
+
+```
+
+
+
+``` {python}
+#| include: false
+census_data = pd.read_csv(
+    here("projects/kaylas-deliverable3/_data/nhgis0001_ts_nominal_state.csv"))
+
+census_data_dmv = census_data[census_data["STATE"].isin(DMV_filter)].copy()
+
+
+census_data_dmv["year"] = census_data_dmv["YEAR"].str[-4:].astype(int)   
+    
+
+```
+
+
+``` {python}
+#| include: false
+census_data_dmv["black_population"] = (
+    census_data_dmv["AA0AB"] /
+    census_data_dmv["AV0AA"]
+)
+
+
+census_data_dmv = census_data_dmv.rename(columns = {"STATE": "state"})
+
+dmv_data_merged = incar_annual.merge(
+    census_data_dmv[["state", "year", "black_population"]], 
+    on = ["state", "year"])
+
+dmv_data_merged.head(10)
+
+```
+
+
+
+
+# Exploratory Data Analysis
+
+## EDA 1: Incareration
+``` {python}
+#| echo: false
+#| fig-cap: "Black share of the incarcerated population in the D.C., Maryland, and Virginia, 2013–2021."
+
+plt.figure(figsize = (8, 5))
+
+ax = sns.lineplot(data = incar_annual, x = "year", y = "black_proportion", hue = "state", marker = "o")
+ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+
+ax.set_title("Black Share of Incarcerated Population in the DMV, 2013–2021")
+ax.set_xlabel("Year")
+ax.set_ylabel("Black Share of Incarcerated Population")
+
+plt.legend(title = "State",
+bbox_to_anchor = (1.02, 1),
+loc = "upper left")
+
+plt.tight_layout()
+plt.show()
+
+```
+
+My first look at the data focused on the Black proportion of the incarcerated population across D.C., Maryland, and Virginia from 22013 to 2021. The graph showed a pretty consistent pattern across this period, with D.C. having the highest incarcerated population, followed by Maryland and Virginia. This first made D.C. look like the state that stood out the most from this region, but also made me question whether looking only at incarerated population was enough to make that comparison. 
+
+
+
+## EDA 2: General Population
+``` {python}
+#| echo: false
+#| fig-cap: "Black share of the general population in the DMV D.C., Maryland, and Virginia, 2013–2021"
+
+plt.figure(figsize=(8,5))
+
+ax = sns.lineplot(
+    data = census_data_dmv,
+    x = "year",
+    y= "black_population",
+    hue = "state",
+    marker = "o"
+)
+
+ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+
+plt.title("Black Share of the General Population in the DMV, 2013-2021")
+plt.xlabel("Year")
+plt.ylabel("Black Share of Population")
+
+plt.legend(
+title = "State",
+bbox_to_anchor=(1.02, 1),
+loc = "upper left"
+)
+plt.tight_layout()
+plt.show()
+
+```
+
+Because D.C., Maryland, and Virginia don't have the same racial population makeup, I then looked at the Black share of the general population across the same time period. This added important context to the first graph because D.C. has a much larger Black population overall than Maryland or Virginia. Looking at these two graphs together made it clear that I should account for the size of the Black population in each state instead of only comparing the racical composition of the incarcerated population. 
+
+``` {python}
+#| include: false
+
+
+dc_arrests = pd.read_csv(
+    here("projects/kaylas-deliverable3/_data/dc_arrests_top20.csv")
+)
+
+race_category_proportion = pd.crosstab(
+    dc_arrests["CATEGORY"],
+    dc_arrests["RACE"],
+    normalize="index"
+)
+
+black_arrest_proportion = (
+    race_category_proportion["BLACK"]
+    .sort_values(ascending=False)
+)
+
+overall_black_arrest = (
+    dc_arrests["overall_black_arrest_share"].iloc[0]
+)
+
+
+```
+
+## EDA 3: D.C. Arrest Categories
+I also wanted to look at an earlier part of the legal system rather than only focusing on incarceration. Before comparing the Black makeup of different arrest categories, I first looked at which types of arrest were actually most common in D.C. from 2013 to 2021. Simple assault, release violation/fugitive arrests, and traffic violations were some of the most common categories, but the top 20 included a wide range of offenses. This gave me a more focused group of arrest categories to use when looking at whether Black representation differed depending on the type of arrest. 
+``` {python}
+
+
+#| echo: false
+#| fig-cap: "The 20 most common D.C. adult arrest categories, 2013–2021."
+
+top_20_counts = (
+    dc_arrests["CATEGORY"]
+    .value_counts()
+)
+
+plt.figure(figsize=(8,5))
+
+ax = sns.barplot(
+    x=top_20_counts.values,
+    y=top_20_counts.index
+)
+
+ax.xaxis.set_major_formatter(
+    mtick.StrMethodFormatter("{x:,.0f}")
+)
+
+plt.title("Top 20 D.C. Adult Arrest Categories, 2013–2021")
+plt.xlabel("Number of Arrests")
+plt.ylabel("Arrest Category")
+
+plt.tight_layout()
+plt.show()
+```
+
+``` {python}
+#| include: false
+
+# incarceration overrepresentation
+dmv_data_merged["overrepresentation_ratio"] = (
+    dmv_data_merged["black_proportion"] /
+    dmv_data_merged["black_population"]
+)
+
+# D.C. arrest proportions
+race_category_proportion = pd.crosstab(
+    dc_arrests["CATEGORY"],
+    dc_arrests["RACE"],
+    normalize="index"
+)
+
+black_arrest_proportion = (
+    race_category_proportion["BLACK"]
+    .sort_values(ascending=False)
+)
+
+
+# federal sentencing
+sentencing_data = pd.DataFrame({
+    "state": ["District of Columbia", "Maryland", "Virginia"],
+    "median_imprisonment": [30, 51, 58]
+})
+
+```
+
+# The Results 
+## Result 1: Looking at Overrepresentation Changes the Interpretation
+
+``` {python}
+
+#| echo: false
+#| fig-cap: "Black incarceration overrepresentation across D.C., Maryland, and Virginia, 2013–2021."
+
+plt.figure(figsize=(8,4.5))
+
+ax = sns.lineplot(
+    data=dmv_data_merged,
+    x="year",
+    y="overrepresentation_ratio",
+    hue="state",
+    marker="o"
+)
+
+plt.title("Black Incarceration Overrepresentation in the DMV, 2013–2021")
+plt.xlabel("Year")
+plt.ylabel("Overrepresentation Ratio")
+
+plt.legend(
+    title="State",
+    bbox_to_anchor=(1.02, 1),
+    loc="upper left"
+)
+
+plt.tight_layout()
+plt.show()
+
+```
+
+The first incareration graph showed D.C. consistently having the highest Black share of its incarcerated population, followed by Maryland and then Virginia. However, that comparison did not take into account the fact that different places have different racial populations. Once I compared the Black incarcerated to the Black population to the Black general population, the pattern changed. 
+
+Virginia, across the same time period of 2013-2021, had the highest overrepresentation ratio, at around 3.0. This means that the Black share of Virginia's incarcerated population was approximately three times their share of Virginia's general population. Maryland's ratio of about 2.4 means that Black individuals were represented in the incarerated population at 2.4 times their share of Maryland's general population. Finally, with D.C.'s ratio of around 1.8 to 1.9 means that Black individuals were represented in the incarerated population almost twice their share of D.C.'s general population. 
+
+What this means is that D.C. looks the most extreme when we only look at who is incarcerated, but Virgnia stands out more once we look at how disproportionate that incarcerated population is compared to who actually lives there. In other words, D.C.'s high Black incarcerated population partly reflects the fact that Black indiviudals also make up a large portion of D.C.'s overall population. Virginia, howeverm has a smaller overall Black population, but Black individuals still make up a much larger part of its incarcerated population than I would expect based on population size alone. 
+
+This changes the interpretation of the first graph. The issue is not just where the largest percentage of incarcerated Black individuals are is located, but where Black people are most disproportionately represeneted compared to the population they come from. By that standard, Virginia stands out the most within the DMV. The fact that these results remained consistent across the entire time period suggets, to me, that this is not driven by one unusual year, but is a persistent difference between these three states that needs more context to understand. 
+
+## Result 2: Looking Earlier in the legal system: D.C. Arrests
+
+
+Because incarceration is only one part of the legal system, I also wanted to look earlier in the process to see whether the Black representation in incarceration was also seen at the arrest stage. 
+
+Looking at the 20 most common D.C. adult arrest categories from 2013 to 2021, Black individuals made up the majority of arrests in every category. This majority ranged from 79% for disorderly conduct to over 95% for robbery and weapon violations. 
+
+``` {python}
+#| echo: false
+#| fig-cap: "Black proportion of D.C. adult arrests across the 20 most common arrest categories. The dashed red line represents the overall Black share of D.C. arrests."
+
+plt.figure(figsize=(8,6))
+
+ax = sns.barplot(
+    x=black_arrest_proportion.values,
+    y=black_arrest_proportion.index
+)
+
+ax.xaxis.set_major_formatter(
+    mtick.PercentFormatter(1.0)
+)
+
+ax.axvline(
+    overall_black_arrest,
+    color="red",
+    linestyle="--",
+    linewidth=2
+)
+
+plt.title(
+    "Black Proportion of D.C. Adult Arrests by Top 20 Categories, 2013–2021"
+)
+
+plt.xlabel("Black Proportion of Arrests")
+plt.ylabel("Arrest Category")
+
+plt.tight_layout()
+plt.show()
+
+
+```
+
+What stands out to me in this graph is that the high Black representation is not limited to one type of arrest. However, at the same time, it is not equally high across every top 20 category. By adding the overall Black share of D.C. arrests as a reference line, you can see which categories had an even higher Black proportion than the already high overall arrest share and which categories fell below it. The results show that Black representation is high throughout D.C.'s entire arrest system, but that representation is concentrated in the more violent arrest categories.
+
+Research from the ACLU of D.C. found a similar broader pattern in D.C. policing. From 2013 to 2017, Black indiviudals make up around 47% of D.C.'s population but 86% of its arrestees [@acludc2019]. This supports the larger pattern I'm seeing in my own research: high Black representation across arrest categories is not something that only appears in my dataset or in one specific year. 
+
+The research also found high Black representation in lower-level offenses. This is important when looking at my results because it shows that the pattern is not only connected to more serious offenses like robbery or weapon violations. Some of these lower-level offenses also give officers discretion in whether someone receives a citation or is taken into custody, which gives more context for why Black representation may differ accross arrest categories. My result scannot show that police discretion is causing those differences, but the research shows that how laws are enforced can be an important part of understanding the patterns that appear in the D.C. arrest data. 
+
+## Result 3: Federal Sentencing Across the DMV
+
+``` {python}
+#| echo: false
+#| fig-cap: "Median federal imprisonment length for Black defendants sentenced for firearm offenses in D.C., Maryland, and Virginia, 2015–2021."
+
+plt.figure(figsize=(7,4.5))
+
+sns.barplot(
+    data=sentencing_data,
+    x="state",
+    y="median_imprisonment"
+)
+
+plt.title(
+    "Median Federal Imprisonment Length for Black Firearm Offenses, 2015–2021"
+)
+
+plt.xlabel("")
+plt.ylabel("Median Imprisonment Length (Months)")
+
+plt.tight_layout()
+plt.show()
+
+```
+
+
+Lookking at federal sentencing outcomes adds another part of the legal system to the differences already seen across the DMV. Among Black individuals sentenced for federal firearm offenses from 2015 to 2021, D.C. had the lowest median imprisonment length 30 months, followed by Maryland at 51 months, while Virginia had the highest at 58 months. 
+
+What makes this more interesting is that Virginia did not have the highest percentage of Black firearm defendants recieving imprisonment. Around 98.6% of Black firearm defendants in D.C. and 99.2% in Maryland recieved some form of imprisonment, compared to around 92.8% in Virginia. So although Virginia stands out the most for the length of imprisonment, it had the lowest percentage receiving imprisonment out of the three. This means the difference I'm seeing is not simply that Virginia imprisons Black defendants more often, but when imprisonment is given, the median sentence is longer. 
+
+This also connects back to the incareration results. For overlapping time periods, Virginia had both the highest Black incarceration overrepresentation ratio and the longest median federal firearm sentence. These two findings cannot show that one causes the other, but they do show that Virgnia stands out compared to D.C. and Maryland across two different parts of the legal system. 
+
+Federal sentencing also gives me a more consistent basis for comparing the three states because the cases are being sentenced within the same broader federal system. Research from the U.S. Commision has also found difference between federal districts in sentencing, including firearm offenses [@ussc2020interdistrict]. This gives  context to my results because it shows that geographic differences in sentencing can still exist even within a shared federal legal system. 
+
+# How to Understand These Results
+Taken together, these results show both similarities and differences across the DMV. Black individuals are overrepresented within incarceration in D.C., Maryland, and Virginia, although the overrepresentation differs. In the federal firearm analysis, the majority of Black defendants also received some form of imprisonment across all three places. So the story is not that one place has racial disparities within its legal system. Instead, the story is more about the differences and how large those dispairities are and where in the legal system they appear. 
+
+There also does not seem to be one single factor that can explain why these patterns look different. Research on cumulative disadvantage argues that decisons made earlier in the legal process can build on one another across policing, charging, sentencing, and incareration [@kurlychek2019]. Research on D.C. neighborhoods also found that racial change, specifically White movement into historically Black neighborhoods, was associated with Black drug arrest patterns [@golashboza2023]. In Maryland, research from the state's sentencing commission found that Black defendants were more likely to be incarcerated and incarcerated for longer periods, however, some of those differences became not as large one criminal history and offense severity were taken into account [@msccsp2023]. That same research also found that Black individuals were heavily represented in firearm offenses involving mandatory minimums. Virginia research similarly found differences in sentence length, but suggested that much of that difference was due to guidline scores and the specific charges associated to the cases, not the final decision made by the judge [@vscc2020mandatory]. Virginia also still has mandatory minimum sentences for certain firearm offenses, which can limit how much discretion a judge has once someone is convicted on that charge. None of this proves why the specific differences in my own resuts and research exist, but it does show multiple points in the legal process where these differences can develop before someone even reaches the point of incarceration. 
+
+There are also limitations to how far I can take these findings. The D.C. arrest case study cannot be generalized to Virginia or Maryland, and the federal sentencing analysis only compares Black defendants across the DMV for firearm offenses. The incarceration dataset also contained some inferred race counts, although my check showed tha removing those observations did not meaningfully change the overall pattern that was observed. Finally, D.C., Maryland, and Virginia operate under different legal structures, so while comparing them is useful for understanding regional differences, the comparisons are not perfect equivalent and should not be taken as such.
+
+Overall, the similarties in how Black individuals are treated in the legal system within the DMV is that no matter what area is looked at, Black individuals are highly repres  the results suggest that geography still matters even within a region as closely connected as the DMV, but the differences are muh more complicated than saying one state treats Black individuals "better" or "worse" than another. What stands out depends on what part of the legal system is being examined and how disparity itself is measured. 
+
 ### Components
-Link to the files you've made!
+Additional Files
 
+- [Abstract](abstract.qmd)
 - [Research Plan](research-plan.qmd) 
 - [Exploratory Data Analysis](kayla-stage2.qmd)
 - [Initial draft writing & reflection](stage2-writing.qmd)
+- [Stage 3 Analysis](kayla-stage3.qmd)
