@@ -1,0 +1,31 @@
+---
+title: Stage 2 Writing
+author: Kayla Tillmon
+execute:
+  code-fold: true
+---
+
+In this file, reflect on what you've learned (overall across all 8 or more questions you've asked and answered) and how you'd like to complete the project.
+
+Answer at least **5** of the following questions:
+
+1. What most surprised you about the data you've been working with?
+My 90% D.C. statistic. As a considerably very woke Black woman from the south, given the racial makeup of D.C, the history behind it, and the governmental influence that exists in D.C, it does not surprise me. However, as a statistics girl, it does surprise me, because you do not see those numbers everyday, and again, as someone who has been doing these types of research projects for 3 years now, you don’t see those numbers everyday. Those numbers were shocking, but made me very intrigued to see what is going on in the DMV and explore that dataset, and along with others to see if I can gather some answers or even just more context behind it. 
+
+2. What questions do you still have? What would help you answer them?
+Many questions. What are the respective population sizes of the DMV compared to the incarcerated population? I will be using my current data set to answer this question. What are the histories behind the creation of the DMV? I will be using literature to answer this question. What contributes to the arrests of Black individuals in the DMV? I’d answer this by analyzing the type of arrests. What are other ways Black people are disproportionately targeted and treated within the U.S. Legal systems, what are those ways represented in the DMV. I think looking at data about the way that Black people are treated even before they officially step inside of the Legal System (such as traffic stop data) would be a great way to start. 
+
+
+
+
+3. How has your thinking changed since you first wrote your research question?
+
+A lot, especially because I changed my research question. The way that I thought about it was specifically through the lens and the regional differences between the North and South, which are composed of a multitude of states. Now I’m thinking about it through the makeup of 3 places: the DMV. This is because I found the differing statistics in the disproportionate amount Black incarcerated population shocking in general, but also how these differences are represented in the geographical area of the DMV.
+
+
+4.  How do you think you'll be able to connect your project to others in your research cluster?
+
+Well, I might look at how segregated the schools are in the DMV to help shape and guide the answer to, “what shapes this?” which is very similar to other projects. Another way I think I’ll be able to connect my research project to the others is genuinely through what our research cluster is about,  geography. We’re all looking at how locations impact experiences in the legal system. Mine is just specifically about Black experiences, which still does connect to the segregation research that others in my research cluster are doing. 
+
+5.  What story are you trying to tell with this data?
+This is a really good question, I think the story I am trying to tell is one of understanding Black discrimination within the U.S. Legal System across space and time. I want to understand and also inform others on how anti-black discrimination is not the same everywhere and does look different across places, especially within the legal systems, and there usually are geographical reasons because of the history of this country. 
