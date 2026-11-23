@@ -1,0 +1,119 @@
+---
+title: "API's. What Are They?"
+subtitle: "Tech Presentation"
+description: "An Introduction to APIs" # appears in the lecture notes round up
+author: "Kayla Tillmon"
+topics:
+- "APIs"
+categories: ["lab"]
+format:
+  revealjs:
+    theme: [dracula, lab.scss]       
+    slide-number: true   # Displays slide numbers in the corner
+    transition: slide    # Clean slide transitions
+    controls: false       # Displays navigation controls on screen
+    highlight-style: dracula  # Matches syntax highlighting to the slide theme
+    code-line-numbers: true   # Adds line numbers to code blocks
+    code-copy: true           # Adds a 1-click "Copy" button for students
+    code-overflow: wrap       # Prevents long code lines from clipping off-screen
+    preview-links: auto       # OPENS LINKS IN AN IN-SLIDE POPUP OVERLAY!
+    scrollable: true          # Allows vertical scrolling if code output is tall
+
+---
+
+## Today's Plan
+
+-   Learn about API's
+
+-   Choose presentation days
+
+-   Class discussion
+
+-   Stage 3 is DUE!
+
+## What is an API
+An API is an Application Programming Interface which is a set of rules that allows a software application to communicate with another software application. 
+
+## Okay... But What Does That Mean?
+ In simple terms, it works as a digital messenger between two systems. A common analogy that’s used to explain what an API does is The Restaurant Analogy.
+
+## Restaurant Analogy
+Imagine you’re at a restaurant, to get food you can’t walk into the kitchen to make it yourself, you have to communicate to the server. 
+
+
+The server doesn’t make your food, but they take your order so they can then communicate with the kitchen staff, the people that actually do make your food. 
+
+
+The kitchen staff doesn’t bring out your food, they prepare it so the waiter can bring it back to you.
+
+
+In this example, the waiter is the API, the messenger between you and the kitchen staff. 
+
+## Other Examples of API Usage in Everyday Life
+- Weather apps 
+
+- Online Payments 
+
+- Signing up/logging in with Google or   Microsoft
+
+## Why Are They Useful
+- They let different software applications communicate, share data, and reuse existing  features without having to build them from scratch. 
+
+Which saves time, helps automate workflow systems, and keeps systems secure and safe.
+
+## How Can We As Data Scientists Use Them
+- Data Retrieval: Some websites that you may want to use data from, don’t have it easily downloadable in a csv or excel file. You can use an API to retrieve the data. 
+
+- Dashboards: Can connect backend data to front-end tools like Tableau or Power BI.
+
+## How Do We Access An API:
+- API Endpoint (URL): An endpoint is a specific URL where an API receives requests. It tells the API exactly what information or resource you want to access.
+
+- API Token (Authentication): Some APIs require a token, which is a unique credential used to verify that you're authorized to access the API.
+
+## How To Use Them 
+In Python you download the `requests` package, in R you can download the `httr` package. 
+
+
+Once we have our endpoint and any required authentication credentials, we can send requests to the API.
+
+
+Some common commands include the following: 
+
+- GET: It’s a reading action that retrieves data from the connected server without changing anything. 
+
+- POST: It’s a creation action that sends data to the connected server and creates a new resource/entry.
+
+- PUT:  It’s a replacing action that replaces an existing resource/entry with new data within the connected server.
+
+- DELETE: Removes a resource from the server. 
+
+## Typical API Structure in Python:
+```  {python}
+#| eval: false
+#| echo: true
+
+# first import requests
+import requests 
+
+# define the url
+Url = "http://labubu_six_seven.example/dubai_chocolate"
+
+# Then you send the request
+response = requests.get(Url)
+
+# Check whether the request succeeded
+
+response.raise_for_status()
+
+# If it did succeed, it would print out a success code, the common one is 200. 
+
+# responses come in JSON format so then you'd convert it into a python data.
+
+API_data = response.json()
+
+print(API_data)
+
+#our defined end point is dubai chocolate so we'd get whatever data there is on dubai chocolate from the website labubu six seven. 
+```
+
