@@ -2,16 +2,160 @@
 title: "Texas Incarceration"
 author: 
   - "Tanisha Chetty"
-date: 2026-10-21
+date: 2026-11-23
 description: "An Investigation of the Offenses and Demographics in Texas Prisons"
 categories: [Texas, Population, Demographics, Drugs]
 image: "images/texas.jpg"
+bibliography: bibliography.bib
 ---
 
-## Project Overview
+## Introduction
 My research project is about demographic differences in Texas prisons. I hope to answer demographic questions about drug offenses, along with the racial makeup of Texas prisons as a whole. Additionally, this research project hopes to explore if there are any potential impacts of policy on the racial makeup of Texas prisons.
 
-### Components
-- [Research Plan](research-plan.qmd) 
-- [Exploratory Data Analysis](stage-2.qmd)
-- [Initial draft writing & reflection](stage2-writing.qmd)
+As of data from 2024, Texas has the highest incarcerated population of all US states [@worldpopreview]. Starting in the 1980s and especially in the 1990s, Texas underwent big change and massively expanded its prison capacity after facing a prison overcrowding lawsuit in 1980 [@cunninghamkang2019]. Between 1993 and 1995 alone, Texas nearly doubled its prison population[@cunninghamkang2019]. 
+
+::: callout-important
+## The primary takeaways are that the dataset consists of over 140? datasets, and roughly 15% of the convictions are drug-related charges. The incarcerated population also consists primarily of white, Black, adn Hispanic individuals in nearly equal measure. 
+:::
+
+## About the Data
+This dataset is from the data.gov website, an official site for the US government's open data. It's a dataset about the currently incarcerated inmate population in the state of Texas, spanning all facilities. There are 142440 total rows in the dataset, indicating 142400 individual people. It includes 20 columns, storing variables such as Name, Current Facility, Gender, Race, Age, Projected Release, Offense Code, etc. 
+
+
+## The Process
+
+### Data Cleaning & Preprocessing
+
+The data was well-maintained, and did not require cleaning. There were a few missing data values in columns such as 'Minimum Sentence Date' and 'Parole Eligibility Date', but they were not relevant to my analysis, so I left the values blank.
+
+### Exploratory Data Analysis
+
+### Number of Facilities
+*I wanted to see how many facilities the dataset spanned, just to get more context about how the data was structured*.
+
+```{python}
+#| echo: false
+import pandas as pd
+from pyprojroot import here
+
+file_path = here("projects/tanisha-template/data/export.csv")
+april26 = pd.read_csv(file_path, sep=',')
+```
+
+```{python}
+#| echo: false
+facility_groups = april26.groupby('Current Facility')
+print(facility_groups.ngroups)
+print(facility_groups.size())
+
+facility = facility_groups.size().sort_values(ascending=False)
+print(facility)
+```
+
+### Race
+In the data's codebook, the races had been abbreviated: W for white, B for Black, A for Asian, H for Hispanic, I for Indian, O for Other, U for Unidentified.
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+
+#grouping by race and seeing how big the categories are
+race_groups = april26.groupby('Race').size()
+races = april26['Race'].unique()
+
+plt.figure(figsize=(6,6))
+plt.pie(race_groups, labels=races, autopct='%1.1f%%', colors=plt.cm.Pastel2.colors)
+plt.title('Racial Breakdown of Incarcerated Individuals in Texas April 2026')
+plt.show()
+
+```
+
+
+### Drug Convictions
+*looking for sub(substances), drug(drug), cs(controlled substances), cocaine, and meth*.
+```{python}
+#| echo: false
+
+total_rows = len(april26)
+
+drug_df = april26[april26['TDCJ Offense'].str.contains('sub|drug|cs|c/s|cocaine|meth', case=False, na=False)]
+drug_breakdown = len(drug_df) / total_rows * 100
+drug_breakdown
+```
+
+## The Results
+*create bar charts comparing the populations*.
+
+## Result 1: Racial Breakdown as Compared to the Texas Population
+
+```{python}
+
+count_white = len(april26[april26['Race'] == 'W']) 
+count_black = len(april26[april26['Race'] == 'B'])
+count_asian = len(april26[april26['Race'] == 'A'])
+count_hisp = len(april26[april26['Race'] == 'H'])
+count_native = len(april26[april26['Race'] == 'I'])
+
+
+# total rows in dataset
+total_rows = len(april26)
+
+# percent count
+white_breakdown = count_white / total_rows * 100
+black_breakdown = count_black / total_rows * 100
+asian_breakdown = count_asian / total_rows * 100
+hisp_breakdown = count_hisp / total_rows * 100
+native_breakdown = count_native / total_rows * 100
+
+
+print("Percentage of white people: ",  white_breakdown)
+print("Percentage of Black people: ",  black_breakdown)
+print("Percentage of Asian people: ",  asian_breakdown)
+print("Percentage of Hispanic people: ",  hisp_breakdown)
+print("Percentage of Native people: ",  native_breakdown)
+```
+
+Percentage of white people:  32.96756529064869 or 32.97%
+Percentage of Black people:  32.48385285032294 or 32.48%
+Percentage of Asian people:  0.4787980904240382 or .48%
+Percentage of Hispanic people:  33.97570907048582 or 33.98%
+Percentage of Native people:  0.04703734905925302 or .05%
+
+As of 2025, [@txpop] the US Census says that the racial breakdown of Texas is roughly:
+Percentage of white people:  37.3%
+Percentage of Black people:  13.4%
+Percentage of Asian people:  6.7%
+Percentage of Hispanic people:  40.9%
+Percentage of Native people:  1.9%
+
+
+## Result 2: Racial Breakdown of Drug-Related Charges as Compared to the Rest of the Incarcerated Population
+```{python}
+#racial breakdown of drug conviction subset
+count_white2 = len(drug_df[drug_df['Race'] == 'W']) 
+count_black2 = len(drug_df[drug_df['Race'] == 'B'])
+count_asian2 = len(drug_df[drug_df['Race'] == 'A'])
+count_hisp2 = len(drug_df[drug_df['Race'] == 'H'])
+count_native2 = len(drug_df[drug_df['Race'] == 'I'])
+
+
+white_breakdown2 = count_white2 / len(drug_df) * 100
+black_breakdown2 = count_black2 / len(drug_df) * 100
+asian_breakdown2 = count_asian2 / len(drug_df) * 100
+hisp_breakdown2 = count_hisp2 / len(drug_df) * 100
+native_breakdown2 = count_native2 / len(drug_df) * 100
+
+
+print("Percentage of white people: ",  white_breakdown2)
+print("Percentage of Black people: ",  black_breakdown2)
+print("Percentage of Asian people: ",  asian_breakdown2)
+print("Percentage of Hispanic people: ",  hisp_breakdown2)
+print("Percentage of Native people: ",  native_breakdown2)
+```
+
+Within the subset of individuals with drug-related charges:
+Percentage of white people:  43.08
+Percentage of Black people:  25.45
+Percentage of Asian people:  0.32
+Percentage of Hispanic people:  31.06
+Percentage of Native people:  0.04

@@ -1,0 +1,22 @@
+---
+title: "Texas Incarceration"
+author: 
+  - "Tanisha Chetty"
+date: 2026-11-23
+description: "An Investigation of the Offenses and Demographics in Texas Prisons"
+categories: [Texas, Population, Demographics, Drugs]  
+image: "images/texas.jpg"       
+---
+
+
+## Project Overview
+
+My research project is about demographic differences in Texas prisons. I hope to answer demographic questions about drug offenses, along with the racial makeup of Texas prisons as a whole. Additionally, this research project hopes to explore if there are any potential impacts of policy on the racial makeup of Texas prisons.
+
+
+### Components
+
+- [Research Plan](research-plan.qmd) 
+- [Exploratory Data Analysis](stage2.qmd)
+- [Initial draft writing & reflection](stage2-writing.qmd)
+- [Draft of Final Report](index.qmd)

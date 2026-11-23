@@ -49,7 +49,7 @@ count_f = len(april26[april26['Gender'] == 'F'])
 gender_breakdown = count_f / total_rows * 100
 
 print("Number of women: ", count_f)
-print(f"Percentage of women: ",  gender_breakdown)
+print("Percentage of women: ",  gender_breakdown)
 ```
 
 The number of women is 11289 out of 142440 total peope. The percentage of women is 7.9 in this dataset. Quite a small percentage.
@@ -99,11 +99,11 @@ hisp_breakdown = count_hisp / total_rows * 100
 native_breakdown = count_native / total_rows * 100
 
 
-print(f"Percentage of white people: ",  white_breakdown)
-print(f"Percentage of Black people: ",  black_breakdown)
-print(f"Percentage of Asian people: ",  asian_breakdown)
-print(f"Percentage of Hispanic people: ",  hisp_breakdown)
-print(f"Percentage of Native people: ",  native_breakdown)
+print("Percentage of white people: ",  white_breakdown)
+print("Percentage of Black people: ",  black_breakdown)
+print("Percentage of Asian people: ",  asian_breakdown)
+print("Percentage of Hispanic people: ",  hisp_breakdown)
+print("Percentage of Native people: ",  native_breakdown)
 ```
 
 Percentage of white people:  32.96756529064869 or 32.97%
@@ -166,11 +166,11 @@ hisp_breakdown2 = count_hisp2 / len(drug_df) * 100
 native_breakdown2 = count_native2 / len(drug_df) * 100
 
 
-print(f"Percentage of white people: ",  white_breakdown2)
-print(f"Percentage of Black people: ",  black_breakdown2)
-print(f"Percentage of Asian people: ",  asian_breakdown2)
-print(f"Percentage of Hispanic people: ",  hisp_breakdown2)
-print(f"Percentage of Native people: ",  native_breakdown2)
+print("Percentage of white people: ",  white_breakdown2)
+print("Percentage of Black people: ",  black_breakdown2)
+print("Percentage of Asian people: ",  asian_breakdown2)
+print("Percentage of Hispanic people: ",  hisp_breakdown2)
+print("Percentage of Native people: ",  native_breakdown2)
 ```
 
 Percentage of white people:  43.08
