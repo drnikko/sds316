@@ -1,0 +1,164 @@
+## About
+
+### Dataset
+The dataset is [Florida Counties](https://data.census.gov/table/DECENNIALDHC2020.P3?q=P3&g=040XX00US12$0500000&d=DEC+Demographic+and+Housing+Characteristics).  It is stored in the `data` folder. I will use it while mapping.
+
+```{python}
+import numpy as np
+import pandas as pd
+from pyprojroot import here # this helps us navigate tricky path stuff between local runs and quarto builds
+
+# Load the data using here() with the path from the project root
+file_path = here("projects/jessie_project/data/florida_counties.csv") # demographics dataset
+df= pd.read_csv(file_path, sep=',')
+
+file_path2 = here("projects/jessie_project/data/allprisons.csv") # prison dataset
+df_prison= pd.read_csv(file_path2, sep=',')
+
+```
+
+## Wrangling
+### first dataset - county demographics
+```{python}
+# organizing + formatting columns
+df = df.transpose()
+
+df.columns = df.iloc[0]
+df = df[1:]
+df.reset_index(level=0, inplace=True)
+
+df.rename(columns = {"index": "county"}, 
+          inplace = True)
+
+df["county"] = df["county"].str.replace(", Florida", "")
+
+df.head(10)
+```
+
+```{python}
+# New column for total poc percentage
+df["Total:"] = df["Total:"].str.replace(",", "")
+df["\xa0\xa0\xa0\xa0White alone"] = df["\xa0\xa0\xa0\xa0White alone"].str.replace(",", "")
+df["per_poc"] = df["\xa0\xa0\xa0\xa0White alone"].astype(int)/df["Total:"].astype(int) * 100
+```
+
+```{python}
+# New DF with fips for graphing
+from urllib.request import urlopen
+import json
+with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
+    counties = json.load(response)
+
+
+url2 = "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
+df_fips = pd.read_csv(url2, dtype={"fips": str})
+fips = df_fips["fips"].iloc[322:389]
+fips = fips.reset_index(drop = True)
+
+pp = df["per_poc"]
+df_new = {
+    "Name": df["county"],
+    "fips" : fips,
+    "Percentage of POC" : pp
+}
+
+df_new = pd.DataFrame(df_new)
+```
+
+## second dataset - prison locations
+
+```{python}
+rows = df_prison[df_prison["stateshortname"] != "FL"].index
+df_prison.drop(rows, inplace=True)
+df_prison = df_prison.reset_index(drop = True)
+df_prison.head(10)
+```
+
+```{python}
+name1 = df_prison["name"].iloc[:12]
+name2 = df_prison["PrisonName"].iloc[12:]
+
+df_prison[['rev_lon', 'rev_lat']] = df_prison['coordinates_rev'].str.split(',', n=1, expand=True)
+df_prison["rev_lon"] = df_prison["rev_lon"].str.replace("(", "")
+df_prison["rev_lat"] = df_prison["rev_lat"].str.replace(")", "")
+
+
+lon1 = df_prison["rev_lon"].iloc[:12]
+lon2= df_prison["longitude"].iloc[12:]
+lat1 = df_prison["rev_lat"].iloc[:12]
+lat2= df_prison["latitude"].iloc[12:]
+
+name = pd.concat([name1, name2], ignore_index=True)
+long = pd.concat([lon1, lon2], ignore_index=True)
+lat = pd.concat([lat1, lat2], ignore_index=True)
+
+df_location = {
+    "Prison Name": name,
+    "longitute" : long,
+    "latitude" : lat
+}
+```
+
+
+
+## Plot time!
+
+```{python}
+# Reading geometry
+from pyprojroot import here
+import geopandas as gpd
+myfile = file_path = here("projects/jessie_project/data/fl_counties.geojson")
+
+# open file for read-only
+florida = gpd.read_file(myfile)
+
+```
+
+```{python}
+# plot demographics 
+import plotly.express as px
+
+fig = px.choropleth(df_new, geojson=florida, hover_data=['Name'],locations='fips', color='Percentage of POC',
+                    featureidkey="properties.GEOID",
+                    color_continuous_scale="Viridis_r",
+                    range_color=(0, 100),
+                    labels={"Name": "County Name", 'Percentage of POC':'Percent Nonwhite'}
+                    )
+fig.update_geos(fitbounds="locations",visible=False)
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+fig.show()
+```
+
+
+This graph is how much of each county is nonwhite, according to the 2020 census. The lighter color is a higher density of nonwhite people. Hovering over the county gives you its fips, its name, and the percentage of nonwhite people. Most counties are above 50% nonwhite, with now obvious trends towards one side of the state. 
+
+It is important to note that Hispanic/Latino is a separate question on the census, and Hispanic/Latino people usually identify as white.
+
+```{python}
+# plot location
+import plotly.graph_objects as go
+
+fig2 = go.Figure(go.Scattermap(
+        lat=list(df_location["latitude"]),
+        lon=list(df_location["longitute"]),
+        mode='markers',
+        marker=go.scattermap.Marker(
+            size=5
+        ),
+        text=list(df_location["Prison Name"]),
+    ))
+
+fig2.show()
+
+#     px.scatter_map(df_location,
+#                         lat=df_location.geometry.y,
+#                         lon=df_location.geometry.x,
+#                         hover_name="Prison Name",
+#                         zoom=1)
+# 
+
+```
+
+This second graph the map of the locations of all the prisons in Florida. There seems to be a slight trend of prisons being built in counties with a higher amount of people of color.
+
