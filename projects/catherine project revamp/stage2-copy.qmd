@@ -90,6 +90,7 @@ print(count_borough)
 
 Most of the incident reports seem to have occurred in the Bronx, with Brooklyn following very closely. There was a bit of a gap between Brooklyn, Queens, and Manhattan in that order, and then Staten Island is last by quite a large margin. I will find NYC's 2020 census data before the next stage to see how these numbers map onto racial demographics, given that most victims and suspects in this dataset were Black.
 
+# Is borough related to the distribution of Ethnicity? What does it mean if some borough have a higher rate and that borough's racial demographics is mostly non-white? Would that be a direct correlation?
 
 ## Q5: intimate relationship?
 I thought it might be a good idea to see how many of these incidents occurred within an established intimate/domestic relationship. I'm not sure yet how I want to relate this to race, but it is an interesting variable and I'm curious as to why they included it/what their definition of domestic violence is? Is the definition in this dataset extended to be between family members (ie. parent-child) too?
@@ -104,6 +105,7 @@ print(count_ir)
 
 I'm not entirely sure why some observations were inputted as 'YES' and some were entered as 'Yes', and same for 'NO'/'No'. I might do some work with the data to combine these. Most of the incidents that were reported were within the bounds of an intimate relationship, but it is about proportional with the number of incidents that weren't. I want to look more thoroughly into the definitions they are using for these domestic violence crimes, because i'm assuming they are extending these crimes to include (reported) abuse that happens between parents and children/other blood-related or live-in family members.
 
+# Maybe the values need a bit more cleaning before re-grouping it so that the count wouldn't look as confusing 
 
 ## Q6: Offense Type
 To clarify my previous question, I obtained the counts of each specific type of domestic violence offense/crime.
@@ -141,6 +143,7 @@ print(pov_proportion)
 
 202,325 of the reports in this dataset, which constitutes about 42% of all reports in this dataset, had a categorical indicator of '1' == Yes for a high poverty rate. I am not sure if the rows lacking a '1' imply the report occurred an area with a low poverty rate or if there was simply not enough information, but a significant proportion of these incidents tended to be in areas with high poverty rates.
 
+# How does this dataset defines "Poverty"? Or how you define "Poverty". I say it would be interesting if you can map out if there's also regional correlation between "Poverty" and demestic violence
 
 ## Q8: Race and Sex
 ```{python}
@@ -155,3 +158,5 @@ print(victim_proportions, suspect_proportions)
 
 
 I will write more about these variables later but wanted to see the relationship between victim sex and race alongside suspect sex and race.
+
+# If changing percentage of population to Female/Male independetly (not Female+Male = 100%) may make the data clearer? A cross examination between gender & race would be interesting

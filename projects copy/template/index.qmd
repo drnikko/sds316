@@ -1,0 +1,13 @@
+---
+title: "How Surveillance Technology Maps onto Arrests and Convictions in Manhatan"
+author: 
+  - "Catherine Xu"
+date: 2026-09-30
+description: "An investigation of how the density of surveillance technologies such as predictive policing and facial recognition cameras corresponds to the arrest rate based on the racial makeup of each neighborhood or locality of Manhattan."
+categories: [Background (Types of Surveillance Technologies, Demographics of Manhattan by Neighborhood), Findings/Results, Implications/Discussion]  #  These are some of the categories you might use
+# image: "images/thumbnail.jpeg"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+---
+
+## Project Overview
+
+Write about 100 - 150 words describing your project. This description will change over the semester, so each time you make a deliverable, you might need to update it.  Each time, do your best to be accurate to the focus of the project _as it is that that moment_
