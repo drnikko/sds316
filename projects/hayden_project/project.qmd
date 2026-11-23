@@ -1,0 +1,19 @@
+---
+title: "Hayden's Project Overview"
+author: "Hayden Steinmann"
+date: 2026-11-23
+description: "An exploration of the historical racial segregation throughout Charlotte-Mecklenburg Schools and its implications on school disciplinary action and law-enforcement contact."
+categories: [Geography, Segregation, Discipline, Education]  
+image: "images/schoolsegregation.jpg"
+---
+
+## Project Overview
+
+The goal of this project is to examine how historical patterns of racial segregation in Charlotte-Mecklenburg Schools (CMS) help contextualize present-day racial inequalities in school discipline and law-enforcement contact. Drawing on historical research surrounding school desegregation efforts throughout Mecklenburg County, I first take a look at how the end of race-based school assignment and busing have shaped educational inequalities. I then pull from more recent school-level data to explore what these patterns look like now. I look at the racial composition of schools and the geographic dispersal of said schools, disciplinary outcomes, and law-enforcement referrals. My hope is that these connections are able to create a framework that highlights how educational inequalities put certain subgroups of students at a higher risk for interacting with the criminal legal system. 
+
+### Components
+
+- [Research Plan](research-plan.qmd) 
+- [Exploratory Data Analysis](stage2-data.qmd)
+- [Initial Draft Writing & Reflection](stage2-writing.qmd)
+- [Final Project](index.qmd)

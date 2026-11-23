@@ -1,5 +1,5 @@
 ---
-title: Initial Questions
+title: Exploratory Data Analysis
 author: Hayden Steinmann
 execute:
  code-fold: true
@@ -58,6 +58,9 @@ merge_2025 = inc_dis_2025.merge(
 
 meck_2025 = merge_2025[
  (merge_2025['county'] == 'Mecklenburg') & (merge_2025['agency_level'] == 'SCH')]
+
+meck_2025.to_csv(here("projects/hayden_project/datasets_files/meck_2025.csv"),
+    index=False)
 
 print(meck_2025.shape)
 print(meck_2025['name'].nunique())
@@ -328,6 +331,8 @@ school_coords = school_locations[['agency_code', 'latitude', 'longitude']].copy(
 
 cms_race["agency_code"] = cms_race["agency_code"].astype(str)
 school_coords["agency_code"] = school_coords["agency_code"].astype(str)
+
+# cms_race.to_csv(here("projects/hayden_project/datasets_files/cms_race.csv"), index = False)
 
 cms_map_info = cms_race.merge(school_coords, on = 'agency_code', how = 'left')
 
