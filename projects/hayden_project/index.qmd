@@ -1,19 +1,317 @@
 ---
-title: "Hayden's Research Project"
+title: "An Exploration of Segregation, Discipline, and Law-Enforcement Contact throughout Charlotte-Mecklenburg Schools"
 author: "Hayden Steinmann"
-date: "2026-10-21"
-description: "An exploration of the implications of racial and socioeconomic inequalities surrounding school disciplinary action throughout Mecklenburg County"
-categories: "[Geography, Segregation, Discipline, School]"
+date: "2026-11-23"
+description: "An exploration of the historical racial segregation throughout Charlotte-Mecklenburg Schools and its implications on school disciplinary action and law-enforcement contact."
+categories: [Geography, Segregation, Discipline, Education]
 image: "images/schoolsegregation.jpg"
+bibliography: bibliography.bib
+
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-## Project Overview
+```{python}
+# Import Data and Packages
 
-The goal of this project is to examine how racial and socioeconomic inequalities in school discipline and law enforcement contact vary across Charlotte Mecklenburg Schools (CMS). I'm also looking to explore how these patterns relate to the geographic distribution of schools in Mecklenburg County. I'm interested in how these findings connect to the historical contextualization surrounding school segregations and other inequalities. I will begin by examining the racial and economic breakdown of schools and then examine how suspension rates, law enforcement referrals, and school-related arrests interact with these demographic features. From a geographic lens, I plan to map these demographic differences and connect this to broader historical and institutional systems. While my initial research questions were hoping to consider neighborhood segregation, school boundaries, and juvenile/young-adult involvement in the criminal legal system, after reviewing the data I have access to these factors may be beyond the scope of this project. Ultimately, I hope to identify descriptive patterns specific to Mecklenburg County that reveal a relationship between school demographics, disciplinary practices, law enforcement contact, and geography, while also contacting these patterns to larger systems.
+import pandas as pd
+import matplotlib.pyplot as plt
+from pyprojroot import here
+import plotly.express as px
+import numpy as np
 
-### Components
-Stage 2 Deliverables
+cms_race = pd.read_csv(here("projects/hayden_project/datasets_files/cms_race.csv"))
 
-- [Research Plan](research-plan.qmd) 
-- [Exploratory Data Analysis](stage2-data.qmd)
-- [Initial draft writing & reflection](stage2-writing.qmd)
+meck_all = pd.read_csv(here("projects/hayden_project/datasets_files/meck_all.csv"))
+
+school_locations = pd.read_csv(here("projects/hayden_project/datasets_files/cms_school_locations.csv"))
+
+school_coords = school_locations[['agency_code', 'latitude', 'longitude']].copy()
+
+cms_map_info = cms_race.merge(school_coords, on = 'agency_code', how = 'left')
+
+meck_2025 = pd.read_csv(here("projects/hayden_project/datasets_files/meck_2025.csv"))
+```
+
+## Introduction
+Charlotte Mecklenburg Schools (CMS), a school district located in the state of North Carolina, provides an important case for examining the relationship between geography, educational inequality, and disciplinary action. CMS is home to one of the most notable and consequential school desegregation cases in the U.S. Despite this history and recognition, the district continues to exhibit racial and socioeconomic disparities across its schools. Having grown up in Charlotte and attended numerous schools throughout CMS, my interest was drawn towards understanding how these historical and geographical patterns relate to more contemporary issues of inequality. 
+
+Many historical accounts and past research has documented the ongoing struggle to desegregate CMS and the role that geographic assignment policies often play in shaping educational opportunities. In 1971, Swann v. Charlotte-Mecklenburg Board of Education brought light to the importance of school reassignment and busing in order to combat racial segregation in schools [@swann1971]. A lawsuit in 1997, Capacchione v. Charlotte-Mecklenburg Schools, brought an end to this race-based busing and race-conscious student assignment as the court ruled that a “unitary status” had been reached [@capacchione1997]. Later research in 2014 compared the before and after of this change, finding that the end of busing widened racial inequalities in educational outcomes [@billings2014]. Pulling from this historical research, this project explores current-day school level patterns of racial composition, discipline, and law-enforcement contact throughout the district. 
+
+::: callout-important
+This project examines the racial and socioeconomic disparities in school discipline and law enforcement contact across Charlotte-Mecklenburg Schools, taking a geographic lens to explore how historical patterns of segregation continue to shape educational experiences and institutional inequalities across the county. Early results show a racially clustered pattern amongst schools and that Black students experienced nearly five times the median short-term suspension rate of white students and the existence of a positive association between short-term suspensions and law-enforcement referrals.
+:::
+
+## Historical and Geographic Context
+As mentioned above, CMS and Mecklenburg County as a whole have a long history of racial segregation and student-assignment policies. During the 1968-1969 school year CMS had 107 schools. Their student population was roughly 29% Black (~24,000 students), yet 14,000 of those students attended 21 schools all of which were at least 99% Black [@swann1971]. This drastic disparity demonstrates the extent of racial segregation that existed within the district prior to the 1971 supreme court decision.
+
+![Attendance Areas for Elementary Schools in CMS, January 1970 [@chambers1970]](images/cms_1970_map.png){#fig-image width=60% fig-align="center"}
+
+A wide range of desegregation efforts were implemented including busing students across neighborhoods and pairing schools to achieve more racially balanced schools [@cms_history]. As a part of these efforts a preliminary map was created to illustrate what new attendance boundaries could look like, as seen in [@fig-image]. This map, created by Julius L. Chambers in 1970, helps provide a historical example of how school assignment was reorganized and brainstormed during the litigation period surrounding the Swann supreme court case [@chambers1970].   
+
+Despite these efforts, this reorganization faced pushback as legal challenges started to arise in the late 1990s. In 1997, a handful of white parents argued that CMS schools were fully desegregated and that the continued use of race-based policies was unconstitutional. This caused lots of debate, ultimately resulting in a lawsuit that made its way to the Fourth Circuit Court of Appeals. It is here, in 1999, that the court affirmed the school district's unitary status, meaning that the district could move away from court-ordered desegregation policies. A new student-assignment plan was implemented in the 2002-2003 school year after much debate [@capacchione1997]. However, the research mentioned above by Billings et. al is what made me curious as to where things stand today. I hope to explore this throughout the remainder of this project. 
+
+## Data and Methodology
+### The Data
+A majority of the data used in this project comes from the North Carolina Department of Public Instruction’s (NC DPI) 2024-2025 School Report Cards [@ncdpi2025reportcards]. These report cards include a wide range of data, though for the purpose of this project I utilized the data relating to school-level disciplinary rates across subgroups of students, including in-school suspensions (ISS), short-term suspensions (STS), referrals to law-enforcement, and school-related arrests. This data was then combined with enrollment data from the NC DPI which included student counts by race, sex, and socioeconomic status as well as school-level geographic information [@ncdpi2025enrollment]. The resulting datasets focus on the 2024-2025 school year with 186 school records and 3,527 subgroup-level records. I wanted to note that the reason suspension rates, law-enforcement referrals, and school-related arrests were used as the main disciplinary outcomes in this project is because data surrounding juvenile involvement within the criminal legal system is often hard to come across. 
+
+### Data Cleaning and Preprocessing
+For the analysis throughout this project, CMS enrollment counts for male and female students were combined within each racial category to calculate the percentage of students belonging to each group at each school. These values were then paired with school-location coordinates to examine the geographic distribution of racial composition, which will be displayed later on in this project. In terms of missing values, schools and subgroups that had missing values for disciplinary rates were kept and marked as missing instead of being coded as zero. Across the four disciplinary measures mentioned above, 335 of 3,527 subgroup records were missing.
+
+### Exploratory Data Analysis
+#### Race
+I think it’s important to start by looking at the racial breakdown of CMS as a whole. We see that Black students represent the largest racial group at approximately 33.9%, followed relatively closely by Hispanic students at 31.4% and white students at 23.5%. These groups make up a majority of the student body, with the remaining percentage being composed of Asian students (7.1%), Two or More races (3.8%), American Indian (0.14%), and Pacific Islander (0.13%). It is important to note that these values represent the district as a whole and not the racial distribution of individual schools. 
+
+```{python}
+# Calculates total enrollment by racial group across schools
+race_totals = {
+    "American Indian": (
+        cms_race["INDIAN Male"].sum() +
+        cms_race["INDIAN Female"].sum()),
+    "Asian": (
+        cms_race["ASIAN Male"].sum() +
+        cms_race["ASIAN Female"].sum()),
+    "Hispanic": (
+        cms_race["HISPANIC Male"].sum() +
+        cms_race["HISPANIC Female"].sum()),
+    "Black": (
+        cms_race["BLACK Male"].sum() +
+        cms_race["BLACK Female"].sum()),
+    "White": (
+        cms_race["WHITE Male"].sum() +
+        cms_race["WHITE Female"].sum()),
+    "Pacific Islander": (
+        cms_race["PACIFIC ISLAND  Male"].sum() +
+        cms_race["PACIFIC ISLAND  Female"].sum()),
+    "Two or More Races": (
+        cms_race["TWO OR MORE Male"].sum() +
+        cms_race["TWO OR MOREFemale"].sum())}
+
+# Converts to a dataframe
+race_df = pd.DataFrame(
+    list(race_totals.items()),
+    columns=["Race", "Enrollment"])
+
+# Calculates percentages
+total_enrollment = race_df["Enrollment"].sum()
+
+race_df["Percentage"] = (
+    race_df["Enrollment"] / total_enrollment * 100)
+
+# Sorts by percentage
+race_df = race_df.sort_values(
+    "Percentage",
+    ascending=False)
+
+# Creates bar chart
+plt.figure(figsize=(8, 6))
+
+bars = plt.bar(
+    race_df["Race"],
+    race_df["Percentage"])
+
+plt.bar_label(
+    bars,
+    labels=[f"{x:.1f}%" for x in race_df["Percentage"]],
+    padding=3)
+
+plt.ylabel("Percentage of Total Enrollment")
+plt.xlabel("Racial Group")
+plt.title("Racial Composition of Charlotte-Mecklenburg Schools (2024–2025)")
+
+plt.xticks(rotation=30, ha="right")
+plt.ylim(0, race_df["Percentage"].max() + 5)
+
+plt.tight_layout()
+plt.show()
+```
+
+#### Disciplinary Action
+The second main part of this analysis is looking at disciplinary rates throughout CMS. Right off the bat we see that short-term suspension (STS) and in-school suspension (ISS) have the highest median rates at 34.63 and 43.87, respectively. When comparing these to the number of law enforcement referrals and school-related arrests the numbers vary quite drastically. These findings generally suggest that disciplinary action across CMS is mainly concentrated between ISS and STS rather than in more severe disciplinary outcomes or law-enforcement involvement. However, this brings up the question of whether disparities exist throughout these forms of discipline.  
+
+```{python}
+# Calculates median disciplinary rates
+discipline_medians = {
+    "In-school suspensions": meck_all["iss_per1000"].median(),
+    "Short-term suspensions": meck_all["sts_per1000"].median(),
+    "Long-term suspensions": meck_all["lts_per1000"].median(),
+    "Expulsions": meck_all["exp_per1000"].median(),
+    "Criminal acts": meck_all["act_per1000"].median(),
+    "Bullying/harassment": meck_all["bha_per1000"].median(),
+    "Law enforcement referrals": meck_all["rpt_per1000"].median(),
+    "School-related arrests": meck_all["arr_per1000"].median()}
+
+# Converts to a dataframe
+discipline_df = pd.DataFrame(
+    list(discipline_medians.items()),
+    columns = ["Disciplinary Outcome", "Median Rate"])
+
+# Sorts for plotting
+discipline_df = discipline_df.sort_values(
+    "Median Rate",
+    ascending = True)
+
+# Creates horizontal bar chart
+plt.figure(figsize = (7, 6))
+
+bars = plt.barh(
+    discipline_df["Disciplinary Outcome"],
+    discipline_df["Median Rate"])
+
+plt.bar_label(
+    bars,
+    fmt = "%.2f",
+    padding = 3)
+
+plt.xlabel("Median Rate per 1,000 Students")
+plt.ylabel("Disciplinary Outcome")
+plt.title("Median Disciplinary Rates Across CMS (2024-2025)")
+
+plt.xlim(0, 50)
+plt.show()
+```
+
+## Results
+### Contemporary School Geography and Inequality
+Based on the long and ongoing history of segregation and school assignment policy, I wanted to visualize what the racial composition of CMS schools looks like to provide a jumping off point for the education inequality that exists and greater implications that this may have. For the purpose of this analysis, Black students were used as the main indicator due to the explicit history of Black student exclusion.
+
+```{python}
+# Creates map
+fig = px.scatter_map(
+    cms_map_info,
+    lat = "latitude",
+    lon = "longitude",
+    color = "pct_black",
+    hover_name = "name",
+    hover_data = {
+        "pct_black": ":.1f",
+        "pct_hispanic": ":.1f"},
+    color_continuous_scale = "Viridis",
+    range_color = [0, 100],
+    center = {"lat": 35.26, "lon": -80.84},
+    zoom = 9,
+    map_style = "carto-positron",
+    opacity = 0.85,
+    title = "Racial Composition of Charlotte-Mecklenburg Schools")
+
+# Additional style changes for hover data, legend, and title
+fig.update_traces(
+    marker = dict(size = 9),
+    hovertemplate = (
+        "<b>%{hovertext}</b><br>"
+        "Black student enrollment: %{marker.color:.1f}%<br>"))
+
+fig.update_layout(
+    title = dict(
+        text = "<b>Racial Composition of Charlotte-Mecklenburg Schools</b>"),
+    coloraxis_colorbar = dict(
+        title = dict(text = "<b>Black enrollment (%)<b>"),
+        ticksuffix = "%"))
+
+fig.show()
+```
+
+In the figure above, we see considerable variation in school racial composition. During the 2024-2025 school year, CMS had a total of 141,480 students, 33.9% of which were Black or a total of 47,961 students. However, the map makes it apparent that substantial differences in racial compositions of schools exist. The percentage of Black student enrollment ranges from 0% to 80%. Elbert Edwin Waddell High School has 0 Black students amongst its 135 students and Turning Point Academy has 157 Black students out of its 196 students. While these are two extremities that have relatively small student popultions, the map visually shows us that a pattern of some sort exists with many schools with higher percentages of Black enrollment being located in the northern part of the county and along the outskirts. This is likely a reflection of the racial segregation that exists throughout Mecklenburg County as a whole and the lack of race-based school assignment policy.
+
+### Disciplinary Outcomes and Law-Enforcement Contact
+In terms of one of the negative outcomes that this educational inequality has we can look at the disciplinary rates throughout schools and the students that are impacted. To help visualize this the figure below bins CMS schools into four groups based on their levels of Black enrollment. For the purpose of this analysis, the bins were calculated to roughly evenly disperse the schools across the four groups. When comparing the schools with 0-20% Black enrollment (51 schools) to the school group that has 60-100% Black enrollment (33 schools), we see that ISS rates were roughly 6 times higher and STS rates were 11 times higher for the schools with 60-100% Black enrollment. This is a staggering figure as it shows the social implications that school environments can have and how school-based segregation causes these social implications to be disproportionately felt by certain students more than others.
+
+```{python}
+# Creates categories based on percentage of Black enrollment
+bins = [0, 20, 40, 60, 100]
+labels = ["0–20%", "20–40%", "40–60%", "60–100%"]
+
+cms_race["black_enrollment_group"] = pd.cut(
+    cms_race["pct_black"],
+    bins = bins,
+    labels = labels,
+    include_lowest = True)
+
+school_group_medians = (
+    cms_race.groupby("black_enrollment_group")[
+        ["iss_per1000", "sts_per1000"]].median())
+
+groups = school_group_medians.index.astype(str)
+
+y = np.arange(len(groups))
+height = 0.35
+
+# Creates horizontal bar chart
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Stacks ISS and STS
+ax.barh(
+    y - height/2,
+    school_group_medians["iss_per1000"],
+    height,
+    label="In-school suspension")
+
+ax.barh(
+    y + height/2,
+    school_group_medians["sts_per1000"],
+    height,
+    label="Short-term suspension")
+
+ax.set_yticks(y)
+ax.set_yticklabels(groups)
+ax.set_xlabel("Median rate per 1,000 students")
+ax.set_ylabel("Black student enrollment")
+ax.set_title("Suspension Rates by Black Enrollment")
+ax.legend()
+
+plt.show()
+```
+
+Additional data analysis I conducted found that when comparing Black students to their white counterparts, Black students had ISS and STS rates that were nearly five times the rates of white students, with median rates of 85.44 and 17.54 for STS and 69.82 and 11.36 for ISS. 
+
+```{python}
+# Copies data and applys log transformation to STS and law-enforcement referrals
+referral_data = meck_2025[
+    meck_2025["subgroup"] == "ALL"].copy()
+
+referral_data = referral_data[
+    ["agency_code", "sts_per1000", "rpt_per1000"]].dropna()
+
+referral_data["log_sts"] = np.log1p(referral_data["sts_per1000"])
+referral_data["log_referrals"] = np.log1p(referral_data["rpt_per1000"])
+
+# Separates schools based on whether they have any law-enforcement referrals
+zero_referrals = referral_data["rpt_per1000"] == 0
+positive_referrals = referral_data["rpt_per1000"] > 0
+
+# Creates scatterplot
+fig, ax = plt.subplots(figsize = (8, 6))
+
+# Plots schools with positive and zero referrals
+ax.scatter(
+    referral_data.loc[zero_referrals, "log_sts"],
+    referral_data.loc[zero_referrals, "log_referrals"],
+    color = "gray",
+    alpha = 0.7,
+    label = "Zero referrals")
+
+ax.scatter(
+    referral_data.loc[positive_referrals, "log_sts"],
+    referral_data.loc[positive_referrals, "log_referrals"],
+    color = "steelblue",
+    alpha = 0.7,
+    label = "Positive referrals")
+
+ax.set_xlabel("Log short-term suspension rate")
+ax.set_ylabel("Log law-enforcement referral rate")
+ax.set_title("Short-term Suspensions and Law-enforcement Referrals")
+
+ax.legend()
+ax.grid(alpha = 0.2)
+
+plt.show()
+```
+
+To tie these ideas more closely to the criminal legal system, we can look at preliminary findings of how suspension rates are tied to interactions with law enforcement. The figure above helps in defining this relationship as it illustrates a moderately positive correlation between STS rates and law-enforcement referral rates across CMS schools. To help quantify this relationship I ran a Spearman correlation test and found a correlation coefficient of 0.65, confirming this moderately positive relationship. 
+
+It is important to note that these disparities should not be understood as a reflection of the students themselves, but rather as patterns that are shaped by the institutional environments in which students are educated. While this analysis didn't touch on this idea directly, differences exist surrounding the resources, funding, and opportunities that different schools have access to. These discrepancies contribute to unequal educational experiences, which the map above showed, is likely to impact certain subgroups of students more than others. Given the neoliberal time period in which we live in, looking at these results through an institutional lens is crucial as it shifts the focus away from the individual and onto the systems and environments in which students are placed. 
+
+## Conclusion
+While CMS has a long history of desegregation efforts, the modern-day racial distribution of schools and disciplinary rates highlight differences that continue to exist across schools and student populations. The disparities discussed above are of extreme importance as school discipline has many consequences that extend beyond simple suspension. Many of these consequences are behavioral and social as classrooms often function as spaces that help with establishing routines, reinforcing expectations, and providing behavioral support [@oliver2011]. Taken together, the three main results discussed above suggest a pattern that since Black enrollment appears to be clustered throughout the district, these students disproportionately face higher rates of STS and ISS rates which we found has a moderate positive correlation with law-enforcement referrals. While this framework cannot establish a direct pathway between school discipline and criminal legal system involvement, it highlights how certain student populations may be affected at higher rates than others. Considered alongside CMS’s history of racial segregation, these findings underscore the importance of examining how historical inequalities continue to shape present-day educational experiences and criminal legal system involvement and the feedback loops that exist throughout. 
