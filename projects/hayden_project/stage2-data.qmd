@@ -1,5 +1,5 @@
 ---
-title: Initial Questions
+title: Exploratory Data Analysis
 author: Hayden Steinmann
 execute:
  code-fold: true
