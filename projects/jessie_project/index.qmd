@@ -1,24 +1,453 @@
 ---
-title: "Jessie's Project"
+title: "Florida's Prisons as a Symptom of Disenfranchisement "
 author: 
   - "Jessie Wang"
 date: 2026-09-01
 description: "Stage 1"
-categories: [Geography, Prisons, State and Federal, Location, Demographics, Racial Demographics]  #  These are some of the categories you might use
-image: "images/geography.png"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+categories: [Investigation, Capture, Trial, Detention, Supervision, Release, Re-entry ]  #  These are some of the categories you might use
+image: "images/geography.png"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist ) 
+bibliography: bibliography.bib      
 ---
 
-## Project Overview
+## Introduction
+My project is focusing on the location of prisons and the demographics of the areas around them. I have several hypotheses, which have guided my research. Perhaps prisons are built to exploit Black and Brown people and their labor—racism is the underlying cause of a lot of issues in the U.S. I am also interested to see if prisons are clustered together, or if they are spread apart in rural areas. Then, I wish to compare the locations of prisons to the demographics of the counties they are located in. 
 
-Write about 100 - 150 words describing your project. This description will change over the semester, so each time you make a deliverable, you might need to update it.  Each time, do your best to be accurate to the focus of the project _as it is that that moment_
+There is research disproving our common myths about prisons, like the myth that prisons are built in rural, white areas. Research shows that overall not a lot of prisons were in rural areas Not a lot were built during the prison boom either. They did find, however, that prison towns are likey to recieve more prisons, and if a town had similar demographics to a prison town–—that is, more black and brown people [@eason2010mapping]. There is also literature theat examines prison distrubtion in California and has a section on the Prison Industrial Complex(PDI) that discusses why prisons were built [@davis2011prisons]. Let's examine how the prison data and the Florida demographics match up to their findings.
 
-9/27: Right now, my project is focusing on the location of prisons, the demographics of the areas around them, and what the reasoning is behind placing a prison there. We are in the researching phase, so a thesis has not been made yet. However, I have several hypotheses, which have guided my research. Perhaps prisons are built to exploit black and Brown people and their labor—racism is the underlying cause of a lot of issues in the U.S. Or perhaps the cause is increased incarceration, which follow policies that our politicians introduce. I am also interested to see if prisons are clustered together, or if they are spread apart and in rural areas. I still need to find a dataset for the locations of prisons, and once I do, I can gather more information and formulate a thesis.
+::: callout-important
+## There seems to be a slight correlation between poc-heavy counties and prison locations in Florida.
+:::
+
+## About the Data
+
+The [US Federal and Private Prisons](https://github.com/miolow/US_prisons/blob/master/allprisons.csv) dataset is a dataset formed by scraping prison names and addresses from publicly available federal and private prison websites using BeautifulSoup, and maps their locations across the US using Geopandas, Google Maps API, and US Census shapefiles.
+
+The [Florida Cities](https://data.census.gov/table/DECENNIALDHC2020.P3?q=P3&g=040XX00US12$1600000&d=DEC+Demographic+and+Housing+Characteristics) dataset is taken from the 2020 census, focusing on cities in Florida.
+
+The dataset [Florida Counties](https://data.census.gov/table/DECENNIALDHC2020.P3?q=P3&g=040XX00US12$0500000&d=DEC+Demographic+and+Housing+Characteristics) dataset is taken from the 2020 census, focusing on counties in Florida.
 
 
-### Components
-Link to the files you've made!
 
-- [Research Plan](research-plan.qmd) 
-- [Exploratory Data Analysis 1](stage2.qmd)
-- [Exploratory Data Analysis 2](stage2.2.qmd)
-- [Initial draft writing & reflection](stage2-writing.qmd)
+## The Process
+
+*Here I'm going to go step by step through the thinking that I did to get to my result*. *You ought to include as many of these as is applicable to your project. You can (and should) reuse some of the work from Stage 2 - that's why you did it!*
+
+### Data Cleaning & Preprocessing
+
+Dataset 1, `allprisons`, did not need any cleaning or wrangling.
+
+Dataset 2 and 3, the demographic data, did need to be cleaned. I transposed the data so that the race/ethnicities were the variables and that the cities/counties was its own column, not indexes. Once I decided to focus on counties, I made a separate column for the percent of POC in a county. 
+
+I also made a dataframe of fips codes for the florida counties, and filtered `allprisons` for just florida ones, then created a dataframe with all the needed prison name, longitute, and latitude neatly together.
+
+
+### Exploratory Data Analysis
+
+*Add 3 to 5 visualizations (e.g., correlation heatmaps, distribution plots, or scatter plots) that directly informed you analysis.*
+
+An exploration of prison location statistics.
+
+#### Total Prisons
+
+```{python}
+#| echo: false
+#| fig-cap: "Distrubtion of Prisons by State, Top Ten"
+
+import pandas as pd
+from pyprojroot import here # this helps us navigate tricky path stuff between local runs and quarto builds
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+# Load the data using here() with the path from the project root
+file_path = here("projects/jessie_project/data/allprisons.csv")
+prisons = pd.read_csv(file_path, sep=',') 
+
+# df of counts
+common_states = prisons['State'].value_counts().rename_axis("state").reset_index(name='prison counts').head(10)
+
+# --- Bar Plot Code ---
+
+states = common_states["state"]
+count = common_states["prison counts"]
+
+plt.bar(states, count, color='lightblue')
+plt.title("Distribution of Prisons")
+plt.tick_params("x", rotation=45, rotation_mode="xtick")
+plt.xlabel("State")
+plt.ylabel("Prison Count")
+
+
+plt.tight_layout()
+plt.show()
+
+```
+
+#### Public VS Private
+
+It should be noted that Federal Prisons are 88% of this dataset.
+
+```{python}
+#| echo: false
+#| fig-cap: "Prisons in Top Ten States, Public VS Private"
+
+# df creation
+
+public = prisons[prisons['private'] == 0.0]
+private = prisons[prisons['private'] == 1.0]
+
+public_common = public['State'].value_counts().rename_axis("state").reset_index(name='prison counts').head(10)
+private_common = private['State'].value_counts().rename_axis("state").reset_index(name='prison counts').head(10)
+
+
+# --- Bar Plot Code ---
+fig, axes = plt.subplots(1, 2, sharey=True, figsize=(10, 5))
+
+plt.title('Prisons in Top Ten States, Public VS Private')
+
+# First dataset
+axes[0].bar(public_common["state"], public_common["prison counts"], color='salmon')
+axes[0].set_title("Public")
+axes[0].tick_params("x", rotation=45, rotation_mode="xtick")
+axes[0].set_ylabel("Prison Count")
+axes[0].set_xlabel("State")
+
+# Second dataset
+axes[1].bar(private_common["state"], private_common["prison counts"], color='turquoise')
+axes[1].set_title("Private")
+axes[1].tick_params("x", rotation=45, rotation_mode="xtick")
+axes[1].set_ylabel("Prison Count")
+axes[1].set_xlabel("State")
+
+plt.xlabel("State")
+
+plt.tight_layout()
+plt.show()
+# change y axis to be same
+```
+
+Since Florida has the most Public Prisons, we will examine it in closer detail.
+
+#### County Mapping
+
+```{python}
+#| echo: false
+import numpy as np
+import pandas as pd
+from pyprojroot import here # this helps us navigate tricky path stuff between local runs and quarto builds
+
+# Load the data using here() with the path from the project root
+file_path = here("projects/jessie_project/data/florida_counties.csv") # demographics dataset
+df= pd.read_csv(file_path, sep=',')
+
+file_path2 = here("projects/jessie_project/data/allprisons.csv") # prison dataset
+df_prison= pd.read_csv(file_path2, sep=',')
+
+```
+
+```{python}
+#| echo: false
+
+
+# First Dataset - County Demographics
+## organizing + formatting columns
+df = df.transpose()
+
+df.columns = df.iloc[0]
+df = df[1:]
+df.reset_index(level=0, inplace=True)
+
+df.rename(columns = {"index": "county"}, 
+          inplace = True)
+
+df["county"] = df["county"].str.replace(", Florida", "")
+
+## New column for total poc percentage
+df["Total:"] = df["Total:"].str.replace(",", "")
+df["\xa0\xa0\xa0\xa0White alone"] = df["\xa0\xa0\xa0\xa0White alone"].str.replace(",", "")
+df["per_poc"] = df["\xa0\xa0\xa0\xa0White alone"].astype(int)/df["Total:"].astype(int) * 100
+
+## New DF with fips for graphing
+from urllib.request import urlopen
+import json
+with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
+    counties = json.load(response)
+
+
+url2 = "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
+df_fips = pd.read_csv(url2, dtype={"fips": str})
+fips = df_fips["fips"].iloc[322:389]
+fips = fips.reset_index(drop = True)
+
+pp = df["per_poc"]
+df_new = {
+    "Name": df["county"],
+    "fips" : fips,
+    "Percentage of POC" : pp,
+    "Total Population" : df["Total:"].astype(float)
+}
+
+df_new = pd.DataFrame(df_new)
+
+# Second Dataset - prison locations
+
+## florida
+rows = df_prison[df_prison["stateshortname"] != "FL"].index
+df_prison.drop(rows, inplace=True)
+df_prison = df_prison.reset_index(drop = True)
+df_prison.head(10)
+
+##cleaning results of a join
+name1 = df_prison["name"].iloc[:12] # combining two columns with the same topic
+name2 = df_prison["PrisonName"].iloc[12:]
+
+df_prison[['rev_lon', 'rev_lat']] = df_prison['coordinates_rev'].str.split(',', n=1, expand=True)
+df_prison["rev_lon"] = df_prison["rev_lon"].str.replace("(", "")
+df_prison["rev_lat"] = df_prison["rev_lat"].str.replace(")", "")
+
+
+lon1 = df_prison["rev_lon"].iloc[:12]
+lon2= df_prison["longitude"].iloc[12:]
+lat1 = df_prison["rev_lat"].iloc[:12]
+lat2= df_prison["latitude"].iloc[12:]
+
+name = pd.concat([name1, name2], ignore_index=True)
+long = pd.concat([lon1, lon2], ignore_index=True)
+lat = pd.concat([lat1, lat2], ignore_index=True)
+
+df_location = {
+    "Prison Name": name,
+    "longitute" : long,
+    "latitude" : lat
+}
+
+
+df_location = pd.DataFrame(df_location)
+
+
+#changing coordinates
+#FCI Marianna
+long = df_location["latitude"].iloc[0]
+lat = df_location["longitute"].iloc[0]
+df_location.at[0, "longitute"] = long
+df_location.at[0, "latitude"] = lat
+
+
+#World Headquarters
+long = df_location["latitude"].iloc[9]
+lat = df_location["longitute"].iloc[9]
+df_location.at[9, "longitute"] = long
+df_location.at[9, "latitude"] = lat
+
+#Broward
+long = df_location["latitude"].iloc[6]
+lat = df_location["longitute"].iloc[6]
+df_location.at[6, "longitute"] = long
+df_location.at[6, "latitude"] = lat
+
+# FDC Miami
+long = df_location["latitude"].iloc[2]
+lat = df_location["longitute"].iloc[2]
+df_location.at[2, "longitute"] = long
+df_location.at[2, "latitude"] = lat
+
+# FPC Pensacola
+long = df_location["latitude"].iloc[3]
+lat = df_location["longitute"].iloc[3]
+df_location.at[3, "longitute"] = long
+df_location.at[3, "latitude"] = lat
+
+
+#FCI Tallahasse
+long = df_location["latitude"].iloc[4]
+lat = df_location["longitute"].iloc[4]
+df_location.at[4, "longitute"] = long
+df_location.at[4, "latitude"] = lat
+
+
+# Blackwater River
+long = df_location["latitude"].iloc[5]
+lat = df_location["longitute"].iloc[5]
+df_location.at[5, "longitute"] = long
+df_location.at[5, "latitude"] = lat
+
+
+# FCI Miami
+long = df_location["latitude"].iloc[1]
+lat = df_location["longitute"].iloc[1]
+df_location.at[1, "longitute"] = long
+df_location.at[1, "latitude"] = lat
+
+# South Bay
+long = df_location["latitude"].iloc[8]
+lat = df_location["longitute"].iloc[8]
+df_location.at[8, "longitute"] = long
+df_location.at[8, "latitude"] = lat
+
+# Moore
+long = df_location["latitude"].iloc[7]
+lat = df_location["longitute"].iloc[7]
+df_location.at[7, "longitute"] = long
+df_location.at[7, "latitude"] = lat
+
+#Citrus
+long = df_location["latitude"].iloc[10]
+lat = df_location["longitute"].iloc[10]
+df_location.at[10, "longitute"] = long
+df_location.at[10, "latitude"] = lat
+
+# Lake City
+long = df_location["latitude"].iloc[11]
+lat = df_location["longitute"].iloc[11]
+df_location.at[11, "longitute"] = long
+df_location.at[11, "latitude"] = lat
+
+
+```
+
+```{python}
+#| echo: false
+#| fig-cap: "Percent of POC in Florida Counties"
+
+# Reading geometry
+from pyprojroot import here
+import geopandas as gpd
+myfile = file_path = here("projects/jessie_project/data/fl_counties.geojson")
+
+# open file for read-only
+florida = gpd.read_file(myfile)
+
+# plot demographics 
+import plotly.express as px
+
+fig = px.choropleth(df_new, geojson=florida, hover_data=['Name'],locations='fips', color='Percentage of POC',
+                    featureidkey="properties.GEOID",
+                    color_continuous_scale="Viridis_r",
+                    range_color=(30, 100),
+                    labels={"Name": "County Name", 'Percentage of POC':'Percent Nonwhite'}
+                    )
+fig.update_geos(fitbounds="locations",visible=False)
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+fig.show()
+```
+
+
+Population Density may be a factor as well. Let's examine it.
+
+```{python}
+#| echo: false
+#| fig-cap: "Population Density in Florida Counties"
+
+fig2 = px.choropleth(df_new, geojson=florida, hover_data=['Name'],locations='fips', color='Total Population',
+                    featureidkey="properties.GEOID",
+                    color_continuous_scale="Plasma_r",
+                    range_color=(7900, 2700000),
+                    labels={"Name": "County Name", 'Total Population':'Population'}
+                    )
+fig2.update_geos(fitbounds="locations",visible=False)
+fig2.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+fig2.show()
+
+```
+
+
+Here is the mapping of Florida Prisons.
+```{python}
+#| echo: false
+#| fig-cap: "Locations of Florida Prisons"
+
+# plot location
+import plotly.graph_objects as go
+
+fig3 = go.Figure(go.Scattermap(
+        lat=list(df_location["latitude"]),
+        lon=list(df_location["longitute"]),
+        mode='markers',
+        marker=go.scattermap.Marker(
+            size=5
+        ),
+        text=list(df_location["Prison Name"], ),
+    ))
+
+fig3.show()
+
+```
+
+::: {.callout-note appearance="simple"}
+
+## Note
+
+These graphs were made with `plotly.express`. 
+
+:::
+
+
+
+## The Results
+
+```{python}
+#| echo: false
+#| fig-cap: "Locations of Florida Prisons compared to Percentage Nonwhite"
+florida = florida.sort_values("NAMELSAD")
+
+df_county = {
+    "Name": df["county"],
+    "Percentage of POC" : pp,
+    "Total Population" : df["Total:"].astype(float),
+    "geometry" : florida["geometry"]
+}
+df_county = pd.DataFrame(df_county)
+gdf_county = gpd.GeoDataFrame(df_county)
+gdf_county1 = gdf_county.plot(column = "Percentage of POC", legend=True, cmap="viridis_r", legend_kwds={"label": "Percentage Nonwhite"})
+gdf_county1.set_axis_off()
+
+from shapely import Point
+df_location["geometry"] = [Point(xy) for xy in zip(df_location.longitute, df_location.latitude)] 
+
+gdf_location = gpd.GeoDataFrame(df_location)
+
+fig4 = gdf_location.plot(ax = gdf_county1, color='red', vmin = 26, vmax =90)
+
+# WRONG COLORS DANGER DANGER ASK
+```
+
+
+```{python}
+# | echo: false
+# | fig-cap: "Locations of Florida Prisons compared to Population Density"
+
+gdf_county2 = gdf_county.plot(column = "Total Population", legend=True, cmap="plasma_r", legend_kwds={"label": "Population Density"})
+gdf_county2.set_axis_off()
+
+fig5 = gdf_location.plot(ax = gdf_county2, color='red')
+
+
+```
+
+
+::: {.callout-note appearance="simple"}
+
+## Note
+
+These plots were made with `geopandas`. The colors of the graphs are slightly off because of the different packages.
+
+:::
+
+
+The choro graph is how much of each county is nonwhite, according to the 2020 census. The lighter color is a higher density of nonwhite people. Hovering over the county gives you its fips, its name, and the percentage of nonwhite people. Most counties are above 50% nonwhite, with now obvious trends towards one side of the state. 
+
+This second graph the map of the locations of all the prisons in Florida. There seems to be a slight trend of prisons being built in counties with a higher amount of people of color.
+
+
+
+## How to understand these results
+
+There seems to be a slight trend following the population of nonwhite people. However, there isn't a strong enough correlation us to determine race as direct factor in prison locations from this vizualization alone, but it matches with prior research, like Eason's work. 
+
+As we can infer from these maps, it is also true that people of color in rural towns also disproportionately incarcerated. Despite the population being low in some counties, they still have a couple prisons. When we compare to the amount of nonwhite people in the county, the prisons start making sense.
+
+It all goes back to the passing of the Thriteenth, Fourteenth, and Fifteenth Amendments. That dreaded clause that excluded slavery "except as a punishment for crime" in the Thirteenth Amendment, coupled with the full citizenship under the law and the right to vote from the Fourteenth and Fifteenth Amendments—— these caused conservative legislators to turn to imprisonment to prevent disruption to white supremacist political regimes, and to keep black people in servitude.
+
+During reconstruction, both liberal and conservative apporaches to policing ended up upholding of white supremacy and the continuing to exploit the lower classes. The Republican Govenor, Claude Kirk, launched a "war on crime." A community control called the "White Hats," made up of young black volunteers was created as a response to an insurrection caused by police violence, and was canceled after three of the young officers were arrested. These are just two examples, but there are many more that made the expansion of incarceration possible in florida[@rettig2017cool]. We can effects of this prison expansion in this project.
