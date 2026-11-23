@@ -1,0 +1,59 @@
+---
+title: "Code is law: How COMPAS affects the way the judiciary handles the risk of recidivism"
+subtitle: "Christoph Engels, Lorenz Linhardt & Marcel Schubert"
+description: "Lecture for Week11-C1"
+author: "Catherine Xu"
+topics:
+- "COMPAS risk assessments"
+- "Bias in predictive policing algorithms"
+categories: ["seminar", "template"]
+format:
+  revealjs:
+    theme: [serif, seminar.scss]       
+    slide-number: true   
+    transition: slide    
+    controls: false       
+---
+
+## Today's Agenda
+
+- Discussion leader: Catherine
+- Wednesday: No class
+
+
+<!--https://quarto.org/docs/presentations/revealjs/ -->
+
+<!-- Discussion Leader: Add your slides here -->
+
+<!-- Don't forget to PREVIEW the slide show in positron to make sure your changes look how you want them to! -->
+
+## Relevant Events
+
+[What Algorithmic Injustice Looks Like in Real Life](https://www.propublica.org/article/what-algorithmic-injustice-looks-like-in-real-life)
+
+-   Not written by justice-impacted individuals, but includes commentary/snippets of interviews with formerly incarcerated individuals whose arrests and subsequent (lack of) criminal activity demonstrate the human consequences of criminal justice outcomes resulting from discriminatory/inequitable sentencing decisions made using COMPAS risk scores. 
+
+[MFIA Clinic Fights for Release of Parole Algorithm Information](https://law.yale.edu/yls-today/news/mfia-clinic-fights-release-parole-algorithm-information)
+
+-   This article covers a lawsuit filed by the Media Freedom and Infomation Access Clinic at Yale Law School challenging the New York State Parole Board's denial of a FOI (freedom of information) request to make COMPAS's formulas/methods and their role in making parole decisions available to the public. 
+
+
+## Main Points
+
+- Normative decision: striking a balance between incarcerating individual who would not have recidivated (false positive) vs. releasing an individual who ultimately reoffends (false negative)
+- "Code is law": normative decisions essential to basic constitutional rights now "buried in code" (Engels et al. 385), minimizes accountability for judges/prosecutors/legislators 
+- Lack of democratic legitimacy in normative decisions made by commercial entities. Legislative bodies/courts and the public are not involved in the process behind decisions made by the algorithm 
+
+
+## Main Points (cont'd)
+
+- Pronounced anti-defendant bias (violation of "clear and convincing evidence" for pretrial detention)
+- Using ProPublica data to create corrected model that reduces anti-defendant bias (~2/3 of all decisions correct regardless of threshold)
+- Despite correction optimizing accuracy, not race and age, there still exists a gap between defendants labelled as "black" and younger (more false positives) or "white" and older (more false negaitves) 
+
+
+## Questions
+- 1. If the authors' corrected algorithm using the ProPublica reduces the overall error rate of the COMPAS algorithm but still disadvantages Black and younger defendants, can we consider it more fair? How can we/the judiciary negotiate the trade-off between improving the accuracy of algorithms and addressing the anti-Black and anti-poor bias baked into questions asked by criminal risk assessments and inherent to the risk factors associated with criminality? 
+- 2. What do you think about the phrase "code is law" and what implications does this have given the rapidly changing use of artificial intelligence in our society and the governance surrounding that? 
+
+<!-- Discussion Leader: End your slides -->
