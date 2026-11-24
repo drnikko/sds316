@@ -15,7 +15,6 @@ Previously I analyzed 2025 data. To add a dimension for further analysis, I am e
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import statsmodels.formula.api as smf
 from pyprojroot import here
 ```
 
