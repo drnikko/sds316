@@ -1,18 +1,186 @@
 ---
-title: "Washington State Law Enforcement & Social Spending"
+title: "Law Enforcement Spending, Social Spending, and Crime in Washington State Counties"
 author: 
   - "Julia Laney"
 date: 2026-09-30
-categories: [Police spending, Social spending, Crime reduction, Municipal budget, Washington state]  #  These are some of the categories you might use
-image: "images/wsp.jpg"  # Required thumbnail for grid view - CHANGE THIS (this file does not exist )
+categories: [Police spending, Social spending, Crime reduction, Municipal budget, Washington state, Government involvement]  
+image: "wa-flag.webp"  
+bibliography: bibliography.bib
 ---
 
-## Project Overview
+## Introduction
 
-This project explores the breakdown of police spending and social spending in each of Washington state's 39 counties. Using Washington state fiscal information, I am looking at each county’s budget to see which counties spend the most on social services relative to their police spending. Further, I am looking at crime statistics by county to explore the relationship between police spending, social spending, and crime. Because some studies have shown that police spending reduces crime short-term while social spending reduces crime long-term, I am going to identify any significant changes in a county’s police or social spending, then evaluate the impact of these changes on crime after a given period.
+This project explores the relationship between police spending, social spending, and crime in Washington state counties. Police spending and the allocation of funds between police and social services is a widely discussed topic. Some studies assert that increased police spending fails to reduce crime and that increased social spending is a better tool for long-term crime reduction. The effectiveness of funding largely comes down to how it is allocated.
 
-### Components
+A multiple regression analyzing the relationship between police spending and crime and social spending and crime found that neither was statistically significant, with the two spending variables explaining only 11.2% of the variation in violent crime rate changes among the counties included in the regression. Interestingly, changes in law enforcement and social spending were largely uncorrelated with one another, which suggests that growth in one category does not necessarily accompany growth in the other. Despite their similarly weak associations with crime, social spending per capita grew faster than law enforcement spending per capita between 2020 and 2025, averaging about 49% growth compared to 33%. These findings highlight the difficulty in establishing a relationship between spending and crime. 
 
-- [Research Plan](research-plan.qmd) 
-- [Exploratory Data Analysis](stage2.qmd)
-- [Initial draft writing & reflection](stage2-writing.qmd)
+
+::: callout-important
+There is a weak and statistically insignificant relationship between police spending, social spending, and crime. Social spending per capita grew faster than law enforcement spending per capita between 2020 and 2025, averaging about 49% growth compared to 33%.
+:::
+
+## About the Data
+
+The data spans 2020-2025. Crime data was sourced from the Washington Association of Sheriffs & Police Chiefs' Criminal Justice Information Support Department. There are 234 observations across all 6 years. The law enforcement and social service spending data was sourced from the State Auditor's Office's Finacial Intelligence Tool (FIT). In the law enforcement spending dataset, law enforcement activities include police operations, traffic policing, administration, crime prevention, training, facilities, and property and evidence room. In the social spending dataset, social services include homeless services, mental health services, public safety services, chemical dependency services, welfare, child services, aging and disability services, veterans services, developmental disability services, and domestic violence services.
+
+## The Process
+
+### Data Cleaning & Preprocessing
+
+Crime and spending data were joined together into a single dataframe for analysis. Spending data had to be cleaned so that dollar amounts were treated as integers/floats and could be used for calculations. There were some observations in the spending data that were listed as "No filing" or "Pending revision" as of November 23, 2026. In the 2024 data for both law enforcement and social services spending, there was one county that was pending revision. In the 2021 data, there was one county pending revision. In the 2025 data, there was one county pending revision and three counties with no filing. I handled this by assigning these observations as NaN. This ensured that these counties could be included in the dataset, but that missing values would not impede the analysis or calculation work. Calculations were added to the dataframe to assist with analysis, and include per capita spending calculations for each county and crime rate.
+
+### Exploratory Data Analysis
+
+Early exploratory data analysis focused on the year 2025. I wanted to answer: 1. On average, how much did counties spend on police and social services?, and 2. What, if any, relationship exists between either type of spending and crime?
+
+I found that in 2025, Washington counties spent an average of $24,960,060 on law enforcement and $65,967,350 on social services. This challenged my initial assumption that police spending would be higher.
+
+From here, I made a scatterplot that plotted law enforcement spending per capita against the violent crime rate.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import statsmodels.formula.api as smf
+from pyprojroot import here
+
+file_2025 = here("projects/wa-state-police-social-spending/_data/change_20_25_final.csv")
+cd_2025 = pd.read_csv(file_2025)
+
+plot4 = cd_2025[["Law Enforcement Spending Per Capita", "Violent Offenses Per 100k (crime rate)"]].dropna()
+
+x = plot4["Law Enforcement Spending Per Capita"]
+y = plot4["Violent Offenses Per 100k (crime rate)"]
+
+plt.scatter(x, y)
+
+#line of best fit
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, m*x + b)
+
+plt.xlabel("Law Enforcement Spending Per Capita")
+plt.ylabel("Violent Offenses per 100,000 People")
+plt.title("Law Enforcement Spending and Violent Crime Rate by Washington State County (2025)")
+plt.show()
+```
+
+I found that there is a positive relationship between law enforcement spending per capita and violent crime rates, which challenged my assumption that greater spending would be associated with lower violent crime. However, there is an extreme outlier in the upper right corner of the plot, which appears to be influencing the relationship. Throughout the analysis, counties with small populations were highly influential over analyses of this type.
+
+```{python}
+plot5 = cd_2025[["Social Spending Per Capita", "Violent Offenses Per 100k (crime rate)"]].dropna()
+
+x = plot5["Social Spending Per Capita"]
+y = plot5["Violent Offenses Per 100k (crime rate)"]
+
+plt.scatter(x, y)
+
+#line of best fit
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, m*x + b)
+
+plt.xlabel("Social Spending Per Capita")
+plt.ylabel("Violent Offenses per 100,000 People")
+plt.title("Social Spending and Violent Crime Rate by Washington State County (2025)")
+plt.show()
+```
+
+This plot shows a slightly negative relationship between social spending per capita and violent crime rates, meaning higher social spending per capita is associated with a lower violent crime rate. Once again, the smallest counties are major outliers.
+
+## The Results
+
+### Result 1: There is a weak and statistically insignificant relationship between police spending, social spending, and crime.
+
+The two graphs below show changes in each of spending plotted against violent crime between the years 2020 and 2025.
+
+```{python}
+file_change_1 = here("projects/wa-state-police-social-spending/_data/change_20_25_final.csv")
+df1 = pd.read_csv(file_change_1)
+
+file_county_1 = here("projects/wa-state-police-social-spending/_data/county_data_final.csv")
+df2 = pd.read_csv(file_county_1)
+
+#remove the NaNs
+plot_1 = df1[
+    ["Law Enforcement Spending Change", "Violent Crime Rate Change"]].dropna()
+
+x = plot_1["Law Enforcement Spending Change"]
+y = plot_1["Violent Crime Rate Change"]
+
+plt.scatter(x, y)
+
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, m*x + b, color="red")
+
+plt.axhline(0, color="gray", linestyle="--")
+plt.axvline(0, color="gray", linestyle="--")
+
+plt.xlabel("Change in Law Enforcement Spending Per Capita ($)")
+plt.ylabel("Change in Violent Offenses per 100,000")
+plt.title("Changes in Police Spending and Violent Crime (2020–2025)")
+plt.show()
+```
+
+```{python}
+file4 = here("projects/wa-state-police-social-spending/_data/change_20_25_final.csv")
+change_20_25_final = pd.read_csv(file4)
+#remove the NaNs
+plot_2 = change_20_25_final[
+    ["Social Spending Change", "Violent Crime Rate Change"]].dropna()
+
+x = plot_2["Social Spending Change"]
+y = plot_2["Violent Crime Rate Change"]
+
+plt.scatter(x, y)
+
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, m*x + b, color="red")
+
+plt.axhline(0, color="gray", linestyle="--")
+plt.axvline(0, color="gray", linestyle="--")
+
+plt.xlabel("Change in Social Spending Per Capita ($)")
+plt.ylabel("Change in Violent Offenses per 100,000")
+plt.title("Changes in Social Spending and Violent Crime (2020–2025)")
+plt.show()
+```
+
+Both law enforcement spending and social spending have a similar pattern. Between 2020 and 2025, changes in law enforcement spending and social service spending per capita were weakly negatively correlated with changes in violent crime rates. The correlation coefficient is -0.248 for law enforcement spending and -0.220 for social spending. The correlation results suggest that counties that experience larger increases in either spending category tend to experience smaller increases in violent crime. Importantly, neither relationship is very strong and the correlations alone cannot establish that increased spending of either kind led to reductions in crime.
+
+### Result 2: The two types of spending are unrelated.
+
+```{python}
+change_20_25_final["Law Enforcement Spending Change"].corr(
+    change_20_25_final["Social Spending Change"])
+```
+
+The correlation coefficient between the change in law enforcement spending and the change in social spending doesn't support the hypothesis that counties that increase law enforcement spending are also increasing social spending. Changes in both spending categories seem to be unrelated. This is important because it explains that counties are not necessarily just increasing public spending overall (if this were the case you could expect correlation here), but certain differing factors are likely driving spending in each category. My data does not explain what these factors are, or what motivates changes in either type of spending.
+
+### Result 3: Social spending grew more over the period 2020-2025 than police spending
+
+```{python, #| echo: false}
+filezz = here("projects/wa-state-police-social-spending/_data/spending_change.csv")
+spending_change = pd.read_csv(filezz)
+#visualization of spending growth
+x = spending_change["Police Growth (%)"]
+y = spending_change["Social Growth (%)"]
+
+plt.scatter(x, y)
+
+plt.axline((0, 0), slope=1, color="red", linestyle="--")
+
+plt.xlabel("Police Spending Growth (%)")
+plt.ylabel("Social Spending Growth (%)")
+plt.title("3. Police vs. Social Spending Growth (2020–2025)")
+
+plt.show()
+```
+
+*Note:* Importantly, spending has not yet been adjusted for inflation. This is a key next step that will bring the project towards its final version, and strengthen my analysis.
+
+## How to understand these results
+
+My findings, above all, show difficulty in establishing a causal relationship between police and/or social spending and crime.
+
+Other studies have also struggled to show that one type of spending can actually meaningfully reduce crime. Amid calls to defund the police in the wake of the murder of George Floyd in 2020, some argued that defunding would spike crime. Interestingly, [@bump2020]'s review of spending on state and local police over the past 60 years showed no correlation nationally between spending and crime rates. Crime rates have steadily dropped over the last 60 years as spending has increased, and yet there is no correlation between the two.
+
+Some literature asserts that increased funding is only as good as its allocation. This means that where funds are deployed and how they are used matters a lot more than sheer amount. [@schwartz2025] found that there was a statistically significant relationship between the funding received by a specific unit of police and violent crime rates. As this unit's funding increased, violent crime rates decreased. This study supports the idea that allocation is the key to using spending as a crime reduction tool. Budgets are limited and it's essential to concentrate funds where they are most effective. My work treats "law enforcement spending" as a whole. A possible expansion of this project may break this category down into more specific channels to see if this impacts my findings.

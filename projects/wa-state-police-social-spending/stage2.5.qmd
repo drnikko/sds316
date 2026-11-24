@@ -1,0 +1,474 @@
+---
+title: "Stage 2.5: More Analysis"
+author: 
+  - "Julia Laney"
+date: 2026-11-22
+---
+
+## Stage 2.5
+
+### 2020-2025
+
+Previously I analyzed 2025 data. To add a dimension for further analysis, I am expanding my dataset to 2020-2025.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import statsmodels.formula.api as smf
+from pyprojroot import here
+```
+
+### Expand spending data to 2020-2025
+
+```{python}
+file_lawenf_2 = here("projects/wa-state-police-social-spending/_data/le_20-25.csv")
+le_spending_2020_2025 = pd.read_csv(file_lawenf_2, skiprows=6)
+
+file_social_2 = here("projects/wa-state-police-social-spending/_data/social_20-25.csv")
+social_spending_2020_2025 = pd.read_csv(file_social_2, skiprows=6)
+```
+
+```{python}
+#sort into only counties for law enforcement spending data
+le_spending_2020_2025 = le_spending_2020_2025[le_spending_2020_2025["Governments/$ Dollars"].str.endswith("County", na=False)]
+
+#39 counties total in WA
+#len(le_spending_2020_2025) #output is 39!
+
+#sorting into only counties for social services spending data
+social_spending_2020_2025 = social_spending_2020_2025[social_spending_2020_2025["Governments/$ Dollars"].str.endswith("County", na=False)]
+
+#39 counties total in WA
+#len(social_spending_2020_2025) #output is 39!
+```
+
+```{python}
+#cleaning dollar values in the spending data
+for year in range(2020, 2026):
+    col = str(year)
+    le_spending_2020_2025[col] = (
+        le_spending_2020_2025[col]
+        .str.replace("$", "", regex=False)
+        .str.replace(",", "", regex=False)
+    )
+    le_spending_2020_2025[col] = pd.to_numeric(
+        le_spending_2020_2025[col], errors="coerce"
+    ) #some unexpected values in the dollar column, so replacing these with NaN
+
+#cleaning dollar values in the data
+for year in range(2020, 2026):
+    col = str(year)
+    social_spending_2020_2025[col] = (
+        social_spending_2020_2025[col]
+        .str.replace("$", "", regex=False)
+        .str.replace(",", "", regex=False)
+    )
+    social_spending_2020_2025[col] = pd.to_numeric(
+        social_spending_2020_2025[col], errors="coerce"
+    ) #some unexpected values in the dollar column, so replacing these with NaN
+```
+
+I also cleaned the dollar amounts in the spending data so that each observation would be classified as an integer/float and it would be possible to sum values together. Finally, there were some observations in the spending data that were listed as "No filing" or "Pending revision" as of November 23, 2026. In the 2024 data for both law enforcement and social services spending, there was one county that was pending revision. In the 2021 data, there was one county pending revision. In the 2025 data, there was one county pending revision and three counties with no filing. I handled this by assigning these observations as NaN. This ensured that these counties could be included in the dataset, but that missing values would not impede the analysis.
+
+```{python}
+#keep county and year columbs
+years = [str(year) for year in range(2020, 2026)]
+
+le_spending_2020_2025 = le_spending_2020_2025[["Governments/$ Dollars"] + years]
+social_spending_2020_2025 = social_spending_2020_2025[["Governments/$ Dollars"] + years]
+
+#rename county column
+le_spending_2020_2025 = le_spending_2020_2025.rename(columns={
+    "Governments/$ Dollars": "County"})
+
+social_spending_2020_2025 = social_spending_2020_2025.rename(columns={
+    "Governments/$ Dollars": "County"})
+
+#cleaing county names
+le_spending_2020_2025["County"] = le_spending_2020_2025["County"].str.replace(" County", "", regex=False)
+social_spending_2020_2025["County"] = social_spending_2020_2025["County"].str.replace(" County", "", regex=False)
+
+#reshaping because i want year as a column
+le_spending_2020_2025 = le_spending_2020_2025.melt(
+    id_vars="County",
+    var_name="Year",
+    value_name="Law Enforcement Spending")
+
+social_spending_2020_2025 = social_spending_2020_2025.melt(
+    id_vars="County",
+    var_name="Year",
+    value_name="Social Spending")
+
+#merging both spending dfs
+spending = le_spending_2020_2025.merge(
+    social_spending_2020_2025,
+    on=["County", "Year"])
+
+#make year an integer
+spending["Year"] = spending["Year"].astype(int)
+
+#sorting by county & year
+spending = spending.sort_values(["County", "Year"])
+```
+
+Column names were cleaned, and the law enforcement and social services spending data were joined into a single dataframe. This required reshaping for both dataframes, as years 2020-2025 needed to be in a single "Year" column rather than each their own column.
+
+### Population
+```{python}
+#import population data
+file_pop = here("projects/wa-state-police-social-spending/_data/populations.csv")
+population = pd.read_csv(file_pop)
+
+#cleaning county names
+population["County"] = population["County"].str.removeprefix(".")
+population["County"] = population["County"].str.replace(" County, Washington", "", regex=False)
+
+#keeping just county and necessary year columns
+years = [str(year) for year in range(2020, 2026)]
+population = population[["County"] + years]
+
+#reshaping
+population = population.melt(
+    id_vars="County",
+    var_name="Year",
+    value_name="Population")
+
+#year: str -> int
+population["Year"] = population["Year"].astype(int)
+
+#lose commas in population and convert type
+population["Population"] = (
+    population["Population"]
+    .astype(str)
+    .str.replace(",", "", regex=False))
+
+population["Population"] = pd.to_numeric(
+    population["Population"], errors="coerce")
+
+#merge w/ spending data
+county_data = spending.merge(
+    population,
+    on=["County", "Year"],
+    how="left",
+    validate="one_to_one")
+
+county_data.head()
+```
+
+### Crime
+
+```{python}
+file_crime_2020 = here("projects/wa-state-police-social-spending/_data/crime_2020.csv")
+crime_2020 = pd.read_csv(file_crime_2020)
+file_crime_2021 = here("projects/wa-state-police-social-spending/_data/crime_2021.csv")
+crime_2021 = pd.read_csv(file_crime_2021)
+file_crime_2022 = here("projects/wa-state-police-social-spending/_data/crime_2022.csv")
+crime_2022 = pd.read_csv(file_crime_2022)
+file_crime_2023 = here("projects/wa-state-police-social-spending/_data/crime_2023.csv")
+crime_2023 = pd.read_csv(file_crime_2023)
+file_crime_2024 = here("projects/wa-state-police-social-spending/_data/crime_2024.csv")
+crime_2024 = pd.read_csv(file_crime_2024)
+file_crime_2025 = here("projects/wa-state-police-social-spending/_data/crime_2025.csv")
+crime_2025 = pd.read_csv(file_crime_2025)
+
+#defining violent offenses
+violent_offenses = [
+    "Murder Non Negligent Manslaughter",
+    "Rape",
+    "Robbery",
+    "Aggravated Assault"]
+
+crime_dfs = [crime_2020, crime_2021, crime_2022,
+    crime_2023, crime_2024, crime_2025]
+
+crime_all = []
+
+for year, df in zip(range(2020, 2026), crime_dfs):
+    #removes State Agency which was listed as a county
+    df = df[df["County"] != "State Agency"].copy()
+    #remove caps lock
+    df["County"] = df["County"].str.title()
+    #classify offenses based on earlier definition
+    df["Crime Type"] = np.where(
+        df["Offense"].isin(violent_offenses),
+        "Violent Offenses",
+        "Other Offenses")
+    county_crime = (
+        df.groupby(["County", "Crime Type"])
+        .size()
+        .unstack(fill_value=0)
+        .reindex(columns=["Violent Offenses", "Other Offenses"], fill_value=0)
+        .reset_index())
+    #calc total offenses
+    county_crime["Total Offenses"] = (
+        county_crime["Violent Offenses"] + county_crime["Other Offenses"])
+    #adding year
+    county_crime["Year"] = year
+    crime_all.append(county_crime)
+
+#combine all years
+crime_all = pd.concat(crime_all, ignore_index=True)
+
+crime_all.head()
+```
+
+### Join crime, spending, population
+
+```{python}
+#rm existing crime columns before merging
+crime_cols = [
+    "Violent Offenses",
+    "Other Offenses",
+    "Total Offenses"]
+
+county_data = county_data.drop(
+    columns=crime_cols + [f"{col}{suffix}" for col in crime_cols for suffix in ["_x", "_y"]],
+    errors="ignore")
+
+#merging crime data
+county_data = county_data.merge(
+    crime_all,
+    on=["County", "Year"],
+    how="left",
+    validate="one_to_one")
+```
+
+```{python}
+#adding per capita spending and offenses per 100k (crime rate)
+#law enforcement spending pc
+county_data["Law Enforcement Spending Per Capita"] = (
+    county_data["Law Enforcement Spending"] / county_data["Population"])
+
+#social spending pc
+county_data["Social Spending Per Capita"] = (
+    county_data["Social Spending"] / county_data["Population"])
+
+#total offenses per 100k population
+county_data["Offenses Per 100k (crime rate)"] = (
+    county_data["Total Offenses"] / county_data["Population"] * 100000)
+
+#violent offenses
+county_data["Violent Offenses Per 100k (crime rate)"] = (
+    county_data["Violent Offenses"] / county_data["Population"] * 100000)
+
+#other offenses
+county_data["Other Offenses Per 100k (crime rate)"] = (
+    county_data["Other Offenses"] / county_data["Population"] * 100000)
+```
+
+```{python}
+#save final df
+county_data.to_csv("projects/wa-state-police-social-spending/_data/county_data_final.csv", index=False)
+```
+
+## How have law enforcement spending, social spending, and crime changed over time?
+
+
+## Do counties that increase police spending experience changes in violent crime?
+
+```{python}
+#select 2020 and 2025 data
+change_20_25 = county_data[
+    county_data["Year"].isin([2020, 2025])].copy()
+
+change_20_25 = change_20_25.pivot(
+    index="County",
+    columns="Year",
+    values=[
+        "Law Enforcement Spending Per Capita",
+        "Violent Offenses Per 100k (crime rate)",
+        "Social Spending Per Capita"])
+
+#calc changes 2020 -> 2025
+change_20_25["Law Enforcement Spending Change"] = (
+    change_20_25["Law Enforcement Spending Per Capita"][2025] -
+    change_20_25["Law Enforcement Spending Per Capita"][2020])
+
+#social spending
+change_20_25["Social Spending Change"] = (
+    change_20_25["Social Spending Per Capita"][2025] -
+    change_20_25["Social Spending Per Capita"][2020])
+
+change_20_25["Violent Crime Rate Change"] = (
+    change_20_25["Violent Offenses Per 100k (crime rate)"][2025] -
+    change_20_25["Violent Offenses Per 100k (crime rate)"][2020])
+
+change_20_25 = change_20_25.reset_index()
+```
+
+```{python}
+change_20_25
+```
+
+```{python}
+#remove the NaNs
+plot_1 = change_20_25[
+    ["Law Enforcement Spending Change", "Violent Crime Rate Change"]].dropna()
+
+x = plot_1["Law Enforcement Spending Change"]
+y = plot_1["Violent Crime Rate Change"]
+
+plt.scatter(x, y)
+
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, m*x + b, color="red")
+
+plt.axhline(0, color="gray", linestyle="--")
+plt.axvline(0, color="gray", linestyle="--")
+
+plt.xlabel("Change in Law Enforcement Spending Per Capita ($)")
+plt.ylabel("Change in Violent Offenses per 100,000")
+plt.title("1. Changes in Police Spending and Violent Crime (2020–2025)")
+plt.show()
+```
+
+```{python}
+#calc correlation
+change_20_25["Law Enforcement Spending Change"].corr(
+    change_20_25["Violent Crime Rate Change"])
+```
+
+Counties ounties with larger increases in law enforcement spending per capita tended to experience smaller increases, or larger decreases, in violent crime rates between 2020 and 2025.
+
+
+### Which counties influence Plot 1 the most?
+
+```{python}
+change_20_25[
+    ["County", "Law Enforcement Spending Change", "Violent Crime Rate Change"]].sort_values("Law Enforcement Spending Change", ascending=False).head(10)
+```
+
+Small counties, particularly Garfield County, are most influential over the data. Garfield is the smallest county (population wise) in the state.
+
+## Do counties that increase social service spending experience changes in violent crime?
+
+```{python}
+#remove the NaNs
+plot_2 = change_20_25[
+    ["Social Spending Change", "Violent Crime Rate Change"]].dropna()
+
+x = plot_2["Social Spending Change"]
+y = plot_2["Violent Crime Rate Change"]
+
+plt.scatter(x, y)
+
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, m*x + b, color="red")
+
+plt.axhline(0, color="gray", linestyle="--")
+plt.axvline(0, color="gray", linestyle="--")
+
+plt.xlabel("Change in Social Spending Per Capita ($)")
+plt.ylabel("Change in Violent Offenses per 100,000")
+plt.title("2. Changes in Social Spending and Violent Crime (2020–2025)")
+plt.show()
+```
+
+```{python}
+#calc correlation
+change_20_25["Social Spending Change"].corr(
+    change_20_25["Violent Crime Rate Change"])
+```
+
+Both law enforcement spending and social spending have a similar pattern. Between 2020 and 2025, changes in law enforcement spending and social service spending per capita were weakly negatively correlated with changes in violent crime rates. The correlation coefficient is -0.248 for law enforcement spending and -0.220 for social spending. The correlation results suggest that counties that experience larger increases in either spending category tend to experience smaller increases in violent crime. Importantly, neither relationship is very strong and the correlations alone cannot establish that increased spending of either kind led to reductions in crime.
+
+## Follow up question: Are counties that are increasing law enforcement spending also increasing social spending?
+
+```{python}
+change_20_25["Law Enforcement Spending Change"].corr(
+    change_20_25["Social Spending Change"])
+```
+
+The coefficient doesn't support the hypothesis that counties that increase law enforcement spending are also increasing social spending. Changes in both spending categories seem to be unrelated.
+
+## Testing statistical significance
+
+```{python}
+#construct multiple linear regression model
+model_data = change_20_25[
+    ["Law Enforcement Spending Change",
+     "Social Spending Change",
+     "Violent Crime Rate Change"]].dropna()
+
+model = smf.ols(
+    'Q("Violent Crime Rate Change") ~ Q("Law Enforcement Spending Change") + Q("Social Spending Change")',
+    data=model_data).fit()
+
+print(model.summary())
+```
+
+The multiple linear regression model found negative coefficients for both spending categories. The estimated coefficient for law enforcement spending was −0.347 (p=0.139), and the coefficient for social spending was −0.256 (p=0.185). Neither relationship was statistically significant at the 5% level. The model can explain approximately 11.2% of the variation in violent crime rate changes across the 35 counties included in the analysis (4 counties were excluded due to missing values). These results don't provide sufficient evidence to establish statistically significant relationships betwee the variables.
+
+## Are police spending and social spending increased proportionately?
+
+```{python}
+#look at 202 and 2025
+spending_change = county_data[
+    county_data["Year"].isin([2020, 2025])].copy()
+
+spending_change = spending_change.pivot(
+    index="County",
+    columns="Year",
+    values=[
+        "Law Enforcement Spending Per Capita",
+        "Social Spending Per Capita"])
+
+#percent change in police
+spending_change["Police Growth (%)"] = (
+    (spending_change["Law Enforcement Spending Per Capita"][2025] -
+     spending_change["Law Enforcement Spending Per Capita"][2020]) /
+    spending_change["Law Enforcement Spending Per Capita"][2020]) * 100
+
+#percent change in social
+spending_change["Social Growth (%)"] = (
+    (spending_change["Social Spending Per Capita"][2025] -
+     spending_change["Social Spending Per Capita"][2020]) /
+    spending_change["Social Spending Per Capita"][2020]) * 100
+
+spending_change = spending_change.reset_index()
+```
+
+```{python}
+#avg spending growth
+print("Average police spending growth:",
+      spending_change["Police Growth (%)"].mean())
+
+print("Average social spending growth:",
+      spending_change["Social Growth (%)"].mean())
+```     
+
+```{python}
+#try median too
+spending_change[
+    ["Police Growth (%)", "Social Growth (%)"]].median()
+```
+
+Social spending grew more than law enforcement spending between 2020 and 2025. Both the average and median calculations for growth show this, so I'm confident that outliers are not skewing this finding.
+
+```{python}
+#visualization of spending growth
+x = spending_change["Police Growth (%)"]
+y = spending_change["Social Growth (%)"]
+
+plt.scatter(x, y)
+
+plt.axline((0, 0), slope=1, color="red", linestyle="--")
+
+plt.xlabel("Police Spending Growth (%)")
+plt.ylabel("Social Spending Growth (%)")
+plt.title("3. Police vs. Social Spending Growth (2020–2025)")
+
+plt.show()
+```
+
+
+```{python}
+#save change df
+change_20_25.to_csv("projects/wa-state-police-social-spending/_data/change_20_25_final.csv", index=False)
+```
+
+```{python}
+#save change df
+spending_change.to_csv("projects/wa-state-police-social-spending/_data/spending_change.csv", index=False)
+```

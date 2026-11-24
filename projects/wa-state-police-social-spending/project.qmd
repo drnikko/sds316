@@ -1,0 +1,20 @@
+---
+title: "Law Enforcement Spending, Social Spending, and Crime in Washington State Counties"
+author: 
+  - "Julia Laney"
+date: 2026-09-30
+categories: [Police spending, Social spending, Crime reduction, Municipal budget, Washington state, Government involvement] 
+image: "wa-flag.webp"  
+bibliography: bibliography.bib
+---
+
+## Project Overview
+
+This project explores the breakdown of police spending and social spending in each of Washington state's 39 counties between 2020 and 2025. Using Washington crime data, I calculate crime rate by county for both violent offenses and other offenses to explore the relationship between police spending, social spending, and types of crime. I identify changes in social spending and police spending per capita over the period 2020 to 2025, and evaluate the impact of growth in either area of spending on crime rates. 
+
+### Components
+
+- [Research Plan](research-plan.qmd) 
+- [Exploratory Data Analysis](stage2.qmd)
+- [Initial draft writing & reflection](stage2-writing.qmd)
+- [Further data analysis & regression work](stage2.5.qmd)
