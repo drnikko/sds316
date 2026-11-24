@@ -1,0 +1,513 @@
+---
+title: Initial Questions
+author: Rae Traver-Fallick
+execute:
+  code-fold: true
+---
+```{python}
+# import pandas as pd
+# import numpy as np
+# import matplotlib.pyplot as plt
+# import shapely
+# import geopandas as gpd
+
+# from gerrychain import  (
+#     GeographicPartition,
+#     Partition,
+#     Graph,
+#     MarkovChain,
+#     updaters,
+#     constraints,
+#     accept,
+#     Election,
+# )
+# from gerrychain.proposals import ReCom
+# from gerrychain.constraints import contiguous
+# from gerrychain.examples import gerrymandria
+# from functools import partial
+# import pandas
+# from gerrychain.accept import always_accept
+# from gerrychain.constraints import single_flip_contiguous
+# from gerrychain.proposals import propose_random_flip
+# from gerrychain.constraints import contiguous
+
+# import tqdm
+```
+
+
+```{python}
+# adjusted_block = pd.read_csv('projects/rae/data/Texas_block_returning_data.csv')
+# blk2vtd = gpd.read_file('../../Downloads/blocks (1)/Blocks.shp')
+```
+
+
+```{python}
+# #ensuring all geometry in the block to vtd table is valid
+# blk2vtd['is_valid'] = blk2vtd.geometry.apply(lambda x: shapely.is_valid(x))
+# len(blk2vtd[blk2vtd['is_valid'] == False])
+# blk2vtd['geometry'] = blk2vtd.geometry.apply(lambda x: shapely.make_valid(x))
+# #double checking it worked
+# blk2vtd['is_valid_now'] = blk2vtd.geometry.apply(lambda x: shapely.is_valid(x))
+# len(blk2vtd[blk2vtd['is_valid_now'] == False])
+# #merging the block to vtd table with the adjusted block data
+# adjusted_block['blockid'] = adjusted_block['blockid'].astype('str')
+```
+
+
+```{python}
+# adjusted_blk = pd.merge(
+#     blk2vtd[['SCTBKEY', 'geometry', 'CNTY']],
+#     adjusted_block,
+#     how='left',
+#     left_on='SCTBKEY',
+#     right_on='blockid'
+# ).drop(['SCTBKEY'], axis=1, errors='ignore')
+```
+
+### Attempting to collapse blocks into census tracts that are within a single district 
+```{python}
+# adjusted_blk['tractid'] = adjusted_blk['blockid'].str[:-4]
+
+# adjusted_blk_df = adjusted_blk.groupby('tractid')['district_h'].aggregate(['min', 'max']).reset_index()
+
+# tract_set = list(adjusted_blk_df[adjusted_blk_df['min'] != adjusted_blk_df['max']]['tractid'])
+
+# adjusted_blk_whole = adjusted_blk[adjusted_blk['tractid'].isin(tract_set)]
+# adjusted_blk_partial = adjusted_blk[~adjusted_blk['tractid'].isin(tract_set)]
+
+# adjusted_whole_dis = adjusted_blk_whole[['geometry', 'tractid', 'total', 'white', 'black', 'latino', 'other', 'adjtotal', 'adjwhite', 'adjblack', 'adjlatino', 'adjother']].dissolve(by = 'tractid', aggfunc = 'sum')
+
+# adjusted_whole_dis2 = adjusted_whole_dis.merge(adjusted_blk_whole[['tractid', 'CNTY', 'district_h', 'district_s']], on = 'tractid', how = 'left').rename({'tractid':'id'})
+
+# adjusted_blk_partial.rename({'blockid':'id'}, inplace = True)
+```
+
+```{python}
+# adjusted_blk_partial = adjusted_blk_partial[adjusted_whole_dis.columns]
+
+# final_df_before_graph = pd.concat([adjusted_whole_dis, adjusted_blk_partial], axis = 0)
+
+# print(len(final_df_before_graph), len(adjusted_block))
+```
+
+Seems like we only shave off 100K (~1/7th) of the total data frame by collapsing some blocks into tracts
+
+Just doing Census tracts represents a 10 fold reduction in the number of nodes in our spanning tree graph. Lets try making a graph with just the census tracts. 
+
+```{python}
+# print(len(adjusted_blk['tractid'].unique()))
+```
+
+```{python}
+# #check if the tract is split between two districts
+# for id in adjusted_blk.tractid:
+#     set = adjusted_blk[adjusted_blk['tractid'] == id]['district_s'].unique()
+#     if len(set) != 1:
+#         print("Tract is split between two districts", set)
+```
+
+
+## Creating a dataframe that is at the CT level
+
+```{python}
+# adjusted_tract = adjusted_blk[['geometry', 'tractid', 'total', 'white', 'black', 'latino', 'other', 'adjtotal', 'adjwhite', 'adjblack', 'adjlatino', 'adjother']].dissolve(by = 'tractid', aggfunc = 'sum')
+```
+
+```{python}
+# adjusted_tract.reset_index(inplace = True)
+```
+
+```{python}
+# # adjusted_tract = adjusted_tract.merge(adjusted_blk[['tractid', 'CNTY', 'district_h', 'district_s']], on = 'tractid', how = 'left')
+# adjusted_tract['CNTY'] = adjusted_tract['tractid'].str[2:-6]
+# print(adjusted_tract)
+```
+
+
+```{python}
+# graph = Graph.from_geodataframe(adjusted_blk)
+# graph = Graph.from_geodataframe(adjusted_tract)
+```
+
+Census tract skewed my results; returning to block approach
+
+```{python}
+# graph.to_json('adj_graph_block_cnty.json')
+# # graph.to_json('tract_graph.json')
+```
+
+## DON'T RUN ABOVE UNLESS YOU HAVE TO REMAKE THE GRAPH
+
+```{python}
+# graph = Graph.from_json('adj_graph_block_cnty.json')
+```
+
+```{python}
+# # from sqlalchemy import alias
+# from gerrychain.updaters import Tally, cut_edges
+
+# #starting the simulation process
+# tx_chain_og = MarkovChain(
+#     total_steps=20000,
+#     rng=2024,
+# )
+
+# # tx_chain_adj = MarkovChain(
+# #     total_steps=20000,
+# #     rng=2024,
+# # )
+
+# #tried to make my own updater...didn't work
+# # def pct_demo(demo):
+# #     #should return the pct of the population that is of a certain demographic
+# #     return updaters.Tally(demo) updaters.Tally('total')
+
+
+# def make_share_updater(numerator_key, denominator_key):
+#     def updater(partition):
+#         num = partition[numerator_key]
+#         den = partition[denominator_key]
+#         return {
+#             district: (num[district] / den[district]) if den[district] > 0 else 0.0
+#             for district in partition.parts
+#         }
+#     return updater
+
+
+# #ensuring that for each round of the simulation (each new map) the total population and demographic info is tracked 
+# my_updaters_og = {"population": Tally("total", alias="population"), "black": Tally('black', alias = 'black'), "white": Tally('white', alias = 'white'), "hispanic": Tally('latino', alias='hispanic'), "adj_population": Tally("adjtotal", alias = "adj_population"), "adj_black": Tally('adjblack', alias = 'adj_black'), "adj_white": Tally('adjwhite', alias = 'adj_white'), "adj_hispanic": Tally('adjlatino', alias = 'adj_hispanic'), "cut_edges": cut_edges}
+
+# my_updaters_og['pct_black'] = make_share_updater('black', 'population')
+# my_updaters_og['pct_white'] = make_share_updater('white', 'population')
+# my_updaters_og['pct_hispanic'] = make_share_updater('hispanic', 'population')
+# my_updaters_og['adj_pct_black'] = make_share_updater('adj_black', 'adj_population')
+# my_updaters_og['adj_pct_white'] = make_share_updater('adj_white', 'adj_population')
+# my_updaters_og['adj_pct_hispanic'] = make_share_updater('adj_hispanic', 'adj_population')
+
+# my_updaters_adj = {"adj_population": Tally("adjtotal", alias = "adj_population"), "adj_black": Tally('adjblack', alias = 'adj_black'), "adj_white": Tally('adjwhite', alias = 'adj_white'), "adj_hispanic": Tally('adjlatino', alias = 'adj_hispanic'), "cut_edges": cut_edges}
+
+
+# my_updaters_adj['pct_adj_black'] = make_share_updater('adj_black', 'adj_population')
+# my_updaters_adj['pct_adj_white'] = make_share_updater('adj_white', 'adj_population')
+# my_updaters_adj['pct_adj_hispanic'] = make_share_updater('adj_hispanic', 'adj_population') 
+```
+
+```{python}
+#finding the initial partition (starting map)
+#this runs an error -- can't find balanced partition
+#could use existing map? 
+
+#it takes too long to create a random partition so we will use district assignments 
+
+# partition_og= Partition(graph, assignment = 'district_h', updaters = my_updaters_og)
+
+# # partition_adj= Partition.from_random_assignment(graph, n_parts = 150, pop_col = 'adjtotal', epsilon = 0.1, rng=2024)
+# partition_adj = Partition(graph, assignment = 'district_h', updaters = my_updaters_adj)
+
+# #Partition.from_random_assignment(
+#     graph=graph, n_parts=150, epsilon=0.1, pop_col="total", rng=2024
+# )
+```
+
+```{python}
+# Partition(graph, assignment = node_assignments, updaters = my_updaters)
+# tx_chain_og.initial_partition = partition_og
+# tx_chain_adj.initial_partition = partition_adj
+```
+
+```{python}
+# tx_chain_og.add_updaters(my_updaters_og)
+# tx_chain_adj.add_updaters(my_updaters_adj)
+```
+
+
+```{python}
+# ideal_population_og = sum(tx_chain_og.initial_partition["population"].values()) / len(
+#     tx_chain_og.initial_partition
+# )
+
+# ideal_population_adj = sum(tx_chain_adj.initial_partition["adj_population"].values()) / len(
+#     tx_chain_adj.initial_partition
+# )
+```
+
+```{python}
+# tx_chain_og.proposal_fn = ReCom.district_pairs_mst(
+#     pop_col="total",
+#     pop_target=ideal_population_og,
+#     epsilon=0.1,
+#     region_surcharge={"CNTY": 0.5}
+# )
+
+# tx_chain_adj.proposal_fn = ReCom.district_pairs_mst(
+#     pop_col="adjtotal",
+#     pop_target=ideal_population_adj,
+#     epsilon=0.1,
+#     region_surcharge={"CNTY": 0.5}
+# )
+
+# tx_chain_og.add_constraint(contiguous)
+# # tx_chain_adj.add_constraint(contiguous)
+# tx_chain_og.acceptance_fn = always_accept
+# tx_chain_adj.acceptance_fn = always_accept -->
+```
+
+```{python}
+# # replacing NaN boundary perim values with 0 instead for graph saving purposes
+# for node_i in range(len(adjusted_blk)):
+#     # partition_adj.graph.node_data(node_i)["boundary_perim"] = 0.0
+#     partition_og.graph.node_data(node_i)["boundary_perim"] = 0.0
+```
+
+```{python}
+# from binary_ensemble import BendlEncoder
+
+# encoder_og = BendlEncoder("saved-run-with-adj_og.bendl", overwrite=True)
+
+# stored_graph_og = encoder_og.add_graph(partition_og.graph.to_networkx_graph(), sort=None)
+
+# node_order_og = list(stored_graph_og.nodes)
+
+# encoder_og.add_metadata({"type": 'Original', "sampler": "ReCom", "seed": 2024})
+```
+
+```{python}
+# encoder_adj = BendlEncoder("saved-run_adj.bendl", overwrite=True)
+
+# stored_graph_adj = encoder_adj.add_graph(tx_chain_adj.initial_partition.graph.to_networkx_graph(), sort=None)
+
+# node_order_adj = list(stored_graph_adj.nodes)
+
+# encoder_adj.add_metadata({"type": 'Adjusted', "sampler": "ReCom", "seed": 2024})
+```
+
+```{python}
+# Initialize lists for original chain
+# total =  []
+# black = []
+# white = []
+# hispanic = []
+# pct_black = []
+# pct_white = []
+# pct_hispanic = []
+# og_adj_pct_black = []
+# og_adj_pct_white = []
+# og_adj_pct_hispanic = []
+# assignment_list_og = []
+
+# with encoder_og.ben_stream() as ensemble:    
+#     for i, partition in enumerate(tx_chain_og.with_progress_bar()):
+        
+#             assignment = partition.assignment
+#             assignment_series = assignment.to_series().loc[node_order_og]
+
+#             ensemble.write(assignment_series.astype(int).tolist())
+
+#             if i % 1000 == 0:
+#                 print("At step:", i)
+#                 assignment_list_og.append(assignment_series.copy())
+
+#             total.append([v for _, v in sorted(partition['population'].items())])
+#             black.append([v for _, v in sorted(partition['black'].items())])
+#             white.append([v for _, v in sorted(partition['white'].items())])
+#             hispanic.append([v for _, v in sorted(partition['hispanic'].items())])
+#             pct_black.append([v for _, v in sorted(partition['pct_black'].items())])
+#             pct_white.append([v for _, v in sorted(partition['pct_white'].items())])
+#             pct_hispanic.append([v for _, v in sorted(partition['pct_hispanic'].items())])
+#             og_adj_pct_black.append([v for _, v in sorted(partition['adj_pct_black'].items())])
+#             og_adj_pct_white.append([v for _, v in sorted(partition['adj_pct_white'].items())])
+#             og_adj_pct_hispanic.append([v for _, v in sorted(partition['adj_pct_hispanic'].items())])
+
+# data_og_total = pd.DataFrame(total)
+# data_og_black = pd.DataFrame(black)
+# data_og_white = pd.DataFrame(white)
+# data_og_pct_black = pd.DataFrame(pct_black)
+# data_og_pct_white = pd.DataFrame(pct_white)
+# data_og_hispanic = pd.DataFrame(hispanic)
+# data_og_pct_hispanic = pd.DataFrame(pct_hispanic)
+# data_og_adj_pct_black = pd.DataFrame(og_adj_pct_black)
+# data_og_adj_pct_white = pd.DataFrame(og_adj_pct_white)
+# data_og_adj_pct_hispanic = pd.DataFrame(og_adj_pct_hispanic)
+```
+
+```{python}
+# data_og_black.to_csv('data_og_black.csv')
+# data_og_hispanic.to_csv('data_og_hispanic.csv')
+# data_og_white.to_csv('data_og_white.csv')
+# data_og_pct_hispanic.to_csv('data_og_pct_hispanic.csv')
+# data_og_pct_black.to_csv('data_og_pct_black.csv')
+# data_og_pct_white.to_csv('data_og_pct_white.csv')
+```
+
+```{python}
+# block_geoms = adjusted_blk[['blockid', 'geometry']]
+```
+```{python}
+# #this code was created with the help of Gemini
+# def plot_fast_district_outlines(this_assignment, output_path=None):
+#     # Instant lookup of district IDs aligned with gdf_aligned rows
+#     districts = block_geoms.index.map(this_assignment)
+
+#     # Group raw geometries by district and union each district's blocks directly
+#     geoms = block_geoms.geometry.values
+#     district_polys = {}
+#     for dist_id in districts.dropna().unique():
+#         mask = (districts == dist_id)
+#         # .to_numpy()
+#         district_polys[dist_id] = shapely.coverage_union_all(geoms[mask])
+
+#     districts_gdf = gpd.GeoSeries(district_polys, crs=block_geoms.crs)
+
+#     fig, ax = plt.subplots(figsize=(10, 10))
+#     districts_gdf.boundary.plot(color="black", linewidth=1.0, ax=ax)
+#     ax.set_axis_off()
+
+#     if output_path:
+#         plt.savefig(output_path, dpi=200, bbox_inches="tight")
+#         plt.close(fig)
+
+#     return fig, ax
+```
+
+```{python}
+# total =  []
+# black = []
+# white = []
+# hispanic = []
+# pct_black = []
+# pct_white = []
+# pct_hispanic = []
+# assignment_list_adj = []
+
+# with encoder_adj.ben_stream() as ensemble:    
+#     for i, partition in enumerate(tx_chain_adj.with_progress_bar()):
+
+#             assignment = partition.assignment
+#             assignment_series = assignment.to_series().loc[node_order_og]
+
+#             ensemble.write(assignment_series.astype(int).tolist())
+
+#             if i % 1000 == 0:
+#                 print("At step:", i)
+#                 assignment_list_adj.append(assignment_series.copy())
+
+#             total.append([v for _, v in sorted(partition['adj_population'].items())])
+#             black.append([v for _, v in sorted(partition['adj_black'].items())])
+#             white.append([v for _, v in sorted(partition['adj_white'].items())])
+#             hispanic.append([v for _, v in sorted(partition['adj_hispanic'].items())])
+#             pct_black.append([v for _, v in sorted(partition['pct_adj_black'].items())])
+#             pct_white.append([v for _, v in sorted(partition['pct_adj_white'].items())])
+#             pct_hispanic.append([v for _, v in sorted(partition['pct_adj_hispanic'].items())])
+
+
+# data_adj_total = pd.DataFrame(total)
+# data_adj_black = pd.DataFrame(black)
+# data_adj_white = pd.DataFrame(white)
+# data_adj_pct_black = pd.DataFrame(pct_black)
+# data_adj_pct_white = pd.DataFrame(pct_white)
+# data_adj_hispanic = pd.DataFrame(hispanic)
+# data_adj_pct_hispanic = pd.DataFrame(pct_hispanic)
+
+# data_adj_black.to_csv('data_adj_black.csv')
+# data_adj_hispanic.to_csv('data_adj_hispanic.csv')
+# data_adj_white.to_csv('data_adj_white.csv')
+# data_adj_pct_hispanic.to_csv('data_adj_pct_hispanic.csv')
+# data_adj_pct_black.to_csv('data_adj_pct_black.csv')
+# data_adj_pct_white.to_csv('data_adj_pct_white.csv')
+```
+
+```{python}
+# for i, this_assignment in enumerate(assignment_list_og):
+#     plot_fast_district_outlines(this_assignment, f"Map_{i*1000}_adj.png")
+```
+
+```{python}
+#load in data from the simulation (so we don't have to rerun the simulation everytime)
+# data_adj_pct_black = pd.read_csv('projects/rae/results/adjusted/dataframes/data_adj_pct_black.csv')
+# data_og_pct_black = pd.read_csv('projects/rae/results/original/dataframes/data_og_pct_black.csv')
+# data_adj_pct_hispanic = pd.read_csv('projects/rae/results/adjusted/dataframes/data_adj_pct_hispanic.csv')
+# data_og_pct_hispanic = pd.read_csv('projects/rae/results/original/dataframes/data_og_pct_hispanic.csv')
+# data_adj_pct_white = pd.read_csv('projects/rae/results/adjusted/dataframes/data_adj_pct_white.csv')
+# data_og_pct_white = pd.read_csv('projects/rae/results/original/dataframes/data_og_pct_white.csv')
+```
+
+```{python}
+# #|echo: False
+# fig, ax = plt.subplots()
+# maj_black_adj= []
+# for i in range(20000):
+#     count = (data_adj_pct_black.transpose()[i] > 0.5).sum()
+#     maj_black_adj.append(count)
+
+# ax.hist(maj_black_adj, color = 'g', label = 'Adjusted', alpha = 0.5, edgecolor = 'k')
+# # plt.title('Histogram of total black seats allocated across TX (Adjusted)')
+
+# maj_black_og= []
+# for i in range(20000):
+#     count = (data_og_adj_pct_black.transpose()[i] > 0.5).sum()
+#     maj_black_og.append(count)
+
+# ax.hist(maj_black_og, color = 'c', label = 'Non-adjusted', alpha = 0.5, edgecolor = 'k')
+# plt.title('Distribution of plausible Black-majority district counts in TX')
+# plt.ylabel('Frequency')
+# plt.xlabel('Number of Black-majority disticts')
+# plt.legend()
+
+# # yes but how many of these non-adjusted maj black districts are actually majority black districts in terms of eligible voters
+
+# # artificially inflated by the high black and brown populations of prison-containing districts 
+
+# # how can I account for this? could look block by block and isolate blocks that see a drop in the black population between original and adjusted. Then remove the blocks that see any loss when calculating maj black count per iteration
+
+# plt.savefig('Black-maj_distribution.png')
+
+```
+
+
+```{python}
+# #|echo: False
+# fig, ax = plt.subplots()
+# maj_latino_adj= []
+# for i in range(20000):
+#     count = (data_adj_pct_hispanic.transpose()[i] > 0.5).sum()
+#     maj_latino_adj.append(count)
+
+# ax.hist(maj_latino_adj, color = 'g', label = 'Adjusted', alpha = 0.5, edgecolor = 'k')
+
+# maj_latino_og= []
+# for i in range(20000):
+#     count = (data_og_adj_pct_hispanic.transpose()[i] > 0.5).sum()
+#     maj_latino_og.append(count)
+
+# ax.hist(maj_latino_og, color = 'c', label = 'Non-adjusted', alpha = 0.5, edgecolor = 'k')
+# plt.title('Distribution of plausible Latino-majority district counts in TX')
+# plt.ylabel('Frequency')
+# plt.xlabel('Number of Latino-majority disticts')
+# plt.legend()
+
+# plt.savefig('Latino-maj_distribution.png')
+```
+
+
+```{python}
+# fig, ax = plt.subplots()
+# maj_POC_adj= []
+# for i in range(20000):
+#     count_POC_adj = 150-(data_adj_pct_white.transpose()[i] > 0.5).sum()
+#     maj_POC_adj.append(count_POC_adj)
+
+# ax.hist(maj_POC_adj, color = 'g', label = 'Adjusted', alpha = 0.5, edgecolor = 'k')
+
+# maj_POC_og= []
+# for i in range(20000):
+#     count_POC_og = 150-(data_og_adj_pct_white.transpose()[i] > 0.5).sum()
+#     maj_POC_og.append(count_POC_og)
+
+# ax.hist(maj_POC_og, color = 'c', label = 'Non-adjusted', alpha = 0.5, edgecolor = 'k')
+# plt.title('Distribution of plausible POC-majority district counts in TX')
+# plt.ylabel('Frequency')
+# plt.xlabel('Number of POC-majority disticts')
+# plt.legend()
+
+# plt.savefig('POC-maj_distribution.png')
+```
