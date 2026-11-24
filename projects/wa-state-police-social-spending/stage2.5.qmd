@@ -400,16 +400,16 @@ The coefficient doesn't support the hypothesis that counties that increase law e
 
 ```{python}
 #construct multiple linear regression model
-model_data = change_20_25[
-    ["Law Enforcement Spending Change",
-     "Social Spending Change",
-     "Violent Crime Rate Change"]].dropna()
+#model_data = change_20_25[
+  #  ["Law Enforcement Spending Change",
+ #    "Social Spending Change",
+  #   "Violent Crime Rate Change"]].dropna()
 
-model = smf.ols(
-    'Q("Violent Crime Rate Change") ~ Q("Law Enforcement Spending Change") + Q("Social Spending Change")',
-    data=model_data).fit()
+#model = smf.ols(
+  #  'Q("Violent Crime Rate Change") ~ Q("Law Enforcement Spending Change") + Q("Social Spending Change")',
+  #  data=model_data).fit()
 
-print(model.summary())
+#print(model.summary())
 ```
 
 The multiple linear regression model found negative coefficients for both spending categories. The estimated coefficient for law enforcement spending was −0.347 (p=0.139), and the coefficient for social spending was −0.256 (p=0.185). Neither relationship was statistically significant at the 5% level. The model can explain approximately 11.2% of the variation in violent crime rate changes across the 35 counties included in the analysis (4 counties were excluded due to missing values). These results don't provide sufficient evidence to establish statistically significant relationships betwee the variables.

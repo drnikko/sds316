@@ -41,7 +41,6 @@ From here, I made a scatterplot that plotted law enforcement spending per capita
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import statsmodels.formula.api as smf
 from pyprojroot import here
 
 file_2025 = here("projects/wa-state-police-social-spending/_data/change_20_25_final.csv")
