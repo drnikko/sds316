@@ -189,6 +189,7 @@ county_data_2025 = (fit_le_counties
     .merge(county_crime_type, on="County", how="outer")
     .merge(population, on="County", how="outer"))
 
+
 #county_data_2025
 #county_data_2025[county_data_2025.isna().any(axis=1)]
 ```
@@ -357,10 +358,22 @@ plt.show()
 This plot shows a slightly negative relationship between social spending per capita and violent crime rates, meaning higher social spending per capita is associated with a lower violent crime rate. Once again, Garfield County is a major outlier.
 
 
-
 ```{python}
+#this kept failing 
+from pathlib import Path
 
-#save  df
-county_data_2025.to_csv("projects/wa-state-police-social-spending/_data/county_data_2025.csv", index=False)
+project_dir = Path("projects/wa-state-police-social-spending")
+
+if not project_dir.is_dir():
+    project_dir = Path(".")
+
+output_dir = project_dir / "_data"
+
+print("Saving to:", output_dir.resolve())
+print("Directory exists:", output_dir.is_dir())
+
+county_data_2025.to_csv(
+    output_dir / "county_data_2025.csv",
+    index=False)
 
 ```

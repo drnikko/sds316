@@ -258,8 +258,23 @@ county_data["Other Offenses Per 100k (crime rate)"] = (
 ```
 
 ```{python}
-#save final df
-county_data.to_csv("projects/wa-state-police-social-spending/_data/county_data_final.csv", index=False)
+#this kept failing 
+from pathlib import Path
+
+project_dir = Path("projects/wa-state-police-social-spending")
+
+if not project_dir.is_dir():
+    project_dir = Path(".")
+
+output_dir = project_dir / "_data"
+
+print("Saving to:", output_dir.resolve())
+print("Directory exists:", output_dir.is_dir())
+
+county_data.to_csv(
+    output_dir / "county_data_final.csv",
+    index=False)
+
 ```
 
 ## How have law enforcement spending, social spending, and crime changed over time?
@@ -462,13 +477,29 @@ plt.title("3. Police vs. Social Spending Growth (2020–2025)")
 plt.show()
 ```
 
-
 ```{python}
-#save change df
-change_20_25.to_csv("projects/wa-state-police-social-spending/_data/change_20_25_final.csv", index=False)
-```
 
-```{python}
+
+#this kept failing 
+from pathlib import Path
+
+project_dir = Path("projects/wa-state-police-social-spending")
+
+if not project_dir.is_dir():
+    project_dir = Path(".")
+
+output_dir = project_dir / "_data"
+
+print("Saving to:", output_dir.resolve())
+print("Directory exists:", output_dir.is_dir())
+
 #save change df
-spending_change.to_csv("projects/wa-state-police-social-spending/_data/spending_change.csv", index=False)
+change_20_25.to_csv(
+    output_dir / "change_20_25_final.csv", 
+    index=False)
+
+spending_change.to_csv(
+    output_dir / "spending_change.csv", 
+    index=False)
+
 ```
