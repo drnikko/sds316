@@ -6,18 +6,461 @@ date: 2026-10-21
 description: "An exploration of how young people involved in the criminal justice system view themselves, their futures, and their experiences with police and judges"
 categories: [Children, Juveniles, Demographics]
 image: "children.jpeg"
+bibliography: bibliography.bib 
 ---
 
-## Project Overview
+## Introduction
 
-This project explores how young people involved in the criminal justice system view themselves, their futures, and their experiences with the system. I am particularly interested in the distinction between being treated as a child and being treated as an adult, and how demographics  influence this distinction.
+Young people involved in the criminal justice system are often discussed in terms of their offenses, the risks they pose, and the consequences they should face. However, these conversations do not always consider how young people understand themselves, their futures, or their experiences with the institutions responsible for them. Research on the treatment of children in the justice system has highlighted how young people can be perceived as more mature and culpable than they actually are, particularly through racial stereotypes and adultification [@goff2014; @rattan2012]. Other accounts, including Catherine Jones's experience of being incarcerated in an adult prison after being charged with a crime at thirteen, illustrate the lasting consequences of treating children as adults [@jones2020]. Research has also documented the extensive histories of trauma among people incarcerated for crimes committed as minors [@tiano2026]. Building on this literature, this project shifts the focus from how the justice system classifies young people to how young people experience it. Using data from the *Pathways to Desistance* study, I explore how participants view their educational opportunities, think about their futures, and perceive their treatment by police officers and judges.
 
-Using survey data from the Pathways to Desistance study, I will examine young people's educational aspirations, expectations for success, and perceptions of fairness when interacting with police and judges. I want to understand whether young people feel heard and respected by the justice system, how they imagine their futures, and whether their experiences are connected to their expectations for success.
+::: callout-important
+## This project look at how young people involved in the juvenile justice system viewed their educational futures, perceived opportunities for success, and experiences with police and judges. Overall, the findings reveal a gap between educational aspirations and expectations, alongside concerns about whether young people felt heard and treated fairly by the institutions they encountered.
+:::
 
-I also plan to interview my father's friend, who was charged as an adult at 17, to learn how this experience affected his identity and outlook on life. Through all of this, I hope to look beyond how society labels young offenders and better understand their perspectives as young people navigating a system that can shape their futures. I will present my findings through a  report that a combination of data visualizations, personal stories, and my outside sources
+## About the Data
 
-### Components
+This project uses data from the Research on Pathways to Desistance study, which followed young people involved in the juvenile justice system in Maricopa County, Arizona, and Philadelphia County, Pennsylvania, between 2000 and 2010. The data contains 1,354 observations with varying numbers of columns/interview questions between each dataset. The Procedural Justice dataset contains 1,335. The other datasets include Perceptions of Success (189 variables), Motivation to Succeed (144 variables), Education Baseline (107 variables), and Education Followup (931).
 
-- [Research Plan](research-plan.qmd)
-- [Exploratory Data Analysis](stage2.qmd)
-- [Initial draft writing & reflection](stage2-writing.qmd)
+## The Process
+
+### Data Cleaning & Preprocessing
+
+Many responses were recorded numerically rather than as written categories, so to make the results easier to interpret, I used the code book to map numerical responses to their corresponding labels. I mapped the educational aspiration response 2, 4, 5 to categories "Graduate high school," "Graduate college," and "Graduate/professional school."
+
+Lastly, some variables contain special numerical codes, such as -9 for "Don't Know," while other codes indicate that a question was skipped. When calculating percentages, I focused on valid responses to the individual questions and included how many missing/I don't know responses there were.
+
+### Exploratory Data Analysis
+
+My initial exploration began with the future orientation dataset. I wanted to understand whether participants regularly thought about their futures and whether their responses changed across interviews. I examined the question asking whether participants thought about how things might be in the future. The most common response was generally "Always true" across the first five interview waves, although "Often true" was slightly more common in the second interview. Since the responses did not show a particularly dramatic change, I decided to focus more closely on educational aspirations and expectations.
+
+```{python}
+import pandas as pd
+from pyprojroot import here # this helps us navigate tricky path stuff between local runs and quarto builds
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+```{python}
+# Load the data using here() with the path from the project root
+file_path_perceptions_success = here("projects/reagan/ICPSR_36800/DS0040/36800-0040-Data.tsv")
+file_path_procedural_justice = here("projects/reagan/ICPSR_36800/DS0042/36800-0042-Data.tsv")
+file_path_motivation_succeed = here("projects/reagan/ICPSR_36800/DS0031/36800-0031-Data.tsv")
+
+perceptions_success = pd.read_csv(file_path_perceptions_success, sep = '\t')
+procedural_justice = pd.read_csv(file_path_procedural_justice, sep = '\t')
+motivation_succeed = pd.read_csv(file_path_motivation_succeed, sep='\t')
+```
+
+#### EDA 1: Educational Aspirations Over Time
+
+```{python}
+#| echo: false
+#| fig-cap: "Educational Aspirations Over Time"
+
+school_mapping = {
+    '1': 'Drop out',
+    '2': 'Graduate high school',
+    '3': 'Business/technical/junior college',
+    '4': 'Graduate college',
+    '5': 'Graduate/professional school'}
+
+# Convert responses to strings and map the education categories
+wanted_baseline = motivation_succeed['S0SCH46'].astype(str).str.strip().map(school_mapping)
+wanted_followup = motivation_succeed['S9SCH_SCH46'].astype(str).str.strip().map(school_mapping)
+
+# Identify responses that could not be mapped
+wanted_baseline = wanted_baseline.fillna('Missing / Unknown')
+wanted_followup = wanted_followup.fillna('Missing / Unknown')
+
+# Count responses, including missing values
+aspiration_time = pd.DataFrame({
+    'Baseline': wanted_baseline.value_counts(),
+    'Follow-up': wanted_followup.value_counts()})
+
+# Put categories in the correct order
+aspiration_time = aspiration_time.reindex([
+    'Drop out',
+    'Graduate high school',
+    'Business/technical/junior college',
+    'Graduate college',
+    'Graduate/professional school',
+    'Missing / Unknown'])
+
+# Create bar chart
+aspiration_time.plot(
+    kind='bar',
+    figsize=(11, 6))
+
+plt.title("Educational Aspirations Over Time")
+plt.xlabel("Education Level")
+plt.ylabel("Number of Participants")
+plt.xticks(rotation=35, ha='right')
+plt.legend(title="Interview")
+plt.tight_layout()
+plt.show()
+
+# Display the number of valid and missing responses
+print("Baseline valid responses:", (wanted_baseline != 'Missing / Unknown').sum())
+print("Baseline missing responses:", (wanted_baseline == 'Missing / Unknown').sum())
+
+print("Follow-up valid responses:", (wanted_followup != 'Missing / Unknown').sum())
+print("Follow-up missing responses:", (wanted_followup == 'Missing / Unknown').sum())
+```
+
+ ```{python}
+ #| echo: false
+# Count how far they'd like to go first interview
+# Count each response
+response_counts = motivation_succeed['S0SCH46'].value_counts()
+
+# Calculate the total number of responses
+total_rows = motivation_succeed['S0SCH46'].count()
+
+# Calculate the percentage for each response
+response_percentages = response_counts / total_rows * 100
+
+print("Number of participants per response:")
+print(response_counts)
+
+print("\nPercentage of participants per response:")
+print(response_percentages.round(2))
+
+# How far they'd like to go last interview
+# Count each response
+response_counts = motivation_succeed['S9SCH_SCH46'].value_counts()
+
+# Calculate the total number of responses
+total_rows = motivation_succeed['S9SCH_SCH46'].count()
+
+# Calculate the percentage for each response
+response_percentages = response_counts / total_rows * 100
+
+print("Number of participants per response:")
+print(response_counts)
+
+print("\nPercentage of participants per response:")
+print(response_percentages.round(2))
+ ```
+
+```{python}
+# How far they think they will go first interview
+# Count each response
+response_counts = motivation_succeed['S0SCH47'].value_counts()
+
+# Calculate the total number of responses
+total_rows = motivation_succeed['S0SCH47'].count()
+
+# Calculate the percentage for each response
+response_percentages = response_counts / total_rows * 100
+
+print("Number of participants per response:")
+print(response_counts)
+
+print("\nPercentage of participants per response:")
+print(response_percentages.round(2))
+# How far they think they'll go last interview
+# Count each response
+response_counts = motivation_succeed['S9SCH_SCH47'].value_counts()
+
+# Calculate the total number of responses
+total_rows = motivation_succeed['S9SCH_SCH47'].count()
+
+# Calculate the percentage for each response
+response_percentages = response_counts / total_rows * 100
+
+print("Number of participants per response:")
+print(response_counts)
+
+print("\nPercentage of participants per response:")
+print(response_percentages.round(2))
+```
+
+ The proportion of participants who wanted to graduate from college decreased from 46.75% in the first interview to 33.68% in the last. Similarly, the proportion who expected to graduate from college decreased from 34.19% to 27.40%. However, the number of participants responding to the questions also changed across interviews. In the first interview, 3 said "I don't know" to the question about how far they'd like to go, and the last interview 2 said they didn't know, with 175 (12.92%) missing followup responses.
+
+#### EDA 2: Participants perceptions of opportunities and barries to success
+```{python}
+#| echo: false
+#| fig-cap: "Participant's Perceptions of Opportunities and Barriers to Success"
+
+# Map the response codes
+motivation_mapping = {
+    '1': 'Strongly Disagree',
+    '2': 'Disagree',
+    '3': 'Neither Agree nor Disagree',
+    '4': 'Agree',
+    '5': 'Strongly Agree'}
+
+# Count responses for each question
+job_opportunities = (motivation_succeed['S0SCH40'].astype(str).map(motivation_mapping).value_counts())
+
+college_cost = (motivation_succeed['S0SCH43'].astype(str).map(motivation_mapping).value_counts())
+
+success_chances = (motivation_succeed['S0SCH45'].astype(str).map(motivation_mapping).value_counts())
+
+# Calculate percentages
+job_opportunities = job_opportunities / job_opportunities.sum() * 100
+college_cost = college_cost / college_cost.sum() * 100
+success_chances = success_chances / success_chances.sum() * 100
+
+# Create separate bar charts
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+sns.barplot(
+    x=job_opportunities.index,
+    y=job_opportunities.values,
+    ax=axes[0])
+axes[0].set_title("Easy to Get a Good Job")
+axes[0].set_ylabel("Percentage")
+axes[0].tick_params(axis='x', rotation=45)
+
+sns.barplot(
+    x=college_cost.index,
+    y=college_cost.values,
+    ax=axes[1])
+axes[1].set_title("College Is Too Expensive")
+axes[1].set_ylabel("Percentage")
+axes[1].tick_params(axis='x', rotation=45)
+
+sns.barplot(
+    x=success_chances.index,
+    y=success_chances.values,
+    ax=axes[2])
+axes[2].set_title("Chances of Success Are Not Very Good")
+axes[2].set_ylabel("Percentage")
+axes[2].tick_params(axis='x', rotation=45)
+
+plt.tight_layout()
+plt.show()
+```
+
+This made me curious as to how these responses changed by the last interview.
+
+```{python}
+#| echo: false
+#| fig-cap: "Participant's Perceptions of Opportunities and Barriers to Success - Final Interview"
+
+# Map the response codes
+motivation_mapping = {
+    '1': 'Strongly Disagree',
+    '2': 'Disagree',
+    '3': 'Neither Agree nor Disagree',
+    '4': 'Agree',
+    '5': 'Strongly Agree'}
+
+# Count responses for each question
+job_opportunities = (motivation_succeed['S9SCH_SCH40'].astype(str).map(motivation_mapping).value_counts())
+
+college_cost = (motivation_succeed['S9SCH_SCH43'].astype(str).map(motivation_mapping).value_counts())
+
+success_chances = (motivation_succeed['S9SCH_SCH45'].astype(str).map(motivation_mapping).value_counts())
+
+# Calculate percentages
+job_opportunities = job_opportunities / job_opportunities.sum() * 100
+college_cost = college_cost / college_cost.sum() * 100
+success_chances = success_chances / success_chances.sum() * 100
+
+# Create separate bar charts
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+sns.barplot(
+    x=job_opportunities.index,
+    y=job_opportunities.values,
+    ax=axes[0])
+axes[0].set_title("Easy to Get a Good Job")
+axes[0].set_ylabel("Percentage")
+axes[0].tick_params(axis='x', rotation=45)
+
+sns.barplot(
+    x=college_cost.index,
+    y=college_cost.values,
+    ax=axes[1])
+axes[1].set_title("College Is Too Expensive")
+axes[1].set_ylabel("Percentage")
+axes[1].tick_params(axis='x', rotation=45)
+
+sns.barplot(
+    x=success_chances.index,
+    y=success_chances.values,
+    ax=axes[2])
+axes[2].set_title("Chances of Success Are Not Very Good")
+axes[2].set_ylabel("Percentage")
+axes[2].tick_params(axis='x', rotation=45)
+
+plt.tight_layout()
+plt.show()
+
+```
+
+I see the percentage of those who disagreed with the question about how it's easy to get a job decreased the most than any other response over time. And the percentage who disagreed with the statement their chances at success are not very good increased by ~10% by the last interview.
+
+Finally, I explored the procedural justice dataset. I wanted to understand whether participants felt they had an opportunity to explain their experiences to the people involved in their cases. I focused on two questions asking how much of their story police officers and judges allowed them to tell. For the police question, 35.67% reported that they were allowed to tell none of their story. For the judge question, 36.93% gave the same response. However, other participants reported being allowed to tell all of their story. These contrasting responses made me interested in exploring how participants perceived their interactions with different parts of the justice system.
+
+#### EDA 4: Feeling heard by police and judges
+
+```{python}
+#| echo: false
+#| fig-cap: "How Much of Their Story Participants Felt They Could Tell"
+
+story_mapping = {
+    '1': 'All of their story',
+    '2': 'Most of their story',
+    '3': 'Some of their story',
+    '4': 'None of their story'}
+
+police = procedural_justice['S0PROJUS'].astype(str).map(story_mapping).value_counts()
+judge = procedural_justice['S0PROJU3'].astype(str).map(story_mapping).value_counts()
+
+story_order = [
+    'All of their story',
+    'Most of their story',
+    'Some of their story',
+    'None of their story']
+
+story_table = pd.DataFrame({
+    'Police': police,
+    'Judge': judge
+}).reindex(story_order)
+
+story_table.plot(kind='bar', figsize=(9, 6))
+
+plt.title("Participants' Perceptions of Being Heard")
+plt.xlabel("How Much of Their Story They Could Tell")
+plt.ylabel("Number of Participants")
+plt.xticks(rotation=25, ha='right')
+plt.show()
+```
+
+## The Results
+
+### Result 1: Educational asirations did not always match expections
+What participants wanted to achieve compared with what they thought they would achieve.
+```{python}
+#| echo: false
+#| fig-cap: "Educational Aspirations Compared With Expectations"
+
+# Map the responses
+wanted = motivation_succeed['S0SCH46'].astype(str).map(school_mapping)
+expected = motivation_succeed['S0SCH47'].astype(str).map(school_mapping)
+
+# Create a contingency table
+aspiration_table = pd.crosstab(wanted, expected)
+
+# Create a heatmap
+plt.figure(figsize=(12, 7))
+
+sns.heatmap(
+    aspiration_table,
+    annot=True,
+    fmt="d",
+    cmap="Blues")
+
+plt.title("Educational Aspirations Compared With Expectations")
+plt.xlabel("How Far Participants Thought They Would Go")
+plt.ylabel("How Far Participants Wanted to Go")
+plt.xticks(rotation=35, ha='right')
+plt.yticks(rotation=0)
+
+plt.show()
+```
+
+The results show that the most common combination was participants who both wanted and expected to graduate from college, with 419 participants selecting this combination. The second most common combination was participants who both wanted and expected to graduate from high school, with 311 participants. Another 139 participants both wanted and expected to attend a business, technical, or junior college.
+
+However, not all participants expected to achieve the same level of education they aspired to. 124 participants wanted to graduate from college but expected to graduate from high school. Another 67 wanted to graduate from college but expected to attend a business, technical, or junior college.
+
+Although many participants expected to achieve their desired educational level, others anticipated falling short of their goals.
+
+### Result 2: Percepstions of Success and Educational Expectations
+
+```{python}
+#| echo: false
+#| fig-cap: "Perceptions of Success and Educational Expectations"
+
+# Map responses
+success_mapping = {
+    '1': 'Strongly Disagree',
+    '2': 'Disagree',
+    '3': 'Neither Agree nor Disagree',
+    '4': 'Agree',
+    '5': 'Strongly Agree'}
+
+success = motivation_succeed['S0SCH45'].astype(str).map(success_mapping)
+expected = motivation_succeed['S0SCH47'].astype(str).map(school_mapping)
+
+# Create a contingency table
+success_table = pd.crosstab(
+    success,
+    expected,
+    normalize='index') * 100
+
+# Create a heatmap
+plt.figure(figsize=(12, 6))
+
+sns.heatmap(
+    success_table,
+    annot=True,
+    fmt=".1f",
+    cmap="Blues")
+
+plt.title("Perceptions of Success and Educational Expectations")
+plt.xlabel("Expected Educational Attainment")
+plt.ylabel("Chances of Getting Ahead Are Not Very Good")
+plt.xticks(rotation=35, ha='right')
+
+plt.show()
+```
+
+The results show differences in educational expectations across participants who held different perceptions of their chances of success. Among participants who strongly disagreed that their chances of getting ahead were not very good, 44.1% expected to graduate from college. 38.2% of participants who disagreed with the statement expected to graduate from college.
+
+In contrast, among participants who strongly agreed that their chances of getting ahead were not very good, 36.4% still expected to graduate from college. However, among those who agreed with the statement, 54% expected to graduate from high school.
+
+These findings suggest that participants' perceptions of their chances of success were associated with differences in their educational expectations. However, even among participants who viewed their chances of success negatively, some maintained expectations of graduating from college. Why did the participants feel these way?
+
+### Result 3: Young people either felt their entire story was heard or none at all
+
+```{python}
+#| echo: false
+#| fig-cap: "Participants' Perceptions of Being Heard by Police and Judges"
+
+# Map the responses
+police = procedural_justice['S0PROJUS'].astype(str).map(story_mapping)
+judge = procedural_justice['S0PROJU3'].astype(str).map(story_mapping)
+
+# Create a contingency table
+police_judge_table = pd.crosstab(
+    police,
+    judge,
+    normalize='index') * 100
+
+# Create a heatmap
+plt.figure(figsize=(9, 6))
+
+sns.heatmap(
+    police_judge_table,
+    annot=True,
+    fmt=".1f",
+    cmap="Blues")
+
+plt.title("Participants' Perceptions of Being Heard by Police and Judges")
+plt.xlabel("Judge: How Much of Their Story?")
+plt.ylabel("Police: How Much of Their Story?")
+
+plt.show()
+```
+
+Among participants who reported that police allowed them to tell none of their story, 52.7% also reported that judges allowed them to tell none of their story. This was the most common combination in that row.
+
+However, among participants who reported that police allowed them to tell some of their story, 35.6% said judges allowed them to tell none of their story. Similarly, among participants who said police allowed them to tell most of their story, 29.1% reported that judges allowed them to tell none of their story. Even among participants who said police allowed them to tell all of their story, 26.6% reported that judges allowed them to tell none of their story.
+
+At the same time, 43.6% of participants who said police allowed them to tell all of their story also reported that judges allowed them to tell all of their story.
+
+These findings suggest that juvenile's experiences of being heard were not necessarily consistent across different parts of the justice system. Some participants felt they had opportunities to share their perspectives with police but not with judges, while others reported similar experiences with both. 
+
+*Note:* I know I used heatmaps for all my results, I just kept thinking that was the best way to show interesting findings. Hopefully class will give me more ideas on visualizations I could do
+
+## How to understand these results
+
+The first two results show that young people's educational expectations were connected to how they viewed their opportunities. Many participants wanted to pursue higher education but did not necessarily expect to achieve it. Those who viewed their chances of success more negatively also tended to report lower educational expectations. This could suggest that it is not enough for young people to have aspirations, they also need access to opportunities and support that make those aspirations feel achievable. How can we achieve this?
+
+The third result, a substantial number of participants reported that they were not allowed to tell their full stories to police officers or judges. This matters because when young people feel that they cannot express their perspectives, they may experience the legal process as something that happens to them rather than a process in which they have a meaningful voice. How can we make children/juveniles feel more heard in the system?
+
+Ultimately, the findings point to a gap between the futures young people hope to achieve, the futures they believe are attainable, and the extent to which they feel heard by institutions with authority over their lives. How can we make children in the criminal justice system more hopeful, and more heard? If this survey was expanded to other geographic locations, would we see similar results? Improving outcomes for young people involved in the juvenile justice system requires attention to both their futures and their experiences in the present. Young people need more than opportunities to change their circumstances. They need to believe that a different future is attainable and to have a meaningful voice in the decisions that affect their lives.
