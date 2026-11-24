@@ -36,3 +36,21 @@ I have a few ideas. First, since ensemble methods are used for outlier analysis,
 **6. How has your thinking changed since you first wrote your research question?** My thinking has largely remained unchanged; my central research question remains the exact same. However, I now have a better understanding of the kinds of supplementary information that may be relevant to that question. I also have a new secondary focus on the impacts of building new prisons. (See Q3)
 
 7.  How do you think you'll be able to connect your project to others in your research cluster?
+
+## New ideas:
+
+-   trying with a different state? am TX specifically a bad case?
+
+-   Comparing the racial impacts of prison gerrymandering in more urban, racially diverse states with the racial impacts of less diverse, more rural states? I.e., controlling for state size and baseline racial diversity, is there a significant difference in the mean disenfranchised POC districts classified as "too big" between rural and urban states?
+
+-   how would I measure racial impacts? -- the number of predominantly POC districts that are too big after reallocation? or controlling for size/num total districts -- % of total districts that are majority POC that remain majority POC and become too big after reallocation?
+
+-   what meeasure of urban would I use? binary encoding with rural states NOT including one of the major cities?
+
+-   account for regional differences?
+
+-   percent of majority POC districts that are "too big"/i.e. disenfranchised by prison gerrymandering predicted by region (cat), number of cities in state with population above (x), and racial makeup of the state
+
+Does the racial impact of prison gerrymandering differ across states: particularly along the lines of whether a state is urban/rural, its region, controlling for its prison population and racial makeup?
+
+Among similarly POC states with high incarceration rates, does the underlying geography of crimminalization and redistricting lead to enhanced impacts of prison gerrymandering in some of those states?
